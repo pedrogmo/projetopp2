@@ -1,0 +1,51 @@
+
+/* Arquivos */
+
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+
+/* Classes padrões */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "Righteous", sans-serif;
+}
+
+img {
+    max-width: 95%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 70em;
+}
+
+/* Header */
+
+header {
+    background-color: green;
+    height: auto;
+}
+
+header ul {
+    list-style: none;
+    padding: 0 2em 2em;
+}
+
+header ul li {
+    display: inline-block;
+    padding: .5em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
