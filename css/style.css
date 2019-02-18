@@ -31,22 +31,24 @@ img {
 
 header {
     background-color: rgba(114,200,0);
-    margin-top: -1em;
 }
 
 nav {
     height: 6.7em;
+    padding: auto;
 }
 
 header ul {
     list-style: none;
     visibility: hidden;
+    position: relative;
+    margin: auto;
 }
 
 header ul li {
     display: inline-block;
-    padding: .3em;
-    margin-top: 1.6em;
+    margin-left: 2em;
+    margin-top: 1.9em;
     font-size: 1.4rem;
 
 }
@@ -61,8 +63,8 @@ header ul li a {
     color: white;
     font-weight: bold;
     float: right;
-    margin-top: .8em;
-    padding: 0 1em;
+    position: relative;
+    top: .9em;
     font-size: 2.2em;
 }
 
@@ -70,7 +72,6 @@ header ul li a {
 
     header ul {
         visibility: initial;
-        padding-left: 50%;
 
     }
 
@@ -85,18 +86,6 @@ header ul li a {
 nav img {
     position: relative;
     float: left;
-    width: 17em;
-    padding-left: .5em;
-    top: -4.5em;
-}
-
-@media(min-width: 5rem) {
-
-    nav img {
-        position: relative;
-        float: left;
-        width: 17em;
-        padding-left: .5em;
-        top: -4.5em;
-    }
+    width: 15em;
+    margin-top: .7em;
 }
