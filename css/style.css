@@ -21,7 +21,7 @@ img {
     height: auto;
 }
 
-.container {
+div .container {
     width: 95%;
     margin: 0 auto;
     max-width: 70em;
@@ -31,26 +31,21 @@ img {
 
 header {
     background-color: rgba(114,200,0);
-}
-
-nav {
     height: 6.7em;
-    padding: auto;
+    margin-top: -1em;
 }
 
 header ul {
     list-style: none;
     visibility: hidden;
     position: relative;
-    margin: auto;
+    top: 2.2em;
 }
 
 header ul li {
     display: inline-block;
-    margin-left: 2em;
-    margin-top: 1.9em;
     font-size: 1.4rem;
-
+    margin-left: 2em; 
 }
 
 header ul li a {
@@ -58,24 +53,23 @@ header ul li a {
     color: white;
 }
 
-.container a {
+div.container a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    float: right;
-    position: relative;
-    top: .9em;
     font-size: 2.2em;
+    position: absolute;
+    top: .6em;
+    right: .5em;
 }
 
 @media(min-width: 60rem) {
 
-    header ul {
+    header ul{
         visibility: initial;
-
     }
 
-    .container a {
+    div.container a {
         visibility: hidden;
     }
     
@@ -83,25 +77,25 @@ header ul li a {
 
 /* Imagens */
 
-nav img {
-    position: relative;
-    float: left;
+header img {
     width: 15em;
-    margin-top: .7em;
+    position: absolute;
+    top: .4em;
+    left: .5em;
 }
 
 .bg {
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 6.5em;
+    top: -.2em;
     left: 0;
 }
 
 .bg2 {
     position: absolute;
     width: 100%;
-    top: 6.5em;
     left: 0;
+    top: 6.5em;
     visibility: hidden;
 }
 
@@ -115,4 +109,61 @@ nav img {
         visibility: hidden;
     }
     
+}
+
+/* Colors */
+
+.planet img{
+    position: relative;
+    width: 30%;
+    top: 3em;
+    z-index: 0;
+}
+
+/* Typography */
+
+.planet h1 {
+    position: relative;
+    font-size: 1.2rem;
+    margin-bottom: 3em;
+    margin-top: -8em;
+    padding: 1rem;
+    color: rgba(4,58,54);
+    z-index: 1;
+}
+
+@media(min-width: 30rem) {
+
+    .planet h1 {
+        font-size: 1.5rem;
+        margin-bottom: 4em;
+        margin-top: -8.5em;
+    }
+}
+
+@media(min-width: 40rem) {
+    
+        .planet h1 {
+            font-size: 1.5rem;
+            margin-bottom: 7em;
+            margin-top: -11em;
+        }
+}
+
+@media(min-width: 45rem) {
+    
+        .planet h1 {
+            font-size: 1.8rem;
+            margin-top: -10.5em;
+            margin-bottom: 8em;
+        }
+}
+
+@media(min-width: 50rem) {
+    
+        .planet h1 {
+            font-size: 1.9rem;
+            margin-bottom: 8em;
+            margin-top: -11em;
+        }
 }
