@@ -33,6 +33,12 @@ header {
     background-color: rgba(114,200,0);
     height: 6.7em;
     margin-top: -1em;
+    transition: 250ms;
+}
+
+header:hover {
+    background-color: white;
+    transition: 250ms;
 }
 
 header ul {
@@ -53,6 +59,10 @@ header ul li a {
     color: white;
 }
 
+header:hover ul li a {
+    color:rgba(114,200,0);
+}
+
 div.container a {
     text-decoration: none;
     color: white;
@@ -61,6 +71,12 @@ div.container a {
     position: absolute;
     top: .6em;
     right: .5em;
+    transition: 100ms;
+}
+
+header:hover .container a {
+    color:rgba(114,200,0);
+    transition: 100ms;
 }
 
 @media(min-width: 60rem) {
@@ -71,8 +87,7 @@ div.container a {
 
     div.container a {
         visibility: hidden;
-    }
-    
+    }   
 }
 
 /* Imagens */
