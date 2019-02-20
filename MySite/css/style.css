@@ -162,12 +162,13 @@ nav img#logo {
 }
 
 nav img#logo2{
-    width: 12em;
+    width: 9em;
     position: absolute;
-    top: 0;
+    top: 2.4em;
     margin-top: .5em;
     margin-bottom: .5em;
     visibility: hidden;
+    left: 13.5em;
 }
 
 @media(min-width: 60rem) {
