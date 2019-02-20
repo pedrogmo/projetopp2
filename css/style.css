@@ -186,8 +186,10 @@ header img {
 @media(min-width: 60rem) {
     
         .planet h1 {
+            position: absolute;
             font-size: 1.7rem;
             margin-bottom: 8em;
-            margin-top: -30em;
+            margin-top: -32em;
+            left: 19em;
         }
 }
