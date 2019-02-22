@@ -1,0 +1,26 @@
+header#menuV{
+    position: absolute;
+    color: white;
+    left: -30em;
+    top:0;
+    border: 5px solid black;
+    width: 12em;
+}
+
+header#menuV ul{
+    
+}
+
+header#menuV ul li{
+    margin-bottom: 4em;
+    margin-left: -1em;
+}
+
+header#menuV ul li a{
+    font-size: 2em;
+    text-decoration: none;
+}
+
+button#showMenu{
+    margin-left: 10em;
+}

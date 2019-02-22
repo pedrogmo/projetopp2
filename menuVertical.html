@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./menuVerticalCss.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id = "menuV">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Lições</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Bastidores</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </header>
+    <button id = "showMenu">Mostrar menu</button>
+    <script>
+        var mostrar = true;
+        document.getElementById("showMenu").onclick = function(){
+            if (mostrar)
+                document.getElementById("menuV").style.left = 0;
+            else
+            {
+                document.getElementById("menuV").style.left = '-30em';
+                alert('A');
+            }
+            mostrar = !mostrar;
+        }
+    </script>
+</body>
+</html>
