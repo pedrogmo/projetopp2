@@ -347,3 +347,20 @@ nav img#logo2{
         margin-top: 4rem;
     }
 }
+
+/**/
+
+.info{
+    position: relative;
+    top: 1em;
+    left: -7em;
+    width: 40em;
+    background-color: darkred;
+    padding:1em;
+    height: 20em;
+}
+
+.texto{
+    color: white;
+    text-align: left;
+}
