@@ -132,18 +132,6 @@ nav div.container a {
     color: white;
 }
 
-.planet h1 {
-    color: white;
-    font-size: 1.2rem;
-    position: relative;
-    top: 15em;
-}
-
-.planet {
-    margin-top: -1.3em;
-    background-color: black;
-    height: 40em;
-}
 
 @media(min-width: 50rem) {
 
@@ -152,6 +140,131 @@ nav div.container a {
     }
 }
 
+/* Planet */
+
+.planet h1#texto {
+    color: black;
+    font-size: 1.1rem;
+    margin-top: 2.5em;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.planet {
+    margin-top: -1.3em;
+    background-color: white;
+    height: 50em;
+    margin-bottom: 2em;
+}
+
+.planet img {
+    width: 40%;
+    margin-top: 5em;
+}
+
+.planet h1#title {
+    margin-top: 3em;
+    font-size: 1.75rem;
+    color: #3a83f5;
+}
+
+.planet hr {
+    width: 30%;
+    height: .5em;
+    background-color: #83e600; 
+    border-radius: 50px;
+    border: none;
+    margin: auto;
+}
+
+@media(min-width: 35rem)
+{
+    .planet img {
+        width: 28%;
+    } 
+
+    .planet h1#texto {
+        font-size: 1.3rem;
+    }
+
+    .planet {
+        height: 55em;
+    }
+}
+
+@media(min-width: 60rem) {
+
+    .planet img {
+        float: right;
+        width: 20%;
+        margin-right: 4em;
+    }
+
+    .planet h1#title {
+        float: left;
+        margin-top: 1em;
+        font-size: 2rem;
+    }
+
+    .planet h1#texto {
+        float: left;
+        text-align: left;
+        padding-right: 15em;
+        position: relative;
+        top: -18em;
+    }
+
+    .planet hr {
+        width: 40%;
+        float: left;
+        margin-top: 6.5em;
+        position: relative;
+        left: -23em;
+    }
+
+    .planet {
+        height: 30em;
+    }
+}
+
+/* Terreno */
+
+.terreno {
+    background-color:rgb(243, 243, 243);
+    height: 51em;
+}
+
+.terreno h1#title {
+
+    position: relative;
+    top: 2em;
+    font-size: 1.7rem;
+    color: #3a83f5;
+}
+
+.terreno hr {
+    width: 40%;
+    height: .5em;
+    background-color: #83e600;
+    border: none;
+    position: relative;
+    top: 2.5em;
+    border-radius: 50px;
+}
+
+.terreno img {
+    width: 90%;
+    position: relative;
+    top: 6em;
+}
+
+.terreno h1 {
+    color: black;
+    font-size: 1.1rem;
+    position: relative;
+    top: 7em;
+    padding: .5em;
+}
 
 /* Home Hero */
 
