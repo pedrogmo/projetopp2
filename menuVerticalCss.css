@@ -19,6 +19,7 @@ header#menuV ul li{
 header#menuV ul li a{
     font-size: 2em;
     text-decoration: none;
+    color: #72c800;
 }
 
 button#showMenu{
