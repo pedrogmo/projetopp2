@@ -34,7 +34,8 @@ img {
 header {
     position: absolute;
 	left: 0;
-	right: 0;
+    right: 0;
+    z-index: 10;
 }
 
 nav ul {
@@ -547,10 +548,11 @@ header#menuV{
     background-color: white;
     left: -30em;
     top:0;
-    border: 5px solid black;
+    border: 1px solid black;
     width: 15em;
     margin-left: -1em;
-    z-index: 10;
+    z-index: 1;
+    transition: left 1s;    
 }
 
 header#menuV ul{
@@ -572,7 +574,7 @@ button#showMenu{
     margin-left: 10em;
 }
 
-@media (min-width: 60rem){
+@media (min-width: 60rem) {
     header#menuV{
         left:-30em;
     }
