@@ -46,6 +46,7 @@ nav ul {
     background-color: #72c800;
     height: 5em;
     transition: .3s;
+    box-shadow: 0px 4px rgba(0,0,0,.1);
 }
 
 nav li {
@@ -229,7 +230,7 @@ nav div.container a {
 /* Terreno */
 
 .terreno {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(235, 235, 235);
     height: auto;
     box-shadow: 10px 10px 8px 10px rbga(0,0,0,.3);
 }
@@ -545,14 +546,15 @@ nav img#logo2{
 header#menuV{
     padding-top: 2em;
     position: absolute;
-    background-color: white;
+    background-color: #72c800;
     left: -30em;
     top:0;
-    border: 1px solid black;
     width: 15em;
     margin-left: -1em;
     z-index: 1;
     transition: left 1s;    
+    height: 100%;
+    box-shadow: 5px 5px rgba(0,0,0,.1);
 }
 
 header#menuV ul{
@@ -560,22 +562,42 @@ header#menuV ul{
 }
 
 header#menuV ul li{
-    margin-top: 4em;
+    margin-top: 6.5em;
     margin-left: -1em;
 }
 
 header#menuV ul li a{
-    font-size: 2em;
+    font-size: 1.5em;
     text-decoration: none;
-    color: #72c800;
+    color: white;
+}
+
+header#menuV ul li a:hover {
+    padding: .7em;
+    border-radius: 50px;
+    transition: .3s;
+    background-color: #83e600;
+    color: white;
+    opacity: .7;
 }
 
 button#showMenu{
     margin-left: 10em;
 }
 
+@media(min-width: 50rem) {
+    
+    header#menuV ul li a{
+        font-size: 1.75em;
+    }
+    
+    header#menuV ul li a:hover {
+    padding: 1em;
+    }
+}
+
 @media (min-width: 60rem) {
     header#menuV{
-        left:-30em;
+        visibility: hidden;
     }
 }
