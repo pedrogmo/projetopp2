@@ -1,5 +1,10 @@
 ﻿
 @import url('https://fonts.googleapis.com/css?family=Righteous');
+@font-face { font-family: 'Aristotelica'; 
+             src: url('aristotelica.text-trial-bold.ttf'); } 
+
+@font-face { font-family: 'Cabo Rounded'; 
+             src: url('Cabo-Rounded-Regular.otf'); } 
 
 /* :root
 {
@@ -14,8 +19,8 @@
 
 body {
     margin: 0;
-	font-family: 'Righteous', sans-serif;
     text-align: center;
+    font-family: 'Righteous';
 }
 
 img {
@@ -61,18 +66,6 @@ nav a {
 	text-transform: uppercase;
 	color: #83e600;
     font-size: .8rem;
-}
-
-/* "Sanduíche" */
-nav div.container a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 2.2em;
-    position: absolute;
-    top: .5em;
-    right: .5em;
-    transition: 100ms;
 }
 
 @media(min-width: 60rem) {
@@ -171,6 +164,7 @@ nav div.container a {
     font-size: 1.75rem;
     color: #3a83f5;
     margin-bottom: 0;
+    font-family: 'Arial';
 }
 
 .planet hr {
@@ -234,9 +228,8 @@ nav div.container a {
 /* Terreno */
 
 .terreno {
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(240, 240, 240);
     height: auto;
-    box-shadow: 10px 10px 8px 10px rbga(0,0,0,.3);
 }
 
 .terreno h1#title {
@@ -322,13 +315,14 @@ nav div.container a {
 /* Home Hero */
 
 .home-hero {
-    background-image: url(../img/paisagem.png);
+    background-image: url(../img/paisagem2.png);
     background-size: cover;
-    background-position: right;
     background-repeat: no-repeat;
     padding: 8em 3em;
     color: white;
     margin-bottom: -.1em;
+
+    /*Parallax*/
     background-attachment: fixed;
 }
 
@@ -397,15 +391,20 @@ nav img#logo2{
 
 /* Buttons */
 
+/*
+  Verde claro:  #94c500
+  Verde escuro: #7da009
+*/
+
 .button {
-    background-color: #94c500;
+    background-color: #1adb00;
     padding: .6em;
     border-radius: 10px;
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    box-shadow: 0px 7px #7da009;
+    box-shadow: 0px 7px #16bd00;
     transition: .3s;
     position: relative;
     top: 1em;
@@ -413,7 +412,7 @@ nav img#logo2{
 
 .button:hover {
     top: 1.3em;
-    box-shadow: 0px 0px #7da009;
+    box-shadow: 0px 0px #16bd00;
 }
 
 /* HR */
@@ -616,4 +615,64 @@ button#showMenu{
     header#menuV{
         visibility: hidden;
     }
+}
+
+/* ICON */
+
+.icon {
+    position: absolute;
+    top: 2.5em;
+    right: 0;
+    transform: translate(-50%,-50%);
+    width: 3.5em;
+    height: 3.5em;
+    cursor: pointer;
+}
+
+.icon.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.icon.active .hamburger::after {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.hamburger {
+    width: 40px;
+    height: 5px;
+    background: white;
+    position: absolute;
+    top: 55%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+    border-radius: 50px;
+}
+
+.icon.active .hamburger {
+    background-color: transparent;
+}
+
+.hamburger::before,
+.hamburger::after {
+
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background: white;
+    left: 0;
+    transition: .5s;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.hamburger::before{
+    top: -13px;
+}
+
+.hamburger::after{
+    top: 13px;
 }
