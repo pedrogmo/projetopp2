@@ -81,6 +81,10 @@ nav div.container a {
         visibility: hidden;
     }
 
+    header {
+        position: absolute;
+    }
+
     nav ul {
         background-color: white;
         margin-top: 3em;
@@ -325,6 +329,7 @@ nav div.container a {
     padding: 8em 3em;
     color: white;
     margin-bottom: -.1em;
+    background-attachment: fixed;
 }
 
 @media(min-width: 50rem) {
@@ -552,7 +557,7 @@ header#menuV{
     width: 15em;
     margin-left: -1em;
     z-index: 2;
-    transition: left 1s;    
+    transition: left .75s;    
     height: 100%;
     box-shadow: 5px 5px rgba(0,0,0,.1);
 }
@@ -572,14 +577,16 @@ header#menuV ul li a{
     font-size: 1.5em;
     text-decoration: none;
     color: white;
+    transition: .2s;
+    border-radius: 20px;
 }
 
 header#menuV ul li a:hover {
     padding: .7em;
-    border-radius: 50px;
-    transition: .3s;
+    transition: .2s;
     background-color: white;
     color: #83e600;
+    border-radius: 20px;
 }
 
 button#showMenu{
