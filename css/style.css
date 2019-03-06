@@ -1,10 +1,17 @@
 ﻿
 @import url('https://fonts.googleapis.com/css?family=Righteous');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
 @font-face { font-family: 'Aristotelica'; 
              src: url('aristotelica.text-trial-bold.ttf'); } 
 
-@font-face { font-family: 'Cabo Rounded'; 
-             src: url('Cabo-Rounded-Regular.otf'); } 
+@font-face { font-family: 'Mikado'; 
+             src: url('Mikado\ Light.otf'); } 
+
+@font-face { font-family: 'Mikado Black'; 
+             src: url('Mikado\ Black.otf'); } 
+
 
 /* :root
 {
@@ -20,7 +27,6 @@
 body {
     margin: 0;
     text-align: center;
-    font-family: 'Righteous';
 }
 
 img {
@@ -66,6 +72,7 @@ nav a {
 	text-transform: uppercase;
 	color: #83e600;
     font-size: .8rem;
+    font-family: 'Aristotelica';
 }
 
 @media(min-width: 60rem) {
@@ -113,22 +120,20 @@ nav a {
         background-color: #83e600;
         color: white;
         opacity: .7; 
+        padding-top: .9em;
     }
 }
 
 /* Typography */
 
-.home-hero h1 {
-    font-size: 1.6rem;
-}
-
 
 #title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 1em;
     margin-top: .1em;
     padding: 1rem;
     color: white;
+    font-family: 'Aristotelica';
 }
 
 
@@ -145,6 +150,7 @@ nav a {
     color: black;
     font-size: 1.18rem;
     margin-bottom: 2em;
+    font-family: 'Mikado';
 }
 
 .planet {
@@ -162,9 +168,10 @@ nav a {
 .planet h1#title {
     margin-top: 1em;
     font-size: 1.75rem;
-    color: #3a83f5;
+    color: rgb(105, 105, 105);
     margin-bottom: 0;
-    font-family: 'Arial';
+    font-family: 'Mikado Black';
+    text-transform: uppercase;
 }
 
 .planet hr {
@@ -210,7 +217,7 @@ nav a {
         float: left;
         position: relative;
         top: 6em;
-        left: -23em;
+        left: -25em;
     }
 
     .planet {
@@ -234,8 +241,11 @@ nav a {
 
 .terreno h1#title {
     font-size: 1.75rem;
-    color: #3a83f5;
+    color: rgb(105, 105, 105);
     margin-bottom: 0;
+    font-family: 'Mikado Black';
+    padding-top: 1em;
+    text-transform: uppercase;
 }
 
 .terreno hr {
@@ -253,6 +263,7 @@ nav a {
     font-size: 1.18rem;
     padding-bottom: 3em;
     padding-top: 1em;
+    font-family: 'Mikado';
 }
 
 .terreno img {
@@ -265,7 +276,7 @@ nav a {
         float: right;
         font-size: 2rem;
         position: relative;
-        top: -3em;
+        top: -3.5em;
     }
 
     .terreno {
@@ -331,14 +342,6 @@ nav a {
         height: 90vh;
         padding-top: 35vh;
         background-position: bottom;
-    }
-
-    #btnLogin:hover {
-        background-color: #83e600;
-        padding: .7em;
-        border-radius: 50px;
-        color: white;
-        opacity: .7; 
     }
 }
 
@@ -408,6 +411,8 @@ nav img#logo2{
     transition: .3s;
     position: relative;
     top: 1em;
+    font-family: 'Aristotelica';
+    padding-top: .9em;
 }
 
 .button:hover {
@@ -528,23 +533,6 @@ nav img#logo2{
     }
 }
 
-/**/
-
-.info{
-    position: relative;
-    top: 1em;
-    left: -7em;
-    width: 40em;
-    background-color: darkred;
-    padding:1em;
-    height: 20em;
-}
-
-.texto{
-    color: white;
-    text-align: left;
-}
-
 /*Menu vertical*/
 
 header#menuV{
@@ -577,7 +565,8 @@ header#menuV ul li a{
     text-decoration: none;
     color: white;
     transition: .2s;
-    border-radius: 20px;
+    border-radius: 50px;
+    font-family: 'Aristotelica';
 }
 
 header#menuV ul li a:hover {
@@ -585,7 +574,8 @@ header#menuV ul li a:hover {
     transition: .2s;
     background-color: white;
     color: #83e600;
-    border-radius: 20px;
+    border-radius: 50px;
+    padding-top: .9em;
 }
 
 button#showMenu{
@@ -675,4 +665,73 @@ button#showMenu{
 
 .hamburger::after{
     top: 13px;
+}
+
+@media(min-width: 60rem) {
+
+    .icon {
+        visibility: hidden;
+    }
+}
+
+/* HDIW */
+
+.hdiw h1 {
+    font-size: 1.7em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: 'Aristotelica';
+    color: rgb(105, 105, 105);
+}
+
+.hdiw #base {
+    width: 100%;
+}   
+
+@media(min-width: 60rem) {
+
+    .hdiw #base {
+        width: 50%;
+    }
+
+    .hdiw h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Footer */
+
+footer {
+    height: 13em;
+    background-color: rgba(66,133,244);
+    width: 100%;
+    margin-top: -12em;
+}
+
+/* footer img {
+    width: 100%;
+    position: relative;
+    top: -5em;
+    transform: translateY(-5em);
+} */
+
+section .wave {
+    position: relative;
+    width: 100%;
+    height: 398px;
+    left: 0;
+    background-image: url(../img/wave.png);
+    top: -7em;
+    transform: translateY(-5em);
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 2000px;
+    }
 }
