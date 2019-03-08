@@ -120,14 +120,13 @@ nav a {
         background-color: #83e600;
         color: white;
         opacity: .7; 
-        padding-top: .9em;
+        padding-top: 1em;
     }
 }
 
 /* Typography */
 
-
-#title {
+ .home-hero .container #title {
     font-size: 2.2rem;
     margin-bottom: 1em;
     margin-top: .1em;
@@ -139,8 +138,8 @@ nav a {
 
 @media(min-width: 50rem) {
 
-    #title {
-        font-size: 2.8frem;
+    .home-hero .container #title {
+        font-size: 2.8rem;
     }
 }
 
@@ -181,6 +180,7 @@ nav a {
     border-radius: 50px;
     border: none;
     position: relative;
+    margin-top: 1em;
 }
 
 @media(min-width: 35rem)
@@ -208,7 +208,7 @@ nav a {
         top: -14em;
         float: left;
         text-align: left;
-        left: 1em;
+        left: 0;
         padding-right: 15em;
     }
 
@@ -217,7 +217,8 @@ nav a {
         float: left;
         position: relative;
         top: 6em;
-        left: -25em;
+        left: -24em;
+        margin-top: 0;
     }
 
     .planet {
@@ -575,7 +576,7 @@ header#menuV ul li a:hover {
     background-color: white;
     color: #83e600;
     border-radius: 50px;
-    padding-top: .9em;
+    padding-top: 1em;
 }
 
 button#showMenu{
@@ -735,3 +736,15 @@ section .wave {
         background-position: 2000px;
     }
 }
+
+    .anime {
+        opacity: 0;
+        transform: translate3d(100px,0,0);
+        transition: .3s;
+        
+    }
+
+    .anime-start {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
