@@ -748,3 +748,64 @@ section .wave {
         opacity: 1;
         transform: translate3d(0,0,0);
     }
+
+    /* Modal Login */
+
+    .modalLogin {
+        position: fixed;
+        background-color: white;
+        width: 70%;
+        height: auto;   
+        padding: 1em;
+        top: 10em;
+        margin: auto;
+        left: 15%;
+        border-radius: 20px;
+        box-shadow: 0px 6px rgba(0,0,0,.2);
+    }
+
+    .modalLogin h1 {
+        margin-top: 1em;
+        font-size: 1.75rem;
+        color: rgb(105, 105, 105);
+        margin-bottom: 0;
+        font-family: 'Mikado Black';
+        text-transform: uppercase;
+    }
+
+    .modalLogin hr {
+        width: 30%;
+        height: .5em;
+        background-color: #83e600; 
+        border-radius: 50px;
+        border: none;
+        position: relative;
+        margin-top: 1em;
+    }
+
+    .modalLogin a {
+        background-color: #83e600;
+        padding: .5em;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Aristotelica';
+        padding-top: .7em;
+
+    }
+
+    .txtCampos {
+        padding: 10px;
+        font-family: 'Mikado Light';
+        font-size: 14pt;
+        width: 87.5%;
+        background: none;
+        border: none;
+        border-bottom: 3px solid lightgray;
+        outline: none;
+    }
+
+    .txtCampos:focus, .txtCampos:valid {
+        transition: 0.25s ease-in;
+        border-color: #83e600;
+    }
