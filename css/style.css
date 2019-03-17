@@ -606,6 +606,10 @@ button#showMenu{
     header#menuV{
         visibility: hidden;
     }
+
+    .tela-escura .container {
+        visibility: hidden;
+    }
 }
 
 /* ICON */
@@ -762,6 +766,8 @@ section .wave {
         left: 15%;
         border-radius: 20px;
         box-shadow: 0px 6px rgba(0,0,0,.2);
+        z-index: 10;
+        visibility: hidden;
     }
 
     .modalLogin h1 {
@@ -791,7 +797,29 @@ section .wave {
         color: white;
         font-family: 'Aristotelica';
         padding-top: .7em;
+        /* transition: .2s; */
+    }
 
+    .modalLogin a:hover {
+        background-color: #a1e648;
+        padding: .5em;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Aristotelica';
+        padding-top: .7em;
+        /* transition: .2s; */
+    }
+
+    .modalLogin h2{
+        margin-top: 2em;
+        padding-bottom: 2em;
+        font-size: .75rem;
+        color: rgb(105, 105, 105);
+        margin-bottom: 0;
+        font-family: 'Mikado Black';
+        text-transform: uppercase;
+        user-select: none;
     }
 
     .txtCampos {

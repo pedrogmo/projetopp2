@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MyWebsite</title>
+    <title>BioPlay - Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,7 +17,7 @@
             <li><a href="#">Lições</a></li>
             <li><a href="#">Sobre</a></li>
             <li><a href="#">Bastidores</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a id="btnLogin" href = "#">Login</a></li>
         </ul>
     </header>
 
@@ -59,7 +59,7 @@
 
     <div class="planet fade-scroll">
         <div class="container">
-            <h1 id="title">Reuse, Reduze, Recicle</h1>
+            <h1 id="title" data-aos="fade-up">Reuse, Reduze, Recicle</h1>
             <hr>
             <img src="img/planet.png" alt="">
             <h1 id="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae lacus ac nisl commodo ornare. Curabitur sed augue tortor. Quisque ullamcorper nibh mi, tempor fermentum urna pharetra a. Donec quis augue pretium, tincidunt lorem eget, facilisis dolor. Vestibulum nec odio ipsum. Maecenas efficitur ullamcorper lacus. Nulla porta efficitur volutpat. Sed at risus vitae felis mollis ultrices.</h1>
@@ -90,14 +90,14 @@
 
     <!-- Modal Login -->
 
-    <section class="modalLogin">
+    <section class="modalLogin" id="modalLogin">
         <div class="container">
             <form>
                 <h1>LOGIN:</h1>               
                 <hr>           
                 <input type="text" id="usu" class="txtCampos" required placeholder=" Usuário">   
                 <br><br>
-                <input type="text" id="sen" class="txtCampos" required placeholder=" Senha">
+                <input type="password" id="sen" class="txtCampos" required placeholder=" Senha">
                 <br><br>             
                 <a href=#>Entrar</a>
                 <h2>Não possui uma conta ainda?</h2>
@@ -133,5 +133,11 @@
 <script src = "./js/menuVertical.js"></script>
 <script src = "./js/parallax.js"></script>
 <script src="./js/fadeIn.js"></script>
+<script src="./js/aos.js"></script>
+<script type="text/javascript">
+    AOS.init({
+        duration: 2000
+    });
+</script>
 </body>
 </html>
