@@ -616,7 +616,7 @@ button#showMenu{
     }
 
     .tela-escura-desk .container {
-        visibility: initial;
+        visibility: hidden;
         background-color: rgba(0,0,0,.5);
         position: fixed;
         z-index: 10;
@@ -849,4 +849,47 @@ section .wave {
     .txtCampos:focus, .txtCampos:valid {
         transition: 0.25s ease-in;
         border-color: #83e600;
+    }
+
+    /* FOOTER */
+
+    footer #infos {
+        font-family: "Mikado Black";
+        color: white;
+        background-color: rgb(53, 105, 187);
+        padding: 1em;
+        font-size: .55rem;
+    }
+
+    footer img {
+        position: relative;
+        width: 40%;
+        left: 0;
+        right: 0;
+        bottom: 10em;
+    }
+
+    footer ul{
+        list-style: none;
+    }
+
+    .icone{
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 50%;
+    }    
+
+    .facebook
+    {
+        background: url('../img/icones/facebook_normal.png');
+        width: 50%; 
+    }
+    .twitter
+    {
+
+    }
+    .instagram
+    {
+
     }
