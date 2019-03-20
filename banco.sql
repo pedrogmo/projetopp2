@@ -38,8 +38,6 @@ create table Pergunta(
 	texto varchar(50),
 	nivel int not null,
 	codRespCerta int not null
-
-	constraint fkRespCerta foreign key(codRespCerta) references Resposta(codigo)
 )
 
 create table Resposta(
@@ -50,3 +48,6 @@ create table Resposta(
 
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codigo)
 )
+
+alter table Pergunta
+add constraint fkRespCerta foreign key(codRespCerta) references Resposta(codigo)
