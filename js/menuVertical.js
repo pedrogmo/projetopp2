@@ -22,6 +22,15 @@ document.getElementById("btnLogin").onclick = function()
     LoginAberto = true;
 }
 
+document.getElementById("btnLogin2").onclick = function()
+{
+    document.getElementById("menuV").style.left = "-30em";
+    mostrar = false;
+
+    document.getElementById("modalLogin").style.visibility = 'initial';
+    LoginAberto = true;
+}
+
 document.getElementById("mostrarMenu").onclick = function(){
     if (mostrar)
     {

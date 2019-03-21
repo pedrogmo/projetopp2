@@ -606,7 +606,7 @@ button#showMenu{
     }
 }
 
-@media (min-width: 60rem) {
+@media screen and (min-width: 60rem) {
     header#menuV{
         visibility: hidden;
     }
@@ -622,6 +622,7 @@ button#showMenu{
         z-index: 10;
         width: 100%;
         height: 100%;
+        max-width: 100%;
     }
 }
 
@@ -849,6 +850,17 @@ section .wave {
     .txtCampos:focus, .txtCampos:valid {
         transition: 0.25s ease-in;
         border-color: #83e600;
+    }
+
+    @media(min-width: 60rem)
+    {
+        .modalLogin
+        {
+            width: 70%;
+            height: 85%;   
+            top: 3.5em;
+            left: 15%;
+        }
     }
 
     /* FOOTER */
