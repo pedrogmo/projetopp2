@@ -550,7 +550,7 @@ header#menuV{
     box-shadow: 5px 5px rgba(0,0,0,.1);
 }
 
-header#menuV ul{
+header#menuV ul{ 
     list-style: none;
 }
 
@@ -772,13 +772,10 @@ section .wave {
     .modalLogin {
         position: fixed;
         background-color: white;
-        width: 70%;
-        height: auto;   
+        width: 100%;
+        height: 100%;   
         padding: 1em;
-        top: 10em;
-        margin: auto;
-        left: 15%;
-        border-radius: 20px;
+        top: 5em;
         box-shadow: 0px 6px rgba(0,0,0,.2);
         z-index: 10;
         visibility: hidden;
@@ -804,29 +801,28 @@ section .wave {
     }
 
     .modalLogin a {
+        font-size: 1.2rem;
         background-color: #83e600;
-        padding: .5em;
+        padding: 1em;
         border-radius: 10px;
         text-decoration: none;
         color: white;
         font-family: 'Aristotelica';
-        padding-top: .7em;
+        padding-top: 1.3em;
         /* transition: .2s; */
     }
 
     .modalLogin a:hover {
         background-color: #a1e648;
-        padding: .5em;
         border-radius: 10px;
         text-decoration: none;
         color: white;
         font-family: 'Aristotelica';
-        padding-top: .7em;
         /* transition: .2s; */
     }
 
     .modalLogin h2{
-        margin-top: 2em;
+        margin-top: 3.3em;
         padding-bottom: 2em;
         font-size: .75rem;
         color: rgb(105, 105, 105);
@@ -834,6 +830,7 @@ section .wave {
         font-family: 'Mikado Black';
         text-transform: uppercase;
         user-select: none;
+        margin-bottom: 2em;
     }
 
     .txtCampos {
@@ -845,21 +842,41 @@ section .wave {
         border: none;
         border-bottom: 3px solid lightgray;
         outline: none;
+        padding-top: 2em;
+    }
+    
+    #usu{
+        margin-bottom: -.5em;
     }
 
+    #sen{
+        margin-bottom: 1.5em;
+    }
+    
     .txtCampos:focus, .txtCampos:valid {
         transition: 0.25s ease-in;
         border-color: #83e600;
     }
 
-    @media(min-width: 60rem)
+    @media(min-width: 40rem)
     {
         .modalLogin
         {
-            width: 70%;
-            height: 85%;   
-            top: 3.5em;
-            left: 15%;
+            width: 30em;
+            height: 30em;   
+            top: 8em;
+            margin: auto;
+        }
+
+        .txtCampos {
+            padding: 10px;
+            font-family: 'Century Gothic';
+            font-size: 14pt;
+            width: 87.5%;
+            background: none;
+            border: none;
+            border-bottom: 3px solid lightgray;
+            outline: none;
         }
     }
 
