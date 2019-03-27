@@ -51,7 +51,8 @@ document.getElementById("mostrarMenu").onclick = function(){
     {
         //escondido
         document.getElementById("menuV").style.left = '-30em';
-        document.getElementById("telaEscura").style.visibility = "hidden";           
+        document.getElementById("telaEscura").style.visibility = "hidden";
+        document.getElementById("telaEscura-desk").style.visibility = "hidden";        
         if(loginAberto)
         {
             document.getElementById("modalLogin").style.visibility = 'hidden';
@@ -86,6 +87,12 @@ document.getElementById("telaEscura-desk").onclick = function()
 {
     if(loginAberto)
     {
+        $('.icon').toggleClass('active');
+        document.getElementById("menuV").style.left = '-30em';
+        document.getElementById("telaEscura").style.visibility = "hidden";
+        mostrar = !mostrar;    
+        var menu = document.querySelector('.icon')
+        menu.classList.toggle('active');
         document.getElementById("telaEscura-desk").style.visibility = "hidden";
         document.getElementById("modalLogin").style.visibility = 'hidden';
         loginAberto = false;
