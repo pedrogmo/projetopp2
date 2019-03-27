@@ -3,8 +3,8 @@
 //Metodo de manutencao de abertura e fechamento do menu vertical
 //////////////////////////////////////////////////////////////////
 
-var mostrar = true;
-var loginAberto = false
+var mostrar = false;
+var loginAberto = false;
 
 document.getElementById("telaEscura").style.visibility = "hidden";
 document.getElementById("telaEscura-desk").style.visibility = "hidden";
@@ -18,7 +18,6 @@ $(document).ready(function(){
 document.getElementById("btnLogin").onclick = function()
 {
     loginAberto = !loginAberto;
-
     if(loginAberto)
     {
         document.getElementById("modalLogin").style.visibility = 'initial';
@@ -26,14 +25,12 @@ document.getElementById("btnLogin").onclick = function()
         document.getElementById("telaEscura-desk").style.visibility = "initial";
     }
     else
-        document.getElementById("modalLogin").style.visibility = 'hidden';
-        
+        document.getElementById("modalLogin").style.visibility = 'hidden';       
 }
 
 document.getElementById("btnLogin2").onclick = function()
 {
-    loginAberto = !loginAberto;
-    
+    loginAberto = !loginAberto;    
     if(loginAberto)
     {
         document.getElementById("modalLogin").style.visibility = 'initial';
@@ -43,6 +40,7 @@ document.getElementById("btnLogin2").onclick = function()
 }
 
 document.getElementById("mostrarMenu").onclick = function(){
+    mostrar = !mostrar;
     if (mostrar)
     {
         //mostrando
@@ -53,15 +51,13 @@ document.getElementById("mostrarMenu").onclick = function(){
     {
         //escondido
         document.getElementById("menuV").style.left = '-30em';
-        document.getElementById("telaEscura").style.visibility = "hidden";   
-        
+        document.getElementById("telaEscura").style.visibility = "hidden";           
         if(loginAberto)
         {
             document.getElementById("modalLogin").style.visibility = 'hidden';
             loginAberto = false;
         }
-    }
-    mostrar = !mostrar;
+    }    
 }
 
 // $(document).ready(function(){
@@ -80,8 +76,7 @@ document.getElementById("telaEscura").onclick = function()
     {
         document.getElementById("menuV").style.left = '-30em';
         document.getElementById("telaEscura").style.visibility = "hidden";
-        mostrar = !mostrar;
-    
+        mostrar = !mostrar;    
         var menu = document.querySelector('.icon')
         menu.classList.toggle('active');
     }

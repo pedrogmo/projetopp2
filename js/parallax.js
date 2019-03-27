@@ -1,6 +1,3 @@
-
-
-
 $('.parallax--bg').css('background-position',
   'center ' + ($(window).scrollTop()) + 'px');
 

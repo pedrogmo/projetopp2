@@ -1,5 +1,3 @@
-
-
 $(function(){
     var documentEl = $(document)
     var fadeElem = $('.fade-scroll');
