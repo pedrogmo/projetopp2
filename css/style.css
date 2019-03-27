@@ -591,10 +591,6 @@ button#showMenu{
     height: 100%;
 }
 
-.tela-escura-desk .container {
-    visibility: hidden;
-}
-
 @media(min-width: 50rem) {
     
     header#menuV ul li a{
@@ -615,8 +611,7 @@ button#showMenu{
         visibility: hidden;
     }
 
-    .tela-escura-desk .container {
-        visibility: hidden;
+    .tela-escura-desk .container {  
         background-color: rgba(0,0,0,.5);
         position: fixed;
         z-index: 10;
@@ -779,6 +774,7 @@ section .wave {
         box-shadow: 0px 6px rgba(0,0,0,.2);
         z-index: 10;
         visibility: hidden;
+        border-radius: 30px;
     }
 
     .modalLogin h1 {
