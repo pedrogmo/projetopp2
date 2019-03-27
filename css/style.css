@@ -864,8 +864,10 @@ section .wave {
         {
             width: 30em;
             height: 30em;   
-            top: 8em;
-            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            right: auto;
         }
 
         .txtCampos {
@@ -880,45 +882,52 @@ section .wave {
         }
     }
 
-    /* FOOTER */
-
-    footer #infos {
-        font-family: "Mikado Black";
-        color: white;
+   /* FOOTER */
+    footer #infos{
         background-color: rgb(53, 105, 187);
-        padding: 1em;
-        font-size: .55rem;
     }
 
+    footer{
+        background-color: rgb(53, 105, 187);    
+    }
+
+footer #infos {
+    font-family: "Mikado Black";
+    color: white;        
+    padding: 1em;
+    font-size: .55rem;
+}
+
+footer img {
+    position: relative;
+    width: 40%;
+    padding: 1em;
+}
+
+footer ul{
+    list-style: none;
+    height: auto;
+    display: list-item;
+}
+
+footer ul li{
+    display: inline;
+    margin-left:2em;
+    margin-right:5.5em;
+}
+
+footer ul li img{        
+    width: 5%;
+    height: auto;
+}
+
+footer ul li img:hover{        
+    cursor:pointer;
+}  
+
+@media(min-width: 40rem)
+{
     footer img {
-        position: relative;
-        width: 40%;
-        left: 0;
-        right: 0;
-        bottom: 10em;
-    }
-
-    footer ul{
-        list-style: none;
-    }
-
-    .icone{
-        position: absolute;
-        left: 0;
-        right: 0;
-        width: 50%;
-    }    
-
-    .facebook
-    {
-        background: url('../img/icones/facebook_normal.png');
-        width: 50%; 
-    }
-    .twitter
-    {
-
-    }
-    .instagram
-    {
-
-    }
+        width: 20%;
+    }   
+}
