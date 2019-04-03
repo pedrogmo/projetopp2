@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+@font-face { font-family: 'Aristotelica'; 
+             src: url('../fonts/aristotelica.text-trial-bold.ttf'); } 
+
+@font-face { font-family: 'Mikado'; 
+             src: url('../fonts/Mikado\ Light.otf'); } 
+
+@font-face { font-family: 'Mikado Black'; 
+             src: url('../fonts/Mikado\ Black.otf'); } 
+
+/* DEFAULT */
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+	left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+header ul {
+    margin: auto;
+    list-style: none;
+    padding: 1.5em;
+    text-align: center;
+    background-color: white;
+    height: 3em;
+    transition: .3s;
+    box-shadow: 0px 4px rgba(0,0,0,.1);
+}
+
+header li {
+	display: inline-block;
+    margin: .2em;
+}
+
+header a {
+	text-decoration: none;
+	padding: .5;
+	text-transform: uppercase;
+	color: #83e600;
+    font-size: .8rem;
+    font-family: 'Aristotelica';
+}
+
+header img {
+    width: 10em;
+    float: right;
+}
+
+header ul a img {
+    width: 3.5em;
+    float: left;
+    margin-right: 2em;
+}
+
+/* USUARIO */
+
+div#usuario {
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    top: 87%;
+    box-shadow: 0px 0px 0px 4px rgba(0,0,0,.1);
+    height: auto;
+}
+
+div#usuario ul a img{
+    position: relative;
+    width: 3.5em;
+    padding-right: 3em;
+}
