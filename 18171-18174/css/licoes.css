@@ -31,14 +31,14 @@ img {
 
 /* HEADER */
 
-header {
+#mobile {
     position: fixed;
 	left: 0;
     right: 0;
     z-index: 10;
 }
 
-header ul {
+#mobile ul {
     margin: auto;
     list-style: none;
     padding: 1.5em;
@@ -49,12 +49,12 @@ header ul {
     box-shadow: 0px 4px rgba(0,0,0,.1);
 }
 
-header li {
+#mobile li {
 	display: inline-block;
     margin: .2em;
 }
 
-header a {
+#mobile a {
 	text-decoration: none;
 	padding: .5;
 	text-transform: uppercase;
@@ -63,12 +63,12 @@ header a {
     font-family: 'Aristotelica';
 }
 
-header img {
+#mobile img {
     width: 10em;
     float: right;
 }
 
-header ul a img {
+#mobile ul a img {
     width: 3.5em;
     float: left;
     margin-right: 2em;
@@ -80,8 +80,8 @@ div#usuario {
     position: fixed;
     left: 0;
     right: 0;
+    bottom: 0;
     display: inline-block;
-    top: 87%;
     box-shadow: 0px 0px 0px 4px rgba(0,0,0,.1);
     height: auto;
 }
@@ -90,4 +90,80 @@ div#usuario ul a img{
     position: relative;
     width: 3.5em;
     padding-right: 3em;
+}
+
+@media(min-width: 50rem)
+{
+    #mobile{
+        visibility: hidden;
+    }
+}
+
+/* HEADER DESKTOP */
+
+#desktop
+{
+    position: fixed;
+	left: 0;
+    right: 0;
+    z-index: 10; 
+    visibility: hidden;
+}
+
+#desktop ul {
+    margin: auto;
+    list-style: none;
+    padding: 1.5em;
+    text-align: center;
+    background-color: #72c800;
+    height: 3em;
+    transition: .3s;
+    box-shadow: 0px 4px rgba(0,0,0,.1);
+}
+
+#desktop ul li{
+    display: inline-block;   
+    left: 50%;
+	transform: translateX(-50%);
+}
+
+#desktop ul li a
+{
+    font-size: 1.5rem;
+    padding-left: 1.2em;
+    position: relative;
+    top: .75em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Aristotelica';
+}
+
+#desktop img {
+    width: 12em;
+    float: left;
+    position: relative;
+    top: -.5em;
+}
+
+/* Estrela */
+#desktop ul li a img
+{
+    width: 2em;
+    top: 50%;
+    padding-left: 2em;
+}
+
+#desktop ul li#pontos2 h1
+{
+    font-size: 2rem;
+    font-family: "Aristotelica";
+}
+
+@media(min-width: 50rem)
+{
+    #desktop
+    {
+        visibility: initial;
+    }
 }
