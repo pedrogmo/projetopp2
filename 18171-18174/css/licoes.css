@@ -63,15 +63,20 @@ img {
     font-family: 'Aristotelica';
 }
 
-#mobile img {
-    width: 10em;
-    float: right;
-}
-
 #mobile ul a img {
     width: 3.5em;
     float: left;
     margin-right: 2em;
+}
+
+#mobile h1
+{
+    float: left;
+    position: relative;
+    top: -.45em;
+    right: .5em;
+    font-family: "Century Gothic";
+    color: rgb(223, 182, 0);
 }
 
 /* USUARIO */
@@ -89,12 +94,16 @@ div#usuario {
 div#usuario ul a img{
     position: relative;
     width: 3.5em;
-    padding-right: 3em;
+    padding-right: 2em;
 }
 
 @media(min-width: 50rem)
 {
     #mobile{
+        visibility: hidden;
+    }
+
+    div#usuario{
         visibility: hidden;
     }
 }
@@ -119,18 +128,17 @@ div#usuario ul a img{
     height: 3em;
     transition: .3s;
     box-shadow: 0px 4px rgba(0,0,0,.1);
+    padding-left: 10em;
 }
 
 #desktop ul li{
-    display: inline-block;   
-    left: 50%;
-	transform: translateX(-50%);
+    display: inline-block;
+    margin-left: 1.2em;
 }
 
 #desktop ul li a
 {
     font-size: 1.5rem;
-    padding-left: 1.2em;
     position: relative;
     top: .75em;
     text-decoration: none;
@@ -139,25 +147,49 @@ div#usuario ul a img{
     font-family: 'Aristotelica';
 }
 
+#desktop ul li #inicio
+{
+    border-bottom: 3px solid white;
+}
+
+#desktop ul li a:hover
+{
+    border-bottom: 3px solid white;
+}
+
+/* LOGO */
 #desktop img {
     width: 12em;
-    float: left;
     position: relative;
-    top: -.5em;
+    top: 1em;
+    left: 1em;
+    float: left;
+    padding-right: 2em;
 }
 
 /* Estrela */
-#desktop ul li a img
+
+#desktop ul #info
+{
+    float: right;
+}
+
+
+#desktop ul a img
 {
     width: 2em;
     top: 50%;
     padding-left: 2em;
 }
 
-#desktop ul li#pontos2 h1
+#desktop ul h1
 {
-    font-size: 2rem;
-    font-family: "Aristotelica";
+    font-family: "Century Gothic";
+    color: rgb(255, 238, 0);
+    position: relative;
+    top: .8em;
+    right: .75em;
+    font-size: 1.5rem;
 }
 
 @media(min-width: 50rem)
@@ -165,5 +197,13 @@ div#usuario ul a img{
     #desktop
     {
         visibility: initial;
+    }
+}
+
+@media(min-width: 70rem)
+{
+    #desktop ul a img
+    {
+        padding-left: 10em;
     }
 }
