@@ -1,6 +1,11 @@
 ﻿
 @{
     Layout = null;
+    string nomeUsuario = "Logar";
+    if (ViewBag.usuario != null)
+    {
+        nomeUsuario = ViewBag.usuario.Nome;
+    }
 }
 
 <!DOCTYPE html>
@@ -34,7 +39,7 @@
                 <li><a href="">Home</a></li>
                 <li><a href="">Sobre</a></li>
                 <li><a href="">Bastidores</a></li>
-                <li><a id="btnLogin2" href="#">Login</a></li>
+                <li><a id="btnLogin2" href="#">@nomeUsuario</a></li>
             </ul>
 
             <section class="icon" id="mostrarMenu">
@@ -101,14 +106,14 @@
     <!-- Modal Login -->
 
     <section class="modalLogin" id="modalLogin">
-        <form>
+        <form action="/Home/Logar" method="post">
             <h1>LOGIN:</h1>
             <hr>
-            <input type="text" id="usu" class="txtCampos" required placeholder=" Usuário">
+            <input type="text" id="usu" name ="stringLogin" class="txtCampos" required placeholder=" Usuário">
             <br><br>
-            <input type="password" id="sen" class="txtCampos" required placeholder=" Senha">
+            <input type="password" id="sen"  name ="stringSenha" class="txtCampos" required placeholder=" Senha">
             <br><br>
-            <a href=#>Entrar</a>
+            <input type="submit" value="Logar" />
             <h2>Não possui uma conta ainda?</h2>
             <a href=#>Cadastrar</a>
         </form>

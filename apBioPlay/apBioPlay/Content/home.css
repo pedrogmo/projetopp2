@@ -795,7 +795,7 @@ section .wave {
         margin-top: 1em;
     }
 
-    .modalLogin a {
+    .modalLogin a , .modalLogin input[type="submit"]{
         font-size: 1.2rem;
         background-color: #83e600;
         padding: 1em;
@@ -807,12 +807,13 @@ section .wave {
         /* transition: .2s; */
     }
 
-    .modalLogin a:hover {
+    .modalLogin a:hover , .modalLogin input[type="submit"]:hover{
         background-color: #a1e648;
         border-radius: 10px;
         text-decoration: none;
         color: white;
         font-family: 'Aristotelica';
+        cursor:pointer;
         /* transition: .2s; */
     }
 

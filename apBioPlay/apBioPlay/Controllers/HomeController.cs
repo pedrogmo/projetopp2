@@ -11,12 +11,22 @@ namespace apBioPlay.Controllers
 {
     public class HomeController : Controller
     {
+        Usuario usuario;
         // GET: Home
         public ActionResult Index()
         {
-            /*var dao = new UsuariosDAO();
-            ViewBag.alu = dao.Buscar(usuario => usuario.Nome == "p");*/
+            ViewBag.usuario = usuario;
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Logar(string stringLogin, string stringSenha)
+        {
+            UsuariosDAO dao = new UsuariosDAO();
+            usuario = dao.Buscar(usuario => usuario.Nome == stringLogin && usuario.Senha == stringSenha);
+            if (usuario != null)
+                ViewBag.usuario = usuario;
+            return RedirectToAction("Index", "Home");
         }
     }
 }
