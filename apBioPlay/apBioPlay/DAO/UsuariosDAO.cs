@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Microsoft.EntityFrameworkCore;
-using BioPlay18171_18174.Models;
+using apBioPlay.Models;
 
-namespace BioPlay18171_18174.DAO
+namespace apBioPlay.DAO
 {
     public class UsuariosDAO
     {
         public delegate bool Buscado(Usuario algo);
-        public delegate bool Nome(string nome);
+        
         public void Adicionar(Usuario u)
         {
             using (var context = new UsuariosContext())
@@ -28,16 +28,16 @@ namespace BioPlay18171_18174.DAO
             }
         }
 
-        public Usuario Buscar(Buscado cod) //sdfs.Buscar(p => p.RA == var )
+        public Usuario Buscar(Buscado procurado)
         {
             using (var contexto = new UsuariosContext())
             {
                 List<Usuario> lista = contexto.Usuario.ToList();
                 foreach (Usuario u in lista)
-                    if (cod(u))
+                    if (procurado(u))
                         return u;
                 return null;
-                /*return contexto.Usuario
+               /* return contexto.Usuario
                 .Where(p => p.Ra == ra)
                 .FirstOrDefault();*/
             }

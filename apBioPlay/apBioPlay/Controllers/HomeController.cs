@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-using BioPlay18171_18174.DAO;
-using BioPlay18171_18174.Models;
+using apBioPlay.DAO;
+using apBioPlay.Models;
 
-namespace BioPlay18171_18174.Controllers
+namespace apBioPlay.Controllers
 {
     public class HomeController : Controller
     {
         // GET: Home
         public ActionResult Index()
         {
-            /*UsuariosDAO dao = new UsuariosDAO();            
-            ViewBag.Aluno = dao.Buscar(u => u.Codigo==1);*/
+            /*var dao = new UsuariosDAO();
+            ViewBag.alu = dao.Buscar(usuario => usuario.Nome == "p");*/
             return View();
         }
     }
