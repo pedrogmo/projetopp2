@@ -75,8 +75,19 @@ img {
     position: relative;
     top: -.45em;
     right: .5em;
-    font-family: "Century Gothic";
+    font-family: "Mikado Black";
     color: rgb(223, 182, 0);
+}
+
+#mobile #nick
+{
+    float: right;
+    position: relative;
+    top: -.35em;
+    right: .5em;
+    font-family: "Mikado Black";
+    font-size: 1.5rem;
+    color: rgb(105, 105, 105);
 }
 
 /* USUARIO */
@@ -89,6 +100,8 @@ div#usuario {
     display: inline-block;
     box-shadow: 0px 0px 0px 4px rgba(0,0,0,.1);
     height: auto;
+    background-color: white;
+    z-index: 10;
 }
 
 div#usuario ul a img{
@@ -97,7 +110,7 @@ div#usuario ul a img{
     padding-right: 2em;
 }
 
-@media(min-width: 50rem)
+@media(min-width: 60rem)
 {
     #mobile{
         visibility: hidden;
@@ -120,20 +133,11 @@ div#usuario ul a img{
 }
 
 #desktop ul {
-    margin: auto;
-    list-style: none;
-    padding: 1.5em;
-    text-align: center;
-    background-color: #72c800;
-    height: 3em;
-    transition: .3s;
-    box-shadow: 0px 4px rgba(0,0,0,.1);
-    padding-left: 10em;
+    float: left;
 }
 
 #desktop ul li{
     display: inline-block;
-    margin-left: 1.2em;
 }
 
 #desktop ul li a
@@ -155,6 +159,7 @@ div#usuario ul a img{
 #desktop ul li a:hover
 {
     border-bottom: 3px solid white;
+    transition: .2s;
 }
 
 /* LOGO */
@@ -169,34 +174,70 @@ div#usuario ul a img{
 
 /* Estrela */
 
-#desktop ul #info
-{
-    float: right;
-}
+    #desktop
+    {
+        visibility: hidden;
+    }
 
 
-#desktop ul a img
+@media(min-width: 60rem)
 {
-    width: 2em;
-    top: 50%;
-    padding-left: 2em;
-}
 
-#desktop ul h1
-{
-    font-family: "Century Gothic";
-    color: rgb(255, 238, 0);
-    position: relative;
-    top: .8em;
-    right: .75em;
-    font-size: 1.5rem;
-}
-
-@media(min-width: 50rem)
-{
     #desktop
     {
         visibility: initial;
+    }
+
+    #desktop ul li{
+        display: inline-block;
+        margin-left: 1.2em;
+    }
+
+    #desktop ul {
+        margin: auto;
+        list-style: none;
+        padding: 1.5em;
+        text-align: center;
+        background-color: #72c800;
+        height: 3em;
+        transition: .3s;
+        box-shadow: 0px 4px rgba(0,0,0,.1);
+        padding-left: 10em;
+        float: none;
+    }
+
+    #desktop ul #info
+    {
+        float: right;
+    }
+
+
+    #desktop ul a img
+    {
+        width: 2em;
+        top: 50%;
+        padding-left: 2em;
+    }
+
+    #desktop ul h1
+    {
+        font-family: "Mikado Black";
+        color: rgb(255, 238, 0);
+        position: relative;
+        top: -.4em;
+        right: 1.5em;
+        font-size: 1.5rem;
+    }
+
+    #desktop #nick
+    {
+        font-family: "Mikado Black";
+        color: white;
+        position: relative;
+        top: -.4em;
+        right: 1.5em;
+        font-size: 1.5rem;
+        margin-left: 1em;
     }
 }
 
@@ -206,4 +247,111 @@ div#usuario ul a img{
     {
         padding-left: 10em;
     }
+}
+
+/* LIÇÕES */
+
+section#teste
+{
+    padding: 8rem 0;
+    background-color: #fff;
+}
+
+.heading
+{
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+    font-family: "Mikado Black";
+}
+
+.card-wrapper
+{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.card
+{
+    width: 20em;
+    height: 17em;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin: 1rem 0;
+    box-shadow: .5rem .5rem .3rem rgba(0,0,0,.2);
+    border-radius: 50px;
+}
+
+.card a
+{
+    width: 50%;
+    background-color: #1adb00;
+    padding: .6em;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0px 7px #16bd00;
+    transition: .3s;
+    position: relative;
+    font-family: 'Mikado Black';
+    top: 0;
+}
+
+.card a:hover {
+    top: .5em;
+    box-shadow: 0px 0px #16bd00;
+    background-color: #69df59;
+}
+
+.card-img
+{
+    width: 30%;
+    margin-top: 3em;
+}
+
+.card-wrapper h1
+{
+    font-family: "Mikado Black";
+    color: rgb(105, 105, 105);
+    font-size: 1.5em;
+    margin-top: .5em;
+}
+
+@media screen and (min-width: 700px)
+{
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        margin: 2rem;
+    }
+}
+
+@media(min-width: 70rem)
+{
+    section
+    {
+        width: 70%;
+    }
+}
+
+/* CARDS LATERAIS */
+
+section#cards-laterais
+{
+    padding: 8rem 0;
+    background-color: red;
 }
