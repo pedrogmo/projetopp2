@@ -333,6 +333,7 @@ section#teste
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        /* width: 90%; */
     }
 
     .card{
@@ -344,7 +345,7 @@ section#teste
 {
     section
     {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -352,6 +353,45 @@ section#teste
 
 section#cards-laterais
 {
-    padding: 8rem 0;
-    background-color: red;
+    top: 16rem;
+    background-color: transparent;
+    position: absolute;
+    left: -60%;
+    width: 20em;
+    height: auto;
+    visibility: hidden;
+}
+
+section#cards-laterais .card-wrapper2 .card2 
+{
+    width: 20em;
+    height: 30em;
+    background-color: transparent;
+    border: 5px solid #ebeef8;
+    border-radius: 50px;
+    position: relative;
+}
+
+section#cards-laterais .card-wrapper2 .card3 
+{
+    width: 20em;
+    height: 26.5em;
+    background-color: transparent;
+    border: 5px solid #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    border-radius: 50px;
+    position: relative;
+    top: 1em;
+}
+
+@media(min-width: 70rem)
+{
+    section#cards-laterais
+    {
+        visibility: initial;
+        left: 60%;
+    }
 }
