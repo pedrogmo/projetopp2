@@ -37,7 +37,7 @@ namespace apBioPlay.DAO
                     if (procurado(u))
                         return u;
                 return null;
-               /* return contexto.Usuario
+                /*return contexto.Usuario
                 .Where(p => p.Ra == ra)
                 .FirstOrDefault();*/
             }

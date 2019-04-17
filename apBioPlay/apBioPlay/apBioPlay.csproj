@@ -197,6 +197,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LicoesController.cs" />
     <Compile Include="DAO\UsuariosContext.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,6 +213,7 @@
     <Content Include="Content\Fonts\Mikado Light.otf" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Licoes\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
