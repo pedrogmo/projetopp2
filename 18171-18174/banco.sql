@@ -33,11 +33,20 @@ create table RepostaPublicacao(
 	constraint fkUsuarioRespostaPublicacao foreign key(codUsuario) references Usuario(codigo)
 )
 
+create table Licao(
+	codigo int identity(1,1) primary key,
+	nome varchar(30) not null,
+	urlImagem varchar(50) not null
+)
+
 create table Pergunta(
 	codigo int identity(1,1) primary key,
 	texto varchar(50),
 	nivel int not null,
-	codRespCerta int not null
+	codRespCerta int not null,
+	codLicao int not null
+
+	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
 
 create table Resposta(
@@ -49,5 +58,21 @@ create table Resposta(
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codigo)
 )
 
-alter table Pergunta
-add constraint fkRespCerta foreign key(codRespCerta) references Resposta(codigo)
+create table UsuarioLicao(
+	codigo int identity(1,1) primary key,
+	codUsuario int not null,
+	codLicao int not null,
+	data datetime not null
+
+	constraint fkLicaoFeita foreign key(codLicao) references Licao(codigo),
+	constraint fkUsuarioQueFez foreign key(codUsuario) references Usuario(codigo)
+)
+
+create table Amizade(
+	codigo int identity(1,1) primary key,
+	codUsuario1 int not null,
+	codUsuario2 int not null
+
+	constraint fkUsuario1 foreign key(codUsuario1) references Usuario(codigo),
+	constraint fkUsuario2 foreign key(codUsuario2) references Usuario(codigo)
+)
