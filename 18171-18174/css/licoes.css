@@ -362,14 +362,73 @@ section#cards-laterais
     visibility: hidden;
 }
 
-section#cards-laterais .card-wrapper2 .card2 
+section#cards-laterais .card-wrapper2 .cardAmigos 
 {
     width: 20em;
     height: 30em;
     background-color: transparent;
-    border: 5px solid #ebeef8;
-    border-radius: 50px;
+    border: 3px solid #ebeef8;
+    border-radius: 30px;
     position: relative;
+}
+
+.cardAmigos img
+{
+    width: 35%;
+}
+
+.cardAmigos h1
+{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    position: relative;
+    font-family: "Mikado Black"; 
+}
+
+.cardAmigos a
+{
+    width: 70%;
+    background-color: transparent;
+    border: 2px solid gray;
+    padding: .7em;
+    padding-top: .6em; 
+    border-radius: 10px;
+    font-size: .75rem;
+    color: gray;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+    position: relative;
+    font-family: 'Mikado Black';
+    top: 0;
+}
+
+.cardAmigos a:hover
+{
+    background-color: gray;
+    color: white;
+}
+
+.cardAmigos ul
+{
+    position: relative;
+    top: -.5em;
+    margin-bottom: 1.25em;
+}
+
+.cardAmigos ul li
+{
+    list-style: none;
+    padding-top: .25em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    position: relative;
+    right: 1em;
+    font-family: "Mikado Black"; 
 }
 
 section#cards-laterais .card-wrapper2 .card3 
@@ -377,15 +436,17 @@ section#cards-laterais .card-wrapper2 .card3
     width: 20em;
     height: 26.5em;
     background-color: transparent;
-    border: 5px solid #ebeef8;
+    border: 3px solid #ebeef8;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1rem 0;
-    border-radius: 50px;
+    border-radius: 30px;
     position: relative;
     top: 1em;
 }
+
+
 
 @media(min-width: 70rem)
 {
