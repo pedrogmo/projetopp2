@@ -283,7 +283,7 @@ section#teste
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
     margin: 1rem 0;
     box-shadow: .5rem .5rem .3rem rgba(0,0,0,.2);
     border-radius: 50px;
@@ -431,7 +431,7 @@ section#cards-laterais .card-wrapper2 .cardAmigos
     font-family: "Mikado Black"; 
 }
 
-section#cards-laterais .card-wrapper2 .card3 
+section#cards-laterais .card-wrapper2 .cardGraphic
 {
     width: 20em;
     height: 26.5em;
@@ -446,8 +446,6 @@ section#cards-laterais .card-wrapper2 .card3
     top: 1em;
 }
 
-
-
 @media(min-width: 70rem)
 {
     section#cards-laterais
@@ -456,3 +454,5 @@ section#cards-laterais .card-wrapper2 .card3
         left: 60%;
     }
 }
+
+/* GRAPHIC */
