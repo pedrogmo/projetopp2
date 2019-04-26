@@ -19,9 +19,9 @@
 
     <header id="menuV">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Bastidores</a></li>
+            <li><a href="/Home/Index">Home</a></li>
+            <li><a href="/Home/Sobre">Sobre</a></li>
+            <li><a href="/Home/Bastidores">Bastidores</a></li>
             <li><a id="btnLogin" href="#">Login</a></li>
         </ul>
     </header>
@@ -31,9 +31,9 @@
             <img src="~/Images/logoMobile.png" alt="" id="logo">
             <ul>
                 <li><img src="~/Images/logoDesk.png" alt="" id="logo2"></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Bastidores</a></li>
+                <li><a href="/Home/Index">Home</a></li>
+                <li><a href="/Home/Sobre">Sobre</a></li>
+                <li><a href="/Home/Bastidores">Bastidores</a></li>
                 <li><a id="btnLogin2" href="#">Logar</a></li>
             </ul>
 
@@ -63,7 +63,7 @@
         <div class="container">
             <h1 id="title">APRENDENDO E SALVANDO O FUTURO DO PLANETA</h1>
             <hr class="spHeader">
-            <a href="" class="button">Saiba Mais</a>
+            <a href="/Home/Sobre" class="button">Saiba Mais</a>
         </div>
     </section>
 
@@ -101,16 +101,16 @@
     <!-- Modal Login -->
 
     <section class="modalLogin" id="modalLogin">
-        <form action="/Home/Logar" method="post">
+        <form action="/Home/Logar">
             <h1>LOGIN:</h1>
             <hr>
             <input type="text" id="usu" name ="stringLogin" class="txtCampos" required placeholder=" Usuário">
             <br><br>
-            <input type="password" id="sen"  name ="stringSenha" class="txtCampos" required placeholder=" Senha">
+            <input type="password" id="sen" name ="stringSenha" class="txtCampos" required placeholder=" Senha">
             <br><br>
             <input type="submit" value="Logar" />
             <h2>Não possui uma conta ainda?</h2>
-            <a href=#>Cadastrar</a>
+            <a href="/Home/Cadastrar">Cadastrar</a>
         </form>
     </section>
 

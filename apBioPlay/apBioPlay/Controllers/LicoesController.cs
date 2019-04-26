@@ -15,5 +15,15 @@ namespace apBioPlay.Controllers
             ViewBag.usuario = usuario;
             return View();
         }
+
+        public ActionResult Perfil()
+        {
+            return View();
+        }
+
+        public ActionResult Forum()
+        {
+            return View();
+        }
     }
 }

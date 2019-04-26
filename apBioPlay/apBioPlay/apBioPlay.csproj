@@ -214,6 +214,10 @@
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Licoes\Index.cshtml" />
+    <Content Include="Views\Home\Sobre.cshtml" />
+    <Content Include="Views\Home\Bastidores.cshtml" />
+    <Content Include="Views\Licoes\Perfil.cshtml" />
+    <Content Include="Views\Licoes\Forum.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -17,14 +17,44 @@ namespace apBioPlay.Controllers
             return View();
         }
 
-        [HttpPost]
+        public ActionResult Sobre()
+        {
+            return View();
+        }
+
+        public ActionResult Bastidores()
+        {
+            return View();
+        }
+
         public ActionResult Logar(string stringLogin, string stringSenha)
         {
             UsuariosDAO dao = new UsuariosDAO();
             Usuario usuario = dao.Buscar(u => u.Nome == stringLogin && u.Senha == stringSenha);
             if (usuario == null)
                 return RedirectToAction("Index", "Home");
-            return RedirectToAction("Index", "Licoes", usuario);
+            else
+                return RedirectToAction("Index", "Licoes", usuario);
+        }
+
+        public ActionResult Cadastrar()
+        {
+            return View();
+        }
+
+        public ActionResult CadastroDeUsuario(Usuario u)
+        {
+            if (ModelState.IsValid)
+            {
+                UsuariosDAO dao = new UsuariosDAO();
+                dao.Adicionar(u);
+                return RedirectToAction("Index", "Licoes", u);
+            }
+            else
+            {
+                //salvar dados do formulário
+                return RedirectToAction("Cadastrar", "Home");
+            }
         }
     }
 }
