@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+    string nomeAnterior = "";
+    string senhaAnterior = "";
+    string emailAnterior = "";
+    string dataAnterior = "";
+    if (ViewBag.usuarioAnterior != null)
+    {
+        nomeAnterior = ViewBag.usuarioAnterior.Nome;
+        senhaAnterior = ViewBag.usuarioAnterior.Senha;
+        emailAnterior = ViewBag.usuarioAnterior.Email;
+        dataAnterior = ViewBag.usuarioAnterior.DataNascimento.ToString();
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastrar</title>
+</head>
+<body>
+    <div>
+        <form action="/Home/CadastroDeUsuario" method="post">
+            <label>Nome: </label><input value ="@nomeAnterior"type="text" name="u.Nome" /><br />
+            <br />@Html.ValidationMessage("u.Nome")<br /><br />
+            <label>Senha: </label><input value ="@senhaAnterior" type="password" name="u.Senha" /><br />
+            <br />@Html.ValidationMessage("u.Senha")<br /><br />
+            <label>Email: </label><input value ="@emailAnterior" type="email" name="u.Email" /><br />
+            <br />@Html.ValidationMessage("u.Email")<br /><br />
+            <label>DataNascimento: </label><input value ="@dataAnterior" type="datetime" name="u.DataNascimento" /><br />
+            <br />@Html.ValidationMessage("u.DataNascimento")<br /><br />
+            <input value="Cadastrar" type="submit" />
+        </form>
+    </div>
+</body>
+</html>

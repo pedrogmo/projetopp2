@@ -42,6 +42,7 @@ namespace apBioPlay.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult CadastroDeUsuario(Usuario u)
         {
             if (ModelState.IsValid)
@@ -52,8 +53,8 @@ namespace apBioPlay.Controllers
             }
             else
             {
-                //salvar dados do formulário
-                return RedirectToAction("Cadastrar", "Home");
+                ViewBag.usuarioAnterior = u;
+                return View("Cadastrar");
             }
         }
     }
