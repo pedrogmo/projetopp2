@@ -18,7 +18,7 @@ namespace apBioPlay.Models
         public string Senha { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "mm/dd/yyyy")]
-        public Date DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
         public int Nivel { get; set; }
         public string FotoPerfil { get; set; }
     }

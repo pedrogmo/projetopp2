@@ -10,7 +10,10 @@
         nomeAnterior = ViewBag.usuarioAnterior.Nome;
         senhaAnterior = ViewBag.usuarioAnterior.Senha;
         emailAnterior = ViewBag.usuarioAnterior.Email;
-        dataAnterior = ViewBag.usuarioAnterior.DataNascimento.ToString();
+        DateTime d = ViewBag.usuarioAnterior.DataNascimento;
+        dataAnterior = d.Year.ToString().PadLeft(4,'0') + "-" + d.Month.ToString().PadLeft(2,'0') + "-" + d.Day.ToString().PadLeft(2,'0');
+
+        ViewBag.usuarioAnterior = null;
     }
 }
 
@@ -20,14 +23,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/Content/cadastro.css">
-    <link rel="stylesheet" href="~/Content/licoes.css">
     <title>Cadastrar</title>
 </head>
 <body>
 
     <header id="desktop">
-        <img src="~/Images/logoMobile.png" alt="">
         <ul>
+            <img src="~/Images/logoMobile.png" alt="">
             <li><a id="inicio" href="/Home/Index">Home</a></li>
             <li><a href="/Home/Sobre">Sobre</a></li>
             <li><a href="/Home/Bastidores">Bastidores</a></li>
@@ -38,16 +40,17 @@
         <div>
             <h1 class="heading">Cadastro:</h1>
             <div class="card-wrapper">
-                <form action="/Home/CadastroDeUsuario" method="post">
-                    <label>Nome: </label><input value="@nomeAnterior" type="text" name="u.Nome" /><br />
-                    <br />@Html.ValidationMessage("u.Nome")<br /><br />
-                    <label>Senha: </label><input value="@senhaAnterior" type="password" name="u.Senha" /><br />
-                    <br />@Html.ValidationMessage("u.Senha")<br /><br />
-                    <label>Email: </label><input value="@emailAnterior" type="email" name="u.Email" /><br />
-                    <br />@Html.ValidationMessage("u.Email")<br /><br />
-                    <label>DataNascimento: </label>
-                    <input value="@dataAnterior" type="date" name="u.DataNascimento" /><br />
-                    <br />@Html.ValidationMessage("u.DataNascimento")<br /><br />
+                <img src="~/Images/Mick2.png" alt="Alternate Text" id="mick" />
+                <form action="/Home/CadastroDeUsuario" method="post" id="form">
+                    <label class="info">Nome </label><br /><input class="txtCampos" value="@nomeAnterior" type="text" name="u.Nome" placeholder=" Ex: JoãozinGameprays"/><br />
+                    <br />@Html.ValidationMessage("u.Nome")<br />
+                    <label class="info">Senha: </label><br /><input class="txtCampos" value="@senhaAnterior" type="password" name="u.Senha" placeholder=" Senha"/><br />
+                    <br />@Html.ValidationMessage("u.Senha")<br />
+                    <label class="info">Email </label><br /><input class="txtCampos" value="@emailAnterior" type="email" name="u.Email" placeholder=" Ex: jgameprays@email.com"/><br />
+                    <br />@Html.ValidationMessage("u.Email")<br />
+                    <label class="info">Nascimento </label><br />
+                    <input value="@dataAnterior" class="txtCampos" type="date" name="u.DataNascimento" /><br />
+                    <br />@Html.ValidationMessage("u.DataNascimento")<br />
                     <input value="Cadastrar" type="submit" />
                 </form>
             </div>

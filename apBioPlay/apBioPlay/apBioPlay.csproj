@@ -174,9 +174,12 @@
     <Content Include="Images\controle.png" />
     <Content Include="Images\hdiw.png" />
     <Content Include="Images\hdiw2.png" />
+    <Content Include="Images\IEstrela.png" />
     <Content Include="Images\Iforum.png" />
+    <Content Include="Images\IforumH.png" />
     <Content Include="Images\IHome.png" />
     <Content Include="Images\ilha.png" />
+    <Content Include="Images\INovoAmigo.png" />
     <Content Include="Images\IPerfil.png" />
     <Content Include="Images\ISino.png" />
     <Content Include="Images\livro.png" />
@@ -184,6 +187,8 @@
     <Content Include="Images\logoDesk2.png" />
     <Content Include="Images\logoDesk3.png" />
     <Content Include="Images\logoMobile.png" />
+    <Content Include="Images\Mick.png" />
+    <Content Include="Images\Mick2.png" />
     <Content Include="Images\paisagem.png" />
     <Content Include="Images\paisagem2.png" />
     <Content Include="Images\planet.png" />
