@@ -1,0 +1,106 @@
+﻿
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./Fonts/aristotelica.text-trial-bold.ttf');
+}
+
+@font-face {
+    font-family: 'Mikado';
+    src: url('./Fonts/Mikado\ Light.otf');
+}
+
+@font-face {
+    font-family: 'Mikado Black';
+    src: url('./Fonts/Mikado\ Black.otf');
+} 
+
+
+/* DEFAULT */
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+/* HEADER DESKTOP */
+
+#desktop
+{
+    position: fixed;
+	left: 0;
+    right: 0;
+    z-index: 10; 
+}
+
+#desktop ul li{
+    display: inline-block;
+    position: relative;
+    left: -5em;
+}
+
+#desktop ul li a
+{
+    font-size: 1.5rem;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Aristotelica';
+}
+
+#desktop ul li #inicio
+{
+    border-bottom: 3px solid white;
+}
+
+#desktop ul li a:hover
+{
+    border-bottom: 3px solid white;
+    transition: .2s;
+}
+
+/* LOGO */
+#desktop img {
+    width: 12em;
+    position: relative;
+    top: 1em;
+    left: 1em;
+    float: left;
+    padding-right: 2em;
+}
+
+/* FORMULÁRIO DE CADASTRO */
+
+    #teste input[type="submit"]
+    {
+        font-size: 1.2rem;
+        background-color: #83e600;
+        padding: 1em;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Aristotelica';
+        padding-top: 1.3em;
+        border: none;
+    }
+
+    #teste input[type="submit"]:hover 
+    {
+        background-color: #a1e648;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Aristotelica';
+        cursor: pointer;
+    }

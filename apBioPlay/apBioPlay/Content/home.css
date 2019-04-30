@@ -1,8 +1,4 @@
 ﻿
-@import url('https://fonts.googleapis.com/css?family=Righteous');
-
-@import url('https://fonts.googleapis.com/css?family=Raleway:300');
-
 @font-face { font-family: 'Aristotelica'; 
              src: url('./Fonts/aristotelica.text-trial-bold.ttf'); } 
 
@@ -805,6 +801,12 @@ section .wave {
         font-family: 'Aristotelica';
         padding-top: 1.3em;
         /* transition: .2s; */
+    }
+
+    .modalLogin input[type="submit"]
+    {
+        border: none;
+        margin-top: -1em;
     }
 
     .modalLogin a:hover , .modalLogin input[type="submit"]:hover{
