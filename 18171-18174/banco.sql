@@ -3,7 +3,7 @@ create table Usuario(
 	nome varchar(30) not null,
 	email varchar(30) not null,
 	senha varchar(30) not null,
-	dataNascimento dateTime not null,
+	dataNascimento date not null,
 	nivel int not null,
 	fotoPerfil varchar(max)
 )
