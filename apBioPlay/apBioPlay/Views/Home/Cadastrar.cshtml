@@ -5,6 +5,10 @@
     string senhaAnterior = "";
     string emailAnterior = "";
     string dataAnterior = "";
+    HtmlString msgNome = new HtmlString(""),
+               msgSenha = new HtmlString(""),
+               msgData = new HtmlString(""),
+               msgEmail = new HtmlString("");
     if (ViewBag.usuarioAnterior != null)
     {
         nomeAnterior = ViewBag.usuarioAnterior.Nome;
@@ -12,6 +16,11 @@
         emailAnterior = ViewBag.usuarioAnterior.Email;
         DateTime d = ViewBag.usuarioAnterior.DataNascimento;
         dataAnterior = d.Year.ToString().PadLeft(4,'0') + "-" + d.Month.ToString().PadLeft(2,'0') + "-" + d.Day.ToString().PadLeft(2,'0');
+
+        msgNome = Html.ValidationMessage("u.Nome");
+        msgSenha = Html.ValidationMessage("u.Senha");
+        msgEmail = Html.ValidationMessage("u.Email");
+        msgData = Html.ValidationMessage("u.DataNascimento");
 
         ViewBag.usuarioAnterior = null;
     }
@@ -43,14 +52,14 @@
                 <img src="~/Images/Mick2.png" alt="Alternate Text" id="mick" />
                 <form action="/Home/CadastroDeUsuario" method="post" id="form">
                     <label class="info">Nome </label><br /><input class="txtCampos" value="@nomeAnterior" type="text" name="u.Nome" placeholder=" Ex: JoãozinGameprays"/><br />
-                    <br />@Html.ValidationMessage("u.Nome")<br />
+                    <br />@msgNome<br />
                     <label class="info">Senha: </label><br /><input class="txtCampos" value="@senhaAnterior" type="password" name="u.Senha" placeholder=" Senha"/><br />
-                    <br />@Html.ValidationMessage("u.Senha")<br />
+                    <br />@msgSenha<br />
                     <label class="info">Email </label><br /><input class="txtCampos" value="@emailAnterior" type="email" name="u.Email" placeholder=" Ex: jgameprays@email.com"/><br />
-                    <br />@Html.ValidationMessage("u.Email")<br />
+                    <br />@msgEmail<br />
                     <label class="info">Nascimento </label><br />
                     <input value="@dataAnterior" class="txtCampos" type="date" name="u.DataNascimento" /><br />
-                    <br />@Html.ValidationMessage("u.DataNascimento")<br />
+                    <br />@msgData<br />
                     <input value="Cadastrar" type="submit" />
                 </form>
             </div>
