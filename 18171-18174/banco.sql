@@ -76,3 +76,15 @@ create table Amizade(
 	constraint fkUsuario1 foreign key(codUsuario1) references Usuario(codigo),
 	constraint fkUsuario2 foreign key(codUsuario2) references Usuario(codigo)
 )
+
+create table Erro(
+	codigo int identity(1,1) primary key,
+	nome varchar(50) not null,
+	ocasioes int not null
+)
+
+insert into Erro values('Conexão com banco', 1)
+insert into Erro values('Ponteiro nulo', 5)
+insert into Erro values('Formatação de String', 3)
+insert into Erro values('Importação de arquivo externo', 10)
+insert into Erro values('Lógica errada', 2)

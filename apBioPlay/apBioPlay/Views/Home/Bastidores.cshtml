@@ -8,12 +8,16 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="~/Scripts/pareto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>    
     <title>Bastidores</title>
 </head>
 <body>
-    <div> 
-    </div>
+    <p id="nome1" hidden>@ViewBag.erros[0].Nome</p><p id="ocasioes1" hidden>@ViewBag.erros[0].Ocasioes</p>
+    <p id="nome2" hidden>@ViewBag.erros[1].Nome</p><p id="ocasioes2" hidden>@ViewBag.erros[1].Ocasioes</p>
+    <p id="nome3" hidden>@ViewBag.erros[2].Nome</p><p id="ocasioes3" hidden>@ViewBag.erros[2].Ocasioes</p>
+    <p id="nome4" hidden>@ViewBag.erros[3].Nome</p><p id="ocasioes4" hidden>@ViewBag.erros[3].Ocasioes</p>
+    <p id="nome5" hidden>@ViewBag.erros[4].Nome</p><p id="ocasioes5" hidden>@ViewBag.erros[4].Ocasioes</p>
+    <canvas id="canvas"></canvas>
+    <script src="~/Scripts/pareto.js"></script>
 </body>
 </html>

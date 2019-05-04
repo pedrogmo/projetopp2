@@ -1,5 +1,32 @@
-﻿var data = {
-    labels: ["8", "7", "9", "11", "10"],
+﻿function val(campo) {
+    return document.getElementById(campo).innerHTML;
+}
+
+function acumulada(numero) {
+    var total = parseInt(val("ocasioes1")) + parseInt(val("ocasioes2")) + parseInt(val("ocasioes3")) + parseInt(val("ocasioes4")) + parseInt(val("ocasioes5"));
+    var result;
+    switch (numero) {
+        case 1:
+            result = parseInt(val("ocasioes1")) / total;
+            break;
+        case 2:
+            result = (parseInt(val("ocasioes1")) + parseInt(val("ocasioes2"))) / total;
+            break;
+        case 3:
+            result = (parseInt(val("ocasioes1")) + parseInt(val("ocasioes2")) + parseInt(val("ocasioes3"))) / total;
+            break;
+        case 4:
+            result = (parseInt(val("ocasioes1")) + parseInt(val("ocasioes2")) + parseInt(val("ocasioes3")) + parseInt(val("ocasioes4"))) / total;
+            break;
+        case 5:
+            result = 1;
+            break;
+    }
+    return (result * 100).toFixed(2);
+}
+
+var data = {
+    labels: [val("nome1"), val("nome2"), val("nome3"), val("nome4"), val("nome5")],
     datasets: [{
         type: "line",
         label: "Acumulado",
@@ -7,21 +34,14 @@
         backgroundColor: "#BA1E14",
         pointBorderWidth: 5,
         fill: false,
-        data: [34.04, 57.45, 76.60, 89.36, 100.00],
+        data: [acumulada(1), acumulada(2), acumulada(3), acumulada(4), acumulada(5)],
         yAxisID: 'y-axis-2'
     }, {
         type: "bar",
-        label: "Asistencia",
-        borderColor: "#56B513",
-        backgroundColor: "#56B513",
-        data: [16, 11, 9, 6, 5],
-        yAxisID: 'y-axis-1'
-    }, {
-        type: "bar",
-        label: "Solución",
+        label: "Ocasiões",
         borderColor: "#000FAA",
         backgroundColor: "#000FAA",
-        data: [16, 11, 9, 6, 5],
+        data: [val("ocasioes1"), val("ocasioes2"), val("ocasioes3"), val("ocasioes4"), val("ocasioes5")],
         yAxisID: 'y-axis-1'
     }]
 };
@@ -32,7 +52,7 @@ var options = {
             stacked: true,
             scaleLabel: {
                 display: true,
-                labelString: "Estaciones"
+                labelString: "Erros"
             }
         }],
 
@@ -46,7 +66,7 @@ var options = {
             },
             scaleLabel: {
                 display: true,
-                labelString: "Minutos"
+                labelString: "Número"
             }
         }, {
             type: "linear",
@@ -60,7 +80,7 @@ var options = {
             },
             scaleLabel: {
                 display: true,
-                labelString: "Porcentaje"
+                labelString: "Porcentagem"
             }
         }]
     }

@@ -24,6 +24,7 @@ namespace apBioPlay.Controllers
 
         public ActionResult Bastidores()
         {
+            ViewBag.erros = new ErrosDAO().Lista().OrderByDescending(e => e.Ocasioes).ToList();
             return View();
         }
 
