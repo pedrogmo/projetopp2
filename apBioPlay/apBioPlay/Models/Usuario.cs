@@ -10,16 +10,27 @@ namespace apBioPlay.Models
     {
         [Key]
         public int Codigo { get; set; }
-        [Required, StringLength(30)]
+
+        [Required(ErrorMessage = "O nome é obrigatório", AllowEmptyStrings = false)]
+        [StringLength(50)]
+        //[RegularExpression(@"^[A - Za - záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ] +$", ErrorMessage = "Nome inválido")]
         public string Nome { get; set; }
-        [Required, StringLength(30)]
+
+        [Required(ErrorMessage = "O email é obrigatório", AllowEmptyStrings = false)]
+        [StringLength(50)]
         public string Email { get; set; }
-        [Required, StringLength(30)]
+
+        [Required(ErrorMessage = "A senha é obrigatória", AllowEmptyStrings = false)]
+        [StringLength(50, MinimumLength = 4)]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
-        [Required]
-        [DisplayFormat(DataFormatString = "mm/dd/yyyy")]
+
+        [Required(ErrorMessage = "A data de nascimento é obrigatória")]
+        [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
         public DateTime DataNascimento { get; set; }
+
         public int Nivel { get; set; }
+
         public string FotoPerfil { get; set; }
     }
 }
