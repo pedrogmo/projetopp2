@@ -7,14 +7,6 @@ function val(campo) {
     return document.getElementById(campo).innerHTML;
 }
 
-function acumulada(numero) {
-    var result=0;
-    for (var i = 0; i <= numero; i++)
-        result += ocasioes[i];
-    result = result / totalOcasioes;
-    return (result * 100).toFixed(2);
-}
-
 window.onload = function () {
     var qtd = parseInt(val("quantidade"));
     for (var i = 0; i < qtd; i++) {
@@ -22,8 +14,11 @@ window.onload = function () {
         ocasioes[i] = parseInt(val("ocasioes" + i));
         totalOcasioes += ocasioes[i];
     }
-    for (var i = 0; i < qtd; i++)
-        acumulados[i] = acumulada(i);
+    var valorAcumulado = 0;
+    for (var i = 0; i < qtd; i++) {
+        valorAcumulado += ocasioes[i];
+        acumulados[i] = (valorAcumulado / totalOcasioes * 100).toFixed(2);
+    }
     var ctx = document.getElementById("canvas").getContext("2d");
     window.myBar = new Chart(ctx, {
         type: 'bar',
