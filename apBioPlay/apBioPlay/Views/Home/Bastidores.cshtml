@@ -12,11 +12,13 @@
     <title>Bastidores</title>
 </head>
 <body>
-    <p id="nome1" hidden>@ViewBag.erros[0].Nome</p><p id="ocasioes1" hidden>@ViewBag.erros[0].Ocasioes</p>
-    <p id="nome2" hidden>@ViewBag.erros[1].Nome</p><p id="ocasioes2" hidden>@ViewBag.erros[1].Ocasioes</p>
-    <p id="nome3" hidden>@ViewBag.erros[2].Nome</p><p id="ocasioes3" hidden>@ViewBag.erros[2].Ocasioes</p>
-    <p id="nome4" hidden>@ViewBag.erros[3].Nome</p><p id="ocasioes4" hidden>@ViewBag.erros[3].Ocasioes</p>
-    <p id="nome5" hidden>@ViewBag.erros[4].Nome</p><p id="ocasioes5" hidden>@ViewBag.erros[4].Ocasioes</p>
+    <p id="quantidade" hidden>@ViewBag.erros.Count</p>
+    @for (int i = 0; i < ViewBag.erros.Count; i++)
+    {
+        string nome = "nome" + i;
+        string ocasioes = "ocasioes" + i;
+        <p id="@nome" hidden>@ViewBag.erros[i].Nome</p><p id="@ocasioes" hidden>@ViewBag.erros[i].Ocasioes</p>
+    }
     <canvas id="canvas"></canvas>
     <script src="~/Scripts/pareto.js"></script>
 </body>

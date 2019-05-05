@@ -86,5 +86,6 @@ create table Erro(
 insert into Erro values('Conexão com banco', 1)
 insert into Erro values('Ponteiro nulo', 5)
 insert into Erro values('Formatação de String', 3)
-insert into Erro values('Importação de arquivo externo', 10)
+insert into Erro values('Importação de arquivo externo', 7)
 insert into Erro values('Lógica errada', 2)
+insert into Erro values('Css incorreto', 9)

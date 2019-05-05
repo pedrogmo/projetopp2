@@ -1,32 +1,39 @@
-﻿function val(campo) {
+﻿var nomes = new Array();
+var ocasioes = new Array();
+var acumulados = new Array();
+var totalOcasioes = 0;
+
+function val(campo) {
     return document.getElementById(campo).innerHTML;
 }
 
 function acumulada(numero) {
-    var total = parseInt(val("ocasioes1")) + parseInt(val("ocasioes2")) + parseInt(val("ocasioes3")) + parseInt(val("ocasioes4")) + parseInt(val("ocasioes5"));
-    var result;
-    switch (numero) {
-        case 1:
-            result = parseInt(val("ocasioes1")) / total;
-            break;
-        case 2:
-            result = (parseInt(val("ocasioes1")) + parseInt(val("ocasioes2"))) / total;
-            break;
-        case 3:
-            result = (parseInt(val("ocasioes1")) + parseInt(val("ocasioes2")) + parseInt(val("ocasioes3"))) / total;
-            break;
-        case 4:
-            result = (parseInt(val("ocasioes1")) + parseInt(val("ocasioes2")) + parseInt(val("ocasioes3")) + parseInt(val("ocasioes4"))) / total;
-            break;
-        case 5:
-            result = 1;
-            break;
-    }
+    var result=0;
+    for (var i = 0; i <= numero; i++)
+        result += ocasioes[i];
+    result = result / totalOcasioes;
     return (result * 100).toFixed(2);
 }
 
+window.onload = function () {
+    var qtd = parseInt(val("quantidade"));
+    for (var i = 0; i < qtd; i++) {
+        nomes[i] = val("nome" + i);
+        ocasioes[i] = parseInt(val("ocasioes" + i));
+        totalOcasioes += ocasioes[i];
+    }
+    for (var i = 0; i < qtd; i++)
+        acumulados[i] = acumulada(i);
+    var ctx = document.getElementById("canvas").getContext("2d");
+    window.myBar = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+    });
+};
+
 var data = {
-    labels: [val("nome1"), val("nome2"), val("nome3"), val("nome4"), val("nome5")],
+    labels: nomes,
     datasets: [{
         type: "line",
         label: "Acumulado",
@@ -34,14 +41,14 @@ var data = {
         backgroundColor: "#BA1E14",
         pointBorderWidth: 5,
         fill: false,
-        data: [acumulada(1), acumulada(2), acumulada(3), acumulada(4), acumulada(5)],
+        data: acumulados,
         yAxisID: 'y-axis-2'
     }, {
         type: "bar",
         label: "Ocasiões",
         borderColor: "#000FAA",
         backgroundColor: "#000FAA",
-        data: [val("ocasioes1"), val("ocasioes2"), val("ocasioes3"), val("ocasioes4"), val("ocasioes5")],
+        data: ocasioes,
         yAxisID: 'y-axis-1'
     }]
 };
@@ -84,14 +91,4 @@ var options = {
             }
         }]
     }
-};
-
-window.onload = function () {
-    var ctx = document.getElementById("canvas").getContext("2d");
-
-    window.myBar = new Chart(ctx, {
-        type: 'bar',
-        data: data,
-        options: options
-    });
 };
