@@ -5,17 +5,111 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/Content/licoes.css">
+    <title>BioPlay - Lições</title>
 </head>
 <body>
-    <div>
-        <h1>Nome: @ViewBag.usuario.Nome</h1>
-        <h1>Email: @ViewBag.usuario.Email</h1>
-        <h1>Data Nascimento: @ViewBag.usuario.DataNascimento</h1>
-        <h1>Nível: @ViewBag.usuario.Nivel</h1>
+    <header id="mobile">
+        <ul>
+            <a href="" id="notificacao"><img src="~/Images/ISino.png" alt=""></a>
+            <a href="" id="pontos"><img src="~/Images/IEstrela.png" alt=""></a>
+            <h1>0</h1>
+            <h1 id="nick">NICKNAME</h1>
+        </ul>
+    </header>
+
+    <div id="desktop">
+        <img src="~/Images/logoMobile.png" alt="">
+        <ul>
+            <li><a id="inicio" href="#">Início</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Fórum</a></li>
+
+            <div id="info">
+                <li><a href="" id="pontos2"><img src="~/Images/IEstrela.png" alt=""></a></li>
+                <li><h1>0</h1></li>
+                <li><h1 id="nick">NICKNAME</h1></li>
+            </div>
+        </ul>
     </div>
+
+    <div id="usuario">
+        <ul>
+            <a href="" id="inicio"><img src="~/Images/IHome.png" alt=""></a>
+            <a href="" id="perfil"><img src="~/Images/IPerfil.png" alt=""></a>
+            <a href="" id="forum"><img src="~/Images/IForum.png" alt=""></a>
+        </ul>
+    </div>
+
+    <!-- LIÇÕES -->
+
+    <section id="teste">
+        <div>
+            <h1 class="heading">Lições</h1>
+            <div class="card-wrapper">
+
+                <!-- <div class="card">
+                    <img src="img/licoes/i1.png" alt="card background" class="card-img">
+                    <h1>Reciclagem</h1>
+                    <a href="#">Iniciar</a>
+                </div>   -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDS LATERAIS -->
+
+    <section id="cards-laterais">
+        <div class="card-wrapper2">
+            <div class="cardAmigos">
+                <h1>Amigos</h1>
+                <img src="~/Images/INovoAmigo.png" alt="">
+
+                <ul>
+                    <li>ABABABA</li>
+                    <li>ABABABA</li>
+                    <li>ABABABA</li>
+                    <li>ABABABA</li>
+                    <li>ABABABA</li>
+                    <li>ABABABA</li>
+                    <li>ABABABA</li>
+                    <li>ABABABA</li>
+                </ul>
+
+                <a href="#">Procurar</a>
+                <a href="#">Adicionar</a>
+            </div>
+
+            <div class="cardGraphic">
+                <div class="center-graphic">
+                    <h1>Total: 80</h1>
+
+                    <div id="graphicBox">
+                        <h1>Acertos:</h1>
+                        <div class="graphic"></div>
+                        <div id="bar2" class="progress"></div>
+                    </div>
+
+                    <div id="graphicBox">
+                        <h1>Erros:</h1>
+                        <div class="graphic"></div>
+                        <div id="bar3" class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="desempenho">
+                    <img src="" alt="">
+                    <p>P DE PEDRO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>

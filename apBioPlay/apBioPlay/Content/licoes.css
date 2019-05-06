@@ -1,15 +1,17 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Righteous');
+﻿@font-face {
+    font-family: 'Aristotelica';
+    src: url('./Fonts/aristotelica.text-trial-bold.ttf');
+}
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+@font-face {
+    font-family: 'Mikado';
+    src: url('./Fonts/Mikado\ Light.otf');
+}
 
-@font-face { font-family: 'Aristotelica'; 
-             src: url('../fonts/aristotelica.text-trial-bold.ttf'); } 
-
-@font-face { font-family: 'Mikado'; 
-             src: url('../fonts/Mikado\ Light.otf'); } 
-
-@font-face { font-family: 'Mikado Black'; 
-             src: url('../fonts/Mikado\ Black.otf'); } 
+@font-face {
+    font-family: 'Mikado Black';
+    src: url('./Fonts/Mikado\ Black.otf');
+} 
 
 /* DEFAULT */
 
@@ -33,62 +35,60 @@ img {
 
 #mobile {
     position: fixed;
-	left: 0;
+    left: 0;
     right: 0;
     z-index: 10;
 }
 
-#mobile ul {
-    margin: auto;
-    list-style: none;
-    padding: 1.5em;
-    text-align: center;
-    background-color: white;
-    height: 3em;
-    transition: .3s;
-    box-shadow: 0px 4px rgba(0,0,0,.1);
-}
+    #mobile ul {
+        margin: auto;
+        list-style: none;
+        padding: 1.5em;
+        text-align: center;
+        background-color: white;
+        height: 3em;
+        transition: .3s;
+        box-shadow: 0px 4px rgba(0,0,0,.1);
+    }
 
-#mobile li {
-	display: inline-block;
-    margin: .2em;
-}
+    #mobile li {
+        display: inline-block;
+        margin: .2em;
+    }
 
-#mobile a {
-	text-decoration: none;
-	padding: .5;
-	text-transform: uppercase;
-	color: #83e600;
-    font-size: .8rem;
-    font-family: 'Aristotelica';
-}
+    #mobile a {
+        text-decoration: none;
+        padding: .5;
+        text-transform: uppercase;
+        color: #83e600;
+        font-size: .8rem;
+        font-family: 'Aristotelica';
+    }
 
-#mobile ul a img {
-    width: 3.5em;
-    float: left;
-    margin-right: 2em;
-}
+    #mobile ul a img {
+        width: 3.5em;
+        float: left;
+        margin-right: 2em;
+    }
 
-#mobile h1
-{
-    float: left;
-    position: relative;
-    top: -.45em;
-    right: .5em;
-    font-family: "Mikado Black";
-    color: rgb(223, 182, 0);
-}
+    #mobile h1 {
+        float: left;
+        position: relative;
+        top: -.45em;
+        right: .5em;
+        font-family: "Mikado Black";
+        color: rgb(223, 182, 0);
+    }
 
-#mobile #nick
-{
-    float: right;
-    position: relative;
-    top: -.35em;
-    right: .5em;
-    font-family: "Mikado Black";
-    font-size: 1.5rem;
-    color: rgb(105, 105, 105);
-}
+    #mobile #nick {
+        float: right;
+        position: relative;
+        top: -.35em;
+        right: .5em;
+        font-family: "Mikado Black";
+        font-size: 1.5rem;
+        color: rgb(105, 105, 105);
+    }
 
 /* USUARIO */
 
@@ -104,161 +104,145 @@ div#usuario {
     z-index: 10;
 }
 
-div#usuario ul a img{
-    position: relative;
-    width: 3.5em;
-    padding-right: 2em;
-}
+    div#usuario ul a img {
+        position: relative;
+        width: 3.5em;
+        padding-right: 2em;
+    }
 
-@media(min-width: 60rem)
-{
-    #mobile{
+@media(min-width: 60rem) {
+    #mobile {
         visibility: hidden;
     }
 
-    div#usuario{
+    div#usuario {
         visibility: hidden;
     }
 }
 
 /* HEADER DESKTOP */
 
-#desktop
-{
+#desktop {
     position: fixed;
-	left: 0;
+    left: 0;
     right: 0;
-    z-index: 10; 
+    z-index: 10;
     visibility: hidden;
 }
 
-#desktop ul {
-    float: left;
-}
+    #desktop ul {
+        float: left;
+    }
 
-#desktop ul li{
-    display: inline-block;
-}
+        #desktop ul li {
+            display: inline-block;
+        }
 
-#desktop ul li a
-{
-    font-size: 1.5rem;
-    position: relative;
-    top: .75em;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-family: 'Aristotelica';
-}
+            #desktop ul li a {
+                font-size: 1.5rem;
+                position: relative;
+                top: .75em;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: white;
+                font-family: 'Aristotelica';
+            }
 
-#desktop ul li #inicio
-{
-    border-bottom: 3px solid white;
-}
+            #desktop ul li #inicio {
+                border-bottom: 3px solid white;
+            }
 
-#desktop ul li a:hover
-{
-    border-bottom: 3px solid white;
-    transition: .2s;
-}
+            #desktop ul li a:hover {
+                border-bottom: 3px solid white;
+                transition: .2s;
+            }
 
-/* LOGO */
-#desktop img {
-    width: 12em;
-    position: relative;
-    top: 1em;
-    left: 1em;
-    float: left;
-    padding-right: 2em;
-}
+    /* LOGO */
+    #desktop img {
+        width: 12em;
+        position: relative;
+        top: 1em;
+        left: 1em;
+        float: left;
+        padding-right: 2em;
+    }
 
 /* Estrela */
 
-    #desktop
-    {
-        visibility: hidden;
-    }
+#desktop {
+    visibility: hidden;
+}
 
 
-@media(min-width: 60rem)
-{
+@media(min-width: 60rem) {
 
-    #desktop
-    {
+    #desktop {
         visibility: initial;
     }
 
-    #desktop ul li{
-        display: inline-block;
-        margin-left: 1.2em;
-    }
+        #desktop ul li {
+            display: inline-block;
+            margin-left: 1.2em;
+        }
 
-    #desktop ul {
-        margin: auto;
-        list-style: none;
-        padding: 1.5em;
-        text-align: center;
-        background-color: #72c800;
-        height: 3em;
-        transition: .3s;
-        box-shadow: 0px 4px rgba(0,0,0,.1);
-        padding-left: 10em;
-        float: none;
-    }
+        #desktop ul {
+            margin: auto;
+            list-style: none;
+            padding: 1.5em;
+            text-align: center;
+            background-color: #72c800;
+            height: 3em;
+            transition: .3s;
+            box-shadow: 0px 4px rgba(0,0,0,.1);
+            padding-left: 10em;
+            float: none;
+        }
 
-    #desktop ul #info
-    {
-        float: right;
-    }
+            #desktop ul #info {
+                float: right;
+            }
 
 
-    #desktop ul a img
-    {
-        width: 2em;
-        top: 50%;
-        padding-left: 2em;
-    }
+            #desktop ul a img {
+                width: 2em;
+                top: 50%;
+                padding-left: 2em;
+            }
 
-    #desktop ul h1
-    {
-        font-family: "Mikado Black";
-        color: rgb(255, 238, 0);
-        position: relative;
-        top: -.4em;
-        right: 1.5em;
-        font-size: 1.5rem;
-    }
+            #desktop ul h1 {
+                font-family: "Mikado Black";
+                color: rgb(255, 238, 0);
+                position: relative;
+                top: -.4em;
+                right: 1.5em;
+                font-size: 1.5rem;
+            }
 
-    #desktop #nick
-    {
-        font-family: "Mikado Black";
-        color: white;
-        position: relative;
-        top: -.4em;
-        right: 1.5em;
-        font-size: 1.5rem;
-        margin-left: 1em;
-    }
+        #desktop #nick {
+            font-family: "Mikado Black";
+            color: white;
+            position: relative;
+            top: -.4em;
+            right: 1.5em;
+            font-size: 1.5rem;
+            margin-left: 1em;
+        }
 }
 
-@media(min-width: 70rem)
-{
-    #desktop ul a img
-    {
+@media(min-width: 70rem) {
+    #desktop ul a img {
         padding-left: 10em;
     }
 }
 
 /* LIÇÕES */
 
-section#teste
-{
+section#teste {
     padding: 8rem 0;
     background-color: #fff;
 }
 
-.heading
-{
+.heading {
     text-transform: uppercase;
     font-size: 2rem;
     text-align: center;
@@ -267,16 +251,14 @@ section#teste
     font-family: "Mikado Black";
 }
 
-.card-wrapper
-{
+.card-wrapper {
     display: flex;
     align-items: center;
     align-content: center;
     flex-direction: column;
 }
 
-.card
-{
+.card {
     width: 20em;
     height: 17em;
     background-color: #ebeef8;
@@ -289,46 +271,42 @@ section#teste
     border-radius: 50px;
 }
 
-.card a
-{
-    width: 50%;
-    background-color: #1adb00;
-    padding: .6em;
-    border-radius: 10px;
-    font-size: 1rem;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    box-shadow: 0px 7px #16bd00;
-    transition: .3s;
-    position: relative;
-    font-family: 'Mikado Black';
-    top: 0;
-}
+    .card a {
+        width: 50%;
+        background-color: #1adb00;
+        padding: .6em;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: 0px 7px #16bd00;
+        transition: .3s;
+        position: relative;
+        font-family: 'Mikado Black';
+        top: 0;
+    }
 
-.card a:hover {
-    top: .5em;
-    box-shadow: 0px 0px #16bd00;
-    background-color: #69df59;
-}
+        .card a:hover {
+            top: .5em;
+            box-shadow: 0px 0px #16bd00;
+            background-color: #69df59;
+        }
 
-.card-img
-{
+.card-img {
     width: 30%;
     margin-top: 3em;
 }
 
-.card-wrapper h1
-{
+.card-wrapper h1 {
     font-family: "Mikado Black";
     color: rgb(105, 105, 105);
     font-size: 1.5em;
     margin-top: .5em;
 }
 
-@media screen and (min-width: 700px)
-{
-    .card-wrapper{
+@media screen and (min-width: 700px) {
+    .card-wrapper {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -336,23 +314,20 @@ section#teste
         /* width: 90%; */
     }
 
-    .card{
+    .card {
         margin: 2rem;
     }
 }
 
-@media(min-width: 70rem)
-{
-    section
-    {
+@media(min-width: 70rem) {
+    section {
         width: 60%;
     }
 }
 
 /* CARDS LATERAIS */
 
-section#cards-laterais
-{
+section#cards-laterais {
     top: 16rem;
     background-color: transparent;
     position: absolute;
@@ -362,38 +337,34 @@ section#cards-laterais
     visibility: hidden;
 }
 
-section#cards-laterais .card-wrapper2 .cardAmigos 
-{
-    width: 20em;
-    height: 30em;
-    background-color: transparent;
-    border: 3px solid #ebeef8;
-    border-radius: 30px;
-    position: relative;
-}
+    section#cards-laterais .card-wrapper2 .cardAmigos {
+        width: 20em;
+        height: 30em;
+        background-color: transparent;
+        border: 3px solid #ebeef8;
+        border-radius: 30px;
+        position: relative;
+    }
 
-.cardAmigos img
-{
+.cardAmigos img {
     width: 35%;
 }
 
-.cardAmigos h1
-{
+.cardAmigos h1 {
     text-transform: uppercase;
     font-size: 1.5rem;
     text-align: center;
     color: #333;
     position: relative;
-    font-family: "Mikado Black"; 
+    font-family: "Mikado Black";
 }
 
-.cardAmigos a
-{
+.cardAmigos a {
     width: 70%;
     background-color: transparent;
     border: 2px solid gray;
     padding: .7em;
-    padding-top: .6em; 
+    padding-top: .6em;
     border-radius: 10px;
     font-size: .75rem;
     color: gray;
@@ -405,34 +376,30 @@ section#cards-laterais .card-wrapper2 .cardAmigos
     top: 0;
 }
 
-.cardAmigos a:hover
-{
-    background-color: gray;
-    color: white;
-}
+    .cardAmigos a:hover {
+        background-color: gray;
+        color: white;
+    }
 
-.cardAmigos ul
-{
+.cardAmigos ul {
     position: relative;
     top: -.5em;
     margin-bottom: 1.25em;
 }
 
-.cardAmigos ul li
-{
-    list-style: none;
-    padding-top: .25em;
-    text-transform: uppercase;
-    font-size: 1rem;
-    text-align: center;
-    color: rgb(102, 102, 102);
-    position: relative;
-    right: 1em;
-    font-family: "Mikado Black"; 
-}
+    .cardAmigos ul li {
+        list-style: none;
+        padding-top: .25em;
+        text-transform: uppercase;
+        font-size: 1rem;
+        text-align: center;
+        color: rgb(102, 102, 102);
+        position: relative;
+        right: 1em;
+        font-family: "Mikado Black";
+    }
 
-section#cards-laterais .card-wrapper2 .cardGraphic
-{
+section#cards-laterais .card-wrapper2 .cardGraphic {
     width: 20em;
     height: 26.5em;
     background-color: transparent;
@@ -446,10 +413,8 @@ section#cards-laterais .card-wrapper2 .cardGraphic
     top: 1em;
 }
 
-@media(min-width: 70rem)
-{
-    section#cards-laterais
-    {
+@media(min-width: 70rem) {
+    section#cards-laterais {
         visibility: initial;
         left: 60%;
     }
