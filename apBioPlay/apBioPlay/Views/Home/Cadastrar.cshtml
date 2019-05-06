@@ -26,30 +26,21 @@
 </head>
 <body>
 
-    <header id="desktop">
-        <ul>
-            <img src="~/Images/logoMobile.png" alt="">
-            <li><a id="inicio" href="/Home/Index">Home</a></li>
-            <li><a href="/Home/Sobre">Sobre</a></li>
-            <li><a href="/Home/Bastidores">Bastidores</a></li>
-        </ul>
-    </header>
-
     <section id="teste" class="container">
         <div>
             <h1 class="heading">Cadastro:</h1>
             <div class="card-wrapper">
-                <img src="~/Images/Mick2.png" alt="Alternate Text" id="mick" />
+                <img src="~/Images/Mick_Cadastro.png" alt="Alternate Text" id="mick" />
                 <form action="/Home/CadastroDeUsuario" method="post" id="form">
-                    <label class="info">Nome </label><br /><input class="txtCampos" value="@nomeAnterior" type="text" name="u.Nome" placeholder=" Ex: JoãozinGameprays"/><br />
-                    <br />@Html.ValidationMessage("u.Nome")<br />
-                    <label class="info">Senha: </label><br /><input class="txtCampos" value="@senhaAnterior" type="password" name="u.Senha" placeholder=" Senha"/><br />
-                    <br />@Html.ValidationMessage("u.Senha")<br />
-                    <label class="info">Email </label><br /><input class="txtCampos" value="@emailAnterior" type="email" name="u.Email" placeholder=" Ex: jgameprays@email.com"/><br />
-                    <br />@Html.ValidationMessage("u.Email")<br />
+                    <label class="info">Nome </label><br /><input class="txtCampos" value="@nomeAnterior" type="text" name="u.Nome" placeholder="   Ex: JoãozinGameprays"/><br />
+                    <br />@Html.ValidationMessage("u.Nome")
+                    <label class="info">Senha: </label><br /><input class="txtCampos" value="@senhaAnterior" type="password" name="u.Senha" placeholder="   Senha"/><br />
+                    <br />@Html.ValidationMessage("u.Senha")
+                    <label class="info">Email </label><br /><input class="txtCampos" value="@emailAnterior" type="email" name="u.Email" placeholder="   Ex: jgameprays@email.com"/><br />
+                    <br />@Html.ValidationMessage("u.Email")
                     <label class="info">Nascimento </label><br />
                     <input value="@dataAnterior" class="txtCampos" type="date" name="u.DataNascimento" /><br />
-                    <br />@Html.ValidationMessage("u.DataNascimento")<br />
+                    <br />@Html.ValidationMessage("u.DataNascimento")
                     <input value="Cadastrar" type="submit" />
                 </form>
             </div>

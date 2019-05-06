@@ -1,4 +1,5 @@
 ﻿
+
 @font-face {
     font-family: 'Aristotelica';
     src: url('./Fonts/aristotelica.text-trial-bold.ttf');
@@ -20,6 +21,9 @@
 body {
     margin: 0;
     text-align: center;
+    background-image: url(../Images/back_cadastro.png);
+    background-size: 100em;
+    background-repeat: no-repeat;
 }
 
 img {
@@ -31,59 +35,6 @@ img {
     width: 95%;
     max-width: 70em;
     margin: 0 auto;
-}
-
-/* HEADER DESKTOP */
-
-header {
-    position: relative;
-    left: 0;
-    right: 0;
-}
-
-header ul {
-    margin: auto;
-    list-style: none;
-    padding: 1.5em;
-    text-align: center;
-    background-color: #72c800;
-    height: 5em;
-    box-shadow: 0px 4px rgba(0,0,0,.1);
-}
-
-header li {
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-header a {
-    text-decoration: none;
-    padding: .5em;
-    text-transform: uppercase;
-    color: white;
-    font-size: 1rem;
-    font-family: 'Aristotelica';
-}
-
-header img{
-    width: 10em; 
-    float: left;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media(min-width: 60rem)
-{
-    header a {
-        font-size: 1.5rem;
-    }
-
-    header img {
-        width: 13em;
-    }
 }
 
 /* FORMULÁRIO DE CADASTRO */
@@ -100,7 +51,7 @@ header img{
         font-size: 1.2rem;
         background-color: #83e600;
         padding: 1em;
-        border-radius: 10px;
+        border-radius: 100px;
         text-decoration: none;
         color: white;
         font-family: 'Aristotelica';
@@ -113,7 +64,7 @@ header img{
 
         #teste input[type="submit"]:hover {
             background-color: #a1e648;
-            border-radius: 10px;
+            border-radius: 100px;
             text-decoration: none;
             color: white;
             font-family: 'Aristotelica';
@@ -138,11 +89,10 @@ header img{
         border-bottom: 3px solid lightgray;
         outline: none;
         padding-top: 1em;*/
-
         width: 10em;
         font-family: 'Mikado Light';
         font-size: 1em;
-        border: none;   
+        border: none;
         height: 2.5em;
         margin-top: .5em;
         border-radius: 5px;
@@ -150,10 +100,13 @@ header img{
         position: relative;
         left: 25%;
         transform: translateX(-25%);
+        background-color: rgb(231,230,230);
+        position: relative;
+        left: 3em;
 }
 
 .info {
-    font-family: 'Century Gothic';
+    font-family: 'Mikado';
     font-size: 1rem;
     position: relative;
     left: 17.5%;
@@ -165,24 +118,16 @@ header img{
     padding: 1em;
 }
 
-#mick {
-    width: 20em;
-    float: right;
-    position: relative;
-    top: 0;
-    visibility: hidden;
-}
-
 @media(min-width: 60rem) {
 
     #teste {
-        width: 50%;
-        margin-top: 2em;
-        background-color: rgb(235,238,248);
+        width: 45em;
+        margin-top: 6em;
+        background-color: white;
         padding: 1em;
         margin-bottom: 10rem;
-        border-radius: 30px;
-        height: 36em;
+        border-radius: 10px;
+        height: 35em;
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
@@ -192,19 +137,20 @@ header img{
             font-size: 1.2rem;
             background-color: #83e600;
             padding: 1em;
-            border-radius: 10px;
+            border-radius: 100px;
             text-decoration: none;
             color: white;
             font-family: 'Aristotelica';
             padding-top: 1.3em;
             border: none;
             position: relative;
-            top: -1em;
+            top: 1em;
+            left: 7em;
         }
 
             #teste input[type="submit"]:hover {
                 background-color: #a1e648;
-                border-radius: 10px;
+                border-radius: 100px;
                 text-decoration: none;
                 color: white;
                 font-family: 'Aristotelica';
@@ -229,20 +175,25 @@ header img{
         border-bottom: 3px solid lightgray;
         outline: none;
         padding-top: 1em;*/
-        font-family: 'Mikado Light';
+        font-family: 'Mikado';
         font-size: 1em;
         border: none;
-        width: 30%;
+        width: 40%;
         height: 2.5em;
-        margin-top: .5em;
-        border-radius: 5px;
+        margin-top: 0.5em;
+        border-radius: 100px;
         user-select: none;
+        background-color: rgb(231,230,230);
+        position: relative;
+        left: 4em;
     }
 
     .info {
-        font-family: 'Century Gothic';
+        font-family: 'Mikado';
         font-size: 1rem;
         margin-right: .5em;
+        position: relative;
+        left: 0;
     }
 
     #form {
@@ -251,10 +202,10 @@ header img{
     }
 
     #mick {
-        width: 20em;
-        bottom: 25em;
+        width: 18em;
+        float: right;
+        padding-right: 5em;
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 3.5em;
     }
 }
