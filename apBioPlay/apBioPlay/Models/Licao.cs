@@ -6,13 +6,15 @@ using System.Web;
 
 namespace apBioPlay.Models
 {
-    public class Erro
+    public class Licao
     {
         [Key]
         public int Codigo { get; set; }
-        [Required, StringLength(30)]
+        [Required, StringLength(50)]
         public string Nome { get; set; }
         [Required]
-        public int Ocasioes { get; set; }
+        public int Nivel { get; set; }
+        [Required, StringLength(50)]
+        public string UrlImagem { get; set; }
     }
 }

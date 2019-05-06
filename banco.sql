@@ -35,9 +35,12 @@ create table RepostaPublicacao(
 
 create table Licao(
 	codigo int identity(1,1) primary key,
-	nome varchar(30) not null,
-	urlImagem varchar(50) not null
+	nome varchar(50) not null,	
+	urlImagem varchar(50) not null,
+	nivel int not null
 )
+
+insert into Licao values('Reciclagem','/Images/Licoes/i1.png', 1)
 
 create table Pergunta(
 	codigo int identity(1,1) primary key,

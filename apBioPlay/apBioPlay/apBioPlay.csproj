@@ -200,6 +200,7 @@
     <Content Include="Images\wave2.png" />
     <Content Include="Scripts\fadeIn.js" />
     <Content Include="Scripts\geral.js" />
+    <Content Include="Scripts\licoes.js" />
     <Content Include="Scripts\menuVertical.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\pareto.js" />
@@ -211,12 +212,15 @@
     <Compile Include="Controllers\LicoesController.cs" />
     <Compile Include="DAO\ErrosContext.cs" />
     <Compile Include="DAO\ErrosDAO.cs" />
+    <Compile Include="DAO\LicoesContext.cs" />
+    <Compile Include="DAO\LicoesDAO.cs" />
     <Compile Include="DAO\UsuariosContext.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Erro.cs" />
+    <Compile Include="Models\Licao.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

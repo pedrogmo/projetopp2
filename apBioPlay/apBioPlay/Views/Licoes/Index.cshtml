@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="~/Content/licoes.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>BioPlay - Lições</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
             <div id="info">
                 <li><a href="" id="pontos2"><img src="~/Images/IEstrela.png" alt=""></a></li>
                 <li><h1>0</h1></li>
-                <li><h1 id="nick">NICKNAME</h1></li>
+                <li><h1 id="nick">@ViewBag.usuario.Nome</h1></li>
             </div>
         </ul>
     </div>
@@ -52,13 +53,14 @@
         <div>
             <h1 class="heading">Lições</h1>
             <div class="card-wrapper">
-
-                <!-- <div class="card">
-                    <img src="img/licoes/i1.png" alt="card background" class="card-img">
-                    <h1>Reciclagem</h1>
-                    <a href="#">Iniciar</a>
-                </div>   -->
-
+                @foreach (apBioPlay.Models.Licao l in ViewBag.licoes)
+                {
+                    <div class="card">
+                        <img src="@l.UrlImagem" alt="card background" class="card-img">
+                        <h1>@l.Nome</h1>
+                        <a href="#">Iniciar</a>
+                    </div>              
+                }
             </div>
         </div>
     </section>
@@ -88,28 +90,29 @@
 
             <div class="cardGraphic">
                 <div class="center-graphic">
-                    <h1>Total: 80</h1>
+                    <h1>Total: 15</h1>
+                    <p id="qtd0" hidden>5</p>
+                    <p id="qtd1" hidden>10</p>
+                    <canvas id="canvas"></canvas>
+                    <!--
+                        <div id="graphicBox">
+                            <h1>Acertos:</h1>
+                            
+                            <div class="graphic"></div>
+                            <div id="bar2" class="progress"></div>
+                        </div>
 
-                    <div id="graphicBox">
-                        <h1>Acertos:</h1>
-                        <div class="graphic"></div>
-                        <div id="bar2" class="progress"></div>
-                    </div>
-
-                    <div id="graphicBox">
-                        <h1>Erros:</h1>
-                        <div class="graphic"></div>
-                        <div id="bar3" class="progress"></div>
-                    </div>
-                </div>
-
-                <div class="desempenho">
-                    <img src="" alt="">
-                    <p>P DE PEDRO</p>
+                        <div id="graphicBox">
+                            <h1>Erros:</h1>
+                            
+                            <div class="graphic"></div>
+                            <div id="bar3" class="progress"></div>
+                        </div>
+                    -->
+                    </div>                       
                 </div>
             </div>
-        </div>
-    </section>
-
-</body>
-</html>
+        </section>
+        <script src="~/Scripts/licoes.js"></script>
+    </body>
+    </html>
