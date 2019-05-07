@@ -210,6 +210,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LicoesController.cs" />
+    <Compile Include="DAO\AmizadeDAO.cs" />
     <Compile Include="DAO\ErrosContext.cs" />
     <Compile Include="DAO\ErrosDAO.cs" />
     <Compile Include="DAO\LicoesContext.cs" />

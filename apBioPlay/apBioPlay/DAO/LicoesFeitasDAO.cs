@@ -49,7 +49,7 @@ namespace apBioPlay.DAO
             return ret;
         }
 
-        internal void Adicionar(int codUsuario, int codLicao, int acertos)
+        public void Adicionar(int codUsuario, int codLicao, int acertos)
         {
             try
             {

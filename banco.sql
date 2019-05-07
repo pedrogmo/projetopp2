@@ -88,6 +88,9 @@ create table Amizade(
 	constraint fkUsuario2 foreign key(codUsuario2) references Usuario(codigo)
 )
 
+insert into Amizade values(2,3)
+insert into Amizade values(3,2)
+
 create table Erro(
 	codigo int identity(1,1) primary key,
 	nome varchar(50) not null,

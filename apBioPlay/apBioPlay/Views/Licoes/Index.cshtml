@@ -20,7 +20,7 @@
             <a href="" id="notificacao"><img src="~/Images/ISino.png" alt=""></a>
             <a href="" id="pontos"><img src="~/Images/IEstrela.png" alt=""></a>
             <h1>0</h1>
-            <h1 id="nick">NICKNAME</h1>
+            <h1 id="nick">@ViewBag.usuario.Nome</h1>
         </ul>
     </header>
 
@@ -74,14 +74,10 @@
                 <img src="~/Images/INovoAmigo.png" alt="">
 
                 <ul>
-                    <li>ABABABA</li>
-                    <li>ABABABA</li>
-                    <li>ABABABA</li>
-                    <li>ABABABA</li>
-                    <li>ABABABA</li>
-                    <li>ABABABA</li>
-                    <li>ABABABA</li>
-                    <li>ABABABA</li>
+                    @foreach (apBioPlay.Models.Usuario amigo in ViewBag.amigos)
+                    {
+                        <li>@Html.ActionLink(amigo.Nome, "Visualiza", new { usu = amigo })</li>
+                    }
                 </ul>
 
                 <a href="#">Procurar</a>

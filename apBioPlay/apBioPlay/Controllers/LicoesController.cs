@@ -15,6 +15,7 @@ namespace apBioPlay.Controllers
         public ActionResult Index(Usuario u)
         {
             usuario = u;
+            ViewBag.amigos = new AmizadeDAO().Amigos(usuario.Codigo);
             ViewBag.dados = new LicoesFeitasDAO().Dados(usuario.Codigo);
             ViewBag.licoes = new LicoesDAO().Lista().OrderBy(l => l.Nivel);
             ViewBag.usuario = u;
@@ -24,6 +25,13 @@ namespace apBioPlay.Controllers
         public ActionResult Perfil()
         {
             ViewBag.usuario = usuario;
+            return View();
+        }
+
+        public ActionResult Visualiza(Usuario usu)
+        {
+            ViewBag.usuario = usuario;
+            ViewBag.visualizado = usu;
             return View();
         }
 
