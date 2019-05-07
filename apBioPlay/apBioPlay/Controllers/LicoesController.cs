@@ -11,9 +11,11 @@ namespace apBioPlay.Controllers
     public class LicoesController : Controller
     {
         Usuario usuario;
+
         public ActionResult Index(Usuario u)
         {
             usuario = u;
+            ViewBag.dados = new LicoesFeitasDAO().Dados(usuario.Codigo);
             ViewBag.licoes = new LicoesDAO().Lista().OrderBy(l => l.Nivel);
             ViewBag.usuario = u;
             return View();

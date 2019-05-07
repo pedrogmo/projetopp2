@@ -214,6 +214,7 @@
     <Compile Include="DAO\ErrosDAO.cs" />
     <Compile Include="DAO\LicoesContext.cs" />
     <Compile Include="DAO\LicoesDAO.cs" />
+    <Compile Include="DAO\LicoesFeitasDAO.cs" />
     <Compile Include="DAO\UsuariosContext.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="Global.asax.cs">

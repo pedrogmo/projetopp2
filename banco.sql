@@ -46,30 +46,38 @@ create table Pergunta(
 	codigo int identity(1,1) primary key,
 	texto varchar(50),
 	nivel int not null,
-	codRespCerta int not null,
 	codLicao int not null
 
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
 
+insert into Pergunta values('O que é reciclagem?', 1, 2)
+insert into Pergunta values('Por que é bom reciclar?', 1, 2)
+
 create table Resposta(
 	codigo int identity(1,1) primary key,
 	texto varchar(50) not null,
 	urlImagem varchar(50) not null,
-	codPergunta int not null
-
+	codPergunta int not null,
+	certa bit not null
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codigo)
 )
+
+insert into Resposta values('É refazer objetos com materias usados', '', 2, 1)
+insert into Resposta values('Porque gasta menos material', '', 3, 1)
 
 create table UsuarioLicao(
 	codigo int identity(1,1) primary key,
 	codUsuario int not null,
 	codLicao int not null,
-	data datetime not null
+	data datetime not null,
+	acertos int not null
 
 	constraint fkLicaoFeita foreign key(codLicao) references Licao(codigo),
 	constraint fkUsuarioQueFez foreign key(codUsuario) references Usuario(codigo)
 )
+
+insert into UsuarioLicao values(2, 2, '06/05/2019', 1)
 
 create table Amizade(
 	codigo int identity(1,1) primary key,
