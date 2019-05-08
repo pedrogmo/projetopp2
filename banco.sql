@@ -19,8 +19,8 @@ create table Acesso(
 create table Publicacao(
 	codigo int identity(1,1) primary key,
 	conteudo ntext not null,
-	codUsuario int not null
-
+	codUsuario int not null,
+	data datetime not null
 	constraint fkUsuarioPublicacao foreign key(codUsuario) references Usuario(codigo)
 )
 
@@ -28,8 +28,8 @@ create table RepostaPublicacao(
 	codigo int identity(1,1) primary key,
 	conteudo ntext not null,
 	codUsuario int not null,
-	codPublicacao int not null
-
+	codPublicacao int not null,
+	data datetime not null
 	constraint fkUsuarioRespostaPublicacao foreign key(codUsuario) references Usuario(codigo)
 )
 

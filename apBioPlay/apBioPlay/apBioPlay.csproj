@@ -213,9 +213,12 @@
     <Compile Include="DAO\AmizadeDAO.cs" />
     <Compile Include="DAO\ErrosContext.cs" />
     <Compile Include="DAO\ErrosDAO.cs" />
+    <Compile Include="DAO\ForumContext.cs" />
     <Compile Include="DAO\LicoesContext.cs" />
     <Compile Include="DAO\LicoesDAO.cs" />
     <Compile Include="DAO\LicoesFeitasDAO.cs" />
+    <Compile Include="DAO\PublicacaoDAO.cs" />
+    <Compile Include="DAO\RepostaPublicacaoDAO.cs" />
     <Compile Include="DAO\UsuariosContext.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="Global.asax.cs">
@@ -223,6 +226,8 @@
     </Compile>
     <Compile Include="Models\Erro.cs" />
     <Compile Include="Models\Licao.cs" />
+    <Compile Include="Models\Publicao.cs" />
+    <Compile Include="Models\RepostaPublicacao.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
