@@ -217,6 +217,7 @@
     <Compile Include="DAO\LicoesContext.cs" />
     <Compile Include="DAO\LicoesDAO.cs" />
     <Compile Include="DAO\LicoesFeitasDAO.cs" />
+    <Compile Include="DAO\NotificacaoDAO.cs" />
     <Compile Include="DAO\PublicacaoDAO.cs" />
     <Compile Include="DAO\RepostaPublicacaoDAO.cs" />
     <Compile Include="DAO\UsuariosContext.cs" />
@@ -226,6 +227,7 @@
     </Compile>
     <Compile Include="Models\Erro.cs" />
     <Compile Include="Models\Licao.cs" />
+    <Compile Include="Models\Notificacao.cs" />
     <Compile Include="Models\Publicao.cs" />
     <Compile Include="Models\RepostaPublicacao.cs" />
     <Compile Include="Models\Usuario.cs" />

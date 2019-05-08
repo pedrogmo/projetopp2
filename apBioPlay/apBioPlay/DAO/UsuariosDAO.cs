@@ -20,6 +20,19 @@ namespace apBioPlay.DAO
             }
         }
 
+        public void Remover(int codU)
+        {
+            using (var context = new UsuariosContext())
+            {
+                var u = Buscar(usu => usu.Codigo == codU);
+                if (u != null)
+                {
+                    context.Usuario.Remove(u);
+                    context.SaveChanges();
+                }
+            }
+        }
+
         public IList<Usuario> Lista()
         {
             using (var contexto = new UsuariosContext())
