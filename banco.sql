@@ -103,3 +103,11 @@ insert into Erro values('Formatação de String', 3)
 insert into Erro values('Importação de arquivo externo', 7)
 insert into Erro values('Lógica errada', 2)
 insert into Erro values('Css incorreto', 9)
+
+create table Notificacao(
+	codigo int identity(1,1) primary key,
+	texto ntext not null,
+	codUsuario int not null
+
+	constraint fkUsuarioNot foreign key(codUsuario) references Usuario(codigo)
+)
