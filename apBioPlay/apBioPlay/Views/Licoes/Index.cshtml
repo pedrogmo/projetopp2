@@ -33,7 +33,7 @@
 
             <div id="info">
                 <li><a href="" id="pontos2"><img src="~/Images/IEstrela.png" alt=""></a></li>
-                <li><h1>0</h1></li>
+                <li><h1>@ViewBag.usuario.Nivel</h1></li>
                 <li><h1 id="nick">@ViewBag.usuario.Nome</h1></li>
             </div>
         </ul>
@@ -86,7 +86,8 @@
 
             <div class="cardGraphic">
                 <div class="center-graphic">
-                    <h1>Total: @ViewBag.dados[0]</h1>
+                    <h1>Estatísticas</h1>
+                    <p>Perguntas respondidas: @ViewBag.dados[0]</p>
                     <p id="qtd0" hidden>@ViewBag.dados[1]</p>
                     <p id="qtd1" hidden>@ViewBag.dados[2]</p>
                     <canvas id="canvas"></canvas>
