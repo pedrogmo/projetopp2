@@ -31,6 +31,7 @@
             <h1 class="heading">Cadastro:</h1>
             <div class="card-wrapper">
                 <img src="~/Images/Mick_Cadastro.png" alt="Alternate Text" id="mick" />
+                <a href="#" class="log">Já tenho uma conta →</a>
                 <form action="/Home/CadastroDeUsuario" method="post" id="form">
                     <label class="info">Nome </label><br /><input class="txtCampos" value="@nomeAnterior" type="text" name="u.Nome" placeholder="   Ex: JoãozinGameprays"/><br />
                     <br />@Html.ValidationMessage("u.Nome")
