@@ -6,7 +6,7 @@ using System.Web;
 
 namespace apBioPlay.Models
 {
-    public class Publicao
+    public class Publicacao
     {
         [Key]
         public int Codigo { get; set; }

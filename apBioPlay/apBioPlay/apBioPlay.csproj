@@ -228,8 +228,8 @@
     <Compile Include="Models\Erro.cs" />
     <Compile Include="Models\Licao.cs" />
     <Compile Include="Models\Notificacao.cs" />
-    <Compile Include="Models\Publicao.cs" />
-    <Compile Include="Models\RepostaPublicacao.cs" />
+    <Compile Include="Models\Publicacao.cs" />
+    <Compile Include="Models\RespostaPublicacao.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
