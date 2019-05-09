@@ -168,6 +168,7 @@
     <Content Include="Content\cadastro.css" />
     <Content Include="Content\licoes.css" />
     <Content Include="Content\home.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back_cadastro.png" />
     <Content Include="Images\bg.png" />
@@ -198,10 +199,16 @@
     <Content Include="Images\simbolo.png" />
     <Content Include="Images\wave.png" />
     <Content Include="Images\wave2.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fadeIn.js" />
     <Content Include="Scripts\geral.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\licoes.js" />
     <Content Include="Scripts\menuVertical.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\pareto.js" />
     <Content Include="Web.config" />
@@ -238,14 +245,18 @@
     <Content Include="Content\Fonts\aristotelica.text-trial-bold.ttf" />
     <Content Include="Content\Fonts\Mikado Black.otf" />
     <Content Include="Content\Fonts\Mikado Light.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Licoes\Index.cshtml" />
     <Content Include="Views\Home\Sobre.cshtml" />
     <Content Include="Views\Home\Bastidores.cshtml" />
-    <Content Include="Views\Licoes\Perfil.cshtml" />
     <Content Include="Views\Licoes\Forum.cshtml" />
     <Content Include="Views\Home\Cadastrar.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Licoes\Visualiza.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

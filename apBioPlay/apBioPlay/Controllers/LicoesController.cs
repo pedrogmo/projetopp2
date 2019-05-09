@@ -24,8 +24,7 @@ namespace apBioPlay.Controllers
 
         public ActionResult Perfil()
         {
-            ViewBag.usuario = usuario;
-            return View();
+            return RedirectToAction("Visualiza", "Licoes", usuario);
         }
 
         public ActionResult Visualiza(Usuario usu)
