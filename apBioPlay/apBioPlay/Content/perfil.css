@@ -1,0 +1,43 @@
+﻿
+
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./Fonts/aristotelica.text-trial-bold.ttf');
+}
+
+@font-face {
+    font-family: 'Mikado';
+    src: url('./Fonts/Mikado\ Light.otf');
+}
+
+@font-face {
+    font-family: 'Mikado Black';
+    src: url('./Fonts/Mikado\ Black.otf');
+}
+
+
+/* DEFAULT */
+
+body {
+    margin: 0;
+    background-image: url("");
+    background-size: 100em;
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+/*HEADER*/
+
+#header img{
+
+}

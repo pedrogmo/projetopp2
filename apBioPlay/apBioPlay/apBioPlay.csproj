@@ -168,12 +168,14 @@
     <Content Include="Content\cadastro.css" />
     <Content Include="Content\licoes.css" />
     <Content Include="Content\home.css" />
+    <Content Include="Content\perfil.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back_cadastro.png" />
     <Content Include="Images\bg.png" />
     <Content Include="Images\bg2.png" />
     <Content Include="Images\controle.png" />
+    <Content Include="Images\Fundo_Perfil.png" />
     <Content Include="Images\hdiw.png" />
     <Content Include="Images\hdiw2.png" />
     <Content Include="Images\IEstrela.png" />

@@ -57,9 +57,10 @@ img {
         padding-top: 1.3em;
         border: none;
         position: relative;
+        top: 2em;
+        margin-bottom: 2em;
         left: 50%;
         transform: translateX(-50%);
-        margin-top: 5em;
     }
 
         #teste input[type="submit"]:hover {
@@ -67,7 +68,7 @@ img {
             border-radius: 10px;
             text-decoration: none;
             color: white;
-            font-family: 'Mikado';
+            font-family: 'Aristotelica';
             cursor: pointer;
         }
 
@@ -101,13 +102,15 @@ img {
         background-color: rgb(231,230,230);
         position: relative;
         left: 1em;
+        outline: none;
+        padding-left: 1em;
 }
 
 .info {
     font-family: 'Mikado';
     font-size: 1rem;
     position: relative;
-    left: 15%;
+    left: 5%;
     transform: translateX(-17.5%);
 }
 
@@ -115,17 +118,6 @@ img {
     text-align: left;
     padding: 1em;
     font-family: "Mikado";
-}
-
-.log
-{
-    position: relative;
-    top: 27em;
-    left: -9.5em;
-    font-family: "Mikado";
-    text-decoration: none;
-    color: gray;
-    font-weight: bold;
 }
 
 #mick {
@@ -165,7 +157,7 @@ img {
             padding-top: 1.3em;
             border: none;
             position: relative;
-            top: -4.5em;
+            top: 0;
             left: 7em;
             border: 3px solid #a1e648;
             transition: .2s;
@@ -211,6 +203,8 @@ img {
         background-color: rgb(231,230,230);
         position: relative;
         left: 0;
+        outline: none;
+        padding-left: 1em;
     }
 
     .info {
@@ -233,16 +227,5 @@ img {
         position: relative;
         top: 3.5em;
         left: 13em;
-    }
-
-    .log {
-        position: relative;
-        float: right;
-        top: 27em;
-        left: 22em;
-        font-family: "Mikado";
-        text-decoration: none;
-        color: gray;
-        font-weight: bold;
     }
 }
