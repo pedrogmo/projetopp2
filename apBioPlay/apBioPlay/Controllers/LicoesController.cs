@@ -12,33 +12,31 @@ namespace apBioPlay.Controllers
     [AutorizacaoFilterAttribute]
     public class LicoesController : Controller
     {
-        Usuario usuario;
-
         public ActionResult Index()
         {
-            usuario = (Usuario) Session["usuarioLogado"];
-            ViewBag.amigos = new AmizadeDAO().Amigos(usuario.Codigo);
-            ViewBag.dados = new LicoesFeitasDAO().Dados(usuario.Codigo);
+            var u = (Usuario) Session["usuarioLogado"];
+            ViewBag.amigos = new AmizadeDAO().Amigos(u.Codigo);
+            ViewBag.dados = new LicoesFeitasDAO().Dados(u.Codigo);
             ViewBag.licoes = new LicoesDAO().Lista().OrderBy(l => l.Nivel);
-            ViewBag.usuario = usuario;
+            ViewBag.usuario = u;
             return View();
         }
 
         public ActionResult Perfil()
         {
-            return RedirectToAction("Visualiza", "Licoes", usuario);
+            return RedirectToAction("Visualiza", "Licoes", (Usuario)Session["usuarioLogado"]);
         }
 
         public ActionResult Visualiza(Usuario usu)
         {
-            ViewBag.usuario = usuario;
+            ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             ViewBag.visualizado = usu;
             return View();
         }
 
         public ActionResult Forum()
         {
-            ViewBag.usuario = usuario;
+            ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
 

@@ -13,8 +13,18 @@
 </head>
 <body>
     <section id="perfil_hero">
-        <img src="~/Images/Fundo_Perfil2.png" alt="Alternate Text" />
         <a href="#">Alterar Perfil</a>
+
+        <div id="card1">
+            <div id="foto">
+                <img src="@ViewBag.visualizado.FotoPerfil" alt="Alternate Text" />
+            </div>
+
+            <div id="user_info">
+                <h1>@ViewBag.visualizado.Nome</h1>
+            </div>
+        </div>
+
     </section>
 </body>
 </html>
