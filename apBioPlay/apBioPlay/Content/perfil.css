@@ -18,13 +18,6 @@
 
 /* DEFAULT */
 
-body {
-    margin: 0;
-    background-image: url("");
-    background-size: 100em;
-    background-repeat: no-repeat;
-}
-
 img {
     max-width: 100%;
     height: auto;
@@ -36,8 +29,9 @@ img {
     margin: 0 auto;
 }
 
-/*HEADER*/
+/*PERFIL HERO*/
 
-#header img{
-
+#perfil_hero img{
+    width: 100%;
+    margin: 0 auto;
 }
