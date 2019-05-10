@@ -172,6 +172,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back_cadastro.png" />
+    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-27 at 16.55.24.jpeg" />
+    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-30 at 12.53.35.jpeg" />
+    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-30 at 12.53.36.jpeg" />
+    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-30 at 12.53.37.jpeg" />
+    <Content Include="Images\Bastidores\WhatsApp Image 2019-05-05 at 16.44.28.jpeg" />
+    <Content Include="Images\Bastidores\WhatsApp Image 2019-05-05 at 16.46.36.jpeg" />
+    <Content Include="Images\Bastidores\WhatsApp Video 2019-04-27 at 16.54.42.mp4" />
     <Content Include="Images\bg.png" />
     <Content Include="Images\bg2.png" />
     <Content Include="Images\controle.png" />
@@ -264,6 +271,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\FotosPerfil\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
