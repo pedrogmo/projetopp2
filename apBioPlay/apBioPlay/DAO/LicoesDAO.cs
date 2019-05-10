@@ -11,7 +11,7 @@ namespace apBioPlay.DAO
     {
         public IList<Licao> Lista()
         {
-            using (var contexto = new LicoesContext())
+            using (var contexto = new SiteContext())
             {
                 return contexto.Licao.ToList();
             }

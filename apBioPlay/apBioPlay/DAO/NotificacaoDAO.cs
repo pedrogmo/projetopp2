@@ -11,7 +11,7 @@ namespace apBioPlay.DAO
     {
         public void Adicionar(Notificacao n)
         {
-            using (var context = new UsuariosContext())
+            using (var context = new SiteContext())
             {
                 context.Notificacao.Add(n);
                 context.SaveChanges();
@@ -20,7 +20,7 @@ namespace apBioPlay.DAO
 
         public void Remover(int codN)
         {
-            using (var context = new UsuariosContext())
+            using (var context = new SiteContext())
             {
                 var n = Buscar(codN);
                 if (n != null)
@@ -33,7 +33,7 @@ namespace apBioPlay.DAO
 
         public IList<Notificacao> Lista()
         {
-            using (var contexto = new UsuariosContext())
+            using (var contexto = new SiteContext())
             {
                 return contexto.Notificacao.ToList();
             }
@@ -41,7 +41,7 @@ namespace apBioPlay.DAO
 
         public Notificacao Buscar(int c)
         {
-            using (var contexto = new UsuariosContext())
+            using (var contexto = new SiteContext())
             {
                 List<Notificacao> lista = contexto.Notificacao.ToList();
                 return contexto.Notificacao

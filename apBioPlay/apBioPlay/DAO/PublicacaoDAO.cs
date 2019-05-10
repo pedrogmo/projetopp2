@@ -11,7 +11,7 @@ namespace apBioPlay.DAO
     {
         public void Adicionar(Publicacao e)
         {
-            using (var context = new ForumContext())
+            using (var context = new SiteContext())
             {
                 context.Publicacao.Add(e);
                 context.SaveChanges();
@@ -20,7 +20,7 @@ namespace apBioPlay.DAO
 
         public IList<Publicacao> Lista()
         {
-            using (var contexto = new ForumContext())
+            using (var contexto = new SiteContext())
             {
                 return contexto.Publicacao.ToList();
             }
@@ -28,7 +28,7 @@ namespace apBioPlay.DAO
 
         public void Atualiza(Publicacao u)
         {
-            using (var contexto = new ForumContext())
+            using (var contexto = new SiteContext())
             {
                 contexto.Entry(u).State = EntityState.Modified;
                 contexto.SaveChanges();

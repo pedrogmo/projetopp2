@@ -13,7 +13,7 @@ namespace apBioPlay.DAO
         
         public void Adicionar(Usuario u)
         {
-            using (var context = new UsuariosContext())
+            using (var context = new SiteContext())
             {
                 context.Usuario.Add(u);
                 context.SaveChanges();
@@ -22,7 +22,7 @@ namespace apBioPlay.DAO
 
         public void Remover(int codU)
         {
-            using (var context = new UsuariosContext())
+            using (var context = new SiteContext())
             {
                 var u = Buscar(usu => usu.Codigo == codU);
                 if (u != null)
@@ -35,7 +35,7 @@ namespace apBioPlay.DAO
 
         public IList<Usuario> Lista()
         {
-            using (var contexto = new UsuariosContext())
+            using (var contexto = new SiteContext())
             {
                 return contexto.Usuario.ToList();
             }
@@ -43,7 +43,7 @@ namespace apBioPlay.DAO
 
         public Usuario Buscar(Buscado procurado)
         {
-            using (var contexto = new UsuariosContext())
+            using (var contexto = new SiteContext())
             {
                 List<Usuario> lista = contexto.Usuario.ToList();
                 foreach (Usuario u in lista)
@@ -57,7 +57,7 @@ namespace apBioPlay.DAO
         }
         public void Atualiza(Usuario u)
         {
-            using (var contexto = new UsuariosContext())
+            using (var contexto = new SiteContext())
             {
                 contexto.Entry(u).State = EntityState.Modified;
                 contexto.SaveChanges();

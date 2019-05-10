@@ -11,7 +11,7 @@ namespace apBioPlay.DAO
     {
         public void Adicionar(ProblemaAmbiental e)
         {
-            using (var context = new ProblemasContext())
+            using (var context = new SiteContext())
             {
                 context.ProblemaAmbiental.Add(e);
                 context.SaveChanges();
@@ -20,7 +20,7 @@ namespace apBioPlay.DAO
 
         public IList<ProblemaAmbiental> Lista()
         {
-            using (var contexto = new ProblemasContext())
+            using (var contexto = new SiteContext())
             {
                 return contexto.ProblemaAmbiental.ToList();
             }
@@ -28,7 +28,7 @@ namespace apBioPlay.DAO
         
         public void Atualiza(ProblemaAmbiental u)
         {
-            using (var contexto = new ProblemasContext())
+            using (var contexto = new SiteContext())
             {
                 contexto.Entry(u).State = EntityState.Modified;
                 contexto.SaveChanges();

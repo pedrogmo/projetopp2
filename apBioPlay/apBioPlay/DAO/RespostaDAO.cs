@@ -12,7 +12,7 @@ namespace apBioPlay.DAO
         public IList<Resposta> Lista(int codP)
         {
             List<Resposta> ret = new List<Resposta>();
-            using (var contexto = new LicoesContext())
+            using (var contexto = new SiteContext())
             {
                 foreach (Resposta r in contexto.Resposta.ToList())
                     if (r.CodPergunta == codP)
