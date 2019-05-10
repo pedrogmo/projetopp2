@@ -31,10 +31,11 @@ namespace apBioPlay.Controllers
         {
             UsuariosDAO dao = new UsuariosDAO();
             Usuario usuario = dao.Buscar(u => u.Nome == stringLogin && u.Senha == stringSenha);
+            Session["usuarioLogado"] = usuario;
             if (usuario == null)
                 return RedirectToAction("Index", "Home");
             else
-                return RedirectToAction("Index", "Licoes", usuario);
+                return RedirectToAction("Index", "Licoes");
         }
 
         public ActionResult Cadastrar()

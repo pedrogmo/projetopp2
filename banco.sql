@@ -45,7 +45,6 @@ insert into Licao values('Reciclagem','/Images/Licoes/i1.png', 1)
 create table Pergunta(
 	codigo int identity(1,1) primary key,
 	texto varchar(50),
-	nivel int not null,
 	codLicao int not null
 
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
@@ -91,18 +90,14 @@ create table Amizade(
 insert into Amizade values(2,3)
 insert into Amizade values(3,2)
 
-create table Erro(
+create table ProblemaAmbiental(
 	codigo int identity(1,1) primary key,
 	nome varchar(50) not null,
 	ocasioes int not null
 )
 
-insert into Erro values('Conexão com banco', 1)
-insert into Erro values('Ponteiro nulo', 5)
-insert into Erro values('Formatação de String', 3)
-insert into Erro values('Importação de arquivo externo', 7)
-insert into Erro values('Lógica errada', 2)
-insert into Erro values('Css incorreto', 9)
+insert into ProblemaAmbiental values('Poluição', 10)
+insert into ProblemaAmbiental values('Chuva ácida', 5)
 
 create table Notificacao(
 	codigo int identity(1,1) primary key,

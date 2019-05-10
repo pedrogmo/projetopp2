@@ -216,10 +216,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LicoesController.cs" />
     <Compile Include="DAO\AmizadeDAO.cs" />
+    <Compile Include="DAO\PerguntaDAO.cs" />
     <Compile Include="DAO\ProblemasContext.cs" />
     <Compile Include="DAO\ProblemasDAO.cs" />
     <Compile Include="DAO\ForumContext.cs" />
@@ -229,15 +231,19 @@
     <Compile Include="DAO\NotificacaoDAO.cs" />
     <Compile Include="DAO\PublicacaoDAO.cs" />
     <Compile Include="DAO\RepostaPublicacaoDAO.cs" />
+    <Compile Include="DAO\RespostaDAO.cs" />
     <Compile Include="DAO\UsuariosContext.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Pergunta.cs" />
     <Compile Include="Models\ProblemaAmbiental.cs" />
     <Compile Include="Models\Licao.cs" />
     <Compile Include="Models\Notificacao.cs" />
     <Compile Include="Models\Publicacao.cs" />
+    <Compile Include="Models\Resposta.cs" />
     <Compile Include="Models\RespostaPublicacao.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

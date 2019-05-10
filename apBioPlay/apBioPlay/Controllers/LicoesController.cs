@@ -5,20 +5,22 @@ using System.Web;
 using System.Web.Mvc;
 using apBioPlay.DAO;
 using apBioPlay.Models;
+using apBioPlay.Filtros;
 
 namespace apBioPlay.Controllers
 {
+    [AutorizacaoFilterAttribute]
     public class LicoesController : Controller
     {
         Usuario usuario;
 
-        public ActionResult Index(Usuario u)
+        public ActionResult Index()
         {
-            usuario = u;
+            usuario = (Usuario) Session["usuarioLogado"];
             ViewBag.amigos = new AmizadeDAO().Amigos(usuario.Codigo);
             ViewBag.dados = new LicoesFeitasDAO().Dados(usuario.Codigo);
             ViewBag.licoes = new LicoesDAO().Lista().OrderBy(l => l.Nivel);
-            ViewBag.usuario = u;
+            ViewBag.usuario = usuario;
             return View();
         }
 
