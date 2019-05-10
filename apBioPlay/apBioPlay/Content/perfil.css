@@ -31,7 +31,80 @@ img {
 
 /*PERFIL HERO*/
 
-#perfil_hero img{
-    width: 100%;
-    margin: 0 auto;
+body {
+    background-image: url('../Images/Fundo_Perfil.png');
+    background-size: 100em;
+    background-repeat: no-repeat;
+}
+
+#perfil_hero #card1 #user_info h1{
+    font-family: "Mikado Black";
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    float:right;
+    font-size: 2rem;
+    top: -1em;
+    width: 30em;  
+    left: 31em;
+    user-select: none;
+}
+
+#perfil_hero #card1 {
+    background-color: white;
+    width: 23em;
+    height: 40em;
+    position: relative;
+    left: 10%;
+    transform: translateX(-10%);
+    top: 2em;
+    box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
+    border-radius: 30px;
+    padding: 1em;
+}
+
+#perfil_hero a
+{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Mikado Black";
+    font-size: .85rem;
+    float: right;
+    padding: .75em;
+    width: 10em;
+    border: 3px white solid;
+    margin-right: 1em;
+    margin-top: 1em;
+    border-radius: 30px;
+    text-align: center;
+    transition: .2s;
+}
+
+#perfil_hero a:hover {
+    background-color: white;
+    color: rgb(134,184,230);
+    transition: .2s;
+}
+
+#perfil_hero #card1 #foto
+{
+    width: 15em;
+    height: 15em;
+    border-radius: 100em;
+    box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
+    overflow: hidden;
+    position: relative;
+    top: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+#perfil_hero #card1 #foto img
+{
+    width: 400em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }

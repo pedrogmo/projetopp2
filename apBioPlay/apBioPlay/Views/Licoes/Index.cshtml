@@ -76,7 +76,7 @@
                 <ul>
                     @foreach (apBioPlay.Models.Usuario amigo in ViewBag.amigos)
                     {
-                        <li>@Html.ActionLink(amigo.Nome, "Visualiza", new { usu = amigo })</li>
+                        <li>@Html.ActionLink(amigo.Nome, "Visualiza", amigo)</li>
                     }
                 </ul>
 
