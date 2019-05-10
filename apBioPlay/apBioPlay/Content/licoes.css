@@ -359,10 +359,10 @@ section#cards-laterais {
     font-family: "Mikado Black";
 }
 
-.cardAmigos a {
+.botao {
     width: 70%;
-    background-color: transparent;
-    border: 2px solid gray;
+    background-color: gray;
+    border: 2px solid white;
     padding: .7em;
     padding-top: .6em;
     border-radius: 10px;
@@ -374,30 +374,49 @@ section#cards-laterais {
     position: relative;
     font-family: 'Mikado Black';
     top: 0;
+    color: white;
 }
 
-    .cardAmigos a:hover {
-        background-color: gray;
-        color: white;
+    .botao:hover {
+        background-color: transparent;
+        color: gray;
+        cursor: pointer;
+        border: 2px solid gray;
     }
 
 .cardAmigos ul {
     position: relative;
     top: -.5em;
     margin-bottom: 1.25em;
+    font-family: "Mikado Black";
+    color: rgb(102, 102, 102);
 }
 
-    .cardAmigos ul li {
-        list-style: none;
-        padding-top: .25em;
-        text-transform: uppercase;
-        font-size: 1rem;
-        text-align: center;
-        color: rgb(102, 102, 102);
-        position: relative;
-        right: 1em;
-        font-family: "Mikado Black";
-    }
+.cardAmigos a {
+    font-family: "Mikado Black";
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+    margin-top: .5em;
+    transition: .2s;
+}
+
+.cardAmigos a:hover
+{
+    color: gray;
+}
+
+.cardAmigos ul li {
+    list-style: none;
+    padding-top: .25em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    right: 1em;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 1em;
+    border-radius: 10px;
+}
 
 section#cards-laterais .card-wrapper2 .cardGraphic {
     width: 20em;
@@ -419,6 +438,4 @@ section#cards-laterais .card-wrapper2 .cardGraphic {
         left: 60%;
     }
 }
-
-/* GRAPHIC */
 
