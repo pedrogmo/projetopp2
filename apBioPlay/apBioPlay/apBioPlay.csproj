@@ -201,16 +201,10 @@
     <Content Include="Images\simbolo.png" />
     <Content Include="Images\wave.png" />
     <Content Include="Images\wave2.png" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\fadeIn.js" />
     <Content Include="Scripts\geral.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\licoes.js" />
     <Content Include="Scripts\menuVertical.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\pareto.js" />
     <Content Include="Web.config" />
@@ -263,7 +257,6 @@
     <Content Include="Views\Home\Bastidores.cshtml" />
     <Content Include="Views\Licoes\Forum.cshtml" />
     <Content Include="Views\Home\Cadastrar.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Licoes\Visualiza.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

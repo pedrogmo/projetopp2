@@ -32,8 +32,8 @@ var data = {
     datasets: [{
         type: "line",
         label: "Acumulado",
-        borderColor: "#BA1E14",
-        backgroundColor: "#BA1E14",
+        borderColor: "#77ff33",
+        backgroundColor: "#77ff33",
         pointBorderWidth: 5,
         fill: false,
         data: acumulados,
@@ -41,8 +41,8 @@ var data = {
     }, {
         type: "bar",
         label: "Ocasiões",
-        borderColor: "#000FAA",
-        backgroundColor: "#000FAA",
+        borderColor: "#d9d9d9",
+        backgroundColor: "#d9d9d9",
         data: ocasioes,
         yAxisID: 'y-axis-1'
     }]
