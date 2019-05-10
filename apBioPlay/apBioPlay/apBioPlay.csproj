@@ -220,8 +220,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LicoesController.cs" />
     <Compile Include="DAO\AmizadeDAO.cs" />
-    <Compile Include="DAO\ErrosContext.cs" />
-    <Compile Include="DAO\ErrosDAO.cs" />
+    <Compile Include="DAO\ProblemasContext.cs" />
+    <Compile Include="DAO\ProblemasDAO.cs" />
     <Compile Include="DAO\ForumContext.cs" />
     <Compile Include="DAO\LicoesContext.cs" />
     <Compile Include="DAO\LicoesDAO.cs" />
@@ -234,7 +234,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Erro.cs" />
+    <Compile Include="Models\ProblemaAmbiental.cs" />
     <Compile Include="Models\Licao.cs" />
     <Compile Include="Models\Notificacao.cs" />
     <Compile Include="Models\Publicacao.cs" />

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using apBioPlay.DAO;
 using apBioPlay.Models;
 
@@ -19,12 +18,12 @@ namespace apBioPlay.Controllers
 
         public ActionResult Sobre()
         {
+            ViewBag.problemas = new ProblemasDAO().Lista().OrderByDescending(e => e.Ocasioes).ToList();
             return View();
         }
 
         public ActionResult Bastidores()
-        {
-            ViewBag.erros = new ErrosDAO().Lista().OrderByDescending(e => e.Ocasioes).ToList();
+        {            
             return View();
         }
 

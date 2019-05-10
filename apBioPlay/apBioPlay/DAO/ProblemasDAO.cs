@@ -7,28 +7,28 @@ using apBioPlay.Models;
 
 namespace apBioPlay.DAO
 {
-    public class ErrosDAO
+    public class ProblemasDAO
     {
-        public void Adicionar(Erro e)
+        public void Adicionar(ProblemaAmbiental e)
         {
-            using (var context = new ErrosContext())
+            using (var context = new ProblemasContext())
             {
-                context.Erro.Add(e);
+                context.ProblemaAmbiental.Add(e);
                 context.SaveChanges();
             }
         }
 
-        public IList<Erro> Lista()
+        public IList<ProblemaAmbiental> Lista()
         {
-            using (var contexto = new ErrosContext())
+            using (var contexto = new ProblemasContext())
             {
-                return contexto.Erro.ToList();
+                return contexto.ProblemaAmbiental.ToList();
             }
         }
         
-        public void Atualiza(Erro u)
+        public void Atualiza(ProblemaAmbiental u)
         {
-            using (var contexto = new ErrosContext())
+            using (var contexto = new ProblemasContext())
             {
                 contexto.Entry(u).State = EntityState.Modified;
                 contexto.SaveChanges();

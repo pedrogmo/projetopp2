@@ -6,7 +6,7 @@ using System.Web;
 
 namespace apBioPlay.Models
 {
-    public class Erro
+    public class ProblemaAmbiental
     {
         [Key]
         public int Codigo { get; set; }
