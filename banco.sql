@@ -106,3 +106,12 @@ create table Notificacao(
 
 	constraint fkUsuarioNot foreign key(codUsuario) references Usuario(codigo)
 )
+
+create table SolicitacaoAmizade(
+	codigo int identity(1,1) primary key,
+	codUsuario1 int not null,
+	codUsuario2 int not null
+
+	constraint fkUsuarioS1 foreign key(codUsuario1) references Usuario(codigo),
+	constraint fkUsuarioS2 foreign key(codUsuario2) references Usuario(codigo)
+)

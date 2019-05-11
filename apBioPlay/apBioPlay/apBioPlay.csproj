@@ -231,6 +231,7 @@
     <Compile Include="DAO\RepostaPublicacaoDAO.cs" />
     <Compile Include="DAO\RespostaDAO.cs" />
     <Compile Include="DAO\SiteContext.cs" />
+    <Compile Include="DAO\SolicitacaoAmizadeDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="Filtros\AutorizacaoFilterAttribute.cs" />
     <Compile Include="Global.asax.cs">
