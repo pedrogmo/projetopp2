@@ -99,7 +99,7 @@ create table Cidade(
 
 insert into Cidade values('Riyadh', 'Arábia Saudita', 156)
 insert into Cidade values('Dammam', 'Arábia Saudita', 121)
-insert into Cidade values('Al Jubail', 'rábia Saudit', 152)
+insert into Cidade values('Al Jubail', 'Arábia Saudit', 152)
 insert into Cidade values('Zabol', 'Irã', 217)
 insert into Cidade values('Patna', 'Índia', 149)
 insert into Cidade values('Ludhiana', 'Índia', 122)
@@ -107,7 +107,7 @@ insert into Cidade values('Dehli', 'Índia', 122)
 insert into Cidade values('Gwalior', 'Índia', 176)
 insert into Cidade values('Allahabad', 'Índia', 170)
 insert into Cidade values('Xingtau', 'China', 128)
-insert into Cidade values('Shijiazhuang', 'Chin', 121)
+insert into Cidade values('Shijiazhuang', 'China', 121)
 insert into Cidade values('Baoding', 'China', 126)
 
 create table Notificacao(
