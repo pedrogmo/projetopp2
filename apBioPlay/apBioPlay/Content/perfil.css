@@ -114,10 +114,13 @@ body {
 #content-info {
     background-color: white;
     border: 2px solid black;
-    width: 63em;
     height: 21.5em;
+    width: 50%;
     
     position: relative;
-    left: 34em;
-    bottom: 20em;
+    left: 45%;
+    transform: translateX(-45%);
+    bottom: 19em;
+    margin-left: 22em;
+    margin-right: 100%;
 }
