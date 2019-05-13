@@ -7,26 +7,26 @@ using apBioPlay.Models;
 
 namespace apBioPlay.DAO
 {
-    public class ProblemasDAO
+    public class CidadesDAO
     {
-        public void Adicionar(ProblemaAmbiental e)
+        public void Adicionar(Cidade e)
         {
             using (var context = new SiteContext())
             {
-                context.ProblemaAmbiental.Add(e);
+                context.Cidade.Add(e);
                 context.SaveChanges();
             }
         }
 
-        public IList<ProblemaAmbiental> Lista()
+        public IList<Cidade> Lista()
         {
             using (var contexto = new SiteContext())
             {
-                return contexto.ProblemaAmbiental.ToList();
+                return contexto.Cidade.ToList();
             }
         }
         
-        public void Atualiza(ProblemaAmbiental u)
+        public void Atualiza(Cidade u)
         {
             using (var contexto = new SiteContext())
             {

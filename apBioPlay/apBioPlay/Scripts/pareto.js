@@ -11,7 +11,7 @@ window.onload = function () {
     var qtd = parseInt(val("quantidade"));
     for (var i = 0; i < qtd; i++) {
         nomes[i] = val("nome" + i);
-        ocasioes[i] = parseInt(val("ocasioes" + i));
+        ocasioes[i] = parseInt(val("poluicao" + i));
         totalOcasioes += ocasioes[i];
     }
     var valorAcumulado = 0;
@@ -40,7 +40,7 @@ var data = {
         yAxisID: 'y-axis-2'
     }, {
         type: "bar",
-        label: "Ocasiões",
+        label: "Poluição (µg/m³)",
         borderColor: "#d9d9d9",
         backgroundColor: "#d9d9d9",
         data: ocasioes,
@@ -54,7 +54,7 @@ var options = {
             stacked: true,
             scaleLabel: {
                 display: true,
-                labelString: "Erros"
+                labelString: "Cidades"
             }
         }],
 

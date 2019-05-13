@@ -12,12 +12,12 @@
     <title>Sobre</title>
 </head>
 <body>
-    <p id="quantidade" hidden>@ViewBag.problemas.Count</p>
-    @for (int i = 0; i < ViewBag.problemas.Count; i++)
+    <p id="quantidade" hidden>@ViewBag.cidades.Count</p>
+    @for (int i = 0; i < ViewBag.cidades.Count; i++)
     {
         string nome = "nome" + i;
-        string ocasioes = "ocasioes" + i;
-        <p id="@nome" hidden>@ViewBag.problemas[i].Nome</p><p id="@ocasioes" hidden>@ViewBag.problemas[i].Ocasioes</p>
+        string pol = "poluicao" + i;
+        <p id="@nome" hidden>@ViewBag.cidades[i].Nome (@ViewBag.cidades[i].Pais)</p><p id="@pol" hidden>@ViewBag.cidades[i].Poluicao</p>
     }
     <canvas id="canvas"></canvas>
     <script src="~/Scripts/pareto.js"></script>

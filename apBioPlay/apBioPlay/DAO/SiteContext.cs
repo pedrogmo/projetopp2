@@ -14,7 +14,7 @@ namespace apBioPlay.DAO
         public DbSet<Licao> Licao { get; set; }
         public DbSet<Pergunta> Pergunta { get; set; }
         public DbSet<Resposta> Resposta { get; set; }
-        public DbSet<ProblemaAmbiental> ProblemaAmbiental { get; set; }
+        public DbSet<Cidade> Cidade { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Notificacao> Notificacao { get; set; }
 

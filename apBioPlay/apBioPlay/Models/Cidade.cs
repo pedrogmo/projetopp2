@@ -6,13 +6,15 @@ using System.Web;
 
 namespace apBioPlay.Models
 {
-    public class ProblemaAmbiental
+    public class Cidade
     {
         [Key]
         public int Codigo { get; set; }
-        [Required, StringLength(30)]
+        [Required, StringLength(50)]
         public string Nome { get; set; }
+        [Required, StringLength(50)]
+        public string Pais { get; set; }
         [Required]
-        public int Ocasioes { get; set; }
+        public int Poluicao { get; set; }
     }
 }

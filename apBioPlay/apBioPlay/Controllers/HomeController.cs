@@ -18,7 +18,7 @@ namespace apBioPlay.Controllers
 
         public ActionResult Sobre()
         {
-            ViewBag.problemas = new ProblemasDAO().Lista().OrderByDescending(e => e.Ocasioes).ToList();
+            ViewBag.cidades = new CidadesDAO().Lista().OrderByDescending(c => c.Poluicao).ToList();
             return View();
         }
 
