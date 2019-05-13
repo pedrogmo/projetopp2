@@ -37,15 +37,15 @@ body {
     background-repeat: no-repeat;
 }
 
-#perfil_hero #card1 #user_info h1{
+#perfil_hero #card1 #user_info #nickname {
     font-family: "Mikado Black";
     color: white;
     text-transform: uppercase;
     position: relative;
-    float:right;
+    float: right;
     font-size: 2rem;
     top: -1em;
-    width: 30em;  
+    width: 30em;
     left: 31em;
     user-select: none;
 }
@@ -107,4 +107,17 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+/*CONTENT INFO*/
+
+#content-info {
+    background-color: white;
+    border: 2px solid black;
+    width: 63em;
+    height: 21.5em;
+    
+    position: relative;
+    left: 34em;
+    bottom: 20em;
 }

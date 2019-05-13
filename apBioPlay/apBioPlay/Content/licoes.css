@@ -375,6 +375,7 @@ section#cards-laterais {
     font-family: 'Mikado Black';
     top: 0;
     color: white;
+    outline: none;
 }
 
     .botao:hover {
