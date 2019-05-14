@@ -18,6 +18,6 @@ namespace apBioPlay.Models
         public int CodUsuario { get; set; }
 
         [Required]
-        public DateTime data { get; set; }
+        public DateTime Data { get; set; }
     }
 }

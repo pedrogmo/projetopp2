@@ -10,7 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="~/Content/licoes.css">
+    <link rel="stylesheet" href="~/Content/menu.css">
+    <link rel="stylesheet" href="~/Content/forum.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>BioPlay - Lições</title>
 </head>
@@ -46,11 +47,26 @@
             <a href="/Licoes/Forum" id="forum"><img src="~/Images/IForum.png" alt=""></a>
         </ul>
     </div>
-    <section>
+    <section id="sInformacao">
         <div id="informacao">
-            <div>
+            @foreach (apBioPlay.Models.Publicacao pub in ViewBag.publicacoes)
+            {
+                var usuAtual = new apBioPlay.DAO.UsuariosDAO().Buscar(o => o.Codigo == pub.CodUsuario);
 
-            </div>
+                <div id="publicacao">
+                    <div id="usuPub">
+                        <h1 id="nomeUsu">@usuAtual.Nome</h1>
+                        <div id="fotoUsu">
+                            <img src=@usuAtual.FotoPerfil />
+                        </div>
+                    </div>
+                    <div id="conteudo">
+                        <h1 id="data">@pub.Data</h1>
+                        <p id="texto">@pub.Conteudo</p>
+                        <button>Responder</button>
+                    </div>
+                </div>
+             }
         </div>
     </section>
 </body>
