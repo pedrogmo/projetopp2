@@ -114,7 +114,7 @@ create table Notificacao(
 	codigo int identity(1,1) primary key,
 	texto ntext not null,
 	codUsuario int not null
-
+	url varchar(50) not null
 	constraint fkUsuarioNot foreign key(codUsuario) references Usuario(codigo)
 )
 

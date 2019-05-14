@@ -20,6 +20,11 @@ namespace apBioPlay.DAO
             conexao2.Open();
         }
 
+        public void Dispose()
+        {
+            conexao.Close();
+        }
+
         public int[] Dados(int u)
         {
             int[] ret = new int[3];
@@ -66,11 +71,6 @@ namespace apBioPlay.DAO
                 sqlInsert.ExecuteNonQuery();
             }
             catch (Exception e) { throw new SystemException(e.Message); }
-        }        
-
-        public void Dispose()
-        {
-            conexao.Close();
-        }
+        }                
     }
 }

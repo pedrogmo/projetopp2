@@ -16,5 +16,8 @@ namespace apBioPlay.Models
 
         [Required]
         public int CodUsuario { get; set; }
+
+        [Required]
+        public string Url { get; set; }
     }
 }
