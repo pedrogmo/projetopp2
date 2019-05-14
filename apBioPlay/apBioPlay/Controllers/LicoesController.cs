@@ -15,8 +15,6 @@ namespace apBioPlay.Controllers
         public ActionResult Index()
         {
             var u = (Usuario) Session["usuarioLogado"];
-            ViewBag.amigos = new AmizadeDAO().Amigos(u.Codigo);
-            ViewBag.dados = new LicoesFeitasDAO().Dados(u.Codigo);
             ViewBag.licoes = new LicoesDAO().Lista().OrderBy(l => l.Nivel);
             ViewBag.usuario = u;
             return View();
@@ -31,11 +29,16 @@ namespace apBioPlay.Controllers
         {
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             ViewBag.visualizado = usu;
+
+            /*if(usu.Codigo == ((Usuario)Session["usuarioLogado"]).Codigo)*/
+            ViewBag.amigos = new AmizadeDAO().Amigos(usu.Codigo);
+            ViewBag.dados = new LicoesFeitasDAO().Dados(usu.Codigo);
             return View();
         }
 
         public ActionResult Forum()
         {
+            ViewBag.Publicacoes = new PublicacaoDAO().Lista();
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
