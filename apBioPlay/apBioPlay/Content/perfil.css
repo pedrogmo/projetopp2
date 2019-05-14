@@ -63,8 +63,7 @@ body {
     padding: 1em;
 }
 
-#perfil_hero a
-{
+.alter {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -81,7 +80,7 @@ body {
     transition: .2s;
 }
 
-#perfil_hero a:hover {
+.alter:hover {
     background-color: white;
     color: rgb(134,184,230);
     transition: .2s;
@@ -165,7 +164,7 @@ body {
     width: 50%;
     background-color: gray;
     border: 2px solid white;
-    padding: .7em;
+    padding: .6em;
     padding-top: .6em;
     border-radius: 10px;
     font-size: .75rem;
@@ -175,11 +174,11 @@ body {
     transition: .3s;
     position: relative;
     font-family: 'Mikado Black';
-    top: 13em;
     color: white;
     outline: none;
     left: 50%;
     transform: translateX(-50%);
+    bottom: .5em;
 }
 
 .botao:hover {
@@ -189,20 +188,52 @@ body {
     border: 2px solid gray;
 }
 
-.cardAmigos ul li {
+#content-info .cardAmigos ul {
     list-style: none;
     padding-top: .25em;
+    padding: 1em;
+    margin-right: 1em;
     text-transform: uppercase;
     font-size: 1rem;
     text-align: center;
     position: relative;
-    border: 1px solid rgb(102, 102, 102);
+    border: 2px solid rgb(160, 160, 160);
     border-radius: 5px;
     height: 10em;
     left: 50%;
-    width: 100%;
     transform: translateX(-50%);
-    margin: 0;
+    width: 90%;
 }
+
+    #content-info .cardAmigos ul li a {
+        color: white;
+        float: none;
+        font-family: "Mikado Black";
+        text-decoration: none;
+        background-color: rgb(28,176,246);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 10em;
+        padding-right: 10em;
+        position: relative;
+        top: .5em;
+        transition: .3s;
+    }
+
+    #content-info .cardAmigos ul li a:hover {
+        color: white;
+        float: none;
+        font-family: "Mikado Black";
+        text-decoration: none;
+        background-color: rgb(68, 195, 255);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 10em;
+        padding-right: 10em;
+        position: relative;
+        top: .5em;
+        transition: .3s;
+    }
+
 
 
