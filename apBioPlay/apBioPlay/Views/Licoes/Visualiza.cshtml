@@ -21,15 +21,20 @@
             <div id="foto">
                 <img src="@ViewBag.visualizado.FotoPerfil" alt="Alternate Text" />
             </div>
-
+            
             <div id="user_info">
                 <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
+
+                <div id="wow">
+                    <img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" />
+                    <h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1>
+                </div>
 
                 <div id="content-info">
                     <div class="cardGraphic">
                         <div class="center-graphic">
                             <h1>Estatísticas</h1>
-                            <p>Perguntas respondidas: @ViewBag.dados[0]</p>
+                            <p id="pr">Perguntas respondidas: @ViewBag.dados[0]</p>
                             <p id="qtd0" hidden>@ViewBag.dados[1]</p>
                             <p id="qtd1" hidden>@ViewBag.dados[2]</p>
                             <canvas id="canvas"></canvas>

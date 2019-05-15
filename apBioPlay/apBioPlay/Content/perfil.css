@@ -44,20 +44,20 @@ body {
     position: relative;
     float: right;
     font-size: 2rem;
-    top: -1.5em;
-    width: 30em;
-    left: 31em;
+    top: -3em;
+    width: auto;
+    left: 6.5em;
     user-select: none;
 }
 
 #perfil_hero #card1 {
     background-color: white;
-    width: 23em;
-    height: 40em;
+    width: 15em;
+    height: 20em;
     position: relative;
     left: 10%;
     transform: translateX(-10%);
-    top: 2em;
+    top: 8em;
     box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
     border-radius: 30px;
     padding: 1em;
@@ -88,13 +88,13 @@ body {
 
 #perfil_hero #card1 #foto
 {
-    width: 15em;
-    height: 15em;
+    width: 13em;
+    height: 13em;
     border-radius: 100em;
     box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
     overflow: hidden;
     position: relative;
-    top: 4em;
+    top: 0em;
     left: 50%;
     transform: translateX(-50%);
     user-select: none;
@@ -107,6 +107,29 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+
+#perfil_hero #user_info #wow
+{
+    position: relative;
+    width: 100%;
+    top: 1em;
+    user-select: none;
+    outline: none;
+}
+
+#perfil_hero #user_info #wow #star
+{
+    width: 20%;
+}
+
+    #perfil_hero #user_info #wow #lvl {
+        float: right;
+        position: relative;
+        bottom: 4.20em;
+        right: 4em;
+        font-family: "Mikado Black";
+        color: rgb(38,38,38);
+    }
 
 /*CONTENT INFO*/
 
@@ -132,9 +155,10 @@ body {
     box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
     border-radius: 10px;
     height: 20em;
-    left: 30em;
+    left: 50%;
     margin-top: 2em;
     margin-bottom: 2em;
+    bottom: 1em;
 }
 
 #content-info .cardGraphic {
@@ -149,6 +173,25 @@ body {
     position: relative;
     top: 1em;
 }
+
+#content-info .cardGraphic .center-graphic h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #333;
+    position: relative;
+    font-family: "Mikado Black";
+    user-select: none;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 2em;
+}
+
+    #content-info .cardGraphic .center-graphic #pr {
+        font-family: "Mikado Black";
+        user-select: none;
+        color: #333;
+        margin-left: 4em;
+    }
 
 #content-info .cardAmigos h1 {
     text-transform: uppercase;
