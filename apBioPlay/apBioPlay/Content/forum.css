@@ -57,7 +57,7 @@ div#conteudo p{
     font-family: 'Aristotelica';
 }
 
-div#conteudo button{
+div#conteudo a{
     position:relative;
     top:10px;
 }

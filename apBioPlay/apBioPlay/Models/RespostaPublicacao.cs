@@ -11,7 +11,7 @@ namespace apBioPlay.Models
         [Key]
         public int Codigo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A resposta é obrigatória", AllowEmptyStrings = false)]
         public string Conteudo { get; set; }
 
         [Required]
@@ -21,6 +21,6 @@ namespace apBioPlay.Models
         public int CodPublicacao { get; set; }
 
         [Required]
-        public DateTime data { get; set; }
+        public DateTime Data { get; set; }
     }
 }

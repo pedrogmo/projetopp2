@@ -12,8 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="~/Content/menu.css">
     <link rel="stylesheet" href="~/Content/forum.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <title>BioPlay - Lições</title>
+    <title>BioPlay - Forum</title>
 </head>
 <body>
     <header id="mobile">
@@ -63,7 +62,7 @@
                     <div id="conteudo">
                         <h1 id="data">@pub.Data</h1>
                         <p id="texto">@pub.Conteudo</p>
-                        <button>Responder</button>
+                        @Html.ActionLink("Visualizar", "VerPublicacao", new { codP = pub.Codigo })
                     </div>
                 </div>
              }

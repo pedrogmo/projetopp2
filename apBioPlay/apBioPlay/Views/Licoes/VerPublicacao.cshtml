@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>B</title>
+</head>
+<body>
+    <section id="sInformacao">
+        <div id="informacao">
+            <div id="publicacao">
+                <div id="usuPub">
+                    <h1 id="nomeUsu">@ViewBag.usuarioPublicacao.Nome</h1>
+                    <div id="fotoUsu">
+                        <img src=@ViewBag.usuarioPublicacao.FotoPerfil />
+                    </div>
+                </div>
+                <div id="conteudo">
+                    <h1 id="data">@ViewBag.publicacao.Data</h1>
+                    <p id="texto">@ViewBag.publicacao.Conteudo</p>
+                </div>
+            </div>
+            @foreach (apBioPlay.Models.RespostaPublicacao resp in ViewBag.respostas)
+            {
+                var usuAtual = new apBioPlay.DAO.UsuariosDAO().Buscar(o => o.Codigo == resp.CodUsuario);
+
+                <div id="resp_publicacao">
+                    <div id="usuPub">
+                        <h1 id="nomeUsu">@usuAtual.Nome</h1>
+                        <div id="fotoUsu">
+                            <img src=@usuAtual.FotoPerfil />
+                        </div>
+                    </div>
+                    <div id="conteudo">
+                        <h1 id="data">@resp.Data</h1>
+                        <p id="texto">@resp.Conteudo</p>
+                    </div>
+                </div>
+            }
+            <form action="/Licoes/Responder">
+                <input name="resp" type="text" />
+                <input value ="Responder"type="submit" />
+            </form>
+        </div>
+    </section>
+</body>
+</html>

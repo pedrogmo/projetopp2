@@ -7,7 +7,7 @@ using apBioPlay.Models;
 
 namespace apBioPlay.DAO
 {
-    public class RepostaPublicacaoDAO
+    public class RespostaPublicacaoDAO
     {
         public void Adicionar(RespostaPublicacao e)
         {
@@ -23,6 +23,19 @@ namespace apBioPlay.DAO
             using (var contexto = new SiteContext())
             {
                 return contexto.RespostaPublicacao.ToList();
+            }
+        }
+
+        public IList<RespostaPublicacao> RespostasDe(int codPublicacao)
+        {
+            using (var contexto = new SiteContext())
+            {
+                var ret = new List<RespostaPublicacao>();
+                var lista = contexto.RespostaPublicacao.ToList();
+                foreach (RespostaPublicacao r in lista)
+                    if (r.CodPublicacao == codPublicacao)
+                        ret.Add(r);
+                return ret;
             }
         }
 

@@ -171,6 +171,7 @@
     <Content Include="Content\home.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\perfil.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back_cadastro.png" />
@@ -230,7 +231,7 @@
     <Compile Include="DAO\LicoesFeitasDAO.cs" />
     <Compile Include="DAO\NotificacaoDAO.cs" />
     <Compile Include="DAO\PublicacaoDAO.cs" />
-    <Compile Include="DAO\RepostaPublicacaoDAO.cs" />
+    <Compile Include="DAO\RespostaPublicacaoDAO.cs" />
     <Compile Include="DAO\RespostaDAO.cs" />
     <Compile Include="DAO\SiteContext.cs" />
     <Compile Include="DAO\SolicitacaoAmizadeDAO.cs" />
@@ -265,6 +266,7 @@
     <Content Include="Views\Licoes\Forum.cshtml" />
     <Content Include="Views\Home\Cadastrar.cshtml" />
     <Content Include="Views\Licoes\Visualiza.cshtml" />
+    <Content Include="Views\Licoes\VerPublicacao.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

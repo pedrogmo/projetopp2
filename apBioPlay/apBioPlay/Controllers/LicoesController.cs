@@ -43,9 +43,39 @@ namespace apBioPlay.Controllers
             return View();
         }
 
+        [Route("publicacoes/{codP}")]
+        public ActionResult VerPublicacao(int codP)
+        {
+            Session["publicacao"] = new PublicacaoDAO().Buscar(codP);
+            ViewBag.publicacao = (Publicacao)Session["publicacao"];
+            ViewBag.respostas = new RespostaPublicacaoDAO().RespostasDe(codP);
+            ViewBag.usuarioPublicacao = new UsuariosDAO().Buscar(u => u.Codigo == ViewBag.publicacao.CodUsuario);
+            ViewBag.usuario = (Usuario)Session["usuarioLogado"];
+            return View();
+        }
+
+        public ActionResult Responder(string resp)
+        {
+            Publicacao pub = (Publicacao)Session["publicacao"];
+            Usuario usu = (Usuario)Session["usuarioLogado"];
+            var resposta = new RespostaPublicacao();
+            resposta.CodPublicacao = pub.Codigo;
+            resposta.CodUsuario = usu.Codigo;
+            resposta.Conteudo = resp;
+            resposta.Data = DateTime.Now;
+            new RespostaPublicacaoDAO().Adicionar(resposta);
+            var notificacao = new Notificacao();
+            notificacao.CodUsuario = pub.CodUsuario;
+            notificacao.Texto = $"O usuário {usu.Nome} respondeu sua publicação.";
+            notificacao.Url = $"publicacoes/{pub.Codigo}";
+            new NotificacaoDAO().Adicionar(notificacao);
+            return View("VerPublicacao", pub.Codigo);
+        }
+
         //Para lição selecionada
         public ActionResult Licao(Licao l)
         {
+            ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
     }

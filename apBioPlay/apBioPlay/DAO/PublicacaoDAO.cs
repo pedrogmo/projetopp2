@@ -34,5 +34,15 @@ namespace apBioPlay.DAO
                 contexto.SaveChanges();
             }
         }
+
+        public Publicacao Buscar(int cod)
+        {
+            using (var contexto = new SiteContext())
+            {
+                return contexto.Publicacao
+                .Where(p => p.Codigo == cod)
+                .FirstOrDefault();
+            }
+        }
     }
 }
