@@ -184,7 +184,12 @@
     <Content Include="Images\Bastidores\WhatsApp Video 2019-04-27 at 16.54.42.mp4" />
     <Content Include="Images\bg.png" />
     <Content Include="Images\bg2.png" />
+    <Content Include="Images\chk.png" />
     <Content Include="Images\controle.png" />
+    <Content Include="Images\FotosPerfil\pic1.png" />
+    <Content Include="Images\FotosPerfil\pic2.png" />
+    <Content Include="Images\FotosPerfil\pic3.png" />
+    <Content Include="Images\FotosPerfil\pic4.png" />
     <Content Include="Images\Fundo_Perfil.png" />
     <Content Include="Images\hdiw.png" />
     <Content Include="Images\hdiw2.png" />
@@ -215,6 +220,7 @@
     <Content Include="Scripts\geral.js" />
     <Content Include="Scripts\licoes.js" />
     <Content Include="Scripts\menuVertical.js" />
+    <Content Include="Scripts\modalPerfil.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\pareto.js" />
     <Content Include="Web.config" />
@@ -276,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\FotosPerfil\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -14,55 +14,96 @@
     <title>BioPlay - Perfil</title>
 </head>
 <body>
-    <section id="perfil_hero">
-        <a href="#" class="alter">Alterar Perfil</a>
+    <div id="perfil_hero">
+        <a href="#" id="alter" style="visibility: @stringBotao">Alterar Perfil</a>
+    </div>
 
-        <div id="card1">
-            <div id="foto">
-                <img src="@ViewBag.visualizado.FotoPerfil" alt="Alternate Text" />
+    <div id="card1">
+        <div id="foto">
+            <img src="@ViewBag.visualizado.FotoPerfil" alt="Alternate Text" />
+        </div>
+
+        <div id="user_info">
+            <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
+
+            <div id="wow">
+                <img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" />
+                <h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1>
             </div>
-            
-            <div id="user_info">
-                <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
 
-                <div id="wow">
-                    <img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" />
-                    <h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1>
-                </div>
-
-                <div id="content-info">
-                    <div class="cardGraphic">
-                        <div class="center-graphic">
-                            <h1>Estatísticas</h1>
-                            <p id="pr">Perguntas respondidas: @ViewBag.dados[0]</p>
-                            <p id="qtd0" hidden>@ViewBag.dados[1]</p>
-                            <p id="qtd1" hidden>@ViewBag.dados[2]</p>
-                            <canvas id="canvas"></canvas>
-                        </div>
+            <div id="content-info">
+                <div class="cardGraphic">
+                    <div class="center-graphic">
+                        <h1>Estatísticas</h1>
+                        <p id="pr">Perguntas respondidas: @ViewBag.dados[0]</p>
+                        <p id="qtd0" hidden>@ViewBag.dados[1]</p>
+                        <p id="qtd1" hidden>@ViewBag.dados[2]</p>
+                        <canvas id="canvas"></canvas>
                     </div>
                 </div>
+            </div>
 
-                <div id="content-info">
-                    <div class="cardAmigos">
-                        <h1>Amigos</h1>
+            <div id="content-info">
+                <div class="cardAmigos">
+                    <h1>Amigos</h1>
 
-                        <ul>
-                            @if (ViewBag.amigos != null)
+                    <ul>
+                        @if (ViewBag.amigos != null)
+                        {
+                            foreach (apBioPlay.Models.Usuario amigo in ViewBag.amigos)
                             {
-                                foreach (apBioPlay.Models.Usuario amigo in ViewBag.amigos)
-                                {
-                                    <li>@Html.ActionLink(amigo.Nome, "Visualiza", amigo)</li>
-                                }
+                                <li>@Html.ActionLink(amigo.Nome, "Visualiza", amigo)</li>
                             }
-                        </ul>
+                        }
+                    </ul>
 
-                        <button class="botao" style="visibility: @stringBotao">Adicionar Novo</button>
-                    </div>
+                    <button class="botao" style="visibility: @stringBotao">Adicionar Novo</button>
                 </div>
-
             </div>
         </div>
-    </section>
-    <script src="~/Scripts/licoes.js"></script>
+    </div>
+
+    <!--<section id="bg-modal">
+        <div id="modal-content">
+
+            <div id="close">X</div>
+
+            <h1>Escolha seu avatar!</h1>
+
+            <ul>
+                <li>
+                    <input type="radio" name="pic" id="pic1" checked />
+                    <label for="pic1"><img src="~/Images/FotosPerfil/pic1.png"></label>
+                </li>
+                <li>
+                    <input type="radio" name="pic" id="pic2" />
+                    <label for="pic2"><img src="~/Images/FotosPerfil/pic2.png"></label>
+                </li>
+                <li>
+                    <input type="radio" name="pic" id="pic3" />
+                    <label for="pic3"><img src="~/Images/FotosPerfil/pic3.png"></label>
+                </li>
+                <li>
+                    <input type="radio" name="pic" id="pic4" />
+                    <label for="pic4"><img src="~/Images/FotosPerfil/pic4.png"></label>
+                </li>
+            </ul>
+
+            <h1>Configurações avançadas:</h1>
+
+            <form action="/" method="post">
+                <h2>Alterar senha:</h2>
+                <input type="text" value="" class="txtCampos" placeholder="Senha antiga" />
+                <input type="text" value="" class="txtCampos" placeholder="Nova senha" />
+                <input type="submit" value="Enviar alterações"/>
+            </form>
+
+
+        </div>
+    </section>-->
+
+
 </body>
+    <script src="~/Scripts/licoes.js"></script>
+    <script src="~/Scripts/modalPerfil.js"></script>
 </html>

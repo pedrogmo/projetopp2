@@ -14,7 +14,7 @@ namespace apBioPlay.DAO
 
         public SolicitacaoAmizadeDAO()
         {
-            conexao = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118174;User ID=PR118174;Password=PR118174");
+            conexao = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118174;User ID=PR118174;Password=PR118174; Min Pool Size=5;Max Pool Size=250; Connect Timeout=3");
             conexao.Open();
         }
 
