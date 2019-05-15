@@ -1,0 +1,10 @@
+* Mensagens de erro para cadastro
+* Design de notificação
+* Código para exibir notificações
+* Botões para adicionar amigo
+* Código para adicionar amigo
+* Design do forum
+* Design da sobre
+* Design da bastidores
+* Design de uma lição
+* Código para lição
