@@ -14,21 +14,28 @@
     <title>BioPlay - Perfil</title>
 </head>
 <body>
-    <div id="perfil_hero">
-        <a href="#" id="alter" style="visibility: @stringBotao">Alterar Perfil</a>
-    </div>
+    <section id="bg-hero"></section>
 
-    <div id="card1">
-        <div id="foto">
-            <img src="@ViewBag.visualizado.FotoPerfil" alt="Alternate Text" />
-        </div>
+    <section id="home-hero">
+        <div class="container">
+            <a href="#" id="alter" style="visibility: @stringBotao">Alterar Perfil</a>
 
-        <div id="user_info">
-            <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
+            <div id="card1">
+                <div id="foto">
+                    <img src="@ViewBag.visualizado.FotoPerfil" alt="Alternate Text" />
+                </div>
 
-            <div id="wow">
-                <img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" />
-                <h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1>
+                <div id="user-info">
+                    <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
+
+                    <div id="wow">
+                        <a href="#" id="novoAmigo">Enviar solicitação</a>
+                        <ul>
+                            <li><img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" /></li>
+                            <li><h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <div id="content-info">
@@ -61,9 +68,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!--<section id="bg-modal">
+    <section id="bg-modal">
         <div id="modal-content">
 
             <div id="close">X</div>
@@ -94,16 +101,15 @@
             <form action="/" method="post">
                 <h2>Alterar senha:</h2>
                 <input type="text" value="" class="txtCampos" placeholder="Senha antiga" />
-                <input type="text" value="" class="txtCampos" placeholder="Nova senha" />
+                <input type="password" value="" class="txtCampos" placeholder="Nova senha" />
                 <input type="submit" value="Enviar alterações"/>
             </form>
 
 
         </div>
-    </section>-->
-
-
+    </section>
 </body>
-    <script src="~/Scripts/licoes.js"></script>
-    <script src="~/Scripts/modalPerfil.js"></script>
 </html>
+
+<script src="~/Scripts/licoes.js"></script>
+<script src="~/Scripts/modalPerfil.js"></script>

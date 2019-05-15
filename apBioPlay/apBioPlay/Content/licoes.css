@@ -1,8 +1,12 @@
-﻿/* LIÇÕES */
+﻿
+/* LIÇÕES */
 
-section#teste {
+#teste {
     padding: 8rem 0;
     background-color: #fff;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .heading {
@@ -22,7 +26,7 @@ section#teste {
 }
 
 .card {
-    width: 20em;
+    width: 17em;
     height: 17em;
     background-color: #ebeef8;
     display: flex;
@@ -81,125 +85,3 @@ section#teste {
         margin: 2rem;
     }
 }
-
-@media(min-width: 70rem) {
-    section {
-        width: 60%;
-    }
-}
-
-/* CARDS LATERAIS */
-
-section#cards-laterais {
-    top: 16rem;
-    background-color: transparent;
-    position: absolute;
-    left: -60%;
-    width: 20em;
-    height: auto;
-    visibility: hidden;
-}
-
-section#cards-laterais .card-wrapper2 .cardAmigos {
-    width: 20em;
-    height: 30em;
-    background-color: transparent;
-    border: 3px solid #ebeef8;
-    border-radius: 30px;
-    position: relative;
-}
-
-.cardAmigos img {
-    width: 35%;
-}
-
-.cardAmigos h1 {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    text-align: center;
-    color: #333;
-    position: relative;
-    font-family: "Mikado Black";
-}
-
-.botao {
-    width: 70%;
-    background-color: gray;
-    border: 2px solid white;
-    padding: .7em;
-    padding-top: .6em;
-    border-radius: 10px;
-    font-size: .75rem;
-    color: gray;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .3s;
-    position: relative;
-    font-family: 'Mikado Black';
-    top: 0;
-    color: white;
-    outline: none;
-}
-
-.botao:hover {
-    background-color: transparent;
-    color: gray;
-    cursor: pointer;
-    border: 2px solid gray;
-}
-
-.cardAmigos ul {
-    position: relative;
-    top: -.5em;
-    margin-bottom: 1.25em;
-    font-family: "Mikado Black";
-    color: rgb(102, 102, 102);
-}
-
-.cardAmigos a {
-    font-family: "Mikado Black";
-    text-decoration: none;
-    color: rgb(102, 102, 102);
-    margin-top: .5em;
-    transition: .2s;
-}
-
-.cardAmigos a:hover
-{
-    color: gray;
-}
-
-.cardAmigos ul li {
-    list-style: none;
-    padding-top: .25em;
-    text-transform: uppercase;
-    font-size: 1rem;
-    text-align: center;
-    position: relative;
-    right: 1em;
-    border: 1px solid rgb(102, 102, 102);
-    padding: 1em;
-    border-radius: 10px;
-}
-
-section#cards-laterais .card-wrapper2 .cardGraphic {
-    width: 20em;
-    height: 26.5em;
-    background-color: transparent;
-    border: 3px solid #ebeef8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
-    border-radius: 30px;
-    position: relative;
-    top: 1em;
-}
-
-@media(min-width: 70rem) {
-    section#cards-laterais {
-        visibility: initial;
-        left: 60%;
-    }
-}
-

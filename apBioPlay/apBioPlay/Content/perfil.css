@@ -18,33 +18,558 @@
 
 /* DEFAULT */
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Righteous', sans-serif;
+    text-align: center;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
 .container {
-    width: 100%;
+    width: 95%;
+    max-width: 70em;
     margin: 0 auto;
 }
 
 /*PERFIL HERO*/
 
-body {
+/*#home-hero {
     background-image: url('../Images/Fundo_Perfil.png');
-    background-size: 100em;
+    background-size: cover;
     background-repeat: no-repeat;
+}*/
+
+#bg-hero {
+    background-image: url('../Images/Fundo_Perfil.png');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 8em 3em;
 }
 
-#perfil_hero
-{
-    width: 100%;
-    border: 2px solid white;
-}
-
-#perfil_hero a
+#home-hero
 {
     position: relative;
+    bottom: 8em;
+}
+
+#home-hero a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Mikado Black";
+    font-size: .85rem;
+    padding: .75em;
+    width: 10em;
+    border: 3px white solid;
+    border-radius: 30px;
+    text-align: center;
+    transition: .2s;
+    position: relative;
+    bottom: 6em;
+}
+
+#home-hero a:hover {
+    background-color: white;
+    color: rgb(134,184,230);
+    transition: .2s;
+}
+
+#home-hero #card1 {
+    background-color: white;
+    box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
+    border-radius: 30px;
+    padding: 1em;
+    width: 25em;
+    height: 30em;
+    position: relative;
+    left: 50%;
+    bottom: 2em;
+    transform: translateX(-50%);
+}
+
+#home-hero #card1 #foto {
+    width: 13em;
+    height: 13em;
+    border-radius: 100em;
+    box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
+    overflow: hidden;
+    position: relative;
+    top: 0em;
     left: 50%;
     transform: translateX(-50%);
+    user-select: none;
+}
+
+#home-hero #card1 #foto img {
+    width: 400em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#home-hero #card1 #user-info #nickname
+{
+    font-family: "Mikado Black";
+    color: rgba(0,0,0,.8);
+    text-transform: uppercase;
+    position: relative;
+    font-size: 2rem;
+    width: auto;
+    user-select: none;
+}
+
+#home-hero #card1 #wow ul
+{
+    position: relative;
+    left: -7em;
+}
+
+#home-hero #card1 #wow ul li
+{
+    display: inline-block;
+}
+
+#home-hero #card1 #wow #star
+{
+    width: 50%;
+}
+
+#home-hero #card1 #wow #lvl {
+    font-family: "Mikado Black";
+    color: rgba(0,0,0,.8);
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.5rem;
+    width: auto;
+    user-select: none;
+    bottom: .55em;
+    right: 1em;
+}
+
+#home-hero #card1 #wow #novoAmigo {
+    font-family: "Mikado Black";
+    color: white;
+    background-color: lawngreen;
+    position: relative;
+    bottom: 1em;
+    padding: .5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 10px;
+}
+
+#home-hero #card1 #wow #novoAmigo:hover {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+/* CARD-CONTENT */
+
+    #content-info {
+        display: grid;
+        background-color: white;
+        position: relative;
+        width: 25em;
+        box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
+        border-radius: 30px;
+        height: 30em;
+        left: 50%;
+        top: 2em;
+        transform: translateX(-50%);
+        margin-top: 2em;
+        margin-bottom: 2em;
+        bottom: 1em;
+    }
+
+    #content-info .cardGraphic {
+        height: 30em;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+        border-radius: 30px;
+        position: relative;
+        top: 1em;
+    }
+
+    #content-info .cardGraphic .center-graphic h1 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: #333;
+        position: relative;
+        font-family: "Mikado Black";
+        user-select: none;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #content-info .cardGraphic .center-graphic #pr {
+        font-family: "Mikado Black";
+        user-select: none;
+        color: #333;
+        margin-bottom: 3em;
+    }
+
+    #content-info .cardAmigos h1 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: #333;
+        position: relative;
+        font-family: "Mikado Black";
+        user-select: none;
+    }
+
+    .botao {
+        width: 50%;
+        background-color: gray;
+        border: 2px solid white;
+        padding: .6em;
+        padding-top: .6em;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: gray;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .3s;
+        position: relative;
+        font-family: 'Mikado Black';
+        color: white;
+        outline: none;
+    }
+
+    .botao:hover {
+        background-color: transparent;
+        color: gray;
+        cursor: pointer;
+        border: 2px solid gray;
+    }
+
+    #content-info .cardAmigos ul {
+        list-style: none;
+        padding-top: .25em;
+        padding: 1em;
+        text-transform: uppercase;
+        font-size: 1rem;
+        text-align: center;
+        position: relative;
+        border: 2px solid rgb(160, 160, 160);
+        border-radius: 5px;
+        height: 20em;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    #content-info .cardAmigos ul li a {
+        color: white;
+        font-family: "Mikado Black";
+        text-decoration: none;
+        background-color: rgb(28,176,246);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 5em;
+        padding-right: 5em;
+        position: relative;
+        top: .5em;
+        transition: .3s;
+    }
+
+    #content-info .cardAmigos ul li a:hover {
+        color: white;
+        float: none;
+        font-family: "Mikado Black";
+        text-decoration: none;
+        background-color: rgb(68, 195, 255);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 6em;
+        padding-right: 6em;
+        position: relative;
+        top: .5em;
+        transition: .3s;
+    }
+
+    /* Modal */
+
+    #bg-modal {
+        background-color: rgb(0,0,0,.5);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        margin: 0 auto;
+        left: 0;
+        visibility: hidden;
+        overflow: auto;
+    }
+
+    #bg-modal #modal-content {
+        width: 90%;
+        height: auto;
+        padding: 1em;
+        position: relative;
+        background-color: white;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #bg-modal #modal-content h1 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        color: #333;
+        font-family: "Mikado Black";
+        user-select: none;
+        top: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: .5em;
+    }
+
+    #bg-modal #modal-content h2 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: #333;
+        font-family: "Mikado Black";
+        user-select: none;
+        top: 1em;
+    }
+
+    #bg-modal #modal-content input[type="submit"] {
+        font-size: 1.2rem;
+        background-color: #83e600;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Aristotelica';
+        position: relative;
+        text-align: center;
+        padding-top: 1.3em;
+        padding: 1em;
+        border: none;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    #bg-modal #modal-content input[type="submit"]:hover {
+        background-color: #a1e648;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Aristotelica';
+        cursor: pointer;
+        /* transition: .2s; */
+    }
+
+    #bg-modal #modal-content #close {
+        font-size: 1.3rem;
+        font-family: "Mikado Black";
+        position: relative;
+        float: right;
+        width: 1.3em;
+        text-align: center;
+        border-radius: 100%;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* FOTOS DE PERFIL */
+
+    ul {
+        list-style-type: none;
+        position: relative;
+        left: -1em;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        padding: 10px;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        outline: none;
+    }
+
+    label:before {
+        background-color: white;
+        color: white;
+        content: " ";
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 28px;
+        transform: scale(0);
+    }
+
+    label img {
+        height: 100px;
+        width: 100px;
+        transform-origin: 50% 50%;
+    }
+
+    :checked + label:before {
+        background-image: url('../Images/chk.png');
+        background-size: 100%;
+        transform: scale(1);
+        z-index: 3;
+    }
+
+    :checked + label img {
+        transform: scale(0.9);
+        z-index: -1;
+    }
+
+    .txtCampos {
+        font-family: 'Mikado';
+        font-size: 14pt;
+        width: 80%;
+        margin-top: 1em;
+        background-color: white;
+        border: 2px solid rgb(160,160,160);
+        border-radius: 30px;
+        outline: none;
+        padding: .25em;
+        padding-left: .55em;
+    }
+
+    .txtCampos:focus {
+        transition: 0.25s ease-in;
+        border-color: #83e600;
+    }
+
+@media(min-width: 60rem)
+{
+    #home-hero #card1 {
+        background-color: white;
+        box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
+        border-radius: 30px;
+        padding: 1em;
+        width: 25em;
+        height: 30em;
+        position: relative;
+        left: 2%;
+        bottom: 2em;
+        transform: translateX(-2%);
+    }
+
+    #home-hero a {
+        float: right;
+    }
+
+    #home-hero #card1 #user-info #nickname {
+        position: relative;
+        font-size: 2.2rem;
+        width: auto;
+        left: 9em;
+        bottom: 5em;
+        color: white;
+    }
+
+    #home-hero #card1 #wow #novoAmigo {
+        bottom: 3em;
+        float: none;
+        font-size: 1.1rem;
+    }
+
+    #home-hero #card1 #wow ul {
+        position: relative;
+        right: 7em;
+    }
+
+    #content-info
+    {
+        width: 80%;
+        top: 0;
+    }
+
+    #content-info .cardAmigos ul li a {
+        color: white;
+        float: none;
+        font-family: "Mikado Black";
+        font-size: 1.5rem;
+        text-decoration: none;
+        background-color: rgb(28,176,246);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 10em;
+        padding-right: 10em;
+        position: relative;
+        top: .5em;
+        transition: .3s;
+    }
+
+    #content-info .cardAmigos ul li a:hover {
+        color: white;
+        float: none;
+        font-family: "Mikado Black";
+        text-decoration: none;
+        background-color: rgb(68, 195, 255);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 11em;
+        padding-right: 11em;
+        position: relative;
+        top: .5em;
+        transition: .3s;
+    }
+
+    .botao {
+        font-size: 1rem;
+        bottom: 0;
+    }
+
+    #content-info .cardGraphic .center-graphic h1 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: #333;
+        position: relative;
+        font-family: "Mikado Black";
+        user-select: none;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #content-info .cardGraphic .center-graphic #pr {
+        font-size: 1.5rem;
+    }
+
+    #bg-modal #modal-content {
+        height: auto;
+        padding: 1em;
+    }
+
+    .txtCampos {
+        width: 90%;
+    }
+
+    #bg-modal #modal-content input[type="submit"] {
+    }
 }

@@ -16,7 +16,7 @@
 /* DEFAULT */
 
 body {
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -26,7 +26,7 @@ img {
 }
 
 .container {
-    width: 95%;
+    width: 100%;
     max-width: 70em;
     margin: 0 auto;
 }
@@ -90,6 +90,7 @@ img {
     color: rgb(105, 105, 105);
 }
 
+
 /* HEADER DESKTOP */
 
 #desktop {
@@ -127,15 +128,15 @@ img {
     transition: .2s;
 }
 
-    /* LOGO */
-    #desktop img {
-        width: 12em;
-        position: relative;
-        top: 1em;
-        left: 1em;
-        float: left;
-        padding-right: 2em;
-    }
+/* LOGO */
+#desktop img {
+    width: 12em;
+    position: relative;
+    top: 1em;
+    left: 1em;
+    float: left;
+    padding-right: 2em;
+}
 
 /* Estrela */
 
