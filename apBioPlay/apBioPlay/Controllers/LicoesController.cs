@@ -69,7 +69,7 @@ namespace apBioPlay.Controllers
             notificacao.Texto = $"O usuário {usu.Nome} respondeu sua publicação.";
             notificacao.Url = $"publicacoes/{pub.Codigo}";
             new NotificacaoDAO().Adicionar(notificacao);
-            return View("VerPublicacao", pub.Codigo);
+            return RedirectToAction("VerPublicacao", new { codP = pub.Codigo });
         }
 
         //Para lição selecionada
