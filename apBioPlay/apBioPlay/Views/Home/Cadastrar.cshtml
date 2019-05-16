@@ -11,9 +11,16 @@
         senhaAnterior = ViewBag.usuarioAnterior.Senha;
         emailAnterior = ViewBag.usuarioAnterior.Email;
         DateTime d = ViewBag.usuarioAnterior.DataNascimento;
-        dataAnterior = d.Year.ToString().PadLeft(4,'0') + "-" + d.Month.ToString().PadLeft(2,'0') + "-" + d.Day.ToString().PadLeft(2,'0');
+        dataAnterior = d.Year.ToString().PadLeft(4, '0') + "-" + d.Month.ToString().PadLeft(2, '0') + "-" + d.Day.ToString().PadLeft(2, '0');
         ViewBag.usuarioAnterior = null;
     }
+
+    string alerta = "";
+    if (Session["Message"] != null)
+    {
+        alerta = (string)Session["Message"];
+    }
+    Session["Message"] = null;
 }
 
 <!DOCTYPE html>
@@ -46,5 +53,9 @@
             </div>
         </div>
     </section>
+    <script>
+        if ('@alerta' != '')
+            alert('@alerta');
+    </script>
 </body>
 </html>

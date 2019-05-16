@@ -1,6 +1,12 @@
 ﻿
 @{
     Layout = null;
+    string alerta = "";
+    if (Session["Message"] != null)
+    {
+        alerta = (string)Session["Message"];
+    }
+    Session["Message"] = null;
 }
 
 <!DOCTYPE html>
@@ -13,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="~/Content/home.css">
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>    
 </head>
 <body>
 
@@ -104,9 +110,9 @@
         <form action="/Home/Logar">
             <h1>LOGIN:</h1>
             <hr>
-            <input type="text" id="usu" name ="stringLogin" class="txtCampos" required placeholder=" Usuário">
+            <input type="text" id="usu" name="stringLogin" class="txtCampos" required placeholder=" Usuário">
             <br><br>
-            <input type="password" id="sen" name ="stringSenha" class="txtCampos" required placeholder=" Senha">
+            <input type="password" id="sen" name="stringSenha" class="txtCampos" required placeholder=" Senha">
             <br><br>
             <input type="submit" value="Logar" />
             <h2>Não possui uma conta ainda?</h2>
@@ -125,5 +131,9 @@
     <script src="~/Scripts/fadeIn.js"></script>
     <script src="~/Scripts/parallax.js"></script>
     <script src="~/Scripts/menuVertical.js"></script>
+    <script>
+        if ('@alerta' != '')
+            alert('@alerta');
+    </script>
 </body>
 </html>

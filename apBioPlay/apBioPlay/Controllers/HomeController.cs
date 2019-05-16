@@ -33,7 +33,10 @@ namespace apBioPlay.Controllers
             Usuario usuario = dao.Buscar(u => u.Nome == stringLogin && u.Senha == stringSenha);
             Session["usuarioLogado"] = usuario;
             if (usuario == null)
-                return RedirectToAction("Index", "Home");
+            {
+                Session["Message"] = "Login e/ou senha incorreto(s)";
+                return RedirectToAction("Index", "Home");                
+            }
             else
                 return RedirectToAction("Index", "Licoes");
         }
@@ -49,6 +52,11 @@ namespace apBioPlay.Controllers
             if (ModelState.IsValid)
             {
                 UsuariosDAO dao = new UsuariosDAO();
+                if (dao.Buscar(us => us.Nome == u.Nome) != null)
+                {
+                    Session["Message"] = "Esse nome já existe no site";
+                    return View("Cadastrar");
+                }
                 dao.Adicionar(u);
                 return RedirectToAction("Index", "Licoes", u);
             }
