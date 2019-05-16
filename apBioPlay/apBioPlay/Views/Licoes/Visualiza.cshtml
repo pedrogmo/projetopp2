@@ -2,6 +2,14 @@
 @{
     Layout = null;
     string stringBotao = (ViewBag.usuario.Codigo == ViewBag.visualizado.Codigo ? "" : "hidden");
+    string stringBotao2 = (ViewBag.usuario.Codigo != ViewBag.visualizado.Codigo ? "" : "hidden");
+
+    string alerta = "";
+    if (Session["Message"] != null)
+    {
+        alerta = (string)Session["Message"];
+    }
+    Session["Message"] = null;
 }
 
 <!DOCTYPE html>
@@ -29,7 +37,7 @@
                     <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
 
                     <div id="wow">
-                        <a href="#" id="novoAmigo">Enviar solicitação</a>
+                        <a href="#" id="novoAmigo" style="visibility: @stringBotao2">Enviar solicitação</a>
                         <ul>
                             <li><img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" /></li>
                             <li><h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1></li>
@@ -77,39 +85,47 @@
 
             <h1>Escolha seu avatar!</h1>
 
-            <ul>
-                <li>
-                    <input type="radio" name="pic" id="pic1" checked />
-                    <label for="pic1"><img src="~/Images/FotosPerfil/pic1.png"></label>
-                </li>
-                <li>
-                    <input type="radio" name="pic" id="pic2" />
-                    <label for="pic2"><img src="~/Images/FotosPerfil/pic2.png"></label>
-                </li>
-                <li>
-                    <input type="radio" name="pic" id="pic3" />
-                    <label for="pic3"><img src="~/Images/FotosPerfil/pic3.png"></label>
-                </li>
-                <li>
-                    <input type="radio" name="pic" id="pic4" />
-                    <label for="pic4"><img src="~/Images/FotosPerfil/pic4.png"></label>
-                </li>
-            </ul>
+            <form action="/Licoes/Alterar" method="post">
+                <input type="text" hidden id="selecionada" value=@ViewBag.usuario.FotoPerfil name="fotoPerfil">
+                <ul>
+                    <li>
+                        <input type="radio" name="pic" id="pic1" checked />
+                        <label for="pic1"><img src="~/Images/FotosPerfil/pic1.png"></label>
+                    </li>
+                    <li>
+                        <input type="radio" name="pic" id="pic2" />
+                        <label for="pic2"><img src="~/Images/FotosPerfil/pic2.png"></label>
+                    </li>
+                    <li>
+                        <input type="radio" name="pic" id="pic3" />
+                        <label for="pic3"><img src="~/Images/FotosPerfil/pic3.png"></label>
+                    </li>
+                    <li>
+                        <input type="radio" name="pic" id="pic4" />
+                        <label for="pic4"><img src="~/Images/FotosPerfil/pic4.png"></label>
+                    </li>
+                </ul>
 
-            <h1>Configurações avançadas:</h1>
+                <h1>Configurações avançadas:</h1>
 
-            <form action="/" method="post">
+
                 <h2>Alterar senha:</h2>
-                <input type="text" value="" class="txtCampos" placeholder="Senha antiga" />
-                <input type="password" value="" class="txtCampos" placeholder="Nova senha" />
-                <input type="submit" value="Enviar alterações"/>
+                <input type="text" name="senhaAnt" value="" class="txtCampos" placeholder="Senha antiga" />
+                <input type="password" name="senhaNov" value="" class="txtCampos" placeholder="Nova senha" />
+                <input type="submit" value="Enviar alterações" />
+
             </form>
 
 
         </div>
     </section>
+    <script>
+        if ('@alerta' != '')
+            alert('@alerta');
+    </script>
 </body>
 </html>
 
 <script src="~/Scripts/licoes.js"></script>
 <script src="~/Scripts/modalPerfil.js"></script>
+<script src="~/Scripts/perfil.js"></script>

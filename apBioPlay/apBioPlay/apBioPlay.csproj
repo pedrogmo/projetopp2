@@ -223,6 +223,7 @@
     <Content Include="Scripts\modalPerfil.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\pareto.js" />
+    <Content Include="Scripts\perfil.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -78,5 +78,32 @@ namespace apBioPlay.Controllers
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
+
+        public ActionResult Alterar(string fotoPerfil, string senhaAnt, string senhaNov)
+        {
+            Usuario usu = (Usuario)Session["usuarioLogado"];
+            if ((senhaAnt == "") != (senhaNov == ""))
+                Session["Message"] = "Senhas inválidas!";
+            else if(senhaAnt != "")
+            {
+                if (senhaAnt != usu.Senha)
+                    Session["Message"] = "Senha anterior incorreta!";
+                else if(senhaAnt == senhaNov)
+                    Session["Message"] = "As senhas são iguais!";
+                else
+                {
+                    usu.Senha = senhaNov;
+                    usu.FotoPerfil = fotoPerfil;
+                    new UsuariosDAO().Atualiza(usu);
+                }
+            }
+            else
+            {
+                usu.FotoPerfil = fotoPerfil;
+                new UsuariosDAO().Atualiza(usu);
+            }
+
+            return RedirectToAction("Perfil");
+        }
     }
 }
