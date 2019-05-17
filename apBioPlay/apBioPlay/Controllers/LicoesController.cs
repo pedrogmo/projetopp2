@@ -163,12 +163,14 @@ namespace apBioPlay.Controllers
             return View();
         }
 
-        public ActionResult ProximaPergunta()
+        public ActionResult ProximaPergunta(Resposta resp)
         {
             Session["indice"] = ((int)Session["indice"]) + 1;
             /*
-             * Verificar se usuário acertou ou errou, dependendo da resposta dele
+             Verificar se usuário acertou ou errou, dependendo da resposta dele            
             */
+            if (resp.Certa)
+                Session["acertos"] = ((int)Session["acertos"]) + 1;
             if (((int)Session["indice"]) >= ((List<Pergunta>)Session["perguntas"]).Count)
                 return RedirectToAction("FimLicao");
             return RedirectToAction("Pergunta", ((List<Pergunta>)Session["perguntas"])[((int)Session["indice"])]);
