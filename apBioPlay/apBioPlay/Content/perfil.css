@@ -61,7 +61,20 @@ img {
     bottom: 8em;
 }
 
-#home-hero a {
+#home-hero #card1 {
+    background-color: white;
+    box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
+    border-radius: 30px;
+    padding: 1em;
+    width: 25em;
+    height: 30em;
+    position: relative;
+    left: 50%;
+    bottom: 2em;
+    transform: translateX(-50%);
+}
+
+#home-hero #alter {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -77,23 +90,10 @@ img {
     bottom: 6em;
 }
 
-#home-hero a:hover {
+#home-hero #alter:hover {
     background-color: white;
     color: rgb(134,184,230);
     transition: .2s;
-}
-
-#home-hero #card1 {
-    background-color: white;
-    box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
-    border-radius: 30px;
-    padding: 1em;
-    width: 25em;
-    height: 30em;
-    position: relative;
-    left: 50%;
-    bottom: 2em;
-    transform: translateX(-50%);
 }
 
 #home-hero #card1 #foto {
@@ -155,21 +155,26 @@ img {
     right: 1em;
 }
 
-#home-hero #card1 #wow #novoAmigo {
+#home-hero #card1 #wow a {
     font-family: "Mikado Black";
     color: white;
-    background-color: lawngreen;
+    background-color: #a1e648;
+    text-transform: uppercase;
     position: relative;
     bottom: 1em;
     padding: .5em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     border-radius: 10px;
+    transition: .2s;
+    text-decoration: none;
 }
 
-#home-hero #card1 #wow #novoAmigo:hover {
+#home-hero #card1 #wow a:hover {
     padding-left: 3em;
     padding-right: 3em;
+    transition: .2s;
+    background-color: #b4e971;
 }
 
 /* CARD-CONTENT */

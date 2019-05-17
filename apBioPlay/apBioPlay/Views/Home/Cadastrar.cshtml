@@ -56,10 +56,15 @@
 
     <section id="bg-modal">
         <div id="modal-content">
-            @Html.ValidationMessage("u.Nome")
-            @Html.ValidationMessage("u.Senha")
-            @Html.ValidationMessage("u.Email")
-            @Html.ValidationMessage("u.DataNascimento")
+            <img src="/Images/erro.png" alt="Alternate Text" id="erro-img" />
+            <p hidden id="valido">@ViewBag.valido</p>
+            <p id="msg">
+                @Html.ValidationMessage("u.Nome") <br />
+                @Html.ValidationMessage("u.Senha")<br />
+                @Html.ValidationMessage("u.Email")<br />
+                @Html.ValidationMessage("u.DataNascimento")<br />
+            </p>
+            <input type="button" id="btn-ok" value="Entendido" />
         </div>
     </section>
 
@@ -67,5 +72,6 @@
         if ('@alerta' != '')
             alert('@alerta');
     </script>
+    <script src="~/Scripts/modalErro.js"></script>
 </body>
 </html>

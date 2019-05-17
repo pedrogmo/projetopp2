@@ -114,31 +114,35 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Perfil");
         }
 
-        public ActionResult TratarAmizade(Usuario dest)
+        [Route("tratarAmizade/{c2}/{sit}")]
+        public ActionResult TratarAmizade(int c2, string sit)
         {
             var u = (Usuario)Session["usuarioLogado"];
-            var u2 = ViewBag.visualizado;
+            var u2 = new UsuariosDAO().Buscar(s=>s.Codigo==c2);
             var nots = new NotificacaoDAO();
             var sol = new SolicitacaoAmizadeDAO();
             var amz = new AmizadeDAO();
-            if (ViewBag.situacao == "Adicionar amigo")
+            if (sit == "Adicionar amigo")
             {
                 sol.Adicionar(u.Codigo, u2.Codigo);
                 var n = new Notificacao();
-                n.CodUsuario = u2;
+                n.CodUsuario = u2.Codigo;
                 n.Texto = $"O usuário {u.Nome} te enviou uma solicitação de amizade";
                 n.Url = $"usuarios/{u.Codigo}";
                 nots.Adicionar(n);
             }
-            else if (ViewBag.situacao == "Aceitar solicitação")
+            else if (sit == "Aceitar solicitação")
             {
                 nots.Remover($"O usuário {u2.Nome} te enviou uma solicitação de amizade");
                 amz.Adicionar(u.Codigo, u2.Codigo);
                 amz.Adicionar(u2.Codigo, u.Codigo);
             }
-            else if (ViewBag.situacao == "Cancelar amizade")
+            else if (sit == "Cancelar amizade")
+            {
                 amz.Remover(u.Codigo, u2.Codigo);
-            return RedirectToAction("Visualiza", u2);
+                amz.Remover(u2.Codigo, u.Codigo);
+            }
+            return RedirectToAction("Visualiza", new { codU = u2.Codigo });
         }
     }
 }

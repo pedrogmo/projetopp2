@@ -83,12 +83,7 @@ namespace apBioPlay.DAO
                 sqlDelete.CommandText = "DELETE FROM AMIZADE WHERE CODUSUARIO1 = @c1 AND CODUSUARIO2 = @c2";
                 sqlDelete.Parameters.Add(pCod1);
                 sqlDelete.Parameters.Add(pCod2);
-                sqlDelete.ExecuteNonQuery();
-
-                sqlDelete.CommandText = "DELETE FROM AMIZADE WHERE CODUSUARIO1 = @c2 AND CODUSUARIO2 = @c1";
-                sqlDelete.Parameters.Add(pCod2);
-                sqlDelete.Parameters.Add(pCod1);                
-                sqlDelete.ExecuteNonQuery();
+                sqlDelete.ExecuteNonQuery();                
             }
             catch (Exception e) { throw new SystemException(e.Message); }
         }
