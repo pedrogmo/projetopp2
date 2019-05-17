@@ -275,6 +275,10 @@ img {
         width: 90%;
     }
 
+    #content-info .cardAmigos ul li {
+        margin-bottom: 1.5em;
+    }
+
     #content-info .cardAmigos ul li a {
         color: white;
         font-family: "Mikado Black";
@@ -573,8 +577,5 @@ img {
 
     .txtCampos {
         width: 90%;
-    }
-
-    #bg-modal #modal-content input[type="submit"] {
     }
 }
