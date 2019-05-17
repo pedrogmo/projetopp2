@@ -57,8 +57,9 @@ namespace apBioPlay.Controllers
                     Session["Message"] = "Esse nome já existe no site";
                     return View("Cadastrar");
                 }
-                u.FotoPerfil = "/Images/FotoPerfil/pic1.png";
+                u.FotoPerfil = "/Images/FotosPerfil/pic1.png";
                 dao.Adicionar(u);
+                Session["usuarioLogado"] = u;
                 return RedirectToAction("Index", "Licoes", u);
             }
             else

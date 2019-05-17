@@ -40,19 +40,29 @@
                 <img src="~/Images/Mick_Cadastro.png" alt="Alternate Text" id="mick" />
                 <form action="/Home/CadastroDeUsuario" method="post" id="form">
                     <label class="info">Nome: </label><br /><input class="txtCampos" value="@nomeAnterior" type="text" name="u.Nome" placeholder="Ex: JoãozinGameprays" /><br />
-                    <br />@Html.ValidationMessage("u.Nome")
+                    <br />
                     <label class="info">Senha: </label><br /><input class="txtCampos" value="@senhaAnterior" type="password" name="u.Senha" placeholder="Senha" /><br />
-                    <br />@Html.ValidationMessage("u.Senha")
+                    <br />
                     <label class="info">Email: </label><br /><input class="txtCampos" value="@emailAnterior" type="email" name="u.Email" placeholder="Ex: jgameprays@email.com" /><br />
-                    <br />@Html.ValidationMessage("u.Email")
+                    <br />
                     <label class="info">Nascimento: </label><br />
                     <input value="@dataAnterior" class="txtCampos" type="date" name="u.DataNascimento" /><br />
-                    <br />@Html.ValidationMessage("u.DataNascimento")
+                    <br />
                     <input value="Cadastrar" type="submit" />
                 </form>
             </div>
         </div>
     </section>
+
+    <section id="bg-modal">
+        <div id="modal-content">
+            @Html.ValidationMessage("u.Nome")
+            @Html.ValidationMessage("u.Senha")
+            @Html.ValidationMessage("u.Email")
+            @Html.ValidationMessage("u.DataNascimento")
+        </div>
+    </section>
+
     <script>
         if ('@alerta' != '')
             alert('@alerta');
