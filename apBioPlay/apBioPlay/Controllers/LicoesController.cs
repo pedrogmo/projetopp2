@@ -134,6 +134,7 @@ namespace apBioPlay.Controllers
             else if (sit == "Aceitar solicitação")
             {
                 nots.Remover($"O usuário {u2.Nome} te enviou uma solicitação de amizade");
+                sol.Remover(u2.Codigo, u.Codigo);
                 amz.Adicionar(u.Codigo, u2.Codigo);
                 amz.Adicionar(u2.Codigo, u.Codigo);
             }
