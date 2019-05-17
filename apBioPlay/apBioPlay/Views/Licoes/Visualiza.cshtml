@@ -89,19 +89,47 @@
                 <input type="text" hidden id="selecionada" value=@ViewBag.usuario.FotoPerfil name="fotoPerfil">
                 <ul>
                     <li>
-                        <input type="radio" name="pic" id="pic1" checked />
+                        @if (ViewBag.usuario.FotoPerfil == "/Images/FotosPerfil/pic1.png")
+                        {
+                            <input type="radio" name="pic" id="pic1" checked />
+                        }
+                        else
+                        {
+                            <input type="radio" name="pic" id="pic1" />
+                        }
                         <label for="pic1"><img src="~/Images/FotosPerfil/pic1.png"></label>
                     </li>
                     <li>
-                        <input type="radio" name="pic" id="pic2" />
+                        @if (ViewBag.usuario.FotoPerfil == "/Images/FotosPerfil/pic2.png")
+                        {
+                            <input type="radio" name="pic" id="pic2" checked />
+                        }
+                        else
+                        {
+                            <input type="radio" name="pic" id="pic2" />
+                        }
                         <label for="pic2"><img src="~/Images/FotosPerfil/pic2.png"></label>
                     </li>
                     <li>
-                        <input type="radio" name="pic" id="pic3" />
+                        @if (ViewBag.usuario.FotoPerfil == "/Images/FotosPerfil/pic3.png")
+                        {
+                            <input type="radio" name="pic" id="pic3" checked />
+                        }
+                        else
+                        {
+                            <input type="radio" name="pic" id="pic3" />
+                        }
                         <label for="pic3"><img src="~/Images/FotosPerfil/pic3.png"></label>
                     </li>
                     <li>
-                        <input type="radio" name="pic" id="pic4" />
+                        @if (ViewBag.usuario.FotoPerfil == "/Images/FotosPerfil/pic4.png")
+                        {
+                            <input type="radio" name="pic" id="pic4" checked />
+                        }
+                        else
+                        {
+                            <input type="radio" name="pic" id="pic4" />
+                        }
                         <label for="pic4"><img src="~/Images/FotosPerfil/pic4.png"></label>
                     </li>
                 </ul>

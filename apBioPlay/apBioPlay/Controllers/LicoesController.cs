@@ -149,13 +149,34 @@ namespace apBioPlay.Controllers
         [Route("licao/{codL}")]
         public ActionResult Licao(int codL)
         {
-            return RedirectToAction();
+            Session["perguntas"] = new PerguntaDAO().Lista(codL);
+            Session["indice"] = 0;
+            Session["codLicao"] = codL;
+            Session["acertos"] = 0;
+            return RedirectToAction("Pergunta", ((List<Pergunta>)Session["perguntas"])[0]);
+        }
+        
+        public ActionResult Pergunta(Pergunta per)
+        {
+            ViewBag.pergunta = per;
+            ViewBag.usuario = (Usuario)Session["usuarioLogado"];
+            return View();
         }
 
-        [Route("licao/{codL}/pergunta/{codP}")]
-        public ActionResult Pergunta(int codL, int codP)
+        public ActionResult ProximaPergunta()
         {
-            ViewBag.pergunta = 
+            Session["indice"] = ((int)Session["indice"]) + 1;
+            /*
+             * Verificar se usuário acertou ou errou, dependendo da resposta dele
+            */
+            if (((int)Session["indice"]) >= ((List<Pergunta>)Session["perguntas"]).Count)
+                return RedirectToAction("FimLicao");
+            return RedirectToAction("Pergunta", ((List<Pergunta>)Session["perguntas"])[((int)Session["indice"])]);
+        }
+
+        public ActionResult FimLicao()
+        {
+            new LicoesFeitasDAO().Adicionar(((Usuario)Session["usuarioLogado"]).Codigo, (int)Session["codLicao"], (int)Session["acertos"]);
             return View();
         }
     }
