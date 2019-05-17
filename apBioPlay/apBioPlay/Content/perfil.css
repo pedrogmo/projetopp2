@@ -273,6 +273,7 @@ img {
         left: 50%;
         transform: translateX(-50%);
         width: 90%;
+        overflow-Y: scroll;
     }
 
     #content-info .cardAmigos ul li {
