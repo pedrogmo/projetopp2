@@ -49,9 +49,15 @@ namespace apBioPlay.Controllers
         [HttpPost]
         public ActionResult CadastroDeUsuario(Usuario u)
         {
+            ViewBag.valido = "SI";
             if (ModelState.IsValid)
             {
                 UsuariosDAO dao = new UsuariosDAO();
+                if (u.DataNascimento.Year < 1900 || u.DataNascimento.Year > 2019)
+                {
+                    Session["Message"] = "Data de nascimento inválida";
+                    return View("Cadastrar");
+                }
                 if (dao.Buscar(us => us.Nome == u.Nome) != null)
                 {
                     Session["Message"] = "Esse nome já existe no site";
@@ -64,6 +70,7 @@ namespace apBioPlay.Controllers
             }
             else
             {
+                ViewBag.valido = "NAO";
                 ViewBag.usuarioAnterior = u;
                 return View("Cadastrar");
             }

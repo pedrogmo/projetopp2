@@ -2,7 +2,7 @@
 @{
     Layout = null;
     string stringBotao = (ViewBag.usuario.Codigo == ViewBag.visualizado.Codigo ? "" : "hidden");
-    string stringBotao2 = (ViewBag.usuario.Codigo != ViewBag.visualizado.Codigo ? "" : "hidden");
+    string stringBotao2 = (ViewBag.usuario.Codigo != ViewBag.visualizado.Codigo ? "display:initial" : "display:none");
 
     string alerta = "";
     if (Session["Message"] != null)
@@ -37,7 +37,7 @@
                     <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
 
                     <div id="wow">
-                        <a href="#" id="novoAmigo" style="visibility: @stringBotao2">Enviar solicitação</a>
+                        @Html.ActionLink((string)ViewBag.situacao, "SolicitarAmizade", new { @style = stringBotao2 }))
                         <ul>
                             <li><img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" /></li>
                             <li><h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1></li>

@@ -29,7 +29,12 @@ namespace apBioPlay.Controllers
         {
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             ViewBag.visualizado = usu;
-
+            if (new SolicitacaoAmizadeDAO().Existe(ViewBag.usuario.Codigo, ViewBag.visualizado.Codigo))
+                ViewBag.situacao = "Solicitação enviada";
+            else if (new AmizadeDAO().EhAmigo(ViewBag.usuario.Codigo, ViewBag.visualizado.Codigo))
+                ViewBag.situacao = "Cancelar amizade";
+            else
+                ViewBag.situacao = "Adicionar amigo";
             /*if(usu.Codigo == ((Usuario)Session["usuarioLogado"]).Codigo)*/
             ViewBag.amigos = new AmizadeDAO().Amigos(usu.Codigo);
             ViewBag.dados = new LicoesFeitasDAO().Dados(usu.Codigo);
@@ -104,6 +109,17 @@ namespace apBioPlay.Controllers
             }
 
             return RedirectToAction("Perfil");
+        }
+
+        public ActionResult SolicitarAmizade(Usuario dest)
+        {
+            var u = (Usuario)Session["usuarioLogado"];
+            var u2 = ViewBag.visualizado;
+            if (ViewBag.situacao=="Adicionar amigo")
+                new SolicitacaoAmizadeDAO().Adicionar(u.Codigo, u2.Codigo);
+            if (ViewBag.situacao == "Cancelar amizade")
+                new AmizadeDAO().Remover(u.Codigo, u2.Codigo);
+            return RedirectToAction("Visualiza", u2);
         }
     }
 }
