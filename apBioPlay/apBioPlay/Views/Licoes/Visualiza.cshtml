@@ -37,7 +37,7 @@
                     <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
 
                     <div id="wow">
-                        @Html.ActionLink((string)ViewBag.situacao, "SolicitarAmizade", new { @style = stringBotao2 }))
+                        @Html.ActionLink((string)ViewBag.situacao, "TratarAmizade", new { @style = stringBotao2 }))
                         <ul>
                             <li><img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" /></li>
                             <li><h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1></li>
@@ -67,7 +67,7 @@
                         {
                             foreach (apBioPlay.Models.Usuario amigo in ViewBag.amigos)
                             {
-                                <li>@Html.ActionLink(amigo.Nome, "Visualiza", amigo)</li>
+                                <li>@Html.ActionLink(amigo.Nome, "Visualiza", new { codU = amigo.Codigo })</li>
                             }
                         }
                     </ul>

@@ -22,22 +22,25 @@ namespace apBioPlay.Controllers
 
         public ActionResult Perfil()
         {
-            return RedirectToAction("Visualiza", "Licoes", (Usuario)Session["usuarioLogado"]);
+            return RedirectToAction("Visualiza", "Licoes", new { codU = ((Usuario)Session["usuarioLogado"]).Codigo } );
         }
 
-        public ActionResult Visualiza(Usuario usu)
+        [Route("usuarios/{codU}")]
+        public ActionResult Visualiza(int codU)
         {
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
-            ViewBag.visualizado = usu;
-            if (new SolicitacaoAmizadeDAO().Existe(ViewBag.usuario.Codigo, ViewBag.visualizado.Codigo))
+            ViewBag.visualizado = new UsuariosDAO().Buscar(u=>u.Codigo==codU);
+            if (new SolicitacaoAmizadeDAO().Existe(ViewBag.usuario.Codigo, codU))
                 ViewBag.situacao = "Solicitação enviada";
-            else if (new AmizadeDAO().EhAmigo(ViewBag.usuario.Codigo, ViewBag.visualizado.Codigo))
+            if (new SolicitacaoAmizadeDAO().Existe(codU, ViewBag.usuario.Codigo))
+                ViewBag.situacao = "Aceitar solicitação";
+            else if (new AmizadeDAO().EhAmigo(ViewBag.usuario.Codigo, codU))
                 ViewBag.situacao = "Cancelar amizade";
             else
                 ViewBag.situacao = "Adicionar amigo";
             /*if(usu.Codigo == ((Usuario)Session["usuarioLogado"]).Codigo)*/
-            ViewBag.amigos = new AmizadeDAO().Amigos(usu.Codigo);
-            ViewBag.dados = new LicoesFeitasDAO().Dados(usu.Codigo);
+            ViewBag.amigos = new AmizadeDAO().Amigos(codU);
+            ViewBag.dados = new LicoesFeitasDAO().Dados(codU);
             return View();
         }
 
@@ -111,14 +114,30 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Perfil");
         }
 
-        public ActionResult SolicitarAmizade(Usuario dest)
+        public ActionResult TratarAmizade(Usuario dest)
         {
             var u = (Usuario)Session["usuarioLogado"];
             var u2 = ViewBag.visualizado;
-            if (ViewBag.situacao=="Adicionar amigo")
-                new SolicitacaoAmizadeDAO().Adicionar(u.Codigo, u2.Codigo);
-            if (ViewBag.situacao == "Cancelar amizade")
-                new AmizadeDAO().Remover(u.Codigo, u2.Codigo);
+            var nots = new NotificacaoDAO();
+            var sol = new SolicitacaoAmizadeDAO();
+            var amz = new AmizadeDAO();
+            if (ViewBag.situacao == "Adicionar amigo")
+            {
+                sol.Adicionar(u.Codigo, u2.Codigo);
+                var n = new Notificacao();
+                n.CodUsuario = u2;
+                n.Texto = $"O usuário {u.Nome} te enviou uma solicitação de amizade";
+                n.Url = $"usuarios/{u.Codigo}";
+                nots.Adicionar(n);
+            }
+            else if (ViewBag.situacao == "Aceitar solicitação")
+            {
+                nots.Remover($"O usuário {u2.Nome} te enviou uma solicitação de amizade");
+                amz.Adicionar(u.Codigo, u2.Codigo);
+                amz.Adicionar(u2.Codigo, u.Codigo);
+            }
+            else if (ViewBag.situacao == "Cancelar amizade")
+                amz.Remover(u.Codigo, u2.Codigo);
             return RedirectToAction("Visualiza", u2);
         }
     }
