@@ -145,5 +145,18 @@ namespace apBioPlay.Controllers
             }
             return RedirectToAction("Visualiza", new { codU = u2.Codigo });
         }
+
+        [Route("licao/{codL}")]
+        public ActionResult Licao(int codL)
+        {
+            return RedirectToAction();
+        }
+
+        [Route("licao/{codL}/pergunta/{codP}")]
+        public ActionResult Pergunta(int codL, int codP)
+        {
+            ViewBag.pergunta = 
+            return View();
+        }
     }
 }

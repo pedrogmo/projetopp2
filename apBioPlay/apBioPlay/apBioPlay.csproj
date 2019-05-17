@@ -277,6 +277,7 @@
     <Content Include="Views\Home\Cadastrar.cshtml" />
     <Content Include="Views\Licoes\Visualiza.cshtml" />
     <Content Include="Views\Licoes\VerPublicacao.cshtml" />
+    <Content Include="Views\Licoes\Pergunta.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
