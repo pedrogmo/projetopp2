@@ -32,7 +32,7 @@ namespace apBioPlay.Controllers
             ViewBag.visualizado = new UsuariosDAO().Buscar(u=>u.Codigo==codU);
             if (new SolicitacaoAmizadeDAO().Existe(ViewBag.usuario.Codigo, codU))
                 ViewBag.situacao = "Solicitação enviada";
-            if (new SolicitacaoAmizadeDAO().Existe(codU, ViewBag.usuario.Codigo))
+            else if (new SolicitacaoAmizadeDAO().Existe(codU, ViewBag.usuario.Codigo))
                 ViewBag.situacao = "Aceitar solicitação";
             else if (new AmizadeDAO().EhAmigo(ViewBag.usuario.Codigo, codU))
                 ViewBag.situacao = "Cancelar amizade";
