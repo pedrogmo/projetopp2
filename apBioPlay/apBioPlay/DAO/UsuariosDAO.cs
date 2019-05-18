@@ -41,6 +41,19 @@ namespace apBioPlay.DAO
             }
         }
 
+        public IList<Usuario> Lista(Buscado procurado)
+        {
+            using (var contexto = new SiteContext())
+            {
+                var ret = new List<Usuario>();
+                List<Usuario> lista = contexto.Usuario.ToList();
+                foreach (Usuario u in lista)
+                    if (procurado(u))
+                        ret.Add(u);
+                return ret;                
+            }
+        }
+
         public Usuario Buscar(Buscado procurado)
         {
             using (var contexto = new SiteContext())
