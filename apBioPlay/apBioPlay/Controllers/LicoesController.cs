@@ -28,6 +28,7 @@ namespace apBioPlay.Controllers
         [Route("usuarios/{codU}")]
         public ActionResult Visualiza(int codU)
         {
+            ViewBag.mensagem = "";
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             ViewBag.visualizado = new UsuariosDAO().Buscar(u=>u.Codigo==codU);
             if (new SolicitacaoAmizadeDAO().Existe(ViewBag.usuario.Codigo, codU))
@@ -91,13 +92,13 @@ namespace apBioPlay.Controllers
         {
             Usuario usu = (Usuario)Session["usuarioLogado"];
             if ((senhaAnt == "") != (senhaNov == ""))
-                Session["Message"] = "Senhas inválidas!";
+                ViewBag.mensagem = "Senhas inválidas!";
             else if(senhaAnt != "")
             {
                 if (senhaAnt != usu.Senha)
-                    Session["Message"] = "Senha anterior incorreta!";
+                    ViewBag.mensagem = "Senha anterior incorreta!";
                 else if(senhaAnt == senhaNov)
-                    Session["Message"] = "As senhas são iguais!";
+                    ViewBag.mensagem = "As senhas são iguais!";
                 else
                 {
                     usu.Senha = senhaNov;

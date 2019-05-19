@@ -3,13 +3,6 @@
     Layout = null;
     string stringBotao = (ViewBag.usuario.Codigo == ViewBag.visualizado.Codigo ? "" : "hidden");
     string stringBotao2 = (ViewBag.usuario.Codigo != ViewBag.visualizado.Codigo ? "initial" : "hidden");
-
-    string alerta = "";
-    if (Session["Message"] != null)
-    {
-        alerta = (string)Session["Message"];
-    }
-    Session["Message"] = null;
 }
 
 <!DOCTYPE html>
@@ -148,8 +141,8 @@
         </div>
     </section>
     <script>
-        if ('@alerta' != '')
-            alert('@alerta');
+        if ('@ViewBag.mensagem' != '')
+            alert('@ViewBag.mensagem');
     </script>
 </body>
 </html>

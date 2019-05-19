@@ -1,12 +1,6 @@
 ﻿
 @{
     Layout = null;
-    string alerta = "";
-    if (Session["Message"] != null)
-    {
-        alerta = (string)Session["Message"];
-    }
-    Session["Message"] = null;
 }
 
 <!DOCTYPE html>
@@ -132,8 +126,8 @@
     <script src="~/Scripts/parallax.js"></script>
     <script src="~/Scripts/menuVertical.js"></script>
     <script>
-        if ('@alerta' != '')
-            alert('@alerta');
+        if ('@ViewBag.mensagem' != '')
+            alert('@ViewBag.mensagem');
     </script>
 </body>
 </html>

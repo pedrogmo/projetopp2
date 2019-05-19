@@ -14,13 +14,6 @@
         dataAnterior = d.Year.ToString().PadLeft(4, '0') + "-" + d.Month.ToString().PadLeft(2, '0') + "-" + d.Day.ToString().PadLeft(2, '0');
         ViewBag.usuarioAnterior = null;
     }
-
-    string alerta = "";
-    if (Session["Message"] != null)
-    {
-        alerta = (string)Session["Message"];
-    }
-    Session["Message"] = null;
 }
 
 <!DOCTYPE html>
@@ -59,6 +52,7 @@
             <img src="/Images/erro.png" alt="Alternate Text" id="erro-img" />
             <p hidden id="valido">@ViewBag.valido</p>
             <p id="msg">
+                @ViewBag.mensagem <br />
                 @Html.ValidationMessage("u.Nome") <br />
                 @Html.ValidationMessage("u.Senha")<br />
                 @Html.ValidationMessage("u.Email")<br />
@@ -67,11 +61,6 @@
             <input type="button" id="btn-ok" value="Entendido" />
         </div>
     </section>
-
-    <script>
-        if ('@alerta' != '')
-            alert('@alerta');
-    </script>
     <script src="~/Scripts/modalErro.js"></script>
 </body>
 </html>

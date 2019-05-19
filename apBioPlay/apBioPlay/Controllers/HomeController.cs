@@ -10,9 +10,9 @@ namespace apBioPlay.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
         public ActionResult Index()
         {
+            ViewBag.mensagem = "";
             return View();
         }
 
@@ -28,14 +28,14 @@ namespace apBioPlay.Controllers
         }
 
         public ActionResult Logar(string stringLogin, string stringSenha)
-        {
+        {            
             UsuariosDAO dao = new UsuariosDAO();
             Usuario usuario = dao.Buscar(u => u.Nome == stringLogin && u.Senha == stringSenha);
             Session["usuarioLogado"] = usuario;
             if (usuario == null)
             {
-                Session["Message"] = "Login e/ou senha incorreto(s)";
-                return RedirectToAction("Index", "Home");                
+                ViewBag.mensagem = "Login e/ou senha incorreto(s)";
+                return View("Index");                
             }
             else
                 return RedirectToAction("Index", "Licoes");
@@ -49,19 +49,22 @@ namespace apBioPlay.Controllers
         [HttpPost]
         public ActionResult CadastroDeUsuario(Usuario u)
         {
-            ViewBag.valido = "SI";
+            ViewBag.valido = "S";
+            ViewBag.mensagem = "";
             if (ModelState.IsValid)
             {
                 UsuariosDAO dao = new UsuariosDAO();
                 if (u.DataNascimento.Year < 1900 || u.DataNascimento.Year > 2019)
                 {
-                    Session["Message"] = "Data de nascimento inválida";
+                    ViewBag.mensagem = "Data de nascimento inválida";
+                    ViewBag.valido = "NAO";
                     ViewBag.usuarioAnterior = u;
                     return View("Cadastrar");
                 }
                 if (dao.Buscar(us => us.Nome == u.Nome) != null)
                 {
-                    Session["Message"] = "Esse nome já existe no site";
+                    ViewBag.mensagem = "Esse nome já existe no site";
+                    ViewBag.valido = "NAO";
                     ViewBag.usuarioAnterior = u;
                     return View("Cadastrar");
                 }
