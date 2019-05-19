@@ -159,6 +159,7 @@ namespace apBioPlay.Controllers
         public ActionResult Pergunta(Pergunta per)
         {
             ViewBag.pergunta = per;
+            ViewBag.respostas = new RespostaDAO().Lista(per.Codigo);
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
