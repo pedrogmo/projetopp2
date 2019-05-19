@@ -13,7 +13,7 @@ namespace apBioPlay.Models
 
         [Required(ErrorMessage = "O nome é obrigatório", AllowEmptyStrings = false)]
         [StringLength(50)]
-        //[RegularExpression(@"^[A - Za - záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ] +$", ErrorMessage = "Nome inválido")]
+        [RegularExpression(@"^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]*$", ErrorMessage = "Nome inválido")]
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "O email é obrigatório", AllowEmptyStrings = false)]

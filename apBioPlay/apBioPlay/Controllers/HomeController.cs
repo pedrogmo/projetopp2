@@ -56,11 +56,13 @@ namespace apBioPlay.Controllers
                 if (u.DataNascimento.Year < 1900 || u.DataNascimento.Year > 2019)
                 {
                     Session["Message"] = "Data de nascimento inválida";
+                    ViewBag.usuarioAnterior = u;
                     return View("Cadastrar");
                 }
                 if (dao.Buscar(us => us.Nome == u.Nome) != null)
                 {
                     Session["Message"] = "Esse nome já existe no site";
+                    ViewBag.usuarioAnterior = u;
                     return View("Cadastrar");
                 }
                 u.FotoPerfil = "/Images/FotosPerfil/pic1.png";

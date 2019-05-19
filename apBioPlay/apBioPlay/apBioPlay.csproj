@@ -172,7 +172,6 @@
     <Content Include="Content\menu.css" />
     <Content Include="Content\perfil.css" />
     <Content Include="Content\pergunta.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back_cadastro.png" />
