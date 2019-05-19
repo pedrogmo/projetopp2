@@ -171,6 +171,7 @@
     <Content Include="Content\home.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\perfil.css" />
+    <Content Include="Content\pergunta.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -203,7 +204,20 @@
     <Content Include="Images\INovoAmigo.png" />
     <Content Include="Images\IPerfil.png" />
     <Content Include="Images\ISino.png" />
-    <Content Include="Images\Licoes\i1.png" />
+    <Content Include="Images\Licoes\Energia\i3.png" />
+    <Content Include="Images\Licoes\Reciclagem\banana.png" />
+    <Content Include="Images\Licoes\Reciclagem\frango.png" />
+    <Content Include="Images\Licoes\Reciclagem\garrafa.png" />
+    <Content Include="Images\Licoes\Reciclagem\garrafa2.png" />
+    <Content Include="Images\Licoes\Reciclagem\i1.png" />
+    <Content Include="Images\Licoes\Reciclagem\maca.png" />
+    <Content Include="Images\Licoes\Reciclagem\metal.png" />
+    <Content Include="Images\Licoes\Reciclagem\metal2.png" />
+    <Content Include="Images\Licoes\Reciclagem\papel.png" />
+    <Content Include="Images\Licoes\Reciclagem\papel2.png" />
+    <Content Include="Images\Licoes\Reciclagem\peixe.png" />
+    <Content Include="Images\Licoes\Reciclagem\pote.png" />
+    <Content Include="Images\Licoes\Transportes\i2.png" />
     <Content Include="Images\livro.png" />
     <Content Include="Images\logoDesk.png" />
     <Content Include="Images\logoDesk2.png" />
@@ -288,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\Licoes\Agua\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
