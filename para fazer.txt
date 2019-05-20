@@ -1,6 +1,6 @@
 * Design de notificação
 * Código para exibir notificações
-* Corrigir desgin perfil e adicionar email e data
+* Adicionar email e data no perfil
 * Design do forum
 * Design da sobre
 * Design da bastidores
