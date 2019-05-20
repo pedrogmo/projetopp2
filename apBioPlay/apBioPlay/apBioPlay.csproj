@@ -241,6 +241,7 @@
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\pareto.js" />
     <Content Include="Scripts\perfil.js" />
+    <Content Include="Scripts\pergunta.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -54,8 +54,7 @@ create table Pergunta(
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
 
-insert into Pergunta values('O que щ reciclagem?', 1, 2)
-insert into Pergunta values('Por que щ bom reciclar?', 1, 2)
+insert into Pergunta values('Selecione o lixo correto', 2)
 
 create table Resposta(
 	codigo int identity(1,1) primary key,
@@ -66,8 +65,10 @@ create table Resposta(
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codigo)
 )
 
-insert into Resposta values('Щ refazer objetos com materias usados', '', 2, 1)
-insert into Resposta values('Porque gasta menos material', '', 3, 1)
+insert into Resposta values('Maчу', '/Images/Licoes/Reciclagem/maca.png', 6, 0)
+insert into Resposta values('Peixinho', '/Images/Licoes/Reciclagem/peixe.png', 6, 0)
+insert into Resposta values('Garrafa', '/Images/Licoes/Reciclagem/garrafa.png', 6, 1)
+insert into Resposta values('Potin', '/Images/Licoes/Reciclagem/pote.png', 6, 0)
 
 create table UsuarioLicao(
 	codigo int identity(1,1) primary key,

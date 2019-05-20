@@ -20,34 +20,26 @@
             <h1>Selecione o lixo correto</h1>
 
             <form action="" method="post">
-                <input type="text" hidden id="selecionada">
+                <input type="text" hidden id="selecionada" value="@indResp">
                 <ul>
-                    <li>
-                        <input type="radio" name="pic" id="pic1" />
-                        <label for="pic1"><img src="~/Images/Licoes/Reciclagem/maca.png"></label>
-                        <h1 id="resp1"></h1>
-                    </li>
-                    <li>
-                        <input type="radio" name="pic" id="pic2" />
-                        <label for="pic2"><img src="~/Images/Licoes/Reciclagem/peixe.png"></label>
-                        <h1 id="resp2"></h1>
-                    </li>
-                    <li>
-                        <input type="radio" name="pic" id="pic3" />
-                        <label for="pic3"><img src="~/Images/Licoes/Reciclagem/garrafa.png"></label>
-                        <h1 id="resp3"></h1>
-                    </li>
-                    <li>
-                        <input type="radio" name="pic" id="pic4" />
-                        <label for="pic4"><img src="~/Images/Licoes/Reciclagem/pote.png"></label>
-                        <h1 id="resp4"></h1>
-                    </li>
+                    @{ int ind = 1; }
+                    @foreach (apBioPlay.Models.Resposta resp in ViewBag.respostas)
+                    {
+                        string p = "pic" + ind;
+                        string r = "resp" + ind;
+                        <li>
+                            <input type="radio" name="pic" id="@p" />
+                            <label for="@p"><img src=@resp.UrlImagem></label>
+                            <h1 id="@r">@resp.Texto</h1>
+                        </li>
+                        ++ind;
+                    }
                 </ul>
             </form>
 
             <hr />
 
-            @Html.ActionLink("Enviar Resposta", "Index")
+            @Html.ActionLink("Enviar Resposta", "ProximaPergunta", new { resp = ViewBag.respostas[indResp] })
 
         </div>
     </section>
