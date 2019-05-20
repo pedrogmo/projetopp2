@@ -216,7 +216,6 @@
     <Content Include="Images\Licoes\Reciclagem\papel.png" />
     <Content Include="Images\Licoes\Reciclagem\papel2.png" />
     <Content Include="Images\Licoes\Reciclagem\peixe.png" />
-    <Content Include="Images\Licoes\Reciclagem\pote.png" />
     <Content Include="Images\Licoes\Transportes\i2.png" />
     <Content Include="Images\livro.png" />
     <Content Include="Images\logoDesk.png" />
@@ -229,6 +228,7 @@
     <Content Include="Images\paisagem.png" />
     <Content Include="Images\paisagem2.png" />
     <Content Include="Images\planet.png" />
+    <Content Include="Images\Licoes\Reciclagem\pote.png" />
     <Content Include="Images\simbolo.png" />
     <Content Include="Images\wave.png" />
     <Content Include="Images\wave2.png" />

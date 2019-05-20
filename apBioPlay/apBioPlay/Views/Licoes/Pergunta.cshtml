@@ -1,6 +1,8 @@
 ﻿
 @{
     Layout = null;
+
+    int indResp = 0;
 }
 
 <!DOCTYPE html>
@@ -15,11 +17,13 @@
     <section id="home-hero">
         <div class="container">
 
+            <h1>Selecione o lixo correto</h1>
+
             <form action="" method="post">
-                <input type="text" hidden id="selecionada" >
+                <input type="text" hidden id="selecionada">
                 <ul>
                     <li>
-                        <input type="radio" name="pic" id="pic1"/>
+                        <input type="radio" name="pic" id="pic1" />
                         <label for="pic1"><img src="~/Images/Licoes/Reciclagem/maca.png"></label>
                         <h1 id="resp1"></h1>
                     </li>
@@ -40,6 +44,10 @@
                     </li>
                 </ul>
             </form>
+
+            <hr />
+
+            @Html.ActionLink("Enviar Resposta", "Index")
 
         </div>
     </section>
