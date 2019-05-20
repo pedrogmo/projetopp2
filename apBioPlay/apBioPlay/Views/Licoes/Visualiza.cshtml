@@ -3,6 +3,9 @@
     Layout = null;
     string stringBotao = (ViewBag.usuario.Codigo == ViewBag.visualizado.Codigo ? "" : "hidden");
     string stringBotao2 = (ViewBag.usuario.Codigo != ViewBag.visualizado.Codigo ? "initial" : "hidden");
+
+    string msg = (string) Session["Message"];
+    Session["Message"] = "";
 }
 
 <!DOCTYPE html>
@@ -10,6 +13,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="~/Content/perfil.css" />
+    <link rel="stylesheet" href="~/Content/modalErro.css" />
     <meta name="viewport" content="width=device-width" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>BioPlay - Perfil</title>
@@ -71,7 +75,7 @@
         </div>
     </section>
 
-    <section id="bg-modal">
+    <section id="modal-perfil">
         <div id="modal-content">
 
             <div id="close">X</div>
@@ -131,7 +135,7 @@
 
 
                 <h2>Alterar senha:</h2>
-                <input type="text" name="senhaAnt" value="" class="txtCampos" placeholder="Senha antiga" />
+                <input type="password" name="senhaAnt" value="" class="txtCampos" placeholder="Senha antiga" />
                 <input type="password" name="senhaNov" value="" class="txtCampos" placeholder="Nova senha" />
                 <input type="submit" value="Enviar alterações" />
 
@@ -140,13 +144,18 @@
 
         </div>
     </section>
-    <script>
-        if ('@ViewBag.mensagem' != '')
-            alert('@ViewBag.mensagem');
-    </script>
+    <section id="bg-modal">
+        <div id="modal-content">
+            <img src="/Images/erro.png" alt="Alternate Text" id="erro-img" />
+            <p id="msg">
+                @msg
+            </p>
+            <input type="button" id="btn-ok" value="Entendido" />
+        </div>
+    </section>
 </body>
 </html>
 
+<script src="~/Scripts/perfil.js"></script>
 <script src="~/Scripts/licoes.js"></script>
 <script src="~/Scripts/modalPerfil.js"></script>
-<script src="~/Scripts/perfil.js"></script>

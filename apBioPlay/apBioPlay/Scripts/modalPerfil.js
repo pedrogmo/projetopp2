@@ -1,5 +1,5 @@
 ﻿
-var modal = document.getElementById("bg-modal");
+var modal = document.getElementById("modal-perfil");
 
 document.getElementById("alter").onclick = function () {
     modal.style.visibility = "initial";
@@ -7,4 +7,13 @@ document.getElementById("alter").onclick = function () {
 
 document.getElementById("close").onclick = function () {
     modal.style.visibility = "hidden";
+}
+
+/* MODAL DE ERRO */
+
+if (document.getElementById("msg").innerHTML.trim() != "")
+    document.getElementById("bg-modal").style.visibility = "initial";
+
+document.getElementById("btn-ok").onclick = function () {
+    document.getElementById("bg-modal").style.visibility = "hidden";
 }

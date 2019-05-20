@@ -311,7 +311,7 @@ img {
 
     /* Modal */
 
-    #bg-modal {
+    #modal-perfil {
         background-color: rgb(0,0,0,.5);
         width: 100%;
         height: 100%;
@@ -323,7 +323,7 @@ img {
         overflow: auto;
     }
 
-    #bg-modal #modal-content {
+    #modal-perfil #modal-content {
         width: 90%;
         height: auto;
         padding: 1em;
@@ -337,7 +337,7 @@ img {
         margin-bottom: 1em;
     }
 
-    #bg-modal #modal-content h1 {
+    #modal-perfil #modal-content h1 {
         position: relative;
         text-transform: uppercase;
         font-size: 1.5rem;
@@ -350,7 +350,7 @@ img {
         padding: .5em;
     }
 
-    #bg-modal #modal-content h2 {
+    #modal-perfil #modal-content h2 {
         position: relative;
         text-transform: uppercase;
         font-size: 1rem;
@@ -360,7 +360,7 @@ img {
         top: 1em;
     }
 
-    #bg-modal #modal-content input[type="submit"] {
+    #modal-perfil #modal-content input[type="submit"] {
         font-size: 1.2rem;
         background-color: #83e600;
         border-radius: 10px;
@@ -376,7 +376,7 @@ img {
         margin-bottom: 1em;
     }
 
-    #bg-modal #modal-content input[type="submit"]:hover {
+    #modal-perfil #modal-content input[type="submit"]:hover {
         background-color: #a1e648;
         border-radius: 10px;
         text-decoration: none;
@@ -386,7 +386,7 @@ img {
         /* transition: .2s; */
     }
 
-    #bg-modal #modal-content #close {
+    #modal-perfil #modal-content #close {
         font-size: 1.3rem;
         font-family: "Mikado Black";
         position: relative;
@@ -571,7 +571,7 @@ img {
         font-size: 1.5rem;
     }
 
-    #bg-modal #modal-content {
+    #modal-perfil #modal-content {
         height: auto;
         padding: 1em;
     }

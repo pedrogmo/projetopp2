@@ -81,24 +81,18 @@ namespace apBioPlay.Controllers
             return RedirectToAction("VerPublicacao", new { codP = pub.Codigo });
         }
 
-        //Para lição selecionada
-        public ActionResult Licao(Licao l)
-        {
-            ViewBag.usuario = (Usuario)Session["usuarioLogado"];
-            return View();
-        }
-
         public ActionResult Alterar(string fotoPerfil, string senhaAnt, string senhaNov)
         {
             Usuario usu = (Usuario)Session["usuarioLogado"];
+            Session["Message"] = "";
             if ((senhaAnt == "") != (senhaNov == ""))
-                ViewBag.mensagem = "Senhas inválidas!";
+                Session["Message"] = "Senhas inválidas!";
             else if(senhaAnt != "")
             {
                 if (senhaAnt != usu.Senha)
-                    ViewBag.mensagem = "Senha anterior incorreta!";
+                    Session["Message"] = "Senha anterior incorreta!";
                 else if(senhaAnt == senhaNov)
-                    ViewBag.mensagem = "As senhas são iguais!";
+                    Session["Message"] = "As senhas são iguais!";
                 else
                 {
                     usu.Senha = senhaNov;

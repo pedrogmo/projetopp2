@@ -1,6 +1,8 @@
 ﻿
 @{
     Layout = null;
+    string msg = ViewBag.mensagem;
+    ViewBag.mensagem = "";
 }
 
 <!DOCTYPE html>
@@ -13,7 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="~/Content/home.css">
-    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>    
+    <link rel="stylesheet" href="~/Content/modalErro.css">
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
 
@@ -121,13 +124,18 @@
             <h1>©2019 BIOPLAY. Todos os direitos reservados. Criado por Pedro Gomes e Vitor Ramos.</h1>
         </div>
     </footer>
+    <section id="bg-modal">
+        <div id="modal-content">
+            <img src="/Images/erro.png" alt="Alternate Text" id="erro-img" />
+            <p id="msg">
+                @msg
+            </p>
+            <input type="button" id="btn-ok" value="Entendido" />
+        </div>
+    </section>
     <script src="~/Scripts/geral.js"></script>
     <script src="~/Scripts/fadeIn.js"></script>
     <script src="~/Scripts/parallax.js"></script>
-    <script src="~/Scripts/menuVertical.js"></script>
-    <script>
-        if ('@ViewBag.mensagem' != '')
-            alert('@ViewBag.mensagem');
-    </script>
+    <script src="~/Scripts/menuVertical.js"></script>    
 </body>
 </html>
