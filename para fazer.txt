@@ -5,4 +5,5 @@
 * Design da sobre
 * Design da bastidores
 * Design do fim de uma lição
+* Procurar novo amigo
 * Código para lição
