@@ -171,6 +171,7 @@ namespace apBioPlay.Controllers
 
         public ActionResult FimLicao()
         {
+            ++((Usuario)Session["usuarioLogado"]).Nivel;
             new LicoesFeitasDAO().Adicionar(((Usuario)Session["usuarioLogado"]).Codigo, (int)Session["codLicao"], (int)Session["acertos"]);
             return View();
         }
