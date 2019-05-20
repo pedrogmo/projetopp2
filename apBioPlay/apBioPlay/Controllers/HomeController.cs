@@ -72,6 +72,7 @@ namespace apBioPlay.Controllers
                     ViewBag.usuarioAnterior = u;
                     return View("Cadastrar");
                 }
+                u.Nivel = 1;
                 u.FotoPerfil = "/Images/FotosPerfil/pic1.png";
                 dao.Adicionar(u);
                 Session["usuarioLogado"] = u;
