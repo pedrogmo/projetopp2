@@ -42,7 +42,9 @@ create table Licao(
 	nivel int not null
 )
 
-insert into Licao values('Reciclagem','/Images/Licoes/i1.png', 1)
+insert into Licao values('Reciclagem', '/Images/Licoes/Reciclagem/i1.png', 1)
+insert into Licao values('Transporte', '/Images/Licoes/Transportes/i2.png', 1)
+insert into Licao values('Energia', '/Images/Licoes/Energia/i3.png', 1)
 
 create table Pergunta(
 	codigo int identity(1,1) primary key,
