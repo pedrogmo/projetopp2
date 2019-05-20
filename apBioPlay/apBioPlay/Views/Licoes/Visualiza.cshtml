@@ -129,6 +129,17 @@
                         }
                         <label for="pic4"><img src="~/Images/FotosPerfil/pic4.png"></label>
                     </li>
+                    <li>
+                        @if (ViewBag.usuario.FotoPerfil == "/Images/FotosPerfil/pic5.png")
+                        {
+                            <input type="radio" name="pic" id="pic5" checked />
+                        }
+                        else
+                        {
+                            <input type="radio" name="pic" id="pic5" />
+                        }
+                        <label for="pic5"><img src="~/Images/FotosPerfil/pic5.png"></label>
+                    </li>
                 </ul>
 
                 <h1>Configurações avançadas:</h1>

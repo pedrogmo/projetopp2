@@ -23,3 +23,7 @@ pic3.onclick = function () {
 pic4.onclick = function () {
     selecionada.value = "/Images/FotosPerfil/pic4.png";
 }
+
+pic5.onclick = function () {
+    selecionada.value = "/Images/FotosPerfil/pic5.png";
+}
