@@ -14,3 +14,8 @@ Código:
 * Procurar novo amigo
 * Acessar lição
 * Bloquear lição com nível maior
+
+Erros:
+
+* F5 faz mensagem de erro aparecer de novo
+* Voltar páginas por causa do Redirect
