@@ -31,11 +31,16 @@ namespace apBioPlay.DAO
             }
         }
 
-        public IList<Notificacao> Lista()
+        public IList<Notificacao> Lista(int codU)
         {
             using (var contexto = new SiteContext())
             {
-                return contexto.Notificacao.ToList();
+                var ret = new List<Notificacao>();
+                List<Notificacao> l = contexto.Notificacao.ToList();
+                foreach (Notificacao n in l)
+                    if (n.CodUsuario == codU)
+                        ret.Add(n);
+                return ret;
             }
         }
 

@@ -17,6 +17,7 @@ namespace apBioPlay.Controllers
             var u = (Usuario) Session["usuarioLogado"];
             ViewBag.licoes = new LicoesDAO().Lista().OrderBy(l => l.Nivel);
             ViewBag.usuario = u;
+            ViewBag.notificacoes = new NotificacaoDAO().Lista(u.Codigo);
             return View();
         }
 
@@ -154,13 +155,15 @@ namespace apBioPlay.Controllers
         public ActionResult Pergunta(Pergunta per)
         {
             ViewBag.pergunta = per;
-            ViewBag.respostas = new RespostaDAO().Lista(per.Codigo);
+            Session["respostas"] = new RespostaDAO().Lista(per.Codigo);
+            ViewBag.respostas = (List<Resposta>)Session["respostas"];
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
 
-        public ActionResult ProximaPergunta(Resposta resp)
+        public ActionResult ProximaPergunta(int indResp)
         {
+            var resp = ((List<Resposta>)Session["respostas"])[indResp];
             Session["indice"] = ((int)Session["indice"]) + 1;
             if (resp.Certa)
                 Session["acertos"] = ((int)Session["acertos"]) + 1;

@@ -2,7 +2,7 @@
 @{
     Layout = null;
 
-    int indResp = 0;
+    int indR = 0;
 }
 
 <!DOCTYPE html>
@@ -20,28 +20,28 @@
             <h1>Selecione o lixo correto</h1>
 
             <form action="" method="post">
-                <input type="text" hidden id="selecionada" value="@indResp">
+                <input type="text" hidden id="selecionada" value="@indR">
                 <ul>
-                    @{ int ind = 1; }
-                    @foreach (apBioPlay.Models.Resposta resp in ViewBag.respostas)
+                    @for(int i=0; i<4; ++i)
                     {
-                        string p = "pic" + ind;
-                        string r = "resp" + ind;
+                        var resp = ViewBag.respostas[ind]
+                        string p = "pic" + (ind+1);
+                        string r = "resp" + (ind + 1);
                         <li>
                             <input type="radio" name="pic" id="@p" />
                             <label for="@p"><img src=@resp.UrlImagem></label>
                             <h1 id="@r">@resp.Texto</h1>
                         </li>
-                        ++ind;
                     }
                 </ul>
             </form>
 
             <hr />
 
-            @Html.ActionLink("Enviar Resposta", "ProximaPergunta", new { resp = ViewBag.respostas[indResp] })
+            @Html.ActionLink("Enviar Resposta", "ProximaPergunta", new { indResp = indR })
 
         </div>
     </section>
+    <script src="~/Scripts/pergunta.js"></script>
 </body>
 </html>
