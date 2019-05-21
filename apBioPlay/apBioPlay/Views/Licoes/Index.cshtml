@@ -18,10 +18,10 @@
 <body>
     <header id="mobile">
         <ul>
-            <a href="" id="notificacao"><img src="~/Images/ISino.png" alt=""></a>
-            <a href="" id="pontos"><img src="~/Images/IEstrela.png" alt=""></a>
-            <h1>@ViewBag.usuario.Nivel</h1>
-            <h1 id="nick">@ViewBag.usuario.Nome</h1>
+            <li class="esq"><a id="notificacao"><img src="~/Images/ISino.png" alt=""></a></li>
+            <li class="esq"><a href="" id="pontos"><img src="~/Images/IEstrela.png" alt=""></a></li>
+            <li><h1>@ViewBag.usuario.Nivel</h1></li>
+            <li><h1 id="nick">@ViewBag.usuario.Nome</h1></li>
         </ul>
     </header>
 
@@ -74,7 +74,20 @@
                 <li><img src="~/Images/ISino.png" alt="Alternate Text" /></li>
                 <li><h1>Notificações</h1></li>
             </ul>
+            <label id="close">X</label>
+
+            <hr />
+
+            @foreach (apBioPlay.Models.Notificacao n in ViewBag.notificacoes)
+             {
+                <div id="card-link">
+                    <a href="@n.Url">@n.Texto!</a>
+                </div>
+             }
+
+            
         </div>
     </section>
 </body>
 </html>
+    <script src="~/Scripts/notificacao.js"></script>
