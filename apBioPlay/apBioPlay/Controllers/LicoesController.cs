@@ -110,7 +110,7 @@ namespace apBioPlay.Controllers
                     Session["Message"] = "As senhas são iguais!";
                 else
                 {
-                    if (senhaNov.Length < 4)
+                    if (senhaNov.Trim().Length < 4)
                         Session["Message"] = "Senha inválida";
                     else
                     {
