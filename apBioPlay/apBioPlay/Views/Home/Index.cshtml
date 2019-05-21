@@ -1,8 +1,8 @@
 ﻿
 @{
     Layout = null;
-    string msg = ViewBag.mensagem;
-    ViewBag.mensagem = "";
+    string msg = (string)Session["mensagem"];
+    Session["mensagem"] = "";
 }
 
 <!DOCTYPE html>

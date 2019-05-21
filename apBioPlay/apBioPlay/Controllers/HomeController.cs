@@ -12,8 +12,6 @@ namespace apBioPlay.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.valido = "S";
-            ViewBag.mensagem = "";
             return View();
         }
 
@@ -30,16 +28,13 @@ namespace apBioPlay.Controllers
 
         public ActionResult Logar(string stringLogin, string stringSenha)
         {
-            ViewBag.mensagem = "";
-            ViewBag.valido = "S";
             UsuariosDAO dao = new UsuariosDAO();
             Usuario usuario = dao.Buscar(u => u.Nome == stringLogin && u.Senha == stringSenha);
             Session["usuarioLogado"] = usuario;
             if (usuario == null)
             {
-                ViewBag.mensagem = "Login e/ou senha incorreto(s)";
-                ViewBag.valido = "NAO";
-                return View("Index");                
+                Session["mensagem"] = "Login e/ou senha incorreto(s)";
+                return RedirectToAction("Index");                
             }
             else
                 return RedirectToAction("Index", "Licoes");
@@ -47,14 +42,14 @@ namespace apBioPlay.Controllers
 
         public ActionResult Cadastrar()
         {
+            ViewBag.mensagem = "";
+            ViewBag.valido = "SIM";
             return View();
         }
 
         [HttpPost]
         public ActionResult CadastroDeUsuario(Usuario u)
         {
-            ViewBag.valido = "S";
-            ViewBag.mensagem = "";
             if (ModelState.IsValid)
             {
                 UsuariosDAO dao = new UsuariosDAO();

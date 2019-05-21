@@ -17,5 +17,4 @@ Código:
 
 Erros:
 
-* F5 faz mensagem de erro aparecer de novo
 * Voltar páginas por causa do Redirect
