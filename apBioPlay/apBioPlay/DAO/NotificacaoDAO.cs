@@ -18,11 +18,11 @@ namespace apBioPlay.DAO
             }
         }
 
-        public void Remover(string msg)
+        public void Remover(int codN)
         {
             using (var context = new SiteContext())
             {
-                var n = Buscar(msg);
+                var n = Buscar(codN);
                 if (n != null)
                 {
                     context.Notificacao.Remove(n);
@@ -44,13 +44,13 @@ namespace apBioPlay.DAO
             }
         }
 
-        public Notificacao Buscar(string m)
+        public Notificacao Buscar(int codN)
         {
             using (var contexto = new SiteContext())
             {
                 List<Notificacao> lista = contexto.Notificacao.ToList();
                 return contexto.Notificacao
-                    .Where(n => n.Texto == m)
+                    .Where(n => n.Codigo == codN)
                     .FirstOrDefault();
             }
         }

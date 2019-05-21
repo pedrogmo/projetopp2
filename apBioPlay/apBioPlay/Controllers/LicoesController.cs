@@ -110,6 +110,13 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Perfil");
         }
 
+        public ActionResult Notificacao(int codN)
+        {
+            var nots = new NotificacaoDAO();
+            nots.Remover(codN);
+            return RedirectToAction(nots.Buscar(codN).Url);
+        }
+
         [Route("tratarAmizade/{c2}/{sit}")]
         public ActionResult TratarAmizade(int c2, string sit)
         {
@@ -129,7 +136,7 @@ namespace apBioPlay.Controllers
             }
             else if (sit == "Aceitar solicitação")
             {
-                nots.Remover($"O usuário {u2.Nome} te enviou uma solicitação de amizade");
+                //nots.Remover($"O usuário {u2.Nome} te enviou uma solicitação de amizade");
                 sol.Remover(u2.Codigo, u.Codigo);
                 amz.Adicionar(u.Codigo, u2.Codigo);
                 amz.Adicionar(u2.Codigo, u.Codigo);
@@ -154,6 +161,7 @@ namespace apBioPlay.Controllers
         
         public ActionResult Pergunta(Pergunta per)
         {
+            ViewBag.indResp = 0;
             ViewBag.pergunta = per;
             Session["respostas"] = new RespostaDAO().Lista(per.Codigo);
             ViewBag.respostas = (List<Resposta>)Session["respostas"];
@@ -161,9 +169,9 @@ namespace apBioPlay.Controllers
             return View();
         }
 
-        public ActionResult ProximaPergunta(int indResp)
+        public ActionResult ProximaPergunta()
         {
-            var resp = ((List<Resposta>)Session["respostas"])[indResp];
+            var resp = ((List<Resposta>)Session["respostas"])[ViewBag.indResp];
             Session["indice"] = ((int)Session["indice"]) + 1;
             if (resp.Certa)
                 Session["acertos"] = ((int)Session["acertos"]) + 1;

@@ -20,13 +20,13 @@
             <h1>Selecione o lixo correto</h1>
 
             <form action="" method="post">
-                <input type="text" hidden id="selecionada" value="@indR">
+                <input type="text" hidden id="selecionada" value="@ViewBag.indResp" name="selecionada">
                 <ul>
-                    @for(int i=0; i<4; ++i)
+                    @for(int ind=0; ind<4; ++ind)
                     {
-                        var resp = ViewBag.respostas[ind]
-                        string p = "pic" + (ind+1);
-                        string r = "resp" + (ind + 1);
+                        var resp = ViewBag.respostas[ind];
+                        string p = "pic" + ind;
+                        string r = "resp" + ind;
                         <li>
                             <input type="radio" name="pic" id="@p" />
                             <label for="@p"><img src=@resp.UrlImagem></label>
@@ -38,7 +38,7 @@
 
             <hr />
 
-            @Html.ActionLink("Enviar Resposta", "ProximaPergunta", new { indResp = indR })
+            @Html.ActionLink("Enviar Resposta", "ProximaPergunta")
 
         </div>
     </section>
