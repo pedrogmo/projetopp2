@@ -1,8 +1,7 @@
 ﻿
 @{
     Layout = null;
-
-    int indR = 0;
+    string indR = "0";
 }
 
 <!DOCTYPE html>
@@ -20,7 +19,7 @@
             <h1>Selecione o lixo correto</h1>
 
             <form action="" method="post">
-                <input type="text" hidden id="selecionada" value="@ViewBag.indResp" name="selecionada">
+                <input type="text" hidden id="sel" value=@indR name="indR">
                 <ul>
                     @for(int ind=0; ind<4; ++ind)
                     {
@@ -38,7 +37,7 @@
 
             <hr />
 
-            @Html.ActionLink("Enviar Resposta", "ProximaPergunta")
+            @Html.ActionLink("Enviar Resposta", "ProximaPergunta", new { resp = ViewBag.respostas[int.Parse(indR)] })
 
         </div>
     </section>

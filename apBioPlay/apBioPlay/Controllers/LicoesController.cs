@@ -161,17 +161,16 @@ namespace apBioPlay.Controllers
         
         public ActionResult Pergunta(Pergunta per)
         {
-            ViewBag.indResp = 0;
+            //ViewBag.indResp = 0;
             ViewBag.pergunta = per;
-            Session["respostas"] = new RespostaDAO().Lista(per.Codigo);
-            ViewBag.respostas = (List<Resposta>)Session["respostas"];
+            ViewBag.respostas = new RespostaDAO().Lista(per.Codigo);
+            //Session["respostas"] = ViewBag.respostas;
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
 
-        public ActionResult ProximaPergunta()
+        public ActionResult ProximaPergunta(Resposta resp)
         {
-            var resp = ((List<Resposta>)Session["respostas"])[ViewBag.indResp];
             Session["indice"] = ((int)Session["indice"]) + 1;
             if (resp.Certa)
                 Session["acertos"] = ((int)Session["acertos"]) + 1;

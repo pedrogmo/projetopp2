@@ -2,7 +2,7 @@
 var pic1 = document.getElementById("pic1");
 var pic2 = document.getElementById("pic2");
 var pic3 = document.getElementById("pic3");
-var selecionada = document.getElementById("selecionada");
+var selecionada = document.getElementById("sel");
 
 pic0.onclick = function () {
     selecionada.value = "0";
