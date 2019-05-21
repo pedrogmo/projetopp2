@@ -125,6 +125,7 @@ img {
     font-size: 2rem;
     width: auto;
     user-select: none;
+    margin-left: 2em;
 }
 
 #home-hero #card1 #wow ul
@@ -498,8 +499,8 @@ img {
         position: relative;
         font-size: 2.2rem;
         width: auto;
-        left: 9em;
-        bottom: 5em;
+        left: 9.5em;
+        bottom: 4.5em;
         color: white;
     }
 
