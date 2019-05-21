@@ -1,1 +1,0 @@
-@Html.ActionLink("Enviar Resposta", "ProximaPergunta", new { resp = ViewBag.respostas[indResp] });

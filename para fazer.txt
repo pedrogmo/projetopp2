@@ -1,8 +1,16 @@
-* Design de notificação
-* Código para exibir notificações
-* Adicionar email e data no perfil
-* Design do forum
-* Design da sobre
-* Design da bastidores
-* Design do fim de uma lição
+Desgin:
+
+* Notificação
+* Botar email e data no perfil
+* Botões de deslogar e excluir conta
+* Botão home no perfil e na publicação
+* Sobre
+* Bastidores
+* Forum
+* FimLicao
+
+Código:
+
 * Procurar novo amigo
+* Acessar lição
+* Bloquear lição com nível maior

@@ -26,7 +26,7 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Visualiza", "Licoes", new { codU = ((Usuario)Session["usuarioLogado"]).Codigo } );
         }
 
-        [Route("usuarios/{codU}")]
+        [Route("Licoes/usuarios/{codU}")]
         public ActionResult Visualiza(int codU)
         {
             ViewBag.mensagem = "";
@@ -65,7 +65,7 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Forum");
         }
 
-        [Route("publicacoes/{codP}")]
+        [Route("Licoes/publicacoes/{codP}")]
         public ActionResult VerPublicacao(int codP)
         {
             Session["publicacao"] = new PublicacaoDAO().Buscar(codP);
@@ -131,11 +131,12 @@ namespace apBioPlay.Controllers
         public ActionResult Notificacao(int codN)
         {
             var nots = new NotificacaoDAO();
+            string url = nots.Buscar(codN).Url;
             nots.Remover(codN);
-            return RedirectToAction(nots.Buscar(codN).Url);
+            return Redirect(url);
         }
 
-        [Route("tratarAmizade/{c2}/{sit}")]
+        [Route("Licoes/tratarAmizade/{c2}/{sit}")]
         public ActionResult TratarAmizade(int c2, string sit)
         {
             var u = (Usuario)Session["usuarioLogado"];
@@ -166,8 +167,7 @@ namespace apBioPlay.Controllers
             }
             return RedirectToAction("Visualiza", new { codU = u2.Codigo });
         }
-
-        [Route("licao/{codL}")]
+        
         public ActionResult Licao(int codL)
         {
             Session["perguntas"] = new PerguntaDAO().Lista(codL);

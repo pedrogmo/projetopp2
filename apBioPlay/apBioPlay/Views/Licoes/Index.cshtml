@@ -81,7 +81,7 @@
             @foreach (apBioPlay.Models.Notificacao n in ViewBag.notificacoes)
              {
                 <div id="card-link">
-                    <a href="@n.Url">@n.Texto!</a>
+                    @Html.ActionLink(n.Texto, "Notificacao", new { codN = n.Codigo })
                 </div>
              }
 
