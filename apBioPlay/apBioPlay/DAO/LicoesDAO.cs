@@ -16,5 +16,15 @@ namespace apBioPlay.DAO
                 return contexto.Licao.ToList();
             }
         }
+
+        public Licao Buscar(int codL)
+        {
+            using (var contexto = new SiteContext())
+            {
+                return contexto.Licao
+                .Where(l=>l.Codigo==codL)
+                .FirstOrDefault();
+            }
+        }
     }
 }

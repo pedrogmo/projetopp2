@@ -56,10 +56,18 @@
             <div class="card-wrapper">
                 @foreach (apBioPlay.Models.Licao l in ViewBag.licoes)
                 {
+                    bool bloqueado = l.Nivel > ViewBag.usuario.Nivel;
                     <div class="card">
                         <img src="@l.UrlImagem" alt="card background" class="card-img">
-                        <h1>@l.Nome</h1>
-                        <a href="#">Iniciar</a>
+                        <h1>@l.Nome - Nível @l.Nivel</h1>
+                        @if (bloqueado)
+                        {
+                            <a href="" class="bloqueado">Iniciar</a>
+                        }
+                        else
+                        {
+                            <a class = "desbloqueado"href="Licoes/licao/@l.Codigo">Iniciar</a>
+                        }
                     </div>
                 }
             </div>
@@ -79,15 +87,15 @@
             <hr />
 
             @foreach (apBioPlay.Models.Notificacao n in ViewBag.notificacoes)
-             {
+            {
                 <div id="card-link">
                     @Html.ActionLink(n.Texto, "Notificacao", new { codN = n.Codigo })
                 </div>
-             }
+            }
 
-            
+
         </div>
     </section>
-</body>
-</html>
     <script src="~/Scripts/notificacao.js"></script>
+</body>
+</html>   

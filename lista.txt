@@ -12,8 +12,6 @@ Desgin:
 Código:
 
 * Procurar novo amigo
-* Acessar lição
-* Bloquear lição com nível maior
 
 Erros:
 

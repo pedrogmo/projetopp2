@@ -168,8 +168,12 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Visualiza", new { codU = u2.Codigo });
         }
         
+
+        [Route("Licoes/licao/{codL}")]
         public ActionResult Licao(int codL)
         {
+            if (new LicoesDAO().Buscar(codL).Nivel > ((Usuario)Session["usuarioLogado"]).Nivel)
+                return RedirectToAction("Index");
             Session["perguntas"] = new PerguntaDAO().Lista(codL);
             Session["indice"] = 0;
             Session["codLicao"] = codL;
