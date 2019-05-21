@@ -11,7 +11,7 @@ namespace apBioPlay.Models
         [Key]
         public int Codigo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O conteúdo é obrigatório", AllowEmptyStrings = false)]
         public string Conteudo { get; set; }
 
         [Required]

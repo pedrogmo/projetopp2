@@ -53,6 +53,20 @@ namespace apBioPlay.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Publicar(Publicacao pub)
+        {
+            Session["valido"] = "SIM";
+            if (ModelState.IsValid)
+            {
+                pub.Data = DateTime.Now;
+                new PublicacaoDAO().Adicionar(pub);
+            }   
+            else
+                Session["valido"] = "NAO";
+            return RedirectToAction("Forum");
+        }
+
         [Route("publicacoes/{codP}")]
         public ActionResult VerPublicacao(int codP)
         {
