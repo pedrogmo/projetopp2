@@ -64,7 +64,7 @@ nav li {
 
 nav a {
 	text-decoration: none;
-	padding: .5;
+	padding: .5em;
 	text-transform: uppercase;
 	color: #83e600;
     font-size: .8rem;
@@ -833,7 +833,7 @@ section .wave {
 
     .txtCampos {
         padding: 10px;
-        font-family: 'Aristotelica';
+        font-family: 'Mikado';
         font-size: 14pt;
         width: 87.5%;
         background: none;

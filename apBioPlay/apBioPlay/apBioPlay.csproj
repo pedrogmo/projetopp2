@@ -238,6 +238,7 @@
     <Content Include="Scripts\menuVertical.js" />
     <Content Include="Scripts\modalErro.js" />
     <Content Include="Scripts\modalPerfil.js" />
+    <Content Include="Scripts\notificacao.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Scripts\pareto.js" />
     <Content Include="Scripts\perfil.js" />
