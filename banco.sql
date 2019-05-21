@@ -24,8 +24,6 @@ create table Publicacao(
 	constraint fkUsuarioPublicacao foreign key(codUsuario) references Usuario(codigo)
 )
 
-insert into Publicacao values('como eu faco para recicial mais em casa?? minha mae queria saber como gastr menos', 2, '14/05/2019')
-
 create table RespostaPublicacao(
 	codigo int identity(1,1) primary key,
 	conteudo ntext not null,

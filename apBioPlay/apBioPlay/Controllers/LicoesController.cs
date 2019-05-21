@@ -56,14 +56,12 @@ namespace apBioPlay.Controllers
         [HttpPost]
         public ActionResult Publicar(Publicacao pub)
         {
-            Session["valido"] = "SIM";
-            if (ModelState.IsValid)
+            if (pub.Conteudo.Trim() != "")
             {
                 pub.Data = DateTime.Now;
+                pub.CodUsuario = ((Usuario)Session["usuarioLogado"]).Codigo;
                 new PublicacaoDAO().Adicionar(pub);
-            }   
-            else
-                Session["valido"] = "NAO";
+            }
             return RedirectToAction("Forum");
         }
 
@@ -78,21 +76,22 @@ namespace apBioPlay.Controllers
             return View();
         }
 
-        public ActionResult Responder(string resp)
+        public ActionResult Responder(RespostaPublicacao resp)
         {
             Publicacao pub = (Publicacao)Session["publicacao"];
-            Usuario usu = (Usuario)Session["usuarioLogado"];
-            var resposta = new RespostaPublicacao();
-            resposta.CodPublicacao = pub.Codigo;
-            resposta.CodUsuario = usu.Codigo;
-            resposta.Conteudo = resp;
-            resposta.Data = DateTime.Now;
-            new RespostaPublicacaoDAO().Adicionar(resposta);
-            var notificacao = new Notificacao();
-            notificacao.CodUsuario = pub.CodUsuario;
-            notificacao.Texto = $"O usuário {usu.Nome} respondeu sua publicação.";
-            notificacao.Url = $"publicacoes/{pub.Codigo}";
-            new NotificacaoDAO().Adicionar(notificacao);
+            if (resp.Conteudo.Trim() != "")
+            {                
+                Usuario usu = (Usuario)Session["usuarioLogado"];
+                resp.CodPublicacao = pub.Codigo;
+                resp.CodUsuario = usu.Codigo;
+                resp.Data = DateTime.Now;
+                new RespostaPublicacaoDAO().Adicionar(resp);
+                var notificacao = new Notificacao();
+                notificacao.CodUsuario = pub.CodUsuario;
+                notificacao.Texto = $"O usuário {usu.Nome} respondeu sua publicação.";
+                notificacao.Url = $"publicacoes/{pub.Codigo}";
+                new NotificacaoDAO().Adicionar(notificacao);
+            }
             return RedirectToAction("VerPublicacao", new { codP = pub.Codigo });
         }
 
