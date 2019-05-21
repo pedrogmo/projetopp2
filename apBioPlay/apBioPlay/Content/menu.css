@@ -45,12 +45,6 @@ img {
     color: #333;
 }
 
-#mobile ul {
-    position: relative;
-    left: 0;
-}
-
-
 #mobile ul li
 {
     display: inline-block;
@@ -59,7 +53,9 @@ img {
 
 #mobile ul li img
 {
-    width: 45%;
+    width: 40%;
+    position: relative;
+    top: .75em;
 }
 
 
