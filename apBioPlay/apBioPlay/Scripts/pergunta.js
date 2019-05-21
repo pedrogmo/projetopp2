@@ -1,21 +1,25 @@
-﻿var pic0 = document.getElementById("pic0");
+﻿
+var selecionada = document.getElementById("selecionada");
+
+/* OPÇÕES */
+
 var pic1 = document.getElementById("pic1");
 var pic2 = document.getElementById("pic2");
 var pic3 = document.getElementById("pic3");
-var selecionada = document.getElementById("sel");
+var pic4 = document.getElementById("pic4");
 
-pic0.onclick = function () {
+pic1.onclick = function () {
     selecionada.value = "0";
 }
 
-pic1.onclick = function () {
+pic2.onclick = function () {
     selecionada.value = "1";
 }
 
-pic2.onclick = function () {
+pic3.onclick = function () {
     selecionada.value = "2";
 }
 
-pic3.onclick = function () {
+pic4.onclick = function () {
     selecionada.value = "3";
 }

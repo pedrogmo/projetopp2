@@ -180,16 +180,15 @@ namespace apBioPlay.Controllers
         
         public ActionResult Pergunta(Pergunta per)
         {
-            //ViewBag.indResp = 0;
             ViewBag.pergunta = per;
             ViewBag.respostas = new RespostaDAO().Lista(per.Codigo);
-            //Session["respostas"] = ViewBag.respostas;
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             return View();
         }
 
-        public ActionResult ProximaPergunta(Resposta resp)
+        public ActionResult ProximaPergunta(string indResp)
         {
+            var resp = new RespostaDAO().Lista(((List<Pergunta>)Session["perguntas"])[(int)Session["indice"]].Codigo)[int.Parse(indResp)];
             Session["indice"] = ((int)Session["indice"]) + 1;
             if (resp.Certa)
                 Session["acertos"] = ((int)Session["acertos"]) + 1;
@@ -201,7 +200,12 @@ namespace apBioPlay.Controllers
         public ActionResult FimLicao()
         {
             ++((Usuario)Session["usuarioLogado"]).Nivel;
+            new UsuariosDAO().Atualiza((Usuario)Session["usuarioLogado"]);            
             new LicoesFeitasDAO().Adicionar(((Usuario)Session["usuarioLogado"]).Codigo, (int)Session["codLicao"], (int)Session["acertos"]);
+            ViewBag.usuario = (Usuario)Session["usuarioLogado"];
+            ViewBag.acertos = (int)Session["acertos"];
+            ViewBag.total = (int)Session["indice"];
+            Session["perguntas"] = Session["indice"] = Session["codLicao"] = Session["acertos"] = null;
             return View();
         }
     }

@@ -127,7 +127,7 @@ label img {
     margin: 0;
 }
 
-#home-hero a {
+#home-hero input[type="submit"] {
     font-size: 1.2rem;
     background-color: rgb(217,217,217);
     border-radius: 10px;
@@ -145,7 +145,7 @@ label img {
     transition: .2s;
 }
 
-#home-hero a:hover {
+#home-hero input[type="submit"]:hover {
     background-color: #83e600;
     border-radius: 10px;
     text-decoration: none;
@@ -186,7 +186,7 @@ label img {
         left: -5em;
     }
 
-    #home-hero a {
+    #home-hero input[type="submit"] {
         font-size: 1.5rem;
         margin-top: 2em;
     }

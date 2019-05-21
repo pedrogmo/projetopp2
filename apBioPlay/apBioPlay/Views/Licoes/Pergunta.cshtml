@@ -1,7 +1,6 @@
 ﻿
 @{
     Layout = null;
-    string indR = "0";
 }
 
 <!DOCTYPE html>
@@ -18,14 +17,14 @@
 
             <h1>Selecione o lixo correto</h1>
 
-            <form action="" method="post">
-                <input type="text" hidden id="sel" value=@indR name="indR">
+            <form action="/Licoes/ProximaPergunta">
+                <input type="text" hidden id="selecionada" value="0" name="indResp">
                 <ul>
-                    @for(int ind=0; ind<4; ++ind)
+                    @for (int ind = 0; ind < 4; ++ind)
                     {
                         var resp = ViewBag.respostas[ind];
-                        string p = "pic" + ind;
-                        string r = "resp" + ind;
+                        string p = "pic" + (ind + 1);
+                        string r = "resp" + (ind + 1);
                         <li>
                             <input type="radio" name="pic" id="@p" />
                             <label for="@p"><img src=@resp.UrlImagem></label>
@@ -33,12 +32,9 @@
                         </li>
                     }
                 </ul>
-            </form>
-
-            <hr />
-
-            @Html.ActionLink("Enviar Resposta", "ProximaPergunta", new { resp = ViewBag.respostas[int.Parse(indR)] })
-
+                <hr />
+                <input value="Enviar resposta" type="submit" />
+            </form>            
         </div>
     </section>
     <script src="~/Scripts/pergunta.js"></script>
