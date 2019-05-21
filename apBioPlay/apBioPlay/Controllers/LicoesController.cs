@@ -110,9 +110,14 @@ namespace apBioPlay.Controllers
                     Session["Message"] = "As senhas são iguais!";
                 else
                 {
-                    usu.Senha = senhaNov;
-                    usu.FotoPerfil = fotoPerfil;
-                    new UsuariosDAO().Atualiza(usu);
+                    if (senhaNov.Length < 4)
+                        Session["Message"] = "Senha inválida";
+                    else
+                    {
+                        usu.Senha = senhaNov;
+                        usu.FotoPerfil = fotoPerfil;
+                        new UsuariosDAO().Atualiza(usu);
+                    }
                 }
             }
             else
