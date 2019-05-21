@@ -1,9 +1,11 @@
 Desgin:
 
 * Notificação
-* Botar email e data no perfil
-* Botões de deslogar e excluir conta
-* Botão home no perfil e na publicação
+* Perfil
+   - Botar email e data no perfil
+   - Botões de deslogar e excluir conta
+   - Botão home no perfil e na publicação
+   - Busca de usuário
 * Sobre
 * Bastidores
 * Forum
@@ -11,7 +13,7 @@ Desgin:
 
 Código:
 
-* Procurar novo amigo
+* Busca de usuário
 
 Erros:
 
