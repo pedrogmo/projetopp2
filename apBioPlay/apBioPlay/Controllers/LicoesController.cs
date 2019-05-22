@@ -217,5 +217,18 @@ namespace apBioPlay.Controllers
             Session["perguntas"] = Session["indice"] = Session["codLicao"] = Session["acertos"] = null;
             return View();
         }
+
+        public ActionResult Deslogar()
+        {
+            Session["usuarioLogado"] = null;
+            return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult ExcluirConta()
+        {
+            new UsuariosDAO().Remover(((Usuario)Session["usuarioLogado"]).Codigo);
+            Session["usuarioLogado"] = null;
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
