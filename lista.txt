@@ -3,10 +3,10 @@ Desgin:
 * Perfil
    - Botões de deslogar e excluir conta
    - Busca de usuário
-* Sobre
-* Bastidores
 * Forum
 * FimLicao
+* Sobre
+* Bastidores
 
 Código:
 
