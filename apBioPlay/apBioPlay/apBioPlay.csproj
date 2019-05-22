@@ -296,6 +296,7 @@
     <Content Include="Views\Licoes\VerPublicacao.cshtml" />
     <Content Include="Views\Licoes\Pergunta.cshtml" />
     <Content Include="Views\Licoes\FimLicao.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

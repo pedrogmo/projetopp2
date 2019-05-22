@@ -14,9 +14,9 @@ namespace apBioPlay.DAO
 
         public LicoesFeitasDAO()
         {
-            conexao = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118174;User ID=PR118174;Password=PR118174; Min Pool Size=5;Max Pool Size=250; Connect Timeout=3");
+            conexao = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118174;User ID=PR118174;Password=PR118174; Min Pool Size=5;Max Pool Size=250; Connect Timeout=5");
             conexao.Open();
-            conexao2 = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118174;User ID=PR118174;Password=PR118174; Min Pool Size=5;Max Pool Size=250; Connect Timeout=3");
+            conexao2 = new SqlConnection("Data Source=regulus.cotuca.unicamp.br;Initial Catalog=PR118174;User ID=PR118174;Password=PR118174; Min Pool Size=5;Max Pool Size=250; Connect Timeout=5");
             conexao2.Open();
         }
 

@@ -1,5 +1,6 @@
 Desgin:
 
+* Lições: fazer menu ficar selecionado
 * Notificação
 * Perfil
    - Botar email e data no perfil
