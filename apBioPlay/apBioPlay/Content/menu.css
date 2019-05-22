@@ -49,6 +49,13 @@ img {
 {
     display: inline-block;
     line-height: 1em;
+    margin-left: -2em;
+}
+
+#mobile ul
+{
+    position: relative;
+    left: -3em;
 }
 
 #mobile ul li img
@@ -58,6 +65,16 @@ img {
     top: .75em;
 }
 
+#mobile #nick
+{
+    position: relative;
+    left: 2em;
+}
+
+#mobile #notificacao:hover
+{
+    cursor: pointer;
+}
 
 /* HEADER DESKTOP */
 
@@ -112,7 +129,7 @@ img {
     visibility: hidden;
 }
 
-@media(min-width: 60rem) {
+@media(min-width: 70rem) {
 
     #desktop {
         visibility: initial;
@@ -140,11 +157,22 @@ img {
         float: right;
     }
 
+    #desktop #info #notificacao2
+    {
+        width: 30%;
+        position: relative;
+        top: .25em;
+    }
+
+    #desktop #info #notificacao2:hover
+    {
+        cursor: pointer;
+    }
+
 
     #desktop ul a img {
         width: 2em;
         top: 50%;
-        padding-left: 2em;
     }
 
     #desktop ul h1 {
@@ -164,12 +192,6 @@ img {
         right: 1.5em;
         font-size: 1.5rem;
         margin-left: 1em;
-    }
-}
-
-@media(min-width: 70rem) {
-    #desktop ul a img {
-        padding-left: 10em;
     }
 }
 
@@ -193,7 +215,7 @@ div#usuario ul a img {
     padding-right: 2em;
 }
 
-@media(min-width: 60rem) {
+@media(min-width: 70rem) {
     #mobile {
         visibility: hidden;
     }

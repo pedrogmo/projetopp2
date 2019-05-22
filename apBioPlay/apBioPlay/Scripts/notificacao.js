@@ -1,15 +1,25 @@
 ﻿
 var modal = document.getElementById("bg-modal");
-var sino = document.getElementById("notificacao");
 var estaAberto = false;
 
 document.getElementById("close").onclick = function () {
+    console.log("FECHOU");
     modal.style.visibility = "hidden";
-    var estaAberto = false;
+    estaAberto = false;
 }
 
-sino.onclick = function () {
-    modal.style.visibility = "initital";
-    var estaAberto = true;
+document.getElementById("notificacao").onclick = function () {
+
+    if (!estaAberto) {
+        modal.style.visibility = "initial";
+        estaAberto = true;
+    }
+}
+
+document.getElementById("notificacao2").onclick = function () {
+    if (!estaAberto) {
+        modal.style.visibility = "initial";
+        estaAberto = true;
+    }
 }
 
