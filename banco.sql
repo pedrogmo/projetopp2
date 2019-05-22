@@ -129,3 +129,18 @@ create table SolicitacaoAmizade(
 	constraint fkUsuarioS1 foreign key(codUsuario1) references Usuario(codigo),
 	constraint fkUsuarioS2 foreign key(codUsuario2) references Usuario(codigo)
 )
+
+create trigger delete_usuario on Usuario
+instead of delete
+as
+declare @codU int
+select @codU = codigo from Deleted
+delete from Notificacao where codUsuario = @codU
+delete from Acesso where codUsuario = @codU
+delete from Amizade where codUsuario1 = @codU
+delete from Amizade where codUsuario2 = @codU
+delete from SolicitacaoAmizade where codUsuario1 = @codU
+delete from SolicitacaoAmizade where codUsuario2 = @codU
+delete from UsuarioLicao where codUsuario = @codU
+delete from Publicacao where codUsuario = @codU
+delete from RespostaPublicacao where codUsuario = @codU
