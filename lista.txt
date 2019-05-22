@@ -1,11 +1,8 @@
 Desgin:
 
-* Lições: fazer menu ficar selecionado
-* Notificação
 * Perfil
-   - Botar email e data no perfil
    - Botões de deslogar e excluir conta
-   - Botão home no perfil e na publicação
+   - Botão home no perfil
    - Busca de usuário
 * Sobre
 * Bastidores
@@ -16,7 +13,6 @@ Código:
 
 * Busca de usuário
 * Modal de aniversário
-* Adicionar na tabela Acesso
 
 Erros:
 

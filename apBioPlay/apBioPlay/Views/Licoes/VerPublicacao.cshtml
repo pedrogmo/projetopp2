@@ -8,9 +8,44 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/menu.css">
+    <link rel="stylesheet" href="~/Content/notificacao.css">
+    <link rel="stylesheet" href="~/Content/forum.css">
     <title>BioPlay - Publicação</title>
 </head>
 <body>
+    <header id="mobile">
+        <ul>
+            <li><img id="notificacao" src="~/Images/ISino.png" alt=""></li>
+            <li><img id="star" class="star" src="~/Images/IEstrela.png" alt=""></li>
+            <li><h1>@ViewBag.usuario.Nivel</h1></li>
+            <li><h1 id="nick">@ViewBag.usuario.Nome</h1></li>
+        </ul>
+    </header>
+
+    <div id="desktop">
+        <img src="~/Images/logoMobile.png" alt="">
+        <ul>
+            <li><a href="/Licoes/Index">Início</a></li>
+            <li><a href="/Licoes/Perfil">Perfil</a></li>
+            <li><a id="inicio" href="/Licoes/Forum">Fórum</a></li>
+
+            <div id="info">
+                <li><a id="pontos2"><img src="~/Images/IEstrela.png" alt=""></a></li>
+                <li><h1>@ViewBag.usuario.Nivel</h1></li>
+                <li><img id="notificacao2" src="~/Images/ISino.png" alt=""></li>
+                <li><h1 id="nick">@ViewBag.usuario.Nome</h1></li>
+            </div>
+        </ul>
+    </div>
+
+    <div id="usuario">
+        <ul>
+            <a href="/Licoes/Index" id="inicio"><img src="~/Images/IHome.png" alt=""></a>
+            <a href="/Licoes/Perfil" id="perfil"><img src="~/Images/IPerfil.png" alt=""></a>
+            <a href="/Licoes/Forum" id="forum"><img src="~/Images/IForum.png" alt=""></a>
+        </ul>
+    </div>
     <section id="sInformacao">
         <div id="informacao">
             <div id="publicacao">
@@ -44,9 +79,26 @@
             }
             <form action="/Licoes/Responder">
                 <input name="resp.Conteudo" type="text" />
-                <input value ="Responder"type="submit" />
+                <input value="Responder" type="submit" />
             </form>
         </div>
     </section>
+    <section id="bg-modal">
+        <div id="modal-content">
+            <ul>
+                <li><img src="~/Images/ISino.png" alt="Alternate Text" /></li>
+                <li><h1>Notificações</h1></li>
+            </ul>
+            <label id="close">X</label>
+            <hr />
+            @foreach (apBioPlay.Models.Notificacao n in ViewBag.notificacoes)
+            {
+                <div id="card-link">
+                    @Html.ActionLink(n.Texto, "Notificacao", new { codN = n.Codigo })
+                </div>
+            }
+        </div>
+    </section>
+    <script src="~/Scripts/notificacao.js"></script>
 </body>
 </html>

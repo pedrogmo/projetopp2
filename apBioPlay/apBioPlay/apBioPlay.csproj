@@ -171,6 +171,7 @@
     <Content Include="Content\home.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\modalErro.css" />
+    <Content Include="Content\notificacao.css" />
     <Content Include="Content\perfil.css" />
     <Content Include="Content\pergunta.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -296,7 +297,6 @@
     <Content Include="Views\Licoes\VerPublicacao.cshtml" />
     <Content Include="Views\Licoes\Pergunta.cshtml" />
     <Content Include="Views\Licoes\FimLicao.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

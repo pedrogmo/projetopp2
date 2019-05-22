@@ -48,8 +48,9 @@ namespace apBioPlay.Controllers
 
         public ActionResult Forum()
         {
-            ViewBag.Publicacoes = new PublicacaoDAO().Lista();
+            ViewBag.publicacoes = new PublicacaoDAO().Lista();
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
+            ViewBag.notificacoes = new NotificacaoDAO().Lista(ViewBag.usuario.Codigo);
             return View();
         }
 
@@ -73,6 +74,7 @@ namespace apBioPlay.Controllers
             ViewBag.respostas = new RespostaPublicacaoDAO().RespostasDe(codP);
             ViewBag.usuarioPublicacao = new UsuariosDAO().Buscar(u => u.Codigo == ViewBag.publicacao.CodUsuario);
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
+            ViewBag.notificacoes = new NotificacaoDAO().Lista(ViewBag.usuario.Codigo);
             return View();
         }
 
