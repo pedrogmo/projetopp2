@@ -2,7 +2,6 @@ Desgin:
 
 * Perfil
    - Botões de deslogar e excluir conta
-   - Botão home no perfil
    - Busca de usuário
 * Sobre
 * Bastidores
