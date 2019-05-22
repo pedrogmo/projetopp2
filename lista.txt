@@ -14,6 +14,8 @@ Desgin:
 Código:
 
 * Busca de usuário
+* Modal de aniversário
+* Adicionar na tabela Acesso
 
 Erros:
 
