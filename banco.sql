@@ -1,7 +1,7 @@
 create table Usuario(
 	codigo int identity(1,1) primary key,
-	nome varchar(50) not null,
-	email varchar(50) not null,
+	nome varchar(30) not null,
+	email varchar(30) not null,
 	senha varchar(50) not null,
 	dataNascimento date not null,
 	nivel int not null,

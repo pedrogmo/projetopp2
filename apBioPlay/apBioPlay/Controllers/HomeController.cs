@@ -34,10 +34,13 @@ namespace apBioPlay.Controllers
             if (usuario == null)
             {
                 Session["mensagem"] = "Login e/ou senha incorreto(s)";
-                return RedirectToAction("Index");                
+                return RedirectToAction("Index");
             }
             else
+            {
+                new AcessoDAO().Adicionar(usuario.Codigo, DateTime.Now);
                 return RedirectToAction("Index", "Licoes");
+            }
         }
 
         public ActionResult Cadastrar()

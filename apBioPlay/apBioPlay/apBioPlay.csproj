@@ -250,6 +250,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LicoesController.cs" />
+    <Compile Include="DAO\AcessoDAO.cs" />
     <Compile Include="DAO\AmizadeDAO.cs" />
     <Compile Include="DAO\PerguntaDAO.cs" />
     <Compile Include="DAO\CidadesDAO.cs" />
