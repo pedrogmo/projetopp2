@@ -1,7 +1,6 @@
 Desgin:
 
 * Perfil
-   - Botões de deslogar e excluir conta
    - Busca de usuário
 * Forum
 * FimLicao
