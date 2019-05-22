@@ -96,6 +96,28 @@ img {
     transition: .2s;
 }
 
+#home-hero #casa {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Mikado Black";
+    font-size: .85rem;
+    padding: .75em;
+    margin-left: 3em;
+    border: 3px white solid;
+    border-radius: 30px;
+    text-align: center;
+    transition: .2s;
+    position: relative;
+    bottom: 6em;
+}
+
+#home-hero #casa:hover {
+    background-color: white;
+    color: rgb(134,184,230);
+    transition: .2s;
+}
+
 #home-hero #card1 #foto {
     width: 13em;
     height: 13em;
@@ -533,6 +555,7 @@ img {
         float: right;
     }
 
+
     #home-hero #card1 #user-info #nickname {
         position: relative;
         font-size: 2rem;
@@ -619,5 +642,20 @@ img {
 
     .txtCampos {
         width: 60%;
+    }
+
+    #home-hero #casa {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Mikado Black";
+        font-size: .85rem;
+        padding: .75em;
+        width: 3.5em;
+        border: 3px white solid;
+        border-radius: 30px;
+        text-align: center;
+        transition: .2s;
+        right: 1em;
     }
 }

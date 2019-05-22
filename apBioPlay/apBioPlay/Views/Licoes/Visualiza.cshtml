@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="~/Content/perfil.css" />
     <link rel="stylesheet" href="~/Content/modalErro.css" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>BioPlay - Perfil</title>
 </head>
@@ -24,6 +25,7 @@
     <section id="home-hero">
         <div class="container">
             <a href="#" id="alter" style="visibility: @stringBotao">Alterar Perfil</a>
+            <a href="/Licoes/Index" id="casa"><i class="fa fa-home" aria-hidden="true"></i></a>
 
             <div id="card1">
                 <div id="foto">
@@ -34,7 +36,7 @@
                     <h1 id="nickname">@ViewBag.visualizado.Nome</h1>
 
                     <div id="wow">
-                        <a  id="novoAmigo" href="/Licoes/tratarAmizade/@ViewBag.visualizado.Codigo/@ViewBag.situacao" style="visibility: @stringBotao2">@ViewBag.situacao</a>
+                        <a id="novoAmigo" href="/Licoes/tratarAmizade/@ViewBag.visualizado.Codigo/@ViewBag.situacao" style="visibility: @stringBotao2">@ViewBag.situacao</a>
                         <ul>
                             <li><img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" /></li>
                             <li><h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1></li>
