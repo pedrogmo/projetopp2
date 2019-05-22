@@ -38,6 +38,8 @@
                         <ul>
                             <li><img id="star" src="~/Images/IEstrela.png" alt="Alternate Text" /></li>
                             <li><h1 id="lvl">Nível: @ViewBag.visualizado.Nivel</h1></li>
+                            <li><img id="bolin" src="~/Images/bolin.png" alt="Alternate Text" /></li>
+                            <li><h1 id="dn">Data de Nascimento: @ViewBag.visualizado.DataNascimento.Day.ToString().PadLeft(2, '0')/@ViewBag.visualizado.DataNascimento.Month.ToString().PadLeft(2, '0')/@ViewBag.visualizado.DataNascimento.Year</h1></li>
                         </ul>
                     </div>
                 </div>
@@ -147,7 +149,7 @@
 
                 <h2>Alterar senha:</h2>
                 <input type="password" name="senhaAnt" value="" class="txtCampos" placeholder="Senha antiga" />
-                <input type="password" name="senhaNov" value="" class="txtCampos" placeholder="Nova senha" />
+                <input type="password" name="senhaNov" value="" class="txtCampos" placeholder="Nova senha" /><br />
                 <input type="submit" value="Enviar alterações" />
 
             </form>
