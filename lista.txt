@@ -15,4 +15,3 @@ Código:
 Erros:
 
 * Voltar páginas por causa do Redirect
-* Url bugado lição
