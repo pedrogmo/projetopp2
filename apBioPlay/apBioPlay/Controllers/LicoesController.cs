@@ -48,7 +48,7 @@ namespace apBioPlay.Controllers
 
         public ActionResult Forum()
         {
-            ViewBag.publicacoes = new PublicacaoDAO().Lista();
+            ViewBag.publicacoes = new PublicacaoDAO().Lista().OrderByDescending(c => c.Data).ToList();
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             ViewBag.notificacoes = new NotificacaoDAO().Lista(ViewBag.usuario.Codigo);
             return View();
@@ -57,7 +57,7 @@ namespace apBioPlay.Controllers
         [HttpPost]
         public ActionResult Publicar(Publicacao pub)
         {
-            if (pub.Conteudo.Trim() != "")
+            if (pub != null && pub.Conteudo != null && pub.Conteudo.Trim() != "")
             {
                 pub.Data = DateTime.Now;
                 pub.CodUsuario = ((Usuario)Session["usuarioLogado"]).Codigo;
@@ -71,7 +71,7 @@ namespace apBioPlay.Controllers
         {
             Session["publicacao"] = new PublicacaoDAO().Buscar(codP);
             ViewBag.publicacao = (Publicacao)Session["publicacao"];
-            ViewBag.respostas = new RespostaPublicacaoDAO().RespostasDe(codP);
+            ViewBag.respostas = new RespostaPublicacaoDAO().RespostasDe(codP).OrderByDescending(c => c.Data).ToList();
             ViewBag.usuarioPublicacao = new UsuariosDAO().Buscar(u => u.Codigo == ViewBag.publicacao.CodUsuario);
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             ViewBag.notificacoes = new NotificacaoDAO().Lista(ViewBag.usuario.Codigo);
@@ -81,7 +81,7 @@ namespace apBioPlay.Controllers
         public ActionResult Responder(RespostaPublicacao resp)
         {
             Publicacao pub = (Publicacao)Session["publicacao"];
-            if (resp.Conteudo.Trim() != "")
+            if (resp != null && resp.Conteudo != null && resp.Conteudo.Trim() != "")
             {                
                 Usuario usu = (Usuario)Session["usuarioLogado"];
                 resp.CodPublicacao = pub.Codigo;
@@ -229,6 +229,18 @@ namespace apBioPlay.Controllers
             new UsuariosDAO().Remover(((Usuario)Session["usuarioLogado"]).Codigo);
             Session["usuarioLogado"] = null;
             return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult ExcluirPublicacao(int codPub)
+        {
+            new PublicacaoDAO().Remover(codPub);
+            return RedirectToAction("Forum");
+        }
+
+        public ActionResult ExcluirResposta(int codResp)
+        {
+            new RespostaPublicacaoDAO().Remover(codResp);
+            return RedirectToAction("VerPublicacao", new { codP = ((Publicacao)Session["publicacao"]).Codigo });
         }
     }
 }

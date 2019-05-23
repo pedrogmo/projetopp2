@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/Content/menu.css">
     <link rel="stylesheet" href="~/Content/notificacao.css">
     <link rel="stylesheet" href="~/Content/forum.css">
+    <link rel="stylesheet" href="~/Content/verPublicacao.css">
     <title>BioPlay - Publicação</title>
 </head>
 <body>
@@ -48,6 +49,7 @@
     </div>
     <section id="sInformacao">
         <div id="informacao">
+            <h1 id="title">PERGUNTA:</h1>
             <div id="publicacao">
                 <div id="usuPub">
                     <h1 id="nomeUsu">@ViewBag.usuarioPublicacao.Nome</h1>
@@ -56,10 +58,18 @@
                     </div>
                 </div>
                 <div id="conteudo">
-                    <h1 id="data">@ViewBag.publicacao.Data</h1>
+                    <h1 id="data">(@ViewBag.publicacao.Data.Day.ToString().PadLeft(2, '0')/@ViewBag.publicacao.Data.Month.ToString().PadLeft(2, '0')/@ViewBag.publicacao.Data.Year) - @ViewBag.publicacao.Data.Hour.ToString().PadLeft(2, '0'):@ViewBag.publicacao.Data.Minute.ToString().PadLeft(2, '0')</h1>
                     <p id="texto">@ViewBag.publicacao.Conteudo</p>
                 </div>
-            </div>
+            </div>                                                                 
+
+            <form action="/Licoes/Responder" id="form">
+                <h1>Sabe a resposta? Responda aqui!</h1>
+                <input id="texto" name="resp.Conteudo" type="text" placeholder="Sua resposta"/>
+                <input value="Responder" type="submit" />
+            </form>
+
+            <h1 id="title">RESPOSTA(S):</h1>
             @foreach (apBioPlay.Models.RespostaPublicacao resp in ViewBag.respostas)
             {
                 var usuAtual = new apBioPlay.DAO.UsuariosDAO().Buscar(o => o.Codigo == resp.CodUsuario);
@@ -72,15 +82,12 @@
                         </div>
                     </div>
                     <div id="conteudo">
-                        <h1 id="data">@resp.Data</h1>
+                        <h1 id="data">(@resp.Data.Day.ToString().PadLeft(2, '0')/@resp.Data.Month.ToString().PadLeft(2, '0')/@resp.Data.Year) - @resp.Data.Hour.ToString().PadLeft(2, '0'):@resp.Data.Minute.ToString().PadLeft(2, '0')</h1>
                         <p id="texto">@resp.Conteudo</p>
                     </div>
                 </div>
             }
-            <form action="/Licoes/Responder">
-                <input name="resp.Conteudo" type="text" />
-                <input value="Responder" type="submit" />
-            </form>
+
         </div>
     </section>
     <section id="bg-modal">

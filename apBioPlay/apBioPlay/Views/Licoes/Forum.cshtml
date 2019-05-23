@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="~/Content/menu.css">
     <link rel="stylesheet" href="~/Content/forum.css">
     <link rel="stylesheet" href="~/Content/notificacao.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>BioPlay - Forum</title>
 </head>
 <body>
@@ -62,9 +63,14 @@
         <div id="informacao">
             @foreach (apBioPlay.Models.Publicacao pub in ViewBag.publicacoes)
             {
+                string stringBotao = pub.CodUsuario == ViewBag.usuario.Codigo ? "" : "hidden";
                 var usuAtual = new apBioPlay.DAO.UsuariosDAO().Buscar(o => o.Codigo == pub.CodUsuario);
 
                 <div id="publicacao">
+                    <div id="excluir" @stringBotao>
+                        <!--<a href="/Licoes/ExcluirPublicacao/pub.Codigo"><i class="fa fa-trash" aria-hidden="true"></i></a>-->
+                        @Html.ActionLink("X", "ExcluirPublicacao", new { codPub = pub.Codigo })
+                    </div>
                     <div id="usuPub">
                         <div id="fotoUsu">
                             <img src=@usuAtual.FotoPerfil />
@@ -72,7 +78,7 @@
                         <h1 id="nomeUsu">@usuAtual.Nome</h1>
                     </div>
                     <div id="conteudo">
-                        <h1 id="data">(@pub.Data.Day.ToString().PadLeft(2, '0')/@pub.Data.Month.ToString().PadLeft(2, '0')/@pub.Data.Year)</h1>
+                        <h1 id="data">(@pub.Data.Day.ToString().PadLeft(2, '0')/@pub.Data.Month.ToString().PadLeft(2, '0')/@pub.Data.Year) - @pub.Data.Hour.ToString().PadLeft(2, '0'):@pub.Data.Minute.ToString().PadLeft(2, '0')</h1>
                         <p id="texto">@pub.Conteudo</p>
                         @Html.ActionLink("Visualizar", "VerPublicacao", new { codP = pub.Codigo })
                     </div>

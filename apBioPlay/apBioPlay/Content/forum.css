@@ -43,26 +43,13 @@ section#sInformacao{
     padding: 1em;
 }
 
-#sInformacao #informacao #publicacao {
-    font-family: "Mikado Black";
-    text-transform: uppercase;
-    background-color: white;
-    padding: 1em;
-    margin-bottom: 2em;
-    border-radius: 10px;
-    width: 80%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0px 4px 4px 2px rgba(0,0,0,.2);
-}
 
 #sInformacao #informacao #publicacao {
     font-family: "Mikado Black";
     text-transform: uppercase;
     background-color: white;
-    padding: 1em;
     margin-bottom: 2em;
+    padding: 1em;
     border-radius: 10px;
     width: 80%;
     position: relative;
@@ -70,6 +57,34 @@ section#sInformacao{
     transform: translateX(-50%);
     box-shadow: 0px 4px 4px 2px rgba(0,0,0,.2);
     padding-bottom: 2em;
+}
+
+#sInformacao #informacao #publicacao #excluir {
+    
+    border-radius: 100em;
+    text-decoration: none;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    background-color: rgb(255, 59, 59);
+    float: right;
+}
+
+#sInformacao #informacao #publicacao #excluir a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: .4em;
+    left: 0.01em;
+}
+
+#sInformacao #informacao #publicacao #excluir:hover {
+    background-color: rgb(255, 105, 105);
+}
+
+
+#sInformacao #informacao #publicacao:last-of-type {
+    margin-bottom: 7em;
 }
 
 #sInformacao #informacao #fotoUsu
@@ -131,7 +146,7 @@ section#sInformacao{
     height: auto;
     padding: .5em;
     padding-bottom: 3em;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0px 1px 4px 1px rgba(0,0,0,.2);
 }
 
@@ -180,6 +195,7 @@ section#sInformacao{
     font-family: "Mikado Black";
     top: 1.25em;
     left: 1.5em;
+    outline: none;
 }
 
 #form input[type="submit"]:hover
@@ -189,3 +205,55 @@ section#sInformacao{
     cursor: pointer;
 }
 
+@media(min-width: 70rem)
+{
+    #sInformacao #informacao #publicacao
+    {
+        width: 50%;
+        margin-bottom: 2em;
+    }
+
+    #sInformacao #informacao #fotoUsu {
+        width: 10%;
+        position: relative;
+        left: 5em;
+        top: 1em;
+    }
+
+    #sInformacao #informacao #conteudo #data {
+        font-size: 1.2rem;
+        bottom: 10em;
+        margin-top: 5em;
+    }
+
+    #sInformacao #informacao #nomeUsu {
+        top: -3.5em;
+        font-size: 1.8rem;
+        margin-top: 2.5em;
+    }
+
+    #sInformacao #informacao #conteudo #texto {
+        color: #333;
+        position: relative;
+        bottom: 5em;
+        font-size: 1.6rem;
+    }
+
+    #sInformacao #informacao #conteudo a {
+        top: -2em;
+        padding-left: 5em;
+        padding-right: 5em;
+        font-size: 1.2rem;
+    }
+
+    #sInformacao #informacao #conteudo a:hover {
+        top: -2em;
+        padding-left: 7em;
+        padding-right: 7em;
+    }
+
+    #form input[type="submit"]
+    {
+        font-size: 1.1rem;
+    }
+}

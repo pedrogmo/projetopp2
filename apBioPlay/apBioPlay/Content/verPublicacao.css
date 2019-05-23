@@ -1,0 +1,177 @@
+﻿
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./Fonts/aristotelica.text-trial-bold.ttf');
+}
+@font-face {
+    font-family: 'Mikado';
+    src: url('./Fonts/Mikado\ Light.otf');
+}
+
+@font-face {
+    font-family: 'Mikado Black';
+    src: url('./Fonts/Mikado\ Black.otf');
+}
+
+section#sInformacao {
+    position: relative;
+    top: 8em;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 1em;
+}
+
+
+#sInformacao #informacao #publicacao {
+    font-family: "Mikado Black";
+    text-transform: uppercase;
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 3em;
+    border-radius: 10px;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 4px 2px rgba(0,0,0,.2);
+    padding-bottom: 2em;
+}
+
+#sInformacao #informacao #fotoUsu {
+    width: 20%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#sInformacao #informacao #nomeUsu {
+    position: relative;
+    top: .75em;
+    color: #333;
+}
+
+#sInformacao #informacao #conteudo #data {
+    font-size: 1rem;
+    position: relative;
+    bottom: 9em;
+    color: gray;
+}
+
+#sInformacao #informacao #conteudo #texto {
+    color: #333;
+    position: relative;
+    bottom: 1em;
+}
+
+#sInformacao #informacao #conteudo a {
+    background-color: rgb(28,176,246);
+    padding: .75em;
+    position: relative;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    padding-left: 3em;
+    padding-right: 3em;
+    transition: .2s;
+}
+
+#sInformacao #informacao #conteudo a:hover {
+    background-color: rgb(68, 195, 255);
+    transition: .2s;
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+#sInformacao #informacao #title
+{
+    font-family: "Mikado Black";
+    font-size: 1.8rem;
+}
+
+    #form {
+        background-color: white;
+        position: relative;
+        top: 0;
+        margin-bottom: 2em;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        padding: .5em;
+        padding-bottom: 3em;
+        border-radius: 10px;
+        box-shadow: 0px 1px 4px 1px rgba(0,0,0,.2);
+    }
+
+    #form h1 {
+        font-family: "Mikado Black";
+        color: #333;
+    }
+
+    #form #texto {
+        position: relative;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(231,230,230);
+        padding: .5em;
+        width: 50%;
+        height: 2em;
+        font-size: 1rem;
+        top: 1.25em;
+        right: 0;
+        outline: none;
+        user-select: none;
+        box-shadow: 0px 2px 4px 2px rgba(0,0,0,0);
+        transition: .2s;
+    }
+
+    #form #texto:focus {
+        box-shadow: 0px 0px 4px 2px rgba(0,0,0,.2);
+        transition: .2s;
+    }
+
+    #form input[type="submit"] {
+        background-color: rgb(28,176,246);
+        padding: .75em;
+        position: relative;
+        border-radius: 30px;
+        color: white;
+        text-decoration: none;
+        padding-left: 3em;
+        padding-right: 3em;
+        transition: .2s;
+        border: none;
+        font-family: "Mikado Black";
+        top: 1.25em;
+        left: 1em;
+        outline: none;
+    }
+
+    #form input[type="submit"]:hover {
+        background-color: rgb(68, 195, 255);
+        transition: .2s;
+        cursor: pointer;
+    }
+
+/* RESPOSTAS */
+
+#sInformacao #informacao #resp_publicacao {
+    font-family: "Mikado Black";
+    text-transform: uppercase;
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 10px;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 4px 2px rgba(0,0,0,.2);
+    padding-bottom: 2em;
+}
+
+#sInformacao #informacao #resp_publicacao:last-of-type {
+    margin-bottom: 7em;
+}
+
