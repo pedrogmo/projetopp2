@@ -145,3 +145,11 @@ delete from UsuarioLicao where codUsuario = @codU
 delete from Publicacao where codUsuario = @codU
 delete from RespostaPublicacao where codUsuario = @codU
 delete from Usuario where codigo = @codU
+
+create trigger delete_publicacao on Publicacao
+instead of delete
+as
+declare @codP int
+select @codP = codigo from Deleted
+delete from RespostaPublicacao where codPublicacao = @codP
+delete from Publicacao where codigo = @codP
