@@ -24,8 +24,8 @@
     margin: 0 auto;
     left: 0;
     overflow: auto;
-    visibility: hidden;
     z-index: 100;
+    visibility: hidden;
 }
 
 #bg-modal #modal-content {
@@ -44,7 +44,9 @@
 #bg-modal #modal-content #erro-img {
     width: 30%;
     position: relative;
-    top: 2em;
+    top: 5em;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -74,6 +76,8 @@
     top: 2em;
     margin-bottom: 2em;
     outline: none;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #bg-modal #modal-content #btn-ok:hover {

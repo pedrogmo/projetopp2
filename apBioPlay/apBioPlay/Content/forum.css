@@ -70,15 +70,16 @@ section#sInformacao{
     float: right;
 }
 
-#sInformacao #informacao #publicacao #excluir a {
+#sInformacao #informacao #excluir a {
     color: white;
     text-decoration: none;
     position: relative;
     top: .4em;
     left: 0.01em;
+    padding: .5em;
 }
 
-#sInformacao #informacao #publicacao #excluir:hover {
+#sInformacao #informacao #excluir:hover {
     background-color: rgb(255, 105, 105);
 }
 
@@ -163,11 +164,10 @@ section#sInformacao{
     border: none;
     background-color: rgb(231,230,230);
     padding: .5em;
-    width: 50%;
+    width: 60%;
     height: 2em;
     font-size: 1rem;
     top: 1.25em;
-    right: 1em;
     outline: none;
     user-select: none;
     box-shadow: 0px 2px 4px 2px rgba(0,0,0,0);
@@ -190,11 +190,11 @@ section#sInformacao{
     text-decoration: none;
     padding-left: 3em;
     padding-right: 3em;
+    margin-top: 2em;
     transition: .2s;
     border: none;
     font-family: "Mikado Black";
     top: 1.25em;
-    left: 1.5em;
     outline: none;
 }
 

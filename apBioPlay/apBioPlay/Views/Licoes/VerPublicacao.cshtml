@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="~/Content/notificacao.css">
     <link rel="stylesheet" href="~/Content/forum.css">
     <link rel="stylesheet" href="~/Content/verPublicacao.css">
+    <link rel="shortcut icon" href="~/Images/favicon.ico" />
     <title>BioPlay - Publicação</title>
 </head>
 <body>
@@ -72,9 +73,14 @@
             <h1 id="title">RESPOSTA(S):</h1>
             @foreach (apBioPlay.Models.RespostaPublicacao resp in ViewBag.respostas)
             {
+                string stringBotao = resp.CodUsuario == ViewBag.usuario.Codigo ? "" : "hidden";
                 var usuAtual = new apBioPlay.DAO.UsuariosDAO().Buscar(o => o.Codigo == resp.CodUsuario);
 
                 <div id="resp_publicacao">
+                    <div id="excluir" @stringBotao>
+                        <!--<a href="/Licoes/ExcluirPublicacao/pub.Codigo"><i class="fa fa-trash" aria-hidden="true"></i></a>-->
+                        @Html.ActionLink("X", "ExcluirResposta", new { codResp = resp.Codigo })
+                    </div>
                     <div id="usuPub">
                         <h1 id="nomeUsu">@usuAtual.Nome</h1>
                         <div id="fotoUsu">

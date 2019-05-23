@@ -49,6 +49,7 @@ section#sInformacao {
     position: relative;
     top: .75em;
     color: #333;
+    z-index: -2;
 }
 
 #sInformacao #informacao #conteudo #data {
@@ -56,6 +57,7 @@ section#sInformacao {
     position: relative;
     bottom: 9em;
     color: gray;
+    z-index: -2;
 }
 
 #sInformacao #informacao #conteudo #texto {
@@ -93,7 +95,7 @@ section#sInformacao {
         background-color: white;
         position: relative;
         top: 0;
-        margin-bottom: 2em;
+        margin-bottom: 5em;
         width: 90%;
         left: 50%;
         transform: translateX(-50%);
@@ -160,7 +162,6 @@ section#sInformacao {
     font-family: "Mikado Black";
     text-transform: uppercase;
     background-color: white;
-    padding: 1em;
     margin-bottom: 2em;
     border-radius: 10px;
     width: 80%;
@@ -174,4 +175,31 @@ section#sInformacao {
 #sInformacao #informacao #resp_publicacao:last-of-type {
     margin-bottom: 7em;
 }
+
+#sInformacao #informacao #resp_publicacao #excluir {
+    border-radius: 100em;
+    text-decoration: none;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    background-color: rgb(255, 59, 59);
+    float: right;
+    z-index: 100;
+}
+
+#sInformacao #informacao #resp_publicacao #excluir a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: .4em;
+    left: 0.01em;
+    z-index: 10;
+    padding: .5em;
+}
+
+#sInformacao #informacao #resp_publicacao #excluir:hover {
+    background-color: rgb(255, 105, 105);
+    cursor: pointer;
+}
+
 
