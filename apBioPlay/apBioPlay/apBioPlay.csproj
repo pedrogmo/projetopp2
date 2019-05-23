@@ -190,6 +190,7 @@
     <Content Include="Images\chk.png" />
     <Content Include="Images\controle.png" />
     <Content Include="Images\erro.png" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="Images\FotosPerfil\pic1.png" />
     <Content Include="Images\FotosPerfil\pic2.png" />
     <Content Include="Images\FotosPerfil\pic3.png" />
