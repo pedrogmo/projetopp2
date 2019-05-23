@@ -7,7 +7,7 @@
     string dataAnterior = "";
     if (ViewBag.usuarioAnterior != null)
     {
-        nomeAnterior = ViewBag.usuarioAnterior.Nome;
+        nomeAnterior = ViewBag.usuarioAnterior.Nickname;
         senhaAnterior = ViewBag.usuarioAnterior.Senha;
         emailAnterior = ViewBag.usuarioAnterior.Email;
         DateTime d = ViewBag.usuarioAnterior.DataNascimento;
@@ -55,7 +55,7 @@
             <p hidden id="valido">@ViewBag.valido</p>
             <p id="msg">
                 @ViewBag.mensagem <br />
-                @Html.ValidationMessage("u.Nome") <br />
+                @Html.ValidationMessage("u.Nickname") <br />
                 @Html.ValidationMessage("u.Senha")<br />
                 @Html.ValidationMessage("u.Email")<br />
                 @Html.ValidationMessage("u.DataNascimento")<br />

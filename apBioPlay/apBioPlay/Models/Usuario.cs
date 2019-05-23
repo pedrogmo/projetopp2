@@ -11,10 +11,10 @@ namespace apBioPlay.Models
         [Key]
         public int Codigo { get; set; }
 
-        [Required(ErrorMessage = "O nome é obrigatório", AllowEmptyStrings = false)]
-        [StringLength(30)]
+        [Required(ErrorMessage = "O nickname é obrigatório", AllowEmptyStrings = false)]
+        [StringLength(20)]
         [RegularExpression(@"^[a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\s]*$", ErrorMessage = "Nome inválido")]
-        public string Nome { get; set; }
+        public string Nickname { get; set; }
 
         [Required(ErrorMessage = "O email é obrigatório", AllowEmptyStrings = false)]
         [StringLength(30)]
