@@ -2,7 +2,6 @@ Desgin:
 
 * Perfil
    - Busca de usuário
-* Forum
 * FimLicao
 * Sobre
 * Bastidores
