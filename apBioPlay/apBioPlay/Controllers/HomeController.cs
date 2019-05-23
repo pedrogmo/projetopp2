@@ -29,7 +29,7 @@ namespace apBioPlay.Controllers
         public ActionResult Logar(string stringLogin, string stringSenha)
         {
             UsuariosDAO dao = new UsuariosDAO();
-            Usuario usuario = dao.Buscar(u => u.Nome == stringLogin && u.Senha == stringSenha);
+            Usuario usuario = dao.Buscar(u => u.Nickname == stringLogin && u.Senha == stringSenha);
             Session["usuarioLogado"] = usuario;
             if (usuario == null)
             {
@@ -63,7 +63,7 @@ namespace apBioPlay.Controllers
                     ViewBag.usuarioAnterior = u;
                     return View("Cadastrar");
                 }
-                if (dao.Buscar(us => us.Nome == u.Nome) != null)
+                if (dao.Buscar(us => us.Nickname == u.Nickname) != null)
                 {
                     ViewBag.mensagem = "Esse nome já existe no site";
                     ViewBag.valido = "NAO";

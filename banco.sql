@@ -1,6 +1,6 @@
 create table Usuario(
 	codigo int identity(1,1) primary key,
-	nome varchar(30) not null,
+	nickname varchar(20) not null,
 	email varchar(30) not null,
 	senha varchar(50) not null,
 	dataNascimento date not null,

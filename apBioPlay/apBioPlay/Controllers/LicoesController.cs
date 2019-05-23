@@ -43,6 +43,7 @@ namespace apBioPlay.Controllers
             /*if(usu.Codigo == ((Usuario)Session["usuarioLogado"]).Codigo)*/
             ViewBag.amigos = new AmizadeDAO().Amigos(codU);
             ViewBag.dados = new LicoesFeitasDAO().Dados(codU);
+            ViewBag.buscaUsuarios = (List<Usuario>)Session["buscaUsuarios"];
             return View();
         }
 
@@ -92,7 +93,7 @@ namespace apBioPlay.Controllers
                 {
                     var notificacao = new Notificacao();
                     notificacao.CodUsuario = pub.CodUsuario;
-                    notificacao.Texto = $"O usuário {usu.Nome} respondeu sua publicação.";
+                    notificacao.Texto = $"O usuário {usu.Nickname} respondeu sua publicação.";
                     notificacao.Url = $"publicacoes/{pub.Codigo}";
                     new NotificacaoDAO().Adicionar(notificacao);
                 }
@@ -154,13 +155,13 @@ namespace apBioPlay.Controllers
                 sol.Adicionar(u.Codigo, u2.Codigo);
                 var n = new Notificacao();
                 n.CodUsuario = u2.Codigo;
-                n.Texto = $"O usuário {u.Nome} te enviou uma solicitação de amizade";
+                n.Texto = $"O usuário {u.Nickname} te enviou uma solicitação de amizade";
                 n.Url = $"usuarios/{u.Codigo}";
                 nots.Adicionar(n);
             }
             else if (sit == "Aceitar solicitação")
             {
-                //nots.Remover($"O usuário {u2.Nome} te enviou uma solicitação de amizade");
+                //nots.Remover($"O usuário {u2.Nickname} te enviou uma solicitação de amizade");
                 sol.Remover(u2.Codigo, u.Codigo);
                 amz.Adicionar(u.Codigo, u2.Codigo);
                 amz.Adicionar(u2.Codigo, u.Codigo);
@@ -244,6 +245,12 @@ namespace apBioPlay.Controllers
         {
             new RespostaPublicacaoDAO().Remover(codResp);
             return RedirectToAction("VerPublicacao", new { codP = ((Publicacao)Session["publicacao"]).Codigo });
+        }
+
+        public ActionResult BuscaUsuarios(string nickname)
+        {
+            Session["buscaUsuarios"] = new UsuariosDAO().Lista(u => u.Nickname.Contains(nickname));
+            return RedirectToAction("Visualiza", new { codU = ((Usuario)Session["usuarioLogado"]).Codigo });
         }
     }
 }
