@@ -47,5 +47,22 @@ namespace apBioPlay.DAO
                 contexto.SaveChanges();
             }
         }
+
+        public void Remover(int codRP)
+        {
+            using (var contexto = new SiteContext())
+            {
+                List<Notificacao> lista = contexto.Notificacao.ToList();
+                RespostaPublicacao r = 
+                    contexto.RespostaPublicacao
+                    .Where(n => n.Codigo == codRP)
+                    .FirstOrDefault();
+                if (r != null)
+                {
+                    contexto.RespostaPublicacao.Remove(r);
+                    contexto.SaveChanges();
+                }
+            }
+        }
     }
 }
