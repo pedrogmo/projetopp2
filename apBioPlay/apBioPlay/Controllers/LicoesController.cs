@@ -88,11 +88,14 @@ namespace apBioPlay.Controllers
                 resp.CodUsuario = usu.Codigo;
                 resp.Data = DateTime.Now;
                 new RespostaPublicacaoDAO().Adicionar(resp);
-                var notificacao = new Notificacao();
-                notificacao.CodUsuario = pub.CodUsuario;
-                notificacao.Texto = $"O usuário {usu.Nome} respondeu sua publicação.";
-                notificacao.Url = $"publicacoes/{pub.Codigo}";
-                new NotificacaoDAO().Adicionar(notificacao);
+                if (usu.Codigo != resp.CodUsuario)
+                {
+                    var notificacao = new Notificacao();
+                    notificacao.CodUsuario = pub.CodUsuario;
+                    notificacao.Texto = $"O usuário {usu.Nome} respondeu sua publicação.";
+                    notificacao.Url = $"publicacoes/{pub.Codigo}";
+                    new NotificacaoDAO().Adicionar(notificacao);
+                }
             }
             return RedirectToAction("VerPublicacao", new { codP = pub.Codigo });
         }
