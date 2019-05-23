@@ -41,6 +41,8 @@ img {
 
 /*PERFIL HERO*/
 
+
+
 /*#home-hero {
     background-image: url('../Images/Fundo_Perfil.png');
     background-size: cover;
@@ -74,49 +76,61 @@ img {
     transform: translateX(-50%);
 }
 
-#home-hero #alter {
-    color: white;
+#menuH #header {
+    background-color: white;
+    height: 6em;
+    width: 100%;
+    box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
+    margin: 0 auto;
+    z-index: 10;
+    position: fixed;
+    bottom: -1em;
+    z-index: 1;
+}
+
+#menuH #header #alter {
+    color: #333;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Mikado Black";
     font-size: .85rem;
     padding: .75em;
     width: 10em;
-    border: 3px white solid;
+    border: 3px #333 solid;
     border-radius: 30px;
     text-align: center;
     transition: .2s;
     position: relative;
-    bottom: 6em;
+    top: 2em;
 }
 
-#home-hero #alter:hover {
-    background-color: white;
-    color: rgb(134,184,230);
-    transition: .2s;
-}
+    #menuH #header #alter:hover {
+        background-color: #333;
+        transition: .2s;
+        color: white;
+        transition: .2s;
+    }
 
-#home-hero #casa {
-    color: white;
+#menuH #header #casa {
+    color: #333;
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Mikado Black";
     font-size: .85rem;
     padding: .75em;
-    margin-left: 3em;
-    margin-right: 3em;
-    border: 3px white solid;
-    border-radius: 30px;
+    border: 3px #333 solid;
+    border-radius: 100em;
     text-align: center;
     transition: .2s;
     position: relative;
-    bottom: 6em;
-    right: 2.5em;
+    margin-right: 1em;
+    top: 2em;
 }
 
-#home-hero #casa:hover {
-    background-color: white;
-    color: rgb(134,184,230);
+#menuH #header #casa:hover {
+    background-color: #333;
+    transition: .2s;
+    color: white;
     transition: .2s;
 }
 
@@ -386,6 +400,7 @@ img {
         left: 0;
         visibility: hidden;
         overflow: auto;
+        z-index: 10;
     }
 
     #modal-perfil #modal-content {
@@ -395,8 +410,7 @@ img {
         position: relative;
         background-color: white;
         left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%);
         border-radius: 10px;
         box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
         margin-top: 1em;
@@ -669,21 +683,6 @@ img {
 
     .txtCampos {
         width: 60%;
-    }
-
-    #home-hero #casa {
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: "Mikado Black";
-        font-size: .85rem;
-        padding: .75em;
-        width: 3.5em;
-        border: 3px white solid;
-        border-radius: 30px;
-        text-align: center;
-        transition: .2s;
-        left: 1em;
     }
 
     #home-hero #card1 #wow ul {

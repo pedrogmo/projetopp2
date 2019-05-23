@@ -44,9 +44,7 @@
 #bg-modal #modal-content #erro-img {
     width: 30%;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 3em;
+    top: 2em;
 }
 
 
@@ -75,8 +73,6 @@
     position: relative;
     top: 2em;
     margin-bottom: 2em;
-    left: 50%;
-    transform: translateX(-50%);
     outline: none;
 }
 

@@ -41,12 +41,13 @@
         </ul>
     </div>
 
-    <div id="usuario">
-        <ul>
-            <a href="/Licoes/Index" id="inicio"><img src="~/Images/IHome.png" alt=""></a>
-            <a href="/Licoes/Perfil" id="perfil"><img src="~/Images/IPerfil.png" alt=""></a>
-            <a href="/Licoes/Forum" id="forum"><img src="~/Images/IForum.png" alt=""></a>
-        </ul>
+    <div id="form">
+        <form action="/Licoes/Publicar" method="post">
+            <h1>FAÇA SUA PERGUNTA!</h1>
+            <input id="texto" name="pub.Conteudo" placeholder="Pergunte aqui" type="text" />
+            <input name="pub.CodUsuario" hidden type="text" />
+            <input type="submit" value="Publicar" />
+        </form>
     </div>
 
     <section id="sInformacao">
@@ -57,13 +58,13 @@
 
                 <div id="publicacao">
                     <div id="usuPub">
-                        <h1 id="nomeUsu">@usuAtual.Nome</h1>
                         <div id="fotoUsu">
                             <img src=@usuAtual.FotoPerfil />
                         </div>
+                        <h1 id="nomeUsu">@usuAtual.Nome</h1>
                     </div>
                     <div id="conteudo">
-                        <h1 id="data">@pub.Data</h1>
+                        <h1 id="data">(@pub.Data.Day.ToString().PadLeft(2, '0')/@pub.Data.Month.ToString().PadLeft(2, '0')/@pub.Data.Year)</h1>
                         <p id="texto">@pub.Conteudo</p>
                         @Html.ActionLink("Visualizar", "VerPublicacao", new { codP = pub.Codigo })
                     </div>
@@ -89,11 +90,6 @@
         </div>
     </section>
 
-    <form action="/Licoes/Publicar" method="post">
-        <input name="pub.Conteudo" placeholder="Digite aqui" type="text" />
-        <input name="pub.CodUsuario" hidden type="text" />
-        <input type="submit" value="Publicar" />
-    </form>
-    <script src="~/Scripts/notificacao.js"></script>
 </body>
+    <script src="~/Scripts/notificacao.js"></script>
 </html>
