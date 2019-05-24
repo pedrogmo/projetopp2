@@ -9,13 +9,15 @@
 <head>
     <link rel="stylesheet" href="~/Content/pergunta.css" />
     <link rel="shortcut icon" href="~/Images/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width" />
     <title>Pergunta</title>
 </head>
 <body>
     <section id="home-hero">
-        <div class="container">k
-
+        <div class="container">
             <h1>@ViewBag.pergunta.Texto</h1>
             <img src= "@ViewBag.pergunta.UrlImagem" />
             <form action="/Licoes/ProximaPergunta">
