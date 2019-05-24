@@ -40,19 +40,42 @@ create table Licao(
 	nivel int not null
 )
 
-insert into Licao values('Reciclagem', '/Images/Licoes/Reciclagem/i1.png', 1)
-insert into Licao values('Transportes', '/Images/Licoes/Transportes/i2.png', 2)
-insert into Licao values('Energia', '/Images/Licoes/Energia/i3.png', 3)
+select * from Licao
+
+insert into Licao values('Reciclagem', '/Images/Licoes/Reciclagem/l1.png', 1)
+insert into Licao values('Transportes', '/Images/Licoes/Transportes/p1r1.png', 2)
+insert into Licao values('Energia', '/Images/Licoes/Energia/l2.png', 3)
+insert into Licao values('Energia', '/Images/Licoes/Agua/l3.png', 6)
 
 create table Pergunta(
 	codigo int identity(1,1) primary key,
 	texto varchar(50),
 	codLicao int not null,
-	urlImagem varchar(50) not null
+	urlImagem varchar(50) not null,
+	qtdRespostas int not null
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
 
-insert into Pergunta values('Selecione o lixo correto', 2)
+                                                                                                                                      
+
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+
+
+insert into Pergunta values('Selecione o transporte menos sustentável: ', 3, '', 4)
+insert into Pergunta values('Selecione o transporte mais sustentável: ', 3, '', 4)
+
 
 create table Resposta(
 	codigo int identity(1,1) primary key,
@@ -63,10 +86,31 @@ create table Resposta(
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codigo)
 )
 
-insert into Resposta values('Maçã', '/Images/Licoes/Reciclagem/maca.png', 6, 0)
-insert into Resposta values('Peixinho', '/Images/Licoes/Reciclagem/peixe.png', 6, 0)
-insert into Resposta values('Garrafa', '/Images/Licoes/Reciclagem/garrafa.png', 6, 1)
-insert into Resposta values('Potin', '/Images/Licoes/Reciclagem/pote.png', 6, 0)
+select * from Resposta
+
+insert into Resposta values('Bicicleta', '/Images/Licoes/Transportes/p1r1.png', 22, 0)
+insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 22, 1)
+insert into Resposta values('Ônibus', '/Images/Licoes/Transportes/p1r3.png', 22, 0)
+insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 22, 0)
+
+create proc RespReciclagem_sp 
+as
+
+declare @i int = 0;
+
+WHILE @i < 21
+BEGIN
+    insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
+	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
+	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
+	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
+	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
+
+	set @i += 1;
+
+END;
+
+
 
 create table UsuarioLicao(
 	codigo int identity(1,1) primary key,
@@ -78,8 +122,6 @@ create table UsuarioLicao(
 	constraint fkLicaoFeita foreign key(codLicao) references Licao(codigo),
 	constraint fkUsuarioQueFez foreign key(codUsuario) references Usuario(codigo)
 )
-
-insert into UsuarioLicao values(2, 2, '06/05/2019', 1)
 
 create table Amizade(
 	codigo int identity(1,1) primary key,
