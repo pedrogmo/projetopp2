@@ -25,7 +25,7 @@ namespace apBioPlay.DAO
             conexao.Close();
         }
 
-        public int[] Dados(int u)
+        public int[] Dados(int u)//0: total, 1: acertos, 2: erros
         {
             int[] ret = new int[3];
             for (int i = 0; i < 3; i++)
