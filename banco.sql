@@ -56,7 +56,21 @@ create table Pergunta(
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
 
-      select * from Pergunta                                                                                                                                
+select * from Pergunta       
+
+alter proc AlteraFoto_sp
+as
+declare @n int = 1;
+declare @c int = 8;
+
+while(@n < 14 and @c < 21)
+begin
+update Pergunta set urlImagem='/Images/Licoes/Reciclagem/p'+CONVERT(varchar(2), @n)+'.png' where codigo = @c
+set @n += 1;
+set @c += 1;      
+end    
+
+AlteraFoto_sp                                                                                                               
 
 insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
 insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
@@ -113,6 +127,8 @@ END
 RespReciclagem_sp
 
 select * from Resposta
+
+update Resposta set certa = 1 where codigo = 
 
 create table UsuarioLicao(
 	codigo int identity(1,1) primary key,
