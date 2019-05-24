@@ -21,7 +21,7 @@
             <form action="/Licoes/ProximaPergunta">
                 <input type="text" hidden id="selecionada" value="0" name="indResp">
                 <ul>
-                    @for (int ind = 0; ind < 4; ++ind)
+                    @for (int ind = 0; ind < 5; ++ind)
                     {
                         var resp = ViewBag.respostas[ind];
                         string p = "pic" + (ind + 1);

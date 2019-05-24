@@ -47,10 +47,16 @@ insert into Licao values('Energia', '/Images/Licoes/Energia/i3.png', 3)
 create table Pergunta(
 	codigo int identity(1,1) primary key,
 	texto varchar(50),
-	codLicao int not null
-
+	codLicao int not null,
+	urlImagem varchar(50) not null
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
+
+alter table Pergunta
+add urlImagem varchar(50)
+update Pergunta set urlImagem = ''
+
+
 
 insert into Pergunta values('Selecione o lixo correto', 2)
 
