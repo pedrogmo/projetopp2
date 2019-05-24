@@ -56,7 +56,7 @@ create table Pergunta(
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
 
-                                                                                                                                      
+      select * from Pergunta                                                                                                                                
 
 insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
 insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
@@ -96,21 +96,23 @@ insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 22, 
 create proc RespReciclagem_sp 
 as
 
-declare @i int = 0;
+declare @i int = 8;
 
 WHILE @i < 21
 BEGIN
-    insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
-	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
-	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
-	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
-	insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/.png', @i, 0)
+    insert into Resposta values('Plástico', '/Images/Licoes/Reciclagem/p1r1.png', @i, 0)
+	insert into Resposta values('Papel', '/Images/Licoes/Reciclagem/p1r2.png', @i, 0)
+	insert into Resposta values('Vidro', '/Images/Licoes/Reciclagem/p1r3.png', @i, 0)
+	insert into Resposta values('Metal', '/Images/Licoes/Reciclagem/p1r4.png', @i, 0)
+	insert into Resposta values('Orgânico', '/Images/Licoes/Reciclagem/p1r5.png', @i, 0)
 
 	set @i += 1;
 
-END;
+END
 
+RespReciclagem_sp
 
+select * from Resposta
 
 create table UsuarioLicao(
 	codigo int identity(1,1) primary key,
