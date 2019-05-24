@@ -107,6 +107,11 @@ insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 22, 
 insert into Resposta values('Ônibus', '/Images/Licoes/Transportes/p1r3.png', 22, 0)
 insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 22, 0)
 
+insert into Resposta values('Bicicleta', '/Images/Licoes/Transportes/p1r1.png', 23, 0)
+insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 23, 1)
+insert into Resposta values('Ônibus', '/Images/Licoes/Transportes/p1r3.png', 23, 0)
+insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 23, 0)
+
 create proc RespReciclagem_sp 
 as
 
