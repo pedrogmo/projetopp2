@@ -128,8 +128,6 @@ RespReciclagem_sp
 
 select * from Resposta
 
-update Resposta set certa = 1 where codigo = 
-
 create table UsuarioLicao(
 	codigo int identity(1,1) primary key,
 	codUsuario int not null,
