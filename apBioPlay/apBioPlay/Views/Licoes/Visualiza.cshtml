@@ -14,6 +14,7 @@
 <head>
     <link rel="stylesheet" href="~/Content/perfil.css" />
     <link rel="stylesheet" href="~/Content/modalErro.css" />
+    <link rel="stylesheet" href="~/Content/modalAmigo.css" />
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="~/Images/favicon.ico" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -174,6 +175,7 @@
 
         </div>
     </section>
+
     <section id="bg-modal">
         <div id="modal-content">
             <img src="/Images/erro.png" alt="Alternate Text" id="erro-img" />
@@ -181,6 +183,20 @@
                 @msg
             </p>
             <input type="button" id="btn-ok" value="Entendido" />
+        </div>
+    </section>
+
+    <section id="black-content">
+        <div id="modal-amigos">
+            <a href="#">X</a>
+            <img src="~/Images/INovoAmigo.png" alt="Alternate Text" />
+            <h1>Adicionar amigo:</h1>
+
+            <form action="/Licoes/BuscaUsuarios" method="post">
+                <input id="caixa" name="nickname" placeholder="Insira o nickname aqui" type="text" /><br />
+                <input type="submit" value="Buscar" />
+            </form>
+
         </div>
     </section>
 

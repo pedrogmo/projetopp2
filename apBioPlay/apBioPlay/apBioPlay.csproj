@@ -170,6 +170,7 @@
     <Content Include="Content\licoes.css" />
     <Content Include="Content\home.css" />
     <Content Include="Content\menu.css" />
+    <Content Include="Content\modalAmigo.css" />
     <Content Include="Content\modalErro.css" />
     <Content Include="Content\notificacao.css" />
     <Content Include="Content\perfil.css" />
