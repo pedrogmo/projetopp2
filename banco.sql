@@ -52,12 +52,6 @@ create table Pergunta(
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
 
-alter table Pergunta
-add urlImagem varchar(50)
-update Pergunta set urlImagem = ''
-
-
-
 insert into Pergunta values('Selecione o lixo correto', 2)
 
 create table Resposta(

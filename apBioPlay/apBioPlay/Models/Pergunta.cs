@@ -16,5 +16,8 @@ namespace apBioPlay.Models
 
         [Required]
         public int CodLicao { get; set; }
+
+        [Required]
+        public string UrlImagem { get; set; }
     }
 }

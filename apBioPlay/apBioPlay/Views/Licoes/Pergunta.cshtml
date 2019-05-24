@@ -16,8 +16,8 @@
     <section id="home-hero">
         <div class="container">
 
-            <h1>Selecione o lixo correto</h1>
-
+            <h1>@ViewBag.pergunta.Texto</h1>
+            <img src= "@ViewBag.pergunta.UrlImagem" />
             <form action="/Licoes/ProximaPergunta">
                 <input type="text" hidden id="selecionada" value="0" name="indResp">
                 <ul>
