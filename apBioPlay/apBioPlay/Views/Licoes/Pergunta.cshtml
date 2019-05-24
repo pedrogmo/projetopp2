@@ -29,9 +29,18 @@
                         string p = "pic" + (ind + 1);
                         string r = "resp" + (ind + 1);
                         <li>
-                            <input type="radio" name="pic" id="@p" />
+                            @if (ind == 0)
+                            {
+                                <input type="radio" name="pic" id="@p" checked />
+                            }
+                            else
+                            {
+                                <input type="radio" name="pic" id="@p" />
+                            }
+
                             <label for="@p"><img src=@resp.UrlImagem></label>
                             <h1 id="@r">@resp.Texto</h1>
+
                         </li>
                     }
                 </ul>
