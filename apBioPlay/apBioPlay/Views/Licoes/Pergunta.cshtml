@@ -14,14 +14,14 @@
 </head>
 <body>
     <section id="home-hero">
-        <div class="container">
+        <div class="container">k
 
             <h1>@ViewBag.pergunta.Texto</h1>
             <img src= "@ViewBag.pergunta.UrlImagem" />
             <form action="/Licoes/ProximaPergunta">
                 <input type="text" hidden id="selecionada" value="0" name="indResp">
                 <ul>
-                    @for (int ind = 0; ind < 5; ++ind)
+                    @for (int ind = 0; ind < ViewBag.pergunta.QtdRespostas; ++ind)
                     {
                         var resp = ViewBag.respostas[ind];
                         string p = "pic" + (ind + 1);

@@ -19,5 +19,8 @@ namespace apBioPlay.Models
 
         [Required]
         public string UrlImagem { get; set; }
+
+        [Required]
+        public int QtdRespostas { get; set; }
     }
 }
