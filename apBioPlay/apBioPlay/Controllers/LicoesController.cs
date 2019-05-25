@@ -43,7 +43,6 @@ namespace apBioPlay.Controllers
             /*if(usu.Codigo == ((Usuario)Session["usuarioLogado"]).Codigo)*/
             ViewBag.amigos = new AmizadeDAO().Amigos(codU);
             ViewBag.dados = new LicoesFeitasDAO().Dados(codU);
-            ViewBag.buscaUsuarios = (List<Usuario>)Session["buscaUsuarios"];
             return View();
         }
 

@@ -6,6 +6,9 @@
 
     string msg = (string) Session["Message"];
     Session["Message"] = "";
+
+    List<apBioPlay.Models.Usuario> buscaUsuarios = (List<apBioPlay.Models.Usuario>)Session["buscaUsuarios"];
+    Session["buscaUsuarios"] = null;
 }
 
 <!DOCTYPE html>
@@ -197,10 +200,13 @@
                 <input type="submit" value="Buscar" />
 
                 <!-- FOREACH PARA MOSTRAR LISTA DE USUÁRIOS CONTENDO STRING PROCURADA -->
-                @foreach (apBioPlay.Models.Usuario lic in ViewBag.buscaUsuarios)
+                @if (@buscaUsuarios != null)
+                {
+                 foreach (apBioPlay.Models.Usuario usu in @buscaUsuarios)
                  {
-                   //action link
+                   @Html.ActionLink(usu.Nickname, "Visualiza", new { codU = usu.Codigo })
                  }
+                }
             </form>
 
         </div>
