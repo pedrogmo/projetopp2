@@ -101,7 +101,9 @@ img {
     text-align: center;
     transition: .2s;
     position: relative;
-    top: 2em;
+    top: 1em;
+    right: .55em;
+    float: right;
 }
 
     #menuH #header #alter:hover {
@@ -125,6 +127,7 @@ img {
     position: relative;
     margin-right: 1em;
     top: 2em;
+    left: 5em;
 }
 
 #menuH #header #casa:hover {
@@ -165,6 +168,7 @@ img {
     transform: translateX(-50%);
     height: 2em;
     margin-top: 2em;
+    bottom: 1em;
 }
 
 #home-hero #card1 #wow {
@@ -176,7 +180,7 @@ img {
 {
     position: relative;
     text-align: left;
-    top: 3em;
+    top: 0em;
 }
 
 #home-hero #card1 #wow ul li
@@ -186,7 +190,7 @@ img {
 
 #home-hero #card1 #wow #star
 {
-    width: 40%;
+    width: 30%;
     position: relative;
     top: 2.5em;
 }
@@ -220,7 +224,7 @@ img {
     font-size: 1.5rem;
     width: auto;
     user-select: none;
-    right: 2.5em;
+    right: 5.2em;
     top: 1.25em;
 }
 
@@ -572,9 +576,14 @@ img {
         background-color: rgb(255,105,105);
     }
 
+    #home-hero #card1 #wow #novoAmigo {
+        position: relative;
+        top: 2em;
+        z-index: 100;
+    }
+
 @media(min-width: 60rem) {
-    #home-hero #card1 #wow
-    {
+    #home-hero #card1 #wow {
         position: relative;
         bottom: 7em;
     }
@@ -610,7 +619,7 @@ img {
     #home-hero #card1 #wow #novoAmigo {
         float: none;
         font-size: 1.1rem;
-        z-index: 10;
+        z-index: 100;
     }
 
     #home-hero #card1 #wow ul {
@@ -619,42 +628,41 @@ img {
         bottom: 3em;
     }
 
-    #content-info
-    {
+    #content-info {
         width: 80%;
         top: 0;
     }
 
-    #content-info .cardAmigos ul li a {
-        color: white;
-        float: none;
-        font-family: "Mikado Black";
-        font-size: 1.5rem;
-        text-decoration: none;
-        background-color: rgb(28,176,246);
-        padding: 7px;
-        border-radius: 30px;
-        padding-left: 10em;
-        padding-right: 10em;
-        position: relative;
-        top: .5em;
-        transition: .3s;
-    }
+        #content-info .cardAmigos ul li a {
+            color: white;
+            float: none;
+            font-family: "Mikado Black";
+            font-size: 1.5rem;
+            text-decoration: none;
+            background-color: rgb(28,176,246);
+            padding: 7px;
+            border-radius: 30px;
+            padding-left: 10em;
+            padding-right: 10em;
+            position: relative;
+            top: .5em;
+            transition: .3s;
+        }
 
-    #content-info .cardAmigos ul li a:hover {
-        color: white;
-        float: none;
-        font-family: "Mikado Black";
-        text-decoration: none;
-        background-color: rgb(68, 195, 255);
-        padding: 7px; 
-        border-radius: 30px;
-        padding-left: 11em;
-        padding-right: 11em;
-        position: relative;
-        top: .5em;
-        transition: .3s;
-    }
+            #content-info .cardAmigos ul li a:hover {
+                color: white;
+                float: none;
+                font-family: "Mikado Black";
+                text-decoration: none;
+                background-color: rgb(68, 195, 255);
+                padding: 7px;
+                border-radius: 30px;
+                padding-left: 11em;
+                padding-right: 11em;
+                position: relative;
+                top: .5em;
+                transition: .3s;
+            }
 
     .botao {
         font-size: 1rem;
@@ -693,5 +701,9 @@ img {
         position: relative;
         right: 40%;
         top: 5em;
+    }
+
+    #menuH #header #alter {
+        right: 2em;
     }
 }

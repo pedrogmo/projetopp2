@@ -81,7 +81,7 @@
                         }
                     </ul>
 
-                    <button class="botao" style="visibility: @stringBotao">Adicionar Novo</button>
+                    <button id="new" class="botao" style="visibility: @stringBotao">Adicionar Novo</button>
                 </div>
             </div>
 
@@ -188,13 +188,19 @@
 
     <section id="black-content">
         <div id="modal-amigos">
-            <a href="#">X</a>
+            <button id="sair">X</button>
             <img src="~/Images/INovoAmigo.png" alt="Alternate Text" />
             <h1>Adicionar amigo:</h1>
 
             <form action="/Licoes/BuscaUsuarios" method="post">
                 <input id="caixa" name="nickname" placeholder="Insira o nickname aqui" type="text" /><br />
                 <input type="submit" value="Buscar" />
+
+                <!-- FOREACH PARA MOSTRAR LISTA DE USUÁRIOS CONTENDO STRING PROCURADA -->
+                @foreach (apBioPlay.Models.Usuario lic in ViewBag.buscaUsuarios)
+                 {
+                   //action link
+                 }
             </form>
 
         </div>
@@ -207,3 +213,4 @@
 <script src="~/Scripts/perfil.js"></script>
 <script src="~/Scripts/licoes.js"></script>
 <script src="~/Scripts/modalPerfil.js"></script>
+<script src="~/Scripts/modalAmigos.js"></script>

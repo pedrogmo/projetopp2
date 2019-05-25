@@ -55,7 +55,7 @@ section#sInformacao {
 #sInformacao #informacao #conteudo #data {
     font-size: 1rem;
     position: relative;
-    bottom: 9em;
+    bottom: 9.5em;
     color: gray;
     z-index: -2;
 }
@@ -164,12 +164,14 @@ section#sInformacao {
     background-color: white;
     margin-bottom: 2em;
     border-radius: 10px;
-    width: 80%;
+    width: 25em;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0px 4px 4px 2px rgba(0,0,0,.2);
+    box-shadow: 0px 4px 4px 2px rgba(0,0,0,.2);
     padding-bottom: 2em;
+    padding: 1em;
 }
 
 #sInformacao #informacao #resp_publicacao:last-of-type {
@@ -201,5 +203,39 @@ section#sInformacao {
     background-color: rgb(255, 105, 105);
     cursor: pointer;
 }
+
+@media(min-width: 70rem)
+{
+    #sInformacao #informacao #resp_publicacao
+    {
+        padding: 1em;
+        width: 40em;
+    }
+
+    #sInformacao #informacao #resp_publicacao #nomeUsu
+    {
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #sInformacao #informacao #resp_publicacao #fotoUsu {
+        margin: 0;
+        position: relative;
+        top: 2em;
+    }
+
+    #sInformacao #informacao #resp_publicacao #data {
+        margin: 0;
+        position: relative;
+        bottom: 10.5em;
+        right: 1em;
+    }
+
+    #sInformacao #informacao #resp_publicacao #texto {
+        position: relative;
+        top: .5em;
+    }
 
 

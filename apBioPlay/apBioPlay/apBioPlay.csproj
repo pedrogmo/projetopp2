@@ -240,6 +240,7 @@
     <Content Include="Scripts\geral.js" />
     <Content Include="Scripts\licoes.js" />
     <Content Include="Scripts\menuVertical.js" />
+    <Content Include="Scripts\modalAmigos.js" />
     <Content Include="Scripts\modalErro.js" />
     <Content Include="Scripts\modalPerfil.js" />
     <Content Include="Scripts\notificacao.js" />
