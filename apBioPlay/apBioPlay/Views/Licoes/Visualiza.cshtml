@@ -3,6 +3,7 @@
     Layout = null;
     string stringBotao = (ViewBag.usuario.Codigo == ViewBag.visualizado.Codigo ? "" : "hidden");
     string stringBotao2 = (ViewBag.usuario.Codigo != ViewBag.visualizado.Codigo ? "initial" : "hidden");
+    string temResultado = "N";
 
     string msg = (string) Session["Message"];
     Session["Message"] = "";
@@ -21,7 +22,6 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="~/Images/favicon.ico" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>BioPlay - Perfil</title>
 </head>
 <body>
@@ -76,12 +76,12 @@
 
                     <ul>
                         @if (ViewBag.amigos != null)
-                        {
+                         {
                             foreach (apBioPlay.Models.Usuario amigo in ViewBag.amigos)
                             {
                                 <li>@Html.ActionLink(amigo.Nickname, "Visualiza", new { codU = amigo.Codigo })</li>
                             }
-                        }
+                         }
                     </ul>
 
                     <button id="new" class="botao" style="visibility: @stringBotao">Adicionar Novo</button>
@@ -197,16 +197,23 @@
 
             <form action="/Licoes/BuscaUsuarios" method="post">
                 <input id="caixa" name="nickname" placeholder="Insira o nickname aqui" type="text" /><br />
-                <input type="submit" value="Buscar" />
+                <input type="submit" id="buscar" value="Buscar" />
 
-                <!-- FOREACH PARA MOSTRAR LISTA DE USUÁRIOS CONTENDO STRING PROCURADA -->
-                @if (@buscaUsuarios != null)
-                {
-                 foreach (apBioPlay.Models.Usuario usu in @buscaUsuarios)
-                 {
-                   @Html.ActionLink(usu.Nickname, "Visualiza", new { codU = usu.Codigo })
-                 }
-                }
+                <div id="resultados">
+                    <label id="temResultado">@temResultado</label>
+                    <ul>
+                        @if (@buscaUsuarios != null)
+                         {
+                            temResultado = "S";
+
+                            foreach (apBioPlay.Models.Usuario usu in @buscaUsuarios)
+                            {
+                                <li>@Html.ActionLink(usu.Nickname, "Visualiza", new { codU = usu.Codigo })</li>
+                            }
+                         }
+                    </ul>
+                </div>
+
             </form>
 
         </div>
@@ -220,3 +227,4 @@
 <script src="~/Scripts/licoes.js"></script>
 <script src="~/Scripts/modalPerfil.js"></script>
 <script src="~/Scripts/modalAmigos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

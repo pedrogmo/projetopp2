@@ -52,6 +52,10 @@ img {
     left: 0;
     overflow: auto;
     z-index: 100;
+}
+
+.invisivel
+{
     visibility: hidden;
 }
 
