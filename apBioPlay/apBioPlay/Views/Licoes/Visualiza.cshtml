@@ -200,19 +200,19 @@
                 <input type="submit" id="buscar" value="Buscar" />
 
                 <div id="resultados">
-                    <label id="temResultado">@temResultado</label>
                     <ul>
                         @if (@buscaUsuarios != null)
-                         {
+                        {
                             temResultado = "S";
-
                             foreach (apBioPlay.Models.Usuario usu in @buscaUsuarios)
                             {
                                 <li>@Html.ActionLink(usu.Nickname, "Visualiza", new { codU = usu.Codigo })</li>
                             }
-                         }
+                        }
                     </ul>
                 </div>
+
+                <input type="text" id="temResultado" value="@temResultado" name="temResultado" hidden/>
 
             </form>
 

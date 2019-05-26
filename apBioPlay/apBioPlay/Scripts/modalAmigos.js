@@ -3,13 +3,13 @@ var sair = document.getElementById("sair");
 var modal = document.getElementById("black-content");
 var btnNovo = document.getElementById("new");
 var btnBuscar = document.getElementById("buscar");
-var temResultado = document.getElementById("temResultado").value;
+var temResultado = document.getElementById("temResultado");
 var caixa = document.getElementById("caixa");
 var estaAberto = false;
 
 window.onload = function () {
+    if (sessionStorage.getItem("temResultado") == null)
         modal.classList.add("invisivel");
-        /*sessionStorage.removeItem('temResultado');*/
        
 }
 
@@ -26,6 +26,6 @@ btnNovo.onclick = function () {
 
 btnBuscar.onclick = function () {
     modal.classList.remove("invisivel");
-    sessionStorage.setItem("temResultado", temResultado);
     estaAberto = true;
+    sessionStorage.setItem("temResultado", temResultado.value);
 }
