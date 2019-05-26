@@ -3,13 +3,13 @@
     Layout = null;
     string stringBotao = (ViewBag.usuario.Codigo == ViewBag.visualizado.Codigo ? "" : "hidden");
     string stringBotao2 = (ViewBag.usuario.Codigo != ViewBag.visualizado.Codigo ? "initial" : "hidden");
-    string temResultado = "N";
 
     string msg = (string) Session["Message"];
     Session["Message"] = "";
-
+    
     List<apBioPlay.Models.Usuario> buscaUsuarios = (List<apBioPlay.Models.Usuario>)Session["buscaUsuarios"];
     Session["buscaUsuarios"] = null;
+    string temResultado = buscaUsuarios==null?"N":"S";
 }
 
 <!DOCTYPE html>
@@ -201,10 +201,9 @@
 
                 <div id="resultados">
                     <ul>
-                        @if (@buscaUsuarios != null)
+                        @if (buscaUsuarios != null)
                         {
-                            temResultado = "S";
-                            foreach (apBioPlay.Models.Usuario usu in @buscaUsuarios)
+                            foreach (apBioPlay.Models.Usuario usu in buscaUsuarios)
                             {
                                 <li>@Html.ActionLink(usu.Nickname, "Visualiza", new { codU = usu.Codigo })</li>
                             }

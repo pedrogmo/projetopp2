@@ -8,16 +8,12 @@ var caixa = document.getElementById("caixa");
 var estaAberto = false;
 
 window.onload = function () {
-    if (sessionStorage.getItem("temResultado") == null)
-        modal.classList.add("invisivel");
-       
+    if (temResultado.value=="N")
+        modal.classList.add("invisivel");       
 }
 
 sair.onclick = function () {
     modal.classList.add("invisivel");
-
-    if (sessionStorage.getItem("temResultado") != null)
-        sessionStorage.removeItem('temResultado');
 }
 
 btnNovo.onclick = function () {
@@ -27,5 +23,4 @@ btnNovo.onclick = function () {
 btnBuscar.onclick = function () {
     modal.classList.remove("invisivel");
     estaAberto = true;
-    sessionStorage.setItem("temResultado", temResultado.value);
 }
