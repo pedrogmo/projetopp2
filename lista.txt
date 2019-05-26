@@ -1,14 +1,10 @@
 Design:
 
-* Perfil
-   - Busca de usuário
-* FimLicao
 * Sobre
 * Bastidores
 
 Código:
 
-* Busca de usuário
 * Modal de aniversário
 
 Erros:
