@@ -153,3 +153,35 @@ img {
         background-color: rgb(255,101,101);
         cursor: pointer;
     }
+
+    #black-content #modal-amigos #resultados
+    {
+        height: 18em;
+        overflow-y: scroll;
+    }
+
+    #black-content #modal-amigos ul li {
+        display: list-item;
+        margin-bottom: 1em;
+        text-transform: uppercase;
+        padding: .75em;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #black-content #modal-amigos ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: .75em;
+        background-color: rgb(28,176,246);
+        border-radius: 100px;
+    }
+
+    #black-content #modal-amigos ul li a:hover
+    {
+        background-color:rgb(68, 195, 255);
+        padding-left: 2em;
+        padding-right: 2em;
+    }

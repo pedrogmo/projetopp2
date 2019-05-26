@@ -45,8 +45,6 @@
     width: 30%;
     position: relative;
     top: 5em;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 
@@ -76,8 +74,6 @@
     top: 2em;
     margin-bottom: 2em;
     outline: none;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 #bg-modal #modal-content #btn-ok:hover {
