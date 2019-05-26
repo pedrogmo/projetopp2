@@ -1,12 +1,12 @@
 ﻿
-var modal = document.getElementById("modal-perfil");
+var modalP = document.getElementById("modal-perfil");
 
 document.getElementById("alter").onclick = function () {
-    modal.style.visibility = "initial";
+    modalP.style.visibility = "initial";
 }
 
 document.getElementById("close").onclick = function () {
-    modal.style.visibility = "hidden";
+    modalP.style.visibility = "hidden";
 }
 
 /* MODAL DE ERRO */
