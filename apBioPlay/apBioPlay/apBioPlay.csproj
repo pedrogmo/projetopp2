@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\cadastro.css" />
+    <Content Include="Content\fimLicao.css" />
     <Content Include="Content\forum.css" />
     <Content Include="Content\licoes.css" />
     <Content Include="Content\home.css" />
@@ -228,6 +229,7 @@
     <Content Include="Images\logoMobile.png" />
     <Content Include="Images\Mick.png" />
     <Content Include="Images\Mick2.png" />
+    <Content Include="Images\mickFinal.png" />
     <Content Include="Images\Mick_Cadastro.png" />
     <Content Include="Images\paisagem.png" />
     <Content Include="Images\paisagem2.png" />

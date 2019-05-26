@@ -1,0 +1,145 @@
+﻿
+@font-face {
+    font-family: 'Aristotelica';
+    src: url('./Fonts/aristotelica.text-trial-bold.ttf');
+}
+
+@font-face {
+    font-family: 'Mikado';
+    src: url('./Fonts/Mikado\ Light.otf');
+}
+
+@font-face {
+    font-family: 'Mikado Black';
+    src: url('./Fonts/Mikado\ Black.otf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background-color: rgb(231,230,230);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+/* FIM LICAO */
+
+header
+{
+    display: inline-block;
+    background-color: #72c800;
+    width: 100%;
+    height: 4em;
+}
+
+header #casa {
+   color: #333;
+   position: relative;
+   top: 1.3em;
+   color: #72c800;
+   background-color: white;
+   padding: .5em;
+   border-radius: 100px;
+   outline: none;
+   user-select: none;
+   text-decoration: none;
+   font-family: "Mikado";
+   font-weight: bold;
+   border: 2px solid white;
+   transition: .2s;
+}
+
+header #casa:hover {
+    color: white;
+    background-color: #72c800;
+    border: 2px solid white;
+}
+
+#home-hero #mickFim
+{
+    width: 100%;
+    margin-top: 2em;
+}
+
+#home-hero #mickFim h1{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-top: 1em;
+    color: #333;
+    position: relative;
+    font-family: "Mikado Black";
+    user-select: none;
+}
+
+#home-hero #mickFim img {
+    width: 50%;
+}
+
+#home-hero #estat
+{
+    background-color: white;
+    margin-top: 1em;
+    height: auto;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 4px 2px rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+#home-hero #estat h1
+{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #333;
+    position: relative;
+    font-family: "Mikado Black";
+    user-select: none;
+}
+
+#home-hero #estat hr
+{
+    border: 2px solid rgb(217,217,217);
+}
+
+#home-hero #estat h2
+{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #333;
+    position: relative;
+    font-family: "Mikado";
+    user-select: none;
+}
+
+#home-hero #estat h2:last-of-type
+{
+    color: orange;
+}
+
+#home-hero #estat h3
+{
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: #333;
+    position: relative;
+    font-family: "Mikado Black";
+    user-select: none;
+    margin: 0;
+}

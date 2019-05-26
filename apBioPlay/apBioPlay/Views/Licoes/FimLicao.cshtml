@@ -9,10 +9,49 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="~/Images/favicon.ico" />
+    <link rel="stylesheet" href="~/Content/fimLicao.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>FimLicao</title>
 </head>
 <body>
-    <div> 
-    </div>
+
+    <header>
+        <nav>
+            <a href="/Licoes" id="casa"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Voltar para Licões</a>
+        </nav>
+    </header>
+
+    <section id="home-hero">
+        <div id="mickFim">
+            <h1>Lição finalizada!</h1>
+            <img src="~/Images/mickFinal.png" alt="Alternate Text" />
+        </div>
+
+        <div id="estat">
+            <h1>Estatísticas - @ViewBag.licao.Nome</h1>
+            <hr />
+
+            <h2>Total de perguntas: </h2>
+            <h3>@ViewBag.total</h3>
+
+            <h2>Acertos:</h2>
+            <h3>@ViewBag.acertos</h3>
+
+            <h2>Erros:</h2>
+                @if(@ViewBag.total - @ViewBag.acertos != 0)
+                 {
+                    int erro = @ViewBag.total - @ViewBag.acertos;
+                    <h3>@erro</h3>
+                }
+                else
+                {
+                    <h3>0</h3>
+                }
+
+            <h2>Atingiu nível @ViewBag.usuario.Nivel!</h2>
+        </div>
+    </section>
+
 </body>
 </html>
+
