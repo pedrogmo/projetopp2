@@ -48,7 +48,12 @@
                     <h3>0</h3>
                 }
 
-            <h2>Atingiu nível @ViewBag.usuario.Nivel!</h2>
+            @if (ViewBag.usuarioUpou) // aumentou nível nessa lição 
+            {
+                string novasLicoes = ViewBag.novasLicoes?
+                    "Novas lições foram desbloqueadas!" : "";
+                <h2>Você atingiu o Nível @ViewBag.usuario.Nivel!<br />@novasLicoes</h2>                
+            }
         </div>
     </section>
 

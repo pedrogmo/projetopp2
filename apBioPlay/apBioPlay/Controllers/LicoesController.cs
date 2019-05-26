@@ -207,13 +207,18 @@ namespace apBioPlay.Controllers
 
         public ActionResult FimLicao()
         {
-            ViewBag.licao = new LicoesDAO().Buscar((int)Session["codLicao"]);
+            var lics = new LicoesDAO();
+            ViewBag.licao = lics.Buscar((int)Session["codLicao"]);
             ViewBag.usuario = (Usuario)Session["usuarioLogado"];
             ViewBag.acertos = (int)Session["acertos"];
             ViewBag.total = (int)Session["indice"];
+            ViewBag.novasLicoes = false;
+            ViewBag.usuarioUpou = false;
             if (ViewBag.licao.Nivel == ViewBag.usuario.Nivel)
             {
                 ++ViewBag.usuario.Nivel;
+                ViewBag.usuarioUpou = true;
+                ViewBag.novasLicoes = lics.ExisteLicaoNivel(ViewBag.usuario.Nivel);
                 new UsuariosDAO().Atualiza(ViewBag.usuario);
             }
             new LicoesFeitasDAO().Adicionar(ViewBag.usuario.Codigo, ViewBag.licao.Codigo, ViewBag.acertos);                        

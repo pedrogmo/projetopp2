@@ -26,5 +26,16 @@ namespace apBioPlay.DAO
                 .FirstOrDefault();
             }
         }
+
+        public bool ExisteLicaoNivel(int nivel)
+        {
+            using (var contexto = new SiteContext())
+            {
+                Licao lic = contexto.Licao
+                .Where(l => l.Nivel == nivel)
+                .FirstOrDefault();
+                return lic != null;
+            }
+        }
     }
 }
