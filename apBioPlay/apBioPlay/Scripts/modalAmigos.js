@@ -7,10 +7,9 @@ var temResultado = document.getElementById("temResultado");
 var caixa = document.getElementById("caixa");
 var estaAberto = false;
 
-window.onload = function () {
-    if (temResultado.value=="N")
-        modal.classList.add("invisivel");       
-}
+
+if (temResultado.value=="N")
+    modal.classList.add("invisivel");       
 
 sair.onclick = function () {
     modal.classList.add("invisivel");
