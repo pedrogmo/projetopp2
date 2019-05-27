@@ -179,13 +179,29 @@ namespace apBioPlay.Controllers
         {
             if (new LicoesDAO().Buscar(codL).Nivel > ((Usuario)Session["usuarioLogado"]).Nivel)
                 return RedirectToAction("Index");
-            Session["perguntas"] = new PerguntaDAO().Lista(codL);
+            var per = new PerguntaDAO().Lista(codL);
+            Shuffle(per);
+            Session["perguntas"] = per;
             Session["indice"] = 0;
             Session["codLicao"] = codL;
             Session["acertos"] = 0;
             return RedirectToAction("Pergunta", ((List<Pergunta>)Session["perguntas"])[0]);
         }
-        
+
+        private static void Shuffle<T>(IList<T> list)
+        {
+            var rng = new Random();
+            int n = list.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                T value = list[k];
+                list[k] = list[n];
+                list[n] = value;
+            }
+        }
+
         public ActionResult Pergunta(Pergunta per)
         {
             ViewBag.pergunta = per;
