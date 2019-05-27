@@ -7,11 +7,86 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />    
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/bastidores.css">
     <link rel="shortcut icon" href="~/Images/favicon.ico" />
     <title>Bastidores</title>
 </head>
 <body>
-    
+
+    <div id="filtro"></div>
+
+    <div id="video">
+        <h1>BASTIDORES</h1>
+        <video preload="auto" autoplay="true" loop="loop" muted="muted" width="100%;">
+            <source src="~/Images/Bastidores/WhatsApp Video 2019-04-27 at 16.54.42.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="title">
+        <h1>"Por trás dos códigos"</h1>
+    </div>
+
+    <div class="container">
+
+        <input type="radio" id="i1" name="images" checked />
+        <input type="radio" id="i2" name="images" />
+        <input type="radio" id="i3" name="images" />
+        <input type="radio" id="i4" name="images" />
+        <input type="radio" id="i5" name="images" />
+        <input type="radio" id="i6" name="images" />
+        <input type="radio" id="i7" name="images" />
+        <input type="radio" id="i8" name="images" />
+
+        <div class="slide_img" id="one">
+            <img src="~/Images/Bastidores/p1.jpeg">
+        </div>
+
+        <div class="slide_img" id="two">
+            <img src="~/Images/Bastidores/p2.jpeg">
+        </div>
+
+        <div class="slide_img" id="three">
+            <img src="~/Images/Bastidores/p3.jpeg">
+        </div>
+
+        <div class="slide_img" id="four">
+            <img src="~/Images/Bastidores/p4.jpeg">
+        </div>
+
+        <div class="slide_img" id="five">
+            <img src="~/Images/Bastidores/p5.jpeg">
+        </div>
+
+        <div class="slide_img" id="six">
+            <img src="~/Images/Bastidores/p6.jpeg">
+        </div>
+
+        <div class="slide_img" id="seven">
+            <img src="~/Images/Bastidores/p7.jpeg">
+        </div>
+
+        <div class="slide_img" id="eight">
+            <img src="~/Images/Bastidores/p8.jpeg">
+        </div>
+
+        <div id="nav_slide">
+            <label for="i1" class="dots" id="dot1"></label>
+            <label for="i2" class="dots" id="dot2"></label>
+            <label for="i3" class="dots" id="dot3"></label>
+            <label for="i4" class="dots" id="dot4"></label>
+            <label for="i5" class="dots" id="dot5"></label>
+            <label for="i6" class="dots" id="dot6"></label>
+            <label for="i7" class="dots" id="dot7"></label>
+            <label for="i8" class="dots" id="dot8"></label>
+        </div>
+    </div>
+
+    <hr />
+
+    <div>
+        <h1>Um pouco sobre nós</h1>
+        <p>ALULA</p>
+    </div>
 </body>
 </html>

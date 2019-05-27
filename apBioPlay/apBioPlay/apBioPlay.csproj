@@ -165,6 +165,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bastidores.css" />
     <Content Include="Content\cadastro.css" />
     <Content Include="Content\fimLicao.css" />
     <Content Include="Content\forum.css" />
@@ -180,13 +181,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back_cadastro.png" />
-    <Content Include="Images\Bastidores\a85a6d09-15a2-446c-9812-f08393e25ffa.jpg" />
-    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-27 at 16.55.24.jpeg" />
-    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-30 at 12.53.35.jpeg" />
-    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-30 at 12.53.36.jpeg" />
-    <Content Include="Images\Bastidores\WhatsApp Image 2019-04-30 at 12.53.37.jpeg" />
-    <Content Include="Images\Bastidores\WhatsApp Image 2019-05-05 at 16.44.28.jpeg" />
-    <Content Include="Images\Bastidores\WhatsApp Image 2019-05-05 at 16.46.36.jpeg" />
+    <Content Include="Images\Bastidores\p1.jpeg" />
+    <Content Include="Images\Bastidores\p2.jpeg" />
+    <Content Include="Images\Bastidores\p3.jpeg" />
+    <Content Include="Images\Bastidores\p4.jpeg" />
+    <Content Include="Images\Bastidores\p5.jpeg" />
+    <Content Include="Images\Bastidores\p6.jpeg" />
+    <Content Include="Images\Bastidores\p7.jpeg" />
+    <Content Include="Images\Bastidores\p8.jpeg" />
     <Content Include="Images\Bastidores\WhatsApp Video 2019-04-27 at 16.54.42.mp4" />
     <Content Include="Images\bg.png" />
     <Content Include="Images\bg2.png" />
