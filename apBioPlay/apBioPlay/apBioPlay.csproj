@@ -220,6 +220,8 @@
     <Content Include="Images\Licoes\Energia\p1r3.png" />
     <Content Include="Images\Licoes\Energia\p1r4.png" />
     <Content Include="Images\Licoes\Energia\p1r5.png" />
+    <Content Include="Images\Licoes\Energia\p1r6.png" />
+    <Content Include="Images\Licoes\Energia\p1r7.png" />
     <Content Include="Images\Licoes\Reciclagem\banana.png" />
     <Content Include="Images\Licoes\Reciclagem\frango.png" />
     <Content Include="Images\Licoes\Reciclagem\garrafa.png" />

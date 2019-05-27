@@ -118,10 +118,30 @@ insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 23, 
 insert into Resposta values('Ônibus', '/Images/Licoes/Transportes/p1r3.png', 23, 0)
 insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 23, 0)
 
-insert into Resposta values('Bicicleta', '/Images/Licoes/Transportes/p1r1.png', 23, 0)
-insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 23, 1)
-insert into Resposta values('Ônibus', '/Images/Licoes/Transportes/p1r3.png', 23, 0)
-insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 23, 0)
+insert into Resposta values('Solar', '/Images/Licoes/Energia/p1r1.png', 24, 0)
+insert into Resposta values('Eólica', '/Images/Licoes/Energia/p1r2.png', 24, 1)
+insert into Resposta values('Hidrelétrica', '/Images/Licoes/Energia/p1r3.png', 24, 0)
+insert into Resposta values('Nuclear', '/Images/Licoes/Energia/p1r6.png', 24, 0)
+
+insert into Resposta values('Solar', '/Images/Licoes/Energia/p1r1.png', 25, 1)
+insert into Resposta values('Eólica', '/Images/Licoes/Energia/p1r2.png', 25, 0)
+insert into Resposta values('Termoelétrica', '/Images/Licoes/Energia/p1r7.png', 25, 0)
+insert into Resposta values('Nuclear', '/Images/Licoes/Energia/p1r6.png', 25, 0)
+
+insert into Resposta values('Eólica', '/Images/Licoes/Energia/p1r2.png', 26, 0)
+insert into Resposta values('Nuclear', '/Images/Licoes/Energia/p1r6.png', 26, 0)
+insert into Resposta values('Termoelétrica', '/Images/Licoes/Energia/p1r7.png', 26, 0)
+insert into Resposta values('Hidrelétrica', '/Images/Licoes/Energia/p1r3.png', 26, 1)
+
+insert into Resposta values('Hidrelétrica', '/Images/Licoes/Energia/p1r3.png', 27, 0)
+insert into Resposta values('Nuclear', '/Images/Licoes/Energia/p1r6.png', 27, 0)
+insert into Resposta values('Termoelétrica', '/Images/Licoes/Energia/p1r7.png', 27, 1)
+insert into Resposta values('Eólica', '/Images/Licoes/Energia/p1r2.png', 27, 0)
+
+insert into Resposta values('Hidrelétrica', '/Images/Licoes/Energia/p1r3.png', 28, 0)
+insert into Resposta values('Nuclear', '/Images/Licoes/Energia/p1r6.png', 28, 1)
+insert into Resposta values('Termoelétrica', '/Images/Licoes/Energia/p1r7.png', 28, 0)
+insert into Resposta values('Eólica', '/Images/Licoes/Energia/p1r2.png', 28, 0)
 
 create proc RespReciclagem_sp 
 as
