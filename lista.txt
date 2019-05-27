@@ -1,12 +1,5 @@
-Design:
-
-* Sobre
-* Bastidores
-
-Código:
+Sugestões:
 
 * Modal de aniversário
-
-Erros:
-
-* Voltar páginas por causa do Redirect
+* Página de leitura da teoria para cada lição
+* Fazer alguma coisa com Amizade
