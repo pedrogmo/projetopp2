@@ -76,7 +76,7 @@ header #casa:hover {
 
 #home-hero #mickFim h1{
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding-top: 1em;
     color: #333;
     position: relative;
@@ -85,7 +85,7 @@ header #casa:hover {
 }
 
 #home-hero #mickFim img {
-    width: 50%;
+    width: 20em;
 }
 
 #home-hero #estat
@@ -142,4 +142,11 @@ header #casa:hover {
     font-family: "Mikado Black";
     user-select: none;
     margin: 0;
+}
+
+@media(min-width: 60rem)
+{
+    #home-hero #estat {
+        width: 60%;
+    }
 }

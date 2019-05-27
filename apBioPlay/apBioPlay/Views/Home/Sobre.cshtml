@@ -9,14 +9,41 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="shortcut icon" href="~/Images/favicon.ico" />
+    <link rel="stylesheet" href="~/Content/sobre.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>Sobre</title>
 </head>
 <body>
+
+    <div id="filtro"></div>
+
+    <div id="video">
+        <h1>SOBRE O BIOPLAY</h1>
+        <video preload="auto" autoplay="true" loop="loop" muted="muted" width="100%;">
+            <source src="~/Images/Bastidores/BioPlay.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <br /><br />  
+
     <h1>O que é o BioPlay?</h1>
-    <p>O BioPlay é um site interativo no qual você pode aprender sobre o meio ambiente e sustentabilidade com muita diversão!</p>
-    <p>Contamos com muitas lições de diferentes temas para você aprender e praticar.</p>
-    <p>Você também pode adicionar amigos para ter diversão em conjunto. Se tiver alguma dúvida ou sugestão, publique no nosso forum!</p>
+
+    <br /><br />
+
+    <div>
+        <video controls="controls" loop="loop" muted="muted" width="60%;">
+            <source src="~/Images/Bastidores/BioPlay.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <p>O BioPlay é um site interativo no qual você pode aprender sobre o meio ambiente e sustentabilidade com muita diversão!
+    Contamos com muitas lições de diferentes temas para você aprender e praticar.
+    Você também pode adicionar amigos para ter diversão em conjunto. Se tiver alguma dúvida ou sugestão, publique em nosso fórum!</p>
+
+    <hr />
+
+    <br /><br />
+
     <h1>As 12 cidades mais poluídas do mundo</h1>
     <h2>Dados da Organização Mundial da Saúde</h2>
     <p id="quantidade" hidden>@ViewBag.cidades.Count</p>

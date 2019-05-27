@@ -177,10 +177,12 @@
     <Content Include="Content\notificacao.css" />
     <Content Include="Content\perfil.css" />
     <Content Include="Content\pergunta.css" />
+    <Content Include="Content\sobre.css" />
     <Content Include="Content\verPublicacao.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\back_cadastro.png" />
+    <Content Include="Images\Bastidores\BioPlay.mp4" />
     <Content Include="Images\Bastidores\p1.jpeg" />
     <Content Include="Images\Bastidores\p2.jpeg" />
     <Content Include="Images\Bastidores\p3.jpeg" />
