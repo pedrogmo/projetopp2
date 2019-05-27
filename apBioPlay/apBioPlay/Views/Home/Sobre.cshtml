@@ -24,7 +24,7 @@
         </video>
     </div>
 
-    <br /><br />  
+    <br /><br />
 
     <h1>O que é o BioPlay?</h1>
 
@@ -36,24 +36,28 @@
         </video>
     </div>
 
-    <p>O BioPlay é um site interativo no qual você pode aprender sobre o meio ambiente e sustentabilidade com muita diversão!
-    Contamos com muitas lições de diferentes temas para você aprender e praticar.
-    Você também pode adicionar amigos para ter diversão em conjunto. Se tiver alguma dúvida ou sugestão, publique em nosso fórum!</p>
+    <p>
+        O BioPlay é um site interativo no qual você pode aprender sobre o meio ambiente e sustentabilidade com muita diversão!
+        Contamos com muitas lições de diferentes temas para você aprender e praticar.
+        Você também pode adicionar amigos para ter diversão em conjunto. Se tiver alguma dúvida ou sugestão, publique em nosso fórum!
+    </p>
 
     <hr />
 
     <br /><br />
 
-    <h1>As 12 cidades mais poluídas do mundo</h1>
-    <h2>Dados da Organização Mundial da Saúde</h2>
-    <p id="quantidade" hidden>@ViewBag.cidades.Count</p>
-    @for (int i = 0; i < ViewBag.cidades.Count; i++)
-    {
-        string nome = "nome" + i;
-        string pol = "poluicao" + i;
-        <p id="@nome" hidden>@ViewBag.cidades[i].Nome (@ViewBag.cidades[i].Pais)</p><p id="@pol" hidden>@ViewBag.cidades[i].Poluicao</p>
-    }
-    <canvas id="canvas"></canvas>
+    <div id="cv" class="container2">
+        <h1>As 12 cidades mais poluídas do mundo</h1>
+        <h2>Dados da Organização Mundial da Saúde</h2>
+        <p id="quantidade" hidden>@ViewBag.cidades.Count</p>
+        @for (int i = 0; i < ViewBag.cidades.Count; i++)
+        {
+            string nome = "nome" + i;
+            string pol = "poluicao" + i;
+            <p id="@nome" hidden>@ViewBag.cidades[i].Nome (@ViewBag.cidades[i].Pais)</p><p id="@pol" hidden>@ViewBag.cidades[i].Poluicao</p>
+        }
+        <canvas id="canvas"></canvas>
+    </div>
     <script src="~/Scripts/pareto.js"></script>
 </body>
 </html>

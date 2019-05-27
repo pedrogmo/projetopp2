@@ -128,6 +128,32 @@ img {
     padding-bottom: 3em;
 }
 
+#bg-modal #modal-content #erro-img {
+    width: 30%;
+    position: relative;
+    top: 5em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#bg-modal #modal-content #btn-ok {
+    font-size: 1.2rem;
+    background-color: #83e600;
+    padding: 1em;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Aristotelica';
+    padding-top: 1.3em;
+    border: none;
+    top: 2em;
+    margin-bottom: 2em;
+    outline: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @media(min-width: 50rem) {
 
     body {

@@ -72,23 +72,29 @@ end
 
 AlteraFoto_sp                                                                                                               
 
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
-insert into Pergunta values('Selecione o lixo correto: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a BANANA: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para o FRANGO: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a GARRAFA: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a GARRAFA PET: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a MAÇÃ: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a EMBALAGEM: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a LATA: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a FOLHA: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para o LIVRO: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para o PEIXE: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para o POTE: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a GARRAFA: ', 2, '', 5)
+insert into Pergunta values('Selecione o lixo correto para a TAÇA: ', 2, '', 5)
 
 
 insert into Pergunta values('Selecione o transporte menos sustentável: ', 3, '', 4)
 insert into Pergunta values('Selecione o transporte mais sustentável: ', 3, '', 4)
+
+insert into Pergunta values('Selecione a energia gerada pelo vento: ', 4, '', 4)
+insert into Pergunta values('Selecione a energia gerada pela luminosidade: ', 4, '', 4)
+insert into Pergunta values('Selecione a energia gerada pela água: ', 4, '', 4)
+insert into Pergunta values('Selecione a energia mais poluente: ', 4, '', 4)
+insert into Pergunta values('Selecione a energia mais perigosa: ', 4, '', 4)
 
 
 create table Resposta(
@@ -106,6 +112,11 @@ insert into Resposta values('Bicicleta', '/Images/Licoes/Transportes/p1r1.png', 
 insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 22, 1)
 insert into Resposta values('Ônibus', '/Images/Licoes/Transportes/p1r3.png', 22, 0)
 insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 22, 0)
+
+insert into Resposta values('Bicicleta', '/Images/Licoes/Transportes/p1r1.png', 23, 0)
+insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 23, 1)
+insert into Resposta values('Ônibus', '/Images/Licoes/Transportes/p1r3.png', 23, 0)
+insert into Resposta values('Carro', '/Images/Licoes/Transportes/p1r5.png', 23, 0)
 
 insert into Resposta values('Bicicleta', '/Images/Licoes/Transportes/p1r1.png', 23, 0)
 insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 23, 1)
