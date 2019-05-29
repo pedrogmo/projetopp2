@@ -237,7 +237,7 @@ p{
 
 #cv
 {
-    width: 60em;
+    width: 90%;
     height: 30em;
     background-color: transparent;
     display: flex;
@@ -247,10 +247,20 @@ p{
     border-radius: 30px;
     position: relative;
     top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media(min-width: 32rem) {
     #filtro {
         height: 20em;
+    }
+}
+
+@media(min-width: 60rem)
+{
+    #cv {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
