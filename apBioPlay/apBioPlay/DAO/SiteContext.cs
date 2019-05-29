@@ -16,7 +16,8 @@ namespace apBioPlay.DAO
         public DbSet<Resposta> Resposta { get; set; }
         public DbSet<Cidade> Cidade { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
-        public DbSet<Notificacao> Notificacao { get; set; }
+        public DbSet<Notificacao> Notificacao { get; set; }        
+        public DbSet<Paragrafo> Paragrafo { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

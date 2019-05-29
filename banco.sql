@@ -41,12 +41,30 @@ create table Licao(
 	teoria ntext not null
 )
 
-select * from Licao
-
 insert into Licao values('Reciclagem', '/Images/Licoes/Reciclagem/l1.png', 1)
 insert into Licao values('Transportes', '/Images/Licoes/Transportes/p1r1.png', 2)
 insert into Licao values('Energia', '/Images/Licoes/Energia/l2.png', 3)
 insert into Licao values('Energia', '/Images/Licoes/Agua/l3.png', 6)
+
+create table Paragrafo(
+	codigo int identity(1,1) primary key,
+	texto ntext not null,
+	codLicao int not null
+
+	constraint fkTeoriaLicao foreign key(codLicao) references Licao(codigo)
+)
+
+insert into Paragrafo values('A reciclagem é um processo em que determinados tipos de materiais, cotidianamente reconhecidos como lixo, são reutilizados como matéria-prima para a fabricação de novos produtos. Além de se apresentarem com propriedades físicas diferentes, estes também possuem uma nova composição química – fator principal que difere o reaproveitamento da reciclagem, conceitos estes muitas vezes confundidos.', 2)
+insert into Paragrafo values('Este processo é importante, nos dias de hoje, porque transforma aquilo que iria ou já se encontra no lixo em novos produtos, reduzindo resíduos que seriam lançados na natureza, ao mesmo tempo em que poupa matérias-primas, muitas vezes oriundas de recursos não renováveis, e energia. Para produzir alumínio reciclado, por exemplo, utiliza-se apenas 5% da energia necessária para fabricar o produto primário.', 2)
+insert into Paragrafo values('Dessa forma, é importante separar esses materiais, para que não sejam encaminhados juntamente com o lixo que não é reciclável, não tendo outro destino a não ser ocupar espaço nos aterros sanitários e lixões.', 2)
+insert into Paragrafo values('Em nosso país, quase toda a totalidade de latinhas descartáveis e garrafas PET são recicladas. Entretanto, plásticos, latas de aço, vidro, dentre outros matérias, são pouco considerados neste processo, reforçando as estatísticas que apontam que somente 11% de tudo o que se joga na lata de lixo, em nosso país é, de fato, reciclado.', 2)
+insert into Paragrafo values('No Brasil, Curitiba (PR), Itabira (MG), Santo André (SP) e Santos (SP) são as cidades que mais reciclam seus materiais.', 2)
+insert into Paragrafo values('Por Mariana Araguaia <br> Graduada em Biologia <br> Fonte : Brasil Escola', 2)
+insert into Paragrafo values('<br>Legenda dos lixos para reciclagem:<br>* Vermelho: plástico<br>* Azul: papel<br>* Verde: vidro<br>* Amarelo: metal<br />* Marrom: orgânico (não reciclável)', 2)
+
+insert into Paragrafo values('', 3)
+insert into Paragrafo values('', 4)
+insert into Paragrafo values('', 4)
 
 create table Pergunta(
 	codigo int identity(1,1) primary key,

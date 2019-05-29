@@ -177,6 +177,7 @@ namespace apBioPlay.Controllers
         public ActionResult Teoria(int codL)
         {
             ViewBag.licao = new LicoesDAO().Buscar(codL);
+            ViewBag.paragrafos = new ParagrafoDAO().Lista(codL);
             return View();
         }
 

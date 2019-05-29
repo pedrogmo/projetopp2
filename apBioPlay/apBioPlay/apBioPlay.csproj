@@ -272,6 +272,7 @@
     <Compile Include="Controllers\LicoesController.cs" />
     <Compile Include="DAO\AcessoDAO.cs" />
     <Compile Include="DAO\AmizadeDAO.cs" />
+    <Compile Include="DAO\ParagrafoDAO.cs" />
     <Compile Include="DAO\PerguntaDAO.cs" />
     <Compile Include="DAO\CidadesDAO.cs" />
     <Compile Include="DAO\LicoesDAO.cs" />
@@ -287,6 +288,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Paragrafo.cs" />
     <Compile Include="Models\Pergunta.cs" />
     <Compile Include="Models\Cidade.cs" />
     <Compile Include="Models\Licao.cs" />

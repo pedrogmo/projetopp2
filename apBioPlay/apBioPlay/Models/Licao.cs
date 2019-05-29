@@ -16,7 +16,5 @@ namespace apBioPlay.Models
         public int Nivel { get; set; }
         [Required, StringLength(50)]
         public string UrlImagem { get; set; }
-        [Required]
-        public string Teoria { get; set; }
     }
 }
