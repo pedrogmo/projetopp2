@@ -7,7 +7,7 @@
     position: fixed;
     top: 0;
     margin: 0 auto;
-    left: 4.3em;
+    left: 0;
     overflow: auto;
     z-index: 10;
     visibility: hidden;
@@ -118,6 +118,7 @@
 @media(min-width: 70rem) {
     #bg-modal {
         background-color: transparent;
+        left: 4.3em;
     }
 
     #bg-modal #modal-content ul {
