@@ -250,6 +250,7 @@
     <Content Include="Images\simbolo.png" />
     <Content Include="Images\wave.png" />
     <Content Include="Images\wave2.png" />
+    <Content Include="Scripts\exclusaoConta.js" />
     <Content Include="Scripts\fadeIn.js" />
     <Content Include="Scripts\geral.js" />
     <Content Include="Scripts\licoes.js" />

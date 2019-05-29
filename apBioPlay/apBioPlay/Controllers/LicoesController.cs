@@ -248,6 +248,12 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public ActionResult ClicouExcluir()
+        {
+            Session["excluir"] = true;
+            return RedirectToAction("Perfil");
+        }
+
         public ActionResult ExcluirConta()
         {
             new UsuariosDAO().Remover(((Usuario)Session["usuarioLogado"]).Codigo);
