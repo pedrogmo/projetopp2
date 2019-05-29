@@ -173,6 +173,12 @@ namespace apBioPlay.Controllers
             return RedirectToAction("Visualiza", new { codU = u2.Codigo });
         }
         
+        [Route("Licoes/teoria/{codL}")]
+        public ActionResult Teoria(int codL)
+        {
+            ViewBag.licao = new LicoesDAO().Buscar(codL);
+            return View();
+        }
 
         [Route("Licoes/licao/{codL}")]
         public ActionResult Licao(int codL)

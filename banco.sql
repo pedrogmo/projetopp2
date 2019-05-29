@@ -37,7 +37,8 @@ create table Licao(
 	codigo int identity(1,1) primary key,
 	nome varchar(50) not null,	
 	urlImagem varchar(50) not null,
-	nivel int not null
+	nivel int not null,
+	teoria ntext not null
 )
 
 select * from Licao
