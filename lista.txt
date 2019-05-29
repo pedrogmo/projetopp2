@@ -4,3 +4,12 @@ Sugestões:
 * Página de leitura da teoria para cada lição
 * Fazer alguma coisa com Amizade
 * Modal de confirmação excluir conta
+
+
+
+
+Necessário:
+
+* Lição água
+* Modal excluir conta
+* Lições teóricas -> botão da lição
