@@ -15,7 +15,7 @@
         <h1>@ViewBag.licao.Nome</h1>
         @foreach (apBioPlay.Models.Paragrafo p in ViewBag.paragrafos)
         {
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;p.Texto</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;@p.Texto</p>
         }
     </div>
 </body>
