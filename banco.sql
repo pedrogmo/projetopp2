@@ -67,8 +67,43 @@ insert into Paragrafo values('* Verde: vidro', 2)
 insert into Paragrafo values('* Amarelo: metal', 2)
 insert into Paragrafo values('* Marrom: orgânico (não reciclável)', 2)
 
-insert into Paragrafo values('', 3)
-insert into Paragrafo values('', 4)
+insert into Paragrafo values('Os transportes são fundamentais para os cidadãos das cidades, porque permitem a locomoção para trabalho e lazer. No entanto, se muitas pessoas utilizam o carro para transporte, as ruas da cidade vão engarrafar sempre, porque muito espaço é ocupado para poucas pessoas.', 3)
+insert into Paragrafo values('Por isso, é importante que haja transportes coletivos ou individuais de pequeno porte. Por exemplo, se muitas pessoas vão ao mesmo local, um ônibus é uma boa opção, embora também polua o ar. Mas se alguém quer ir para um local próximo, pode ir de bicicleta ou até mesmo de skate, que ocupa muito pouco espaço.', 3)
+insert into Paragrafo values('É daí que vem o termo mobilidade urbana, que significa uma locomoção boa pela cidade, sem engarrafamentos, com velocidade e qualidade. Esse conceito também se relaciona com transporte sustentável.', 3)
+insert into Paragrafo values('São importantes medidas que ampliem o transporte coletivo e sustentável para um maior bem estar de todos', 3)
+
+insert into Paragrafo values('A energia movimenta o mundo e dela as empresas dependem para a produção, comercialização e distribuição de seus produtos, seja no Brasil, nos Estados Unidos, na China ou qualquer outra parte da terra. Também as pessoas dependem da energia em suas residências, no trabalho e outros meios de convívio social. Por fim os países dependem da energia para movimentar suas economias e criar produtos competitivos no mundo globalizado. Mas quais os tipos de energia e como podemos classificá-las? Veja abaixo os principais tipos.', 3)
+insert into Paragrafo values('Energia Hidrelétrica', 4)
+insert into Paragrafo values('A energia hidrelétrica é aquela que é gerada em uma usina hidrelétrica e tem como fonte de produção a força da água em movimento. Para a sua obtenção são necessários os passos abaixo:', 4)
+insert into Paragrafo values('Primeiro é necessário a construção de enormes barragens que são criadas sob o leito de um rio com a finalidade de represar a água;', 4)
+insert into Paragrafo values('Á água que corria livremente pelo leito do rio agora começa a ficar contida pela barragem e inicia a formação de um grande reservatório;', 4)
+insert into Paragrafo values('Enormes turbinas são instaladas nas barragens com certo desnível, permitindo que a água que passa pela barragem caia com enorme força sobre as turbinas que são movimentas transformando a energia potencial em energia mecânica;', 4)
+insert into Paragrafo values('A energia mecânica gerada nas turbinas é captada por um gerador de eletricidade que a transforma em energia elétrica;', 4)
+insert into Paragrafo values('A última parte do processo é a transmissão da energia que ocorre por meio das redes de transmissão de alta tensão. Quando chega ao seu destino a energia é transformada em baixa tensão para as residências e comércios e em média tensão para as indústrias.', 4)
+insert into Paragrafo values('A grande maioria da energia gerada e consumida no Brasil é hidrelétrica, isto ocorre pelo enorme potencial hidrelétrico que o país tem. A abundância de rios e os longos percursos desses permitiram a construção de inúmeras usinas hidrelétricas por aqui. A grande vantagem da energia hidrelétrica é que ela limpa, ou seja, não é poluente o que contribui para o equilíbrio ambiental.', 4)
+insert into Paragrafo values('Energia Eólica', 4)
+insert into Paragrafo values('A energia eólica é talvez a bola da vez, isto é, ela está na moda, assim como a energia solar(ver abaixo). Esta energia é produzida usando a força dos ventos para movimentar enormes aero-geradores que são conectados a turbinas para a geração da energia elétrica. Assim coo outras energias, a eólica também é limpa e renovável o que a torna muito atraente para os dias atuais.', 4)
+insert into Paragrafo values('Para a sua produção são necessários a instalação dos aero-geradores em locais com abundância de ventos, tanto em volume como em regularidade, ou seja, não basta ter ventos fontes é preciso que eles sejam constantes. A velocidade dos ventos precisa ser superior a 3,6 m/s.', 4)
+insert into Paragrafo values('Assim como a energia hidrelétrica, o Brasil tem um grande potencial para a produção de energia eólica, visto que há regiões onde a presença dos ventos favorece a instalação de parques eólicos. Neste cenário destacam-se os estados do Rio Grande do Norte e Ceará, ambos na região nordeste do país. Atualmente os principais parques eólicos do Brasil são:', 4)
+insert into Paragrafo values('Complexo eólico Alto Sertão I no estado da Bahia', 4)
+insert into Paragrafo values('Parque eólico de Osório no Rio Grande do Sul', 4)
+insert into Paragrafo values('Usina de Energia Eólica de Praia Formosa no Ceará', 4)
+insert into Paragrafo values('Energia Nuclear', 4)
+insert into Paragrafo values('A energia nuclear se produz a partir de uma reação denominada fissão, a fissão segundo o Dicionário Priberan da Língua Portuguesa, é para a física nuclear a divisão de um núcleo de átomo pesado (urânio,plutônio, etc.) em dois ou vários fragmentos, determinada por um bombardeamento de neutrões, e que liberta uma enorme quantidade de energia e vários neutrões. =CISÃO. E é a partir da fissão do núcleo de um átomo que bombardeia uns contra os  outros ocasionando o rompimento do núcleos e gerando grandes quantidades de energia.', 4)
+insert into Paragrafo values('As usinas nucleares, apesar de ser mais uma opção de gerar energia elétrica, também provocam acidentes graves no ecossistema, assim como ocorreu nas usinas de Three Miles Island, nos EUA, em 1979, e Chernobyl, na Ucrânia, em 1986, pois a extração do núcleos dos átomos ocorre a liberação de dejetos radioativos que altera a genética, provoca o câncer, além de danificar de modo incalculável o meio ambiente.', 4)
+insert into Paragrafo values('Só no Brasil existem duas usinas nucleares em funcionamento, (Angra 1 e 2), no município de Angra dos Reis, RJ.', 4)
+insert into Paragrafo values('Energia Solar – Térmica e Fotovoltaica', 4)
+insert into Paragrafo values('O Sol é em si grande produtor de calor e potência, proporcionadas pela radiação eletromagnética que ele libera, assim o Sol através de processos distintos é responsável pela geração de dois tipos de energia elétrica, a energia térmica e a energia fotovoltaica, entendamos como funciona cada processo e como cada uma é utilizada.', 4)
+insert into Paragrafo values('A energia térmica é gerada a partir de coletores solares que ao captar a energia provinda do Sol transfere à água, utilizada geralmente em chuveiros elétricos, pois a água é totalmente aquecida quando recebe a energia térmica. Já a energia fotovoltaica, possui duas possíveis formas de ser coletadas, seja por lâminas ou por painéis conhecidos por painéis fotovoltaicos, tanto um como o outro são compostos de um material que possui capacidade de capturar a radiação liberada pelo sol e produzir energia elétrica. A energia fotovoltaica possui mais um fator interessante, ela poder ser utilizada diretamente ou então pode ser abrigada em baterias para ser utilizada quando não houver sol.', 4)
+insert into Paragrafo values('A grande vantagem da energia provinda do sol, térmica ou fotovoltaica, é que é uma energia limpa, isto é, não ocasiona a poluição, alem de dispensar a utilização da turbinas e geradores, no entanto, o custo para a realização desses processos ainda encontram-se elevados.', 4)
+insert into Paragrafo values('Energia termelétrica', 4)
+insert into Paragrafo values('Conhecida também por calorífica, esta energia é resultante da combustão de materiais de fontes não renováveis, por exemplo, carvão, petróleo e gás natural, e também outros de fontes renováveis como a lenha, o bagaço de cana, etc. A energia termelétrica pode ser utilizada tanto como energia mecânica como também por eletricidade.', 4)
+insert into Paragrafo values('Depois de conhecer os tipos de energia elétrica que temos como opção, nos dê sua opinião sobre qual delas poderia ser muito útil a nós e não causaria tantos danos ao meio ambiente.', 4)
+insert into Paragrafo values('Fonte: www.educacao.cc', 4)
+
+select * from Paragrafo
+update Paragrafo set codLicao = 4 where codigo > 19
+
 insert into Paragrafo values('', 4)
 
 create table Pergunta(
@@ -112,7 +147,7 @@ insert into Pergunta values('Selecione o lixo correto para a TAÇA: ', 2, '', 5)
 
 
 insert into Pergunta values('Selecione o transporte menos sustentável: ', 3, '', 4)
-insert into Pergunta values('Selecione o transporte mais sustentável: ', 3, '', 4)
+insert into Pergunta values('Selecione o transporte que ocupa menos espaço: ', 3, '', 4)
 
 insert into Pergunta values('Selecione a energia gerada pelo vento: ', 4, '', 4)
 insert into Pergunta values('Selecione a energia gerada pela luminosidade: ', 4, '', 4)
