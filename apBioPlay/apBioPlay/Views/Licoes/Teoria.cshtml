@@ -7,16 +7,25 @@
 
 <html>
 <head>
+    <link href="~/Content/teoria.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Teoria - @ViewBag.licao.Nome</title>
 </head>
 <body>
-    <div> 
-        <h1>@ViewBag.licao.Nome</h1>
+    <header>
+        <nav>
+            <a href="/Licoes" id="casa"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Voltar para Licões</a>
+        </nav>
+    </header>
+
+    <div id="content">
+        <img src="@ViewBag.licao.UrlImagem" alt="Alternate Text" />
+        <h1 id="nome">@ViewBag.licao.Nome</h1>
         @foreach (apBioPlay.Models.Paragrafo p in ViewBag.paragrafos)
-        {
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;@p.Texto</p>
-        }
+         {
+            <p class="texto">&nbsp;&nbsp;&nbsp;&nbsp;@p.Texto</p>
+         }
     </div>
 </body>
 </html>

@@ -60,17 +60,19 @@
             <div class="card-wrapper">
                 @foreach (apBioPlay.Models.Licao l in ViewBag.licoes)
                 {
+                    string urlTeoria = "/Licoes/teoria/" + l.Codigo;
                     bool bloqueado = l.Nivel > ViewBag.usuario.Nivel;
                     <div class="card">
+                        <a href=@urlTeoria id="livro" name="livro"><i class="fa fa-book" aria-hidden="true"></i></a>
                         <img src="@l.UrlImagem" alt="card background" class="card-img">
                         <h1>@l.Nome</h1>
                         @if (bloqueado)
                         {
-                        <a href="" class="bloqueado" disabled><i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Nível @l.Nivel</a>
+                            <a href="" class="bloqueado" disabled><i class="fa fa-lock" aria-hidden="true"></i>&nbsp; Nível @l.Nivel</a>
                         }
                         else
                         {
-                            <a class = "desbloqueado"href="Licoes/licao/@l.Codigo">Iniciar</a>
+                            <a class="desbloqueado" href="Licoes/licao/@l.Codigo">Iniciar</a>
                         }
                     </div>
                 }

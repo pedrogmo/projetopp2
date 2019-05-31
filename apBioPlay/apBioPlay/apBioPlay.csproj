@@ -178,6 +178,7 @@
     <Content Include="Content\perfil.css" />
     <Content Include="Content\pergunta.css" />
     <Content Include="Content\sobre.css" />
+    <Content Include="Content\teoria.css" />
     <Content Include="Content\verPublicacao.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

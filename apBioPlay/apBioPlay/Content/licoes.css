@@ -27,7 +27,7 @@
 
 .card {
     width: 17em;
-    height: 17em;
+    height: 21em;
     background-color: #ebeef8;
     display: flex;
     flex-direction: column;
@@ -87,3 +87,18 @@
     margin-top: .5em;
 }
 
+#teste #livro {
+    color: white;
+    background-color: rgb(28,176,246);
+    padding: .75em;
+    padding-bottom: .5em;
+    border-radius: 50px;
+    position: relative;
+    top: 1em;
+    font-size: 1.3em;
+    transition: .2s;
+}
+
+#teste #livro:hover {
+    background-color: rgb(68, 195, 255);
+}

@@ -71,6 +71,7 @@ img {
     transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
+    font-family: "Mikado Black"
 }
 
 #black-content #modal-amigos img
