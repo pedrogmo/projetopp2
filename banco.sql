@@ -103,10 +103,25 @@ insert into Paragrafo values('Conhecida também por calorífica, esta energia é re
 insert into Paragrafo values('Depois de conhecer os tipos de energia elétrica que temos como opção, nos dê sua opinião sobre qual delas poderia ser muito útil a nós e não causaria tantos danos ao meio ambiente.', 4)
 insert into Paragrafo values('Fonte: www.educacao.cc', 4)
 
-select * from Paragrafo
-update Paragrafo set codLicao = 4 where codigo > 19
-
-insert into Paragrafo values('', 4)
+insert into Paragrafo values('Hoje em dia é comum ouvirmos que algumas regiões brasileiras estão sofrendo com a falta de água, porém, não entendemos como nossas atitudes estão diretamente relacionadas com essa triste situação. O uso inadequado, a poluição e contaminação desse importante recurso natural poderão causar, em breve, graves problemas de abastecimento.', 5)
+insert into Paragrafo values('Muitas vezes o problema do desperdício de água inicia-se nas próprias empresas responsáveis pelo abastecimento. A falta de manutenção na rede de distribuição faz com que vazamentos demorem muito tempo para serem percebidos, desencadeando uma grande perda de água potável. Entretanto, o problema maior inicia-se quando a água entra em nossas casas. A falta de consciência da população sobre a importância de economizar água faz com que hábitos inadequados sejam mantidos a todo tempo.', 5)
+insert into Paragrafo values('A seguir listaremos algumas dicas importantes para que você comece a poupar água hoje mesmo:', 5)
+insert into Paragrafo values('* A primeira dica e uma das mais importantes: Tome banhos rápidos. Alguns autores afirmam que, se você se ensaboar com o chuveiro desligado, é possível economizar cerca de 130 litros de água. Além de economizar água, economiza-se também energia elétrica;', 5)
+insert into Paragrafo values('* Lembre-se sempre de fechar a torneira enquanto escova os dentes ou faz a barba;', 5)
+insert into Paragrafo values('* Não limpe a calçada com água. Caso seja necessário, utilize baldes e opte por água que já foi utilizada, como a água da máquina de lavar;', 5)
+insert into Paragrafo values('* Cuidado com as torneiras que ficam pingando. Estudos indicam que um pequeno pinga-pinga provoca a perda de cerca de 16 mil litros de água por ano;', 5)
+insert into Paragrafo values('* Atenção aos vazamentos! Essa atitude, além de economizar água, evita danos ao imóvel;', 5)
+insert into Paragrafo values('* Fique atento à descarga e se esta não está desregulada. É importante também evitar apertar o botão por um longo período de tempo;', 5)
+insert into Paragrafo values('* Ao encher a caixa da água, tome cuidado para que ela não transborde;', 5)
+insert into Paragrafo values('* Se você possui piscina em casa, lembre-se sempre de manter uma cobertura sobre ela para evitar a perda de água por evaporação;', 5)
+insert into Paragrafo values('* Ao lavar a louça, primeiro procure retirar o excesso de sujeira e somente depois ligue a torneira. Enquanto estiver ensaboando a louça, evite ficar com a torneira ligada;', 5)
+insert into Paragrafo values('* Evite lavar uma peça de roupas por vez. O ideal é juntar várias peças para que a máquina seja usada sem desperdício;', 5)
+insert into Paragrafo values('* Utilize água das chuvas para molhar as plantas e escolha sempre o horário da manhã ou noite, pois nesses horários a água não evapora rapidamente;', 5)
+insert into Paragrafo values('* Lave o carro apenas uma vez por mês e use sempre um balde com água. O uso de mangueiras pode provocar um desperdício de mais de 500 litros de água a cada meia hora.', 5)
+insert into Paragrafo values('Lembre-se de que, apesar dos dias secos e da falta de chuva, você também exerce influência na disponibilidade de água. Atitudes conscientes são fundamentais para garantir que água de qualidade continue disponível!', 5)
+insert into Paragrafo values('Não desperdice!', 5)
+insert into Paragrafo values('Por Ma. Vanessa dos Santos', 5)
+insert into Paragrafo values('Fonte: Brasil Escola', 5)
 
 create table Pergunta(
 	codigo int identity(1,1) primary key,
@@ -116,8 +131,6 @@ create table Pergunta(
 	qtdRespostas int not null
 	constraint fkLicao foreign key(codLicao) references Licao(codigo)
 )
-
-select * from Pergunta       
 
 alter proc AlteraFoto_sp
 as
@@ -147,7 +160,6 @@ insert into Pergunta values('Selecione o lixo correto para o POTE: ', 2, '', 5)
 insert into Pergunta values('Selecione o lixo correto para a GARRAFA: ', 2, '', 5)
 insert into Pergunta values('Selecione o lixo correto para a TAÇA: ', 2, '', 5)
 
-
 insert into Pergunta values('Selecione o transporte menos sustentável: ', 3, '', 4)
 insert into Pergunta values('Selecione o transporte que ocupa menos espaço: ', 3, '', 4)
 
@@ -169,8 +181,6 @@ create table Resposta(
 	certa bit not null
 	constraint fkPergunta foreign key(codPergunta) references Pergunta(codigo)
 )
-
-select * from Resposta
 
 insert into Resposta values('Bicicleta', '/Images/Licoes/Transportes/p1r1.png', 22, 0)
 insert into Resposta values('Skate', '/Images/Licoes/Transportes/p1r2.png', 22, 1)
@@ -236,8 +246,6 @@ BEGIN
 END
 
 RespReciclagem_sp
-
-select * from Resposta
 
 create table UsuarioLicao(
 	codigo int identity(1,1) primary key,
