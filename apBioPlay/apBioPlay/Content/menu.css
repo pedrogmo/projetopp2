@@ -65,6 +65,11 @@ img {
     top: .75em;
 }
 
+#mobile .star
+{
+    width: 30%;
+}
+
 #mobile #nick
 {
     position: relative;
