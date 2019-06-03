@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = null;
+    int qtdNotificacoes = ViewBag.notificacoes.Count;
 }
 
 <!DOCTYPE html>
@@ -21,6 +22,7 @@
     <header id="mobile">
         <ul>
             <li><img id="notificacao" src="~/Images/ISino.png" alt=""></li>
+            <li><h1 id="numNotificacoes2">@qtdNotificacoes</h1></li>
             <li><img id="star" class="star" src="~/Images/IEstrela.png" alt=""></li>
             <li><h1>@ViewBag.usuario.Nivel</h1></li>
             <li><h1 id="nick">@ViewBag.usuario.Nickname</h1></li>
@@ -30,14 +32,15 @@
     <div id="desktop">
         <img src="~/Images/logoMobile.png" alt="">
         <ul>
-            <li><a href="/Licoes">Início</a></li>
+            <li><a id="inicio" href="/Licoes">Início</a></li>
             <li><a href="/Licoes/Perfil">Perfil</a></li>
-            <li><a id="inicio" href="/Licoes/Forum">Fórum</a></li>
+            <li><a href="/Licoes/Forum">Fórum</a></li>
 
             <div id="info">
                 <li><a id="pontos2"><img src="~/Images/IEstrela.png" alt=""></a></li>
                 <li><h1>@ViewBag.usuario.Nivel</h1></li>
                 <li><img id="notificacao2" src="~/Images/ISino.png" alt=""></li>
+                <li><h1 id="numNotificacoes">@qtdNotificacoes</h1></li>
                 <li><h1 id="nick">@ViewBag.usuario.Nickname</h1></li>
             </div>
         </ul>

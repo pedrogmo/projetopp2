@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = null;
+    int qtdNotificacoes = ViewBag.notificacoes.Count;
 }
 
 <!DOCTYPE html>
@@ -19,6 +20,7 @@
     <header id="mobile">
         <ul>
             <li><img id="notificacao" src="~/Images/ISino.png" alt=""></li>
+            <li><h1 id="numNotificacoes2">@qtdNotificacoes</h1></li>
             <li><img id="star" class="star" src="~/Images/IEstrela.png" alt=""></li>
             <li><h1>@ViewBag.usuario.Nivel</h1></li>
             <li><h1 id="nick">@ViewBag.usuario.Nickname</h1></li>
@@ -28,14 +30,15 @@
     <div id="desktop">
         <img src="~/Images/logoMobile.png" alt="">
         <ul>
-            <li><a href="/Licoes">Início</a></li>
+            <li><a id="inicio" href="/Licoes">Início</a></li>
             <li><a href="/Licoes/Perfil">Perfil</a></li>
-            <li><a id="inicio" href="/Licoes/Forum">Fórum</a></li>
+            <li><a href="/Licoes/Forum">Fórum</a></li>
 
             <div id="info">
                 <li><a id="pontos2"><img src="~/Images/IEstrela.png" alt=""></a></li>
                 <li><h1>@ViewBag.usuario.Nivel</h1></li>
                 <li><img id="notificacao2" src="~/Images/ISino.png" alt=""></li>
+                <li><h1 id="numNotificacoes">@qtdNotificacoes</h1></li>
                 <li><h1 id="nick">@ViewBag.usuario.Nickname</h1></li>
             </div>
         </ul>
@@ -62,11 +65,11 @@
                     <h1 id="data">(@ViewBag.publicacao.Data.Day.ToString().PadLeft(2, '0')/@ViewBag.publicacao.Data.Month.ToString().PadLeft(2, '0')/@ViewBag.publicacao.Data.Year) - @ViewBag.publicacao.Data.Hour.ToString().PadLeft(2, '0'):@ViewBag.publicacao.Data.Minute.ToString().PadLeft(2, '0')</h1>
                     <p id="texto">@ViewBag.publicacao.Conteudo</p>
                 </div>
-            </div>                                                                 
+            </div>
 
             <form action="/Licoes/Responder" id="form">
                 <h1>Sabe a resposta? Responda aqui!</h1>
-                <input id="texto" name="resp.Conteudo" type="text" placeholder="Sua resposta"/>
+                <input id="texto" name="resp.Conteudo" type="text" placeholder="Sua resposta" />
                 <input value="Responder" type="submit" />
             </form>
 

@@ -23,3 +23,17 @@ document.getElementById("notificacao2").onclick = function () {
     }
 }
 
+document.getElementById("numNotificacoes").onclick = function () {
+    if (!estaAberto) {
+        modal.style.visibility = "initial";
+        estaAberto = true;
+    }
+}
+
+document.getElementById("numNotificacoes2").onclick = function () {
+    if (!estaAberto) {
+        modal.style.visibility = "initial";
+        estaAberto = true;
+    }
+}
+

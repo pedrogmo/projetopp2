@@ -81,6 +81,26 @@ img {
     cursor: pointer;
 }
 
+#mobile #numNotificacoes2 {
+    background-color: rgb(255,59,59);
+    color: white;
+    padding-top: .35em;
+    padding-bottom: .35em;
+    padding-left: .5em;
+    padding-right: .5em;
+    border-radius: 100px;
+    font-size: 1rem;
+    user-select: none;
+    outline: none;
+    position: relative;
+    bottom: 1.3em;
+    right: 3.5em;
+}
+
+#mobile #numNotificacoes2:hover {
+    cursor: pointer;
+}
+
 /* HEADER DESKTOP */
 
 #desktop {
@@ -132,6 +152,28 @@ img {
 
 #desktop {
     visibility: hidden;
+}
+
+/* QUANTAS NOTIFICAÇÕES */
+
+#desktop #info #numNotificacoes {
+    background-color: rgb(255,59,59);
+    color: white;
+    padding-top: .15em;
+    padding-bottom: .15em;
+    padding-left: .5em;
+    padding-right: .5em;
+    border-radius: 100px;
+    font-size: 1rem;
+    position: relative;
+    right: 10em;
+    top: -1.5em;
+    user-select: none;
+    outline: none;
+}
+
+#desktop #info #numNotificacoes:hover {
+    cursor: pointer;
 }
 
 @media(min-width: 70rem) {
