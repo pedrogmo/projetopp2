@@ -211,7 +211,6 @@ img {
     width: 5em;
     left: 3em;
     user-select: none;
-    bottom: 3em;
 }
 
 #home-hero #card1 #wow #lvl {
@@ -221,8 +220,8 @@ img {
     position: relative;
     font-size: 1.5rem;
     user-select: none;
-    left: 3em;
-    bottom: .85em;
+    left: -5em;
+    top: 1em;
 }
 
 #home-hero #card1 #wow a {
@@ -703,5 +702,10 @@ img {
 
     #menuH #header #alter {
         right: 2em;
+    }
+
+    #home-hero #card1 #wow #lvl {
+        left: -5em;
+        top: 1.2em;
     }
 }
