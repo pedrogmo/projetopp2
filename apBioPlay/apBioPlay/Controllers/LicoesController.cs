@@ -59,9 +59,14 @@ namespace apBioPlay.Controllers
         {
             if (pub != null && pub.Conteudo != null && pub.Conteudo.Trim() != "")
             {
+                Usuario usu = (Usuario)Session["usuarioLogado"];
                 pub.Data = DateTime.Now;
-                pub.CodUsuario = ((Usuario)Session["usuarioLogado"]).Codigo;
-                new PublicacaoDAO().Adicionar(pub);
+                pub.CodUsuario = usu.Codigo;
+                var publs = new PublicacaoDAO();
+                publs.Adicionar(pub);
+
+                NotificacoesParaAmigos(usu.Codigo, $"O seu amigo {usu.Nickname} publicou no forum", 
+                    $"publicacoes/{pub.Codigo}", -1);
             }
             return RedirectToAction("Forum");
         }
@@ -88,13 +93,17 @@ namespace apBioPlay.Controllers
                 resp.CodUsuario = usu.Codigo;
                 resp.Data = DateTime.Now;
                 new RespostaPublicacaoDAO().Adicionar(resp);
-                if (usu.Codigo != resp.CodUsuario)
+                if (usu.Codigo != pub.CodUsuario)
                 {
                     var notificacao = new Notificacao();
                     notificacao.CodUsuario = pub.CodUsuario;
                     notificacao.Texto = $"O usuário {usu.Nickname} respondeu sua publicação.";
                     notificacao.Url = $"publicacoes/{pub.Codigo}";
                     new NotificacaoDAO().Adicionar(notificacao);
+
+                    NotificacoesParaAmigos(usu.Codigo, 
+                        $"O seu amigo {usu.Nickname} respondeu a publicação do usuário { (new UsuariosDAO().Buscar(u=>u.Codigo==pub.CodUsuario)).Nickname}",
+                        $"publicacoes/{pub.Codigo}", pub.CodUsuario);
                 }
             }
             return RedirectToAction("VerPublicacao", new { codP = pub.Codigo });
@@ -160,7 +169,6 @@ namespace apBioPlay.Controllers
             }
             else if (sit == "Aceitar solicitação")
             {
-                //nots.Remover($"O usuário {u2.Nickname} te enviou uma solicitação de amizade");
                 sol.Remover(u2.Codigo, u.Codigo);
                 amz.Adicionar(u.Codigo, u2.Codigo);
                 amz.Adicionar(u2.Codigo, u.Codigo);
@@ -244,7 +252,10 @@ namespace apBioPlay.Controllers
                 ViewBag.novasLicoes = lics.ExisteLicaoNivel(ViewBag.usuario.Nivel);
                 new UsuariosDAO().Atualiza(ViewBag.usuario);
             }
-            new LicoesFeitasDAO().Adicionar(ViewBag.usuario.Codigo, ViewBag.licao.Codigo, ViewBag.acertos);                        
+            new LicoesFeitasDAO().Adicionar(ViewBag.usuario.Codigo, ViewBag.licao.Codigo, ViewBag.acertos);
+            NotificacoesParaAmigos(ViewBag.usuario.Codigo, 
+                $"Seu amigo {ViewBag.usuario.Nickname} fez a lição {ViewBag.licao.Nome}", 
+                $"licao/{ViewBag.licao.Codigo}", -1);
             Session["perguntas"] = Session["indice"] = Session["codLicao"] = Session["acertos"] = null;
             return View();
         }
@@ -284,6 +295,22 @@ namespace apBioPlay.Controllers
         {
             Session["buscaUsuarios"] = new UsuariosDAO().Lista(u => u.Nickname.Contains(nickname));
             return RedirectToAction("Visualiza", new { codU = ((Usuario)Session["usuarioLogado"]).Codigo });
+        }
+
+        private void NotificacoesParaAmigos(int codU, string msg, string url, int codNao)
+        {
+            var amigos = new AmizadeDAO().Amigos(codU);
+            foreach (Usuario a in amigos)
+            {
+                if (a.Codigo != codNao)
+                {
+                    var not = new Notificacao();
+                    not.CodUsuario = a.Codigo;
+                    not.Texto = msg;
+                    not.Url = url;
+                    new NotificacaoDAO().Adicionar(not);
+                }
+            }
         }
     }
 }
