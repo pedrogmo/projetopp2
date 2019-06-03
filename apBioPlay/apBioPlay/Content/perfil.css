@@ -67,7 +67,7 @@ img {
     border-radius: 30px;
     padding: 1em;
     width: 95%;
-    height: 35em;
+    height: auto;
     position: relative;
     left: 50%;
     bottom: 2em;
@@ -174,31 +174,19 @@ img {
     bottom: 4em;
 }
 
-#home-hero #card1 #wow ul
-{
-    position: relative;
-    text-align: left;
-    top: 0em;
-}
-
-#home-hero #card1 #wow ul li
-{
-    display: inline-block;
-}
-
 #home-hero #card1 #wow #star
 {
-    width: 30%;
+    width: 4em;
     position: relative;
-    top: 2.5em;
+    top: 5em;
+    left: -5.5em;
+    right: 0;
 }
 
-#home-hero #card1 #wow #bolin
-{
-    width: 30%;
+#home-hero #card1 #wow #bolin {
+    width: 5em;
     position: relative;
-    top: 1.5em;
-    right: .75em;
+    top: 3em;
 }
 
 #home-hero #card1 #wow #dn
@@ -206,40 +194,38 @@ img {
     font-family: "Mikado Black";
     color: rgba(0,0,0,.8);
     text-transform: uppercase;
-    position: relative;
     font-size: 1.3rem;
-    width: 5em;
-    left: 3em;
     user-select: none;
+    position: relative;
+    top: 2em;
 }
 
 #home-hero #card1 #wow #lvl {
     font-family: "Mikado Black";
     color: rgba(0,0,0,.8);
     text-transform: uppercase;
-    position: relative;
     font-size: 1.5rem;
     user-select: none;
-    left: -5em;
-    top: 1em;
+    position: relative;
+    top: .7em;
 }
 
-#home-hero #card1 #wow a {
+#home-hero #card1 a {
     font-family: "Mikado Black";
     color: white;
     background-color: #a1e648;
     text-transform: uppercase;
-    position: relative;
     padding: .5em;
     padding-left: 1em;
     padding-right: 1em;
     border-radius: 10px;
     transition: .2s;
     text-decoration: none;
-    top: 3.5em;
+    z-index: 100;
+    position: relative;
 }
 
-#home-hero #card1 #wow a:hover {
+#home-hero #card1 a:hover {
     padding-left: 3em;
     padding-right: 3em;
     transition: .2s;
@@ -400,7 +386,6 @@ img {
         left: 0;
         visibility: hidden;
         overflow: auto;
-        z-index: 10;
     }
 
     #modal-perfil #modal-content {
@@ -572,16 +557,16 @@ img {
         background-color: rgb(255,105,105);
     }
 
-    #home-hero #card1 #wow #novoAmigo {
+    #home-hero #card1 #novoAmigo
+    {
         position: relative;
-        top: 2em;
-        z-index: 100;
+        bottom: 2em;
     }
 
 @media(min-width: 60rem) {
     #home-hero #card1 #wow {
         position: relative;
-        bottom: 7em;
+        bottom: 10em;
     }
 
     #home-hero #card1 {
@@ -598,7 +583,31 @@ img {
     }
 
     #home-hero a {
-        float: right;
+        position: relative;
+        top: -3em;
+    }
+
+    #home-hero #card1 #wow #star
+    {
+        position: relative;
+        top: 9em;
+        left: -9em;
+    }
+
+    #home-hero #card1 #wow #lvl {
+        position: relative;
+        top: 3.5em;
+        left: -2.2em;
+    }
+
+    #home-hero #card1 #wow #bolin {
+        position: relative;
+        top: 5em;
+        left: -9em;
+    }
+
+    #home-hero #card1 #wow #dn {
+        position: relative;
     }
 
 
@@ -612,13 +621,6 @@ img {
         margin-top: 0;
     }
 
-    #home-hero #card1 #wow #novoAmigo {
-        float: none;
-        font-size: 1.1rem;
-        z-index: 100;
-        top: 2.75em;
-    }
-
     #home-hero #card1 #wow ul {
         position: relative;
         right: 7em;
@@ -630,36 +632,35 @@ img {
         top: 0;
     }
 
-        #content-info .cardAmigos ul li a {
-            color: white;
-            float: none;
-            font-family: "Mikado Black";
-            font-size: 1.5rem;
-            text-decoration: none;
-            background-color: rgb(28,176,246);
-            padding: 7px;
-            border-radius: 30px;
-            padding-left: 10em;
-            padding-right: 10em;
-            position: relative;
-            top: .5em;
-            transition: .3s;
-        }
+    #content-info .cardAmigos ul li a {
+        color: white;
+        float: none;
+        font-family: "Mikado Black";
+        font-size: 1.5rem;
+        text-decoration: none;
+        background-color: rgb(28,176,246);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 10em;
+        padding-right: 10em;
+        position: relative;
+        transition: .3s;
+    }
 
-            #content-info .cardAmigos ul li a:hover {
-                color: white;
-                float: none;
-                font-family: "Mikado Black";
-                text-decoration: none;
-                background-color: rgb(68, 195, 255);
-                padding: 7px;
-                border-radius: 30px;
-                padding-left: 11em;
-                padding-right: 11em;
-                position: relative;
-                top: .5em;
-                transition: .3s;
-            }
+    #content-info .cardAmigos ul li a:hover {
+        color: white;
+        float: none;
+        font-family: "Mikado Black";
+        text-decoration: none;
+        background-color: rgb(68, 195, 255);
+        padding: 7px;
+        border-radius: 30px;
+        padding-left: 11em;
+        padding-right: 11em;
+        position: relative;
+        top: .5em;
+        transition: .3s;
+    }
 
     .botao {
         font-size: 1rem;
@@ -690,10 +691,6 @@ img {
         width: 60%;
     }
 
-    #home-hero #card1 #wow ul {
-        top: 1em;
-    }
-
     #content-info .danger-zone a {
         position: relative;
         right: 40%;
@@ -702,10 +699,5 @@ img {
 
     #menuH #header #alter {
         right: 2em;
-    }
-
-    #home-hero #card1 #wow #lvl {
-        left: -5em;
-        top: 1.2em;
     }
 }
