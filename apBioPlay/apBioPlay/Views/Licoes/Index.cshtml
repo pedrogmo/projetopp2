@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="~/Content/notificacao.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
     <title>BioPlay - Lições</title>
 </head>
 <body>
@@ -25,8 +28,8 @@
             <li><img id="notificacao" src="~/Images/ISino.png" alt=""></li>
             <li><h1 id="numNotificacoes2">@qtdNotificacoes</h1></li>
             <li><img id="star" class="star" src="~/Images/IEstrela.png" alt=""></li>
-            <li><h1>@ViewBag.usuario.Nivel</h1></li>
-            <li><h1 id="nick">@ViewBag.usuario.Nickname</h1></li>
+            <li><h1 class="level">@ViewBag.usuario.Nivel</h1></li>
+            <li><h1 id="nick" class="n1">@ViewBag.usuario.Nickname</h1></li>
         </ul>
     </header>
 
@@ -42,7 +45,7 @@
                 <li><h1>@ViewBag.usuario.Nivel</h1></li>
                 <li><img id="notificacao2" src="~/Images/ISino.png" alt=""></li>
                 <li><h1 id="numNotificacoes">@qtdNotificacoes</h1></li>
-                <li><h1 id="nick">@ViewBag.usuario.Nickname</h1></li>
+                <li><h1 id="nick" class="n2">@ViewBag.usuario.Nickname</h1></li>
             </div>
         </ul>
     </div>
@@ -58,7 +61,7 @@
     <!-- LIÇÕES -->
 
     <section id="teste">
-        <div>
+        <div id="divTeste">
             <h1 class="heading">Lições</h1>
             <div class="card-wrapper">
                 @foreach (apBioPlay.Models.Licao l in ViewBag.licoes)
@@ -88,7 +91,7 @@
     <section id="bg-modal">
         <div id="modal-content">
             <ul>
-                <li><img src="~/Images/ISino.png" alt="Alternate Text" /></li>                
+                <li><img src="~/Images/ISino.png" alt="Alternate Text" /></li>
                 <li><h1>Notificações</h1></li>
             </ul>
             <label id="close">X</label>
@@ -103,9 +106,15 @@
                 </div>
             }
 
-
         </div>
     </section>
+
+    <section>
+        <div id="modal-deslogar">
+            <a href="/Licoes/Deslogar" id="casa">sair&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </section>
+
     <script src="~/Scripts/notificacao.js"></script>
 </body>
 </html>   

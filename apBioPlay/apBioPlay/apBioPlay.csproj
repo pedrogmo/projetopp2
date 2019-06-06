@@ -255,6 +255,7 @@
     <Content Include="Scripts\fadeIn.js" />
     <Content Include="Scripts\geral.js" />
     <Content Include="Scripts\licoes.js" />
+    <Content Include="Scripts\modalConfirm.js" />
     <Content Include="Scripts\menuVertical.js" />
     <Content Include="Scripts\modalAmigos.js" />
     <Content Include="Scripts\modalErro.js" />

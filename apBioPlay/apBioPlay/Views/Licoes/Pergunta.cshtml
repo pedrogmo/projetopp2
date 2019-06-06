@@ -12,14 +12,16 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width" />
     <title>Pergunta</title>
 </head>
 <body>
     <section id="home-hero">
         <div class="container">
+            <a href="#" id="voltar">Voltar para lições&nbsp; <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
             <h1>@ViewBag.pergunta.Texto</h1>
-            <img src= "@ViewBag.pergunta.UrlImagem" />
+            <img src="@ViewBag.pergunta.UrlImagem" />
             <form action="/Licoes/ProximaPergunta">
                 <input type="text" hidden id="selecionada" value="0" name="indResp">
                 <ul>
@@ -46,9 +48,21 @@
                 </ul>
                 <hr />
                 <input id="enviar" value="Enviar resposta" type="submit" />
-            </form>            
+            </form>
         </div>
     </section>
+
+    <section id="bg-modal">
+        <div id="modal-confirm">
+            <h1>Você tem certeza que deseja voltar? Todo seu progresso será perdido!</h1>
+            <br /><br /><br />
+            <a href="#" id="nao">NÃO</a>
+            <a href="/Licoes">SIM</a>
+            <br /><br />
+        </div>
+    </section>
+
     <script src="~/Scripts/pergunta.js"></script>
+    <script src="~/Scripts/modalConfirm.js"></script>
 </body>
 </html>

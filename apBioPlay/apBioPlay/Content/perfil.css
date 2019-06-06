@@ -98,18 +98,14 @@ img {
     border-radius: 30px;
     text-align: center;
     transition: .2s;
-    position: relative;
-    top: 1em;
-    right: .55em;
-    float: right;
 }
 
-    #menuH #header #alter:hover {
-        background-color: #333;
-        transition: .2s;
-        color: white;
-        transition: .2s;
-    }
+#menuH #header #alter:hover {
+    background-color: #333;
+    transition: .2s;
+    color: white;
+    transition: .2s;
+}
 
 #menuH #header #casa {
     color: #333;
@@ -122,10 +118,6 @@ img {
     border-radius: 100em;
     text-align: center;
     transition: .2s;
-    position: relative;
-    margin-right: 1em;
-    top: 2em;
-    left: 5em;
 }
 
 #menuH #header #casa:hover {
@@ -133,6 +125,16 @@ img {
     transition: .2s;
     color: white;
     transition: .2s;
+}
+
+#header ul
+{
+    position: relative;
+    top: 1em;
+}
+
+#header ul li {
+    margin-right: 1em;
 }
 
 #home-hero #card1 #foto {
@@ -248,6 +250,12 @@ img {
         margin-top: 2em;
         margin-bottom: 2em;
         bottom: 1em;
+    }
+
+    #canvas {
+        width: 20em;
+        position: relative;
+        bottom: 0em;
     }
 
     #content-info .cardGraphic {
@@ -399,7 +407,7 @@ img {
         border-radius: 10px;
         box-shadow: 0px 4px 8px 3px rgba(0,0,0,.4);
         margin-top: 1em;
-        margin-bottom: 1em;
+        margin-bottom: 6em;
     }
 
     #modal-perfil #modal-content h1 {
@@ -569,6 +577,12 @@ img {
         bottom: 10em;
     }
 
+    #canvas {
+        width: 30em;
+        position: relative;
+        bottom: 2em;
+    }
+
     #home-hero #card1 {
         background-color: white;
         box-shadow: 0px 4px 8px 3px rgba(0,0,0,.3);
@@ -580,6 +594,10 @@ img {
         left: 2%;
         bottom: 2em;
         transform: translateX(-2%);
+    }
+
+    #header ul li{
+        margin-right: 1em;
     }
 
     #home-hero a {
@@ -604,10 +622,6 @@ img {
         position: relative;
         top: 5em;
         left: -9em;
-    }
-
-    #home-hero #card1 #wow #dn {
-        position: relative;
     }
 
 
@@ -693,11 +707,21 @@ img {
 
     #content-info .danger-zone a {
         position: relative;
-        right: 40%;
-        top: 5em;
     }
 
     #menuH #header #alter {
         right: 2em;
+    }
+
+    #home-hero #card1 #wow #dn {
+        font-family: "Mikado Black";
+        color: rgba(0,0,0,.8);
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        user-select: none;
+        position: relative;
+        left: 1.5em;
+        top: 0em;
+        width: 16em;
     }
 }

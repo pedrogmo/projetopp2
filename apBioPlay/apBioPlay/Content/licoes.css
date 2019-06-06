@@ -38,6 +38,11 @@
     border-radius: 50px;
 }
 
+#divTeste
+{
+    margin-top: 7em;
+}
+
 .card a.desbloqueado {
     width: 50%;
     background-color: #1adb00;
