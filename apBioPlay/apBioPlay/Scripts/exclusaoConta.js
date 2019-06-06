@@ -1,8 +1,12 @@
 ﻿var confirm = document.getElementById("modal-confirm")
-var exibirConfirm = document.getElementById("exibirExclusao").value;
+var botaoConfirm = document.getElementById("clicouExcluir")
+var nao = document.getElementById("confirmNao")
+confirm.style.visibility = "hidden";
 
-if (exibirConfirm == 'N') {
-    confirm.style.visibility = "hidden";
-} else if (exibirConfirm == 'S') {
+botaoConfirm.onclick = function () {
     confirm.style.visibility = "initial";
+}
+
+nao.onclick = function () {
+    confirm.style.visibility = "hidden";
 }

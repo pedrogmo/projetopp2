@@ -10,14 +10,6 @@
     List<apBioPlay.Models.Usuario> buscaUsuarios = (List<apBioPlay.Models.Usuario>)Session["buscaUsuarios"];
     Session["buscaUsuarios"] = null;
     string temResultado = buscaUsuarios == null ? "N" : "S";
-
-    string exibirExclusao = "N";
-    if (Session["excluir"] != null)
-    {
-        exibirExclusao = "S";
-    }
-
-    Session["excluir"] = null;
 }
 
 <!DOCTYPE html>
@@ -98,7 +90,7 @@
             <div id="content-info" style="visibility: @stringBotao">
                 <div class="danger-zone">
                     <h1>Zona de perigo</h1>
-                    <a href="/Licoes/ClicouExcluir">Excluir conta</a>
+                    <a id ="clicouExcluir">Excluir conta</a>
                 </div>
             </div>
 
@@ -199,9 +191,8 @@
     <section id="modal-confirm">
         <div id="modal-content">
             <h1>Você tem certeza que deseja excluir sua conta?!</h1>
-            <input type="text" id="exibirExclusao" hidden value="@exibirExclusao" />
             <br /><br /><br />
-            <a href="/Licoes/Perfil">NÃO</a>
+            <a href ="#" id="confirmNao">NÃO</a>
             <a href="/Licoes/ExcluirConta">SIM</a>
             <br /><br />
         </div>

@@ -92,6 +92,7 @@ img {
 #modal-confirm #modal-content a:last-of-type:hover
 {
     background-color: rgb(173,255,63);
+    cursor: pointer;
 }
 
 #modal-confirm #modal-content a:first-of-type
@@ -103,6 +104,7 @@ img {
 #modal-confirm #modal-content a:first-of-type:hover
 {
     background-color: rgb(255,105,105);
+    cursor: pointer;
 }
 
 @media(min-width: 60rem){

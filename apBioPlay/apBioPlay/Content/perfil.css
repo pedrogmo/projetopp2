@@ -563,6 +563,7 @@ img {
 
     #content-info .danger-zone a:hover {
         background-color: rgb(255,105,105);
+        cursor: pointer;
     }
 
     #home-hero #card1 #novoAmigo
