@@ -59,9 +59,11 @@ ul {
     left: -2.3em;
 }
 
-li {
+li
+{
     display: inline-block;
 }
+
 
 input[type="radio"] {
     display: none;

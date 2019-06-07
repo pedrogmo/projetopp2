@@ -8,6 +8,8 @@ create table Usuario(
 	fotoPerfil varchar(max)
 )
 
+select * from Usuario
+
 create table Acesso(
 	codigo int identity(1,1) primary key,
 	codUsuario int not null,
@@ -218,15 +220,19 @@ insert into Resposta values('Termoelétrica', '/Images/Licoes/Energia/p1r7.png', 
 insert into Resposta values('Eólica', '/Images/Licoes/Energia/p1r2.png', 28, 0)
 
 
-insert into Resposta values('Deixar torneira aberta', '/Images/Licoes/Agua/p1r1.png', 31, 0)
-insert into Resposta values('Reutilizar água da chuva', '/Images/Licoes/Agua/p1r4.png', 31, 1)
+insert into Resposta values('Não fechar torneira', '/Images/Licoes/Agua/p1r1.png', 31, 0)
+insert into Resposta values('Reutilizar água', '/Images/Licoes/Agua/p1r4.png', 31, 1)
 insert into Resposta values('Demorar no banho', '/Images/Licoes/Agua/p1r2.png', 31, 0)
-insert into Resposta values('Lavar carro com mangueira', '/Images/Licoes/Agua/p1r3.png', 31, 0)
+insert into Resposta values('Usar mangueira', '/Images/Licoes/Agua/p1r3.png', 31, 0)
 
-insert into Resposta values('Deixar torneira aberta', '/Images/Licoes/Agua/p1r1.png', 32, 1)
-insert into Resposta values('Não lavar carro com mangueira', '/Images/Licoes/Agua/p2r2.png', 32, 0)
+insert into Resposta values('Não fechar torneira', '/Images/Licoes/Agua/p1r1.png', 32, 1)
+insert into Resposta values('Não usar mangueira', '/Images/Licoes/Agua/p2r2.png', 32, 0)
 insert into Resposta values('Não demorar no banho', '/Images/Licoes/Agua/p2r1.png', 32, 0)
-insert into Resposta values('Não deixar torneira aberta', '/Images/Licoes/Agua/p2r3.png', 32, 0)
+insert into Resposta values('Fechar torneira', '/Images/Licoes/Agua/p2r3.png', 32, 0)
+
+update Resposta set texto= 'Reutilizar água' where codigo = 214
+
+select * from Resposta
 
 create proc RespReciclagem_sp 
 as

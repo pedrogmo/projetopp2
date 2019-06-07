@@ -53,18 +53,18 @@ body, html {
     border-radius: 10px;
 }
 
-    .container .slide_img {
-        position: absolute;
-        width: auto;
-        height: 100%;
-        left: 50%;
-        transform: translate(-50%);
-    }
+.container .slide_img {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
 
-        .container .slide_img img {
-            width: inherit;
-            height: inherit;
-        }
+.container .slide_img img {
+    width: inherit;
+    height: inherit;
+}
 
 .prev, .next {
     width: 12%;
@@ -198,7 +198,7 @@ label span {
     position: absolute;
     color: white;
     top: 1em;
-    font-size: 4rem;
+    font-size: 3rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -208,7 +208,7 @@ label span {
     height: 16.6em;
     width: 100%;
     position: absolute;
-    opacity: .5;
+    opacity: .8;
 }
 
 #title {
@@ -264,10 +264,13 @@ p{
     }
 }
 
-@media(min-width: 60rem)
-{
+@media(min-width: 60rem) {
     #cv {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    #video h1 {
+        font-size: 4em;
     }
 }
