@@ -1,0 +1,19 @@
+------------------------------- Slide 1 ---------------------
+
+Apresentação da equipe e do nome do projeto
+Nomes na ordem do powerpoint
+Breve descrição do projeto (1 frase)
+
+------------------------------- Slide 2 ---------------------
+
+Objetivo principal: frase do ppt + frase explicativa
+Pontos postitivos: design eficiente, programação previne erros,
+	acessibilidade para público infantil, site integrado e banco
+	consistente.
+Pontos negativos: redirecionamento de páginas por causa do asp,
+	dificuldade para exibição de mensagens ao usuário.
+
+------------------------------- Slide 3 ---------------------
+
+Ler benefícios do ppt
+Incluir mais um benefício: notificações
